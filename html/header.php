@@ -3,9 +3,7 @@
 <!-- header -->
 <header class="header">
 
-  <p>
-  	Header
-  </p>
+  Header
 
 </header>
 <!-- eof header -->
