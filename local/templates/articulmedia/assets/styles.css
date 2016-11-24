@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Articul';
+  src: url("../fonts/ArticulRegular/Articul.eot");
+  src: url("../fonts/ArticulRegular/Articul.eot?#iefix") format("embedded-opentype"), url("../fonts/ArticulRegular/Articul.woff") format("woff"), url("../fonts/ArticulRegular/Articul.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Articul';
+  src: url("../fonts/ArticulMedium/Articul-Medium.eot");
+  src: url("../fonts/ArticulMedium/Articul-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ArticulMedium/Articul-Medium.woff") format("woff"), url("../fonts/ArticulMedium/Articul-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Articul';
+  src: url("../fonts/ArticulBlack/Articul-Black.eot");
+  src: url("../fonts/ArticulBlack/Articul-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ArticulBlack/Articul-Black.woff") format("woff"), url("../fonts/ArticulBlack/Articul-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Articul';
+  src: url("../fonts/ArticulBold/Articul-Bold.eot");
+  src: url("../fonts/ArticulBold/Articul-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ArticulBold/Articul-Bold.woff") format("woff"), url("../fonts/ArticulBold/Articul-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Articul';
+  src: url("../fonts/ArticulLight/Articul-Light.eot");
+  src: url("../fonts/ArticulLight/Articul-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ArticulLight/Articul-Light.woff") format("woff"), url("../fonts/ArticulLight/Articul-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }

@@ -6,9 +6,9 @@ var autoprefixer = require('autoprefixer-core');
 var csswring     = require('csswring');
 var CopyPlugin = require('copy-webpack-plugin');
 
-var projectRootPath = path.join(__dirname, 'local/templates/fanid');      //path to root
-var entryPath = path.join(__dirname, 'local/templates/fanid/js');         //path to input dir
-var assetsPath = path.join(__dirname, 'local/templates/fanid/assets');    //path to output dir
+var projectRootPath = path.join(__dirname, 'local/templates/articulmedia');      //path to root
+var entryPath = path.join(__dirname, 'local/templates/articulmedia/js');         //path to input dir
+var assetsPath = path.join(__dirname, 'local/templates/articulmedia/assets');    //path to output dir
 
 var config = {
     context: entryPath,
