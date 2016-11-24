@@ -15,12 +15,16 @@ body {
   position: relative; 
   top: 0;
   font-family: 'Articul';
+
+  background: transparent url('../img/desktop/bg.jpg') center top no-repeat;
+	background-size: cover;
 }
 
 .container {
 	max-width: $container-max-width;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 50px;
 }
 
 svg {
@@ -67,6 +71,9 @@ svg {
 		margin: 0;
 		display: inline-block;
 		margin-right: 95px;
+		@media (max-width: $screen-md) {
+
+		}
 	}
 
 	&__icon {
@@ -87,6 +94,7 @@ svg {
 			fill: $black;
 		}
 	}
+
 	&__link {
 		display: inline-block;
 		margin: 0 10px;
