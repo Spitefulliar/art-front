@@ -79,7 +79,11 @@ svg {
 .footer {
   background: rgba(204, 204, 204, 0.4);
   max-height: 50px;
-  line-height: 50px; }
+  line-height: 50px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed; }
   .footer__copy {
     color: #0d0907;
     font-size: 16px;
