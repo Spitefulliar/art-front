@@ -1,3 +1,96 @@
-  @import 'variables.scss';
-  @import 'fonts.scss';
-  @import 'elements.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'elements.scss';
+
+html {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative; 
+  top: 0;
+  font-family: 'Articul';
+}
+
+.container {
+	max-width: $container-max-width;
+	width: 100%;
+	margin: 0 auto;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+.svg-icon {
+	margin: auto;
+	background-repeat: no-repeat no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	height: 1em;
+	max-width: 1em;
+	line-height: 1em;
+	svg {
+		width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    fill: currentColor;
+	}
+}
+
+.header {
+
+}
+
+.main {
+	height: 80vh;
+}
+
+.content {
+
+}
+
+.footer {
+	background: rgba(204,204,204,.4);
+	max-height: 50px;
+	line-height: 50px;
+
+	&__copy {
+		color: $nightRider;
+		font-size: 16px;
+		margin: 0;
+		display: inline-block;
+		margin-right: 95px;
+	}
+
+	&__icon {
+		display: inline-block;
+		margin-right: 25px;
+		vertical-align: middle;
+	}
+
+	&__img {
+		max-width: 100%;
+		display: block;
+	}
+
+	&__social {
+		display: inline-block;
+		float: right;
+		svg {
+			fill: $black;
+		}
+	}
+	&__link {
+		display: inline-block;
+		margin: 0 10px;
+		vertical-align: middle;
+		text-decoration: none;
+	}
+}
