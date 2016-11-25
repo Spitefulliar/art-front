@@ -73,6 +73,48 @@ svg {
     max-width: 100%;
     fill: currentColor; }
 
+.header {
+  margin-top: 50px;
+  height: 40px;
+  display: -ms-flexbox;
+  display: flex; }
+  .header__logo {
+    display: inline-block;
+    width: 230px;
+    height: 40px; }
+    .header__logo img {
+      max-width: 100%;
+      display: block; }
+  .header__link {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px; }
+    .header__link img {
+      max-width: 100%;
+      display: block; }
+  .header .nav {
+    background: rgba(204, 204, 204, 0.2); }
+    .header .nav__list {
+      margin: 0;
+      padding: 0; }
+    .header .nav__item {
+      display: inline-block; }
+    .header .nav__link {
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      line-height: 40px;
+      padding: 0 15px;
+      color: #000000;
+      transition: all .3s ease; }
+      .header .nav__link:hover {
+        color: #ffffff;
+        background: #000000; }
+
 .main {
   height: 80vh; }
 
