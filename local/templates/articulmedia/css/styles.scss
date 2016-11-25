@@ -15,8 +15,7 @@ body {
   position: relative; 
   top: 0;
   font-family: 'Articul';
-
-  background: transparent url('../img/desktop/bg.jpg') center top no-repeat;
+  background: #a8a5a4;
 	background-size: cover;
 }
 
@@ -49,11 +48,105 @@ svg {
 }
 
 .header {
+	margin-top: 50px;
+	height: 40px;
+	display: flex;
 
+	&__logo {
+		display: inline-block;
+		width: 230px;
+		height: 40px;
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		text-decoration: none;
+		margin-left: 5px;
+		height: 40px;
+		width: 40px;
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+
+	.nav {
+		background: rgba(204,204,204,.2);
+		&__list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+		}
+
+		&__item {
+			display: inline-block;
+			position: relative;
+
+			&:hover {
+				.submenu {
+					visibility: visible;
+					opacity: 1;
+					display: block;
+				}
+			}
+		}
+
+		&__link {
+			text-transform: uppercase;
+			font-weight: bold;
+			text-decoration: none;
+			position: relative;
+			display: block;
+			font-size: 16px;
+			line-height: 40px;
+			padding: 0 15px;
+			color: $black;
+			transition: all .3s ease;
+
+			&:hover {
+				color: $white;
+				background: $black;
+			}
+		}
+
+		.submenu {
+			padding: 0;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			left: 0;
+			list-style: none;
+			opacity: 0;
+			visibility: hidden;
+			display: none;
+			background: rgba(223,220,220,.6);
+
+			&__item {
+				display: inline-block;
+
+				&:hover {
+					background: $white;
+				}
+			}
+
+			&__link {
+				color: $black;
+				text-decoration: none;
+				font-size: 16px;
+				line-height: 40px;
+			}
+		}
+	}
 }
 
 .main {
 	height: 80vh;
+	padding-top: 50px;
 }
 
 .content {
