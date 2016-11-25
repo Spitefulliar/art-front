@@ -13,6 +13,10 @@
 			</li>
 			<li class="nav__item">
 				<a href="" class="nav__link">Экспертиза</a>
+				<ul class="submenu">
+					<li class="submenu__item"><a href="" class="submenu__link">Уникальный опыт</a></li>
+					<li class="submenu__item"><a href="" class="submenu__link">Развивам digital-индустрию</a></li>
+				</ul>
 			</li>
 			<li class="nav__item">
 				<a href="" class="nav__link">Работы</a>
