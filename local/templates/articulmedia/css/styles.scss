@@ -25,6 +25,9 @@ body {
 	margin: 0 auto;
 	padding: 0 50px;
 	min-width: 320px;
+	@media (max-width: $screen-sm) {
+		padding: 0 15px;
+	}
 }
 
 svg {
