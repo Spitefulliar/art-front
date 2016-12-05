@@ -24,6 +24,10 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 50px;
+	min-width: 320px;
+	@media (max-width: $screen-sm) {
+		padding: 0 15px;
+	}
 }
 
 svg {
@@ -68,30 +72,43 @@ svg {
 		margin-left: 5px;
 		height: 40px;
 		width: 40px;
+
 		img {
 			max-width: 100%;
 			display: block;
 		}
+
+		@media (max-width: $screen-sm) {
+			display: none;
+		}
 	}
 
 	.nav {
+		background: $silver;
 		background: rgba(204,204,204,.2);
 		&__list {
 			margin: 0;
 			padding: 0;
 			list-style: none;
 			display: flex;
+
+			@media (max-width: $screen-sm) {
+				flex-direction: column;
+			}
 		}
 
 		&__item {
-			display: inline-block;
 			position: relative;
 
 			&:hover {
 				.submenu {
 					visibility: visible;
 					opacity: 1;
-					display: block;
+					display: flex;
+				}
+				.nav__link {
+					color: $white;
+					background: $black;
 				}
 			}
 		}
@@ -100,37 +117,34 @@ svg {
 			text-transform: uppercase;
 			font-weight: bold;
 			text-decoration: none;
-			position: relative;
 			display: block;
 			font-size: 16px;
 			line-height: 40px;
 			padding: 0 15px;
 			color: $black;
 			transition: all .3s ease;
-
-			&:hover {
-				color: $white;
-				background: $black;
-			}
 		}
 
 		.submenu {
 			padding: 0;
 			position: absolute;
 			left: 0;
-			bottom: 0;
+			top: 100%;
 			left: 0;
 			list-style: none;
 			opacity: 0;
 			visibility: hidden;
 			display: none;
+			background: $alto;
 			background: rgba(223,220,220,.6);
 
 			&__item {
 				display: inline-block;
 
 				&:hover {
-					background: $white;
+					.submenu__link {
+						background: $white;
+					}
 				}
 			}
 
@@ -139,6 +153,11 @@ svg {
 				text-decoration: none;
 				font-size: 16px;
 				line-height: 40px;
+				white-space: nowrap;
+				font-weight: 500;
+				display: block;
+				padding: 0 15px;
+				transition: all .3s ease;
 			}
 		}
 	}
