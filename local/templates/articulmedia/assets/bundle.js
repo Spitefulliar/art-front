@@ -10382,7 +10382,7 @@
 
 	;
 	var sprite = __webpack_require__(5);;
-	var image = "<symbol viewBox=\"0 0 22.6 22.6\" id=\"spr-cross\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <style type=\"text/css\"> .st0{fill-rule:evenodd;clip-rule:evenodd;} </style> <polygon id=\"spr-cross_XMLID_16_\" class=\"st0\" points=\"22.6,1.4 21.2,0 11.3,9.9 1.4,0 0,1.4 9.9,11.3 0,21.2 1.4,22.6 11.3,12.7 21.2,22.6 \r\n\t22.6,21.2 12.7,11.3 \"/> </symbol>";
+	var image = "<symbol viewBox=\"0 0 22.6 22.6\" id=\"spr-cross\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <style type=\"text/css\"> .st0{fill-rule:evenodd;clip-rule:evenodd;} </style> <polygon id=\"spr-cross_XMLID_16_\" class=\"st0\" fill=\"#fff\" points=\"22.6,1.4 21.2,0 11.3,9.9 1.4,0 0,1.4 9.9,11.3 0,21.2 1.4,22.6 11.3,12.7 21.2,22.6 \r\n\t22.6,21.2 12.7,11.3 \"/> </symbol>";
 	module.exports = sprite.add(image, "spr-cross");
 
 /***/ },
