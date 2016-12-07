@@ -45,4 +45,4 @@
 </header>
 <!-- eof header -->
 
-<main class="main">
+<main class="main remodal-bg">

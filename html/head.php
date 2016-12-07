@@ -22,7 +22,8 @@
     <script src="../local/templates/articulmedia/assets/bundle.js"></script>
 
     <!-- libs -->
-
+    
+    <script src="../local/templates/articulmedia/libs/remodal.min.js"></script>
     
     <!-- eof libs -->
 
