@@ -50,4 +50,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Articul';
+    src: url('../fonts/ArticulThin/Articul-Thin.eot');
+    src: url('../fonts/ArticulThin/Articul-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ArticulThin/Articul-Thin.woff') format('woff'),
+        url('../fonts/ArticulThin/Articul-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
 // eof fonts
