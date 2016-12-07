@@ -20,7 +20,7 @@
     </div>
   </div>
 </section>
-<section class="case-2">
+<!-- <section class="case-2">
   <div class="container">
     <div class="brief">
       <h2 class="brief__title">
@@ -44,5 +44,10 @@
       </p>
     </div>
   </div>
-</section>
+</section> -->
 
+<section class="case-3">
+  <div class="container">
+    
+  </div>
+</section>
