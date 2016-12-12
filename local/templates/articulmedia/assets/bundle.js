@@ -3,7 +3,7 @@ webpackJsonp([0],[
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(59);
+	module.exports = __webpack_require__(60);
 
 
 /***/ },
@@ -22,7 +22,7 @@ webpackJsonp([0],[
 	}
 
 	//custom modules
-	var components = __webpack_require__(69);
+	var components = __webpack_require__(59);
 	// components.keys().forEach(components);
 	requireAll(components);
 
@@ -835,24 +835,6 @@ webpackJsonp([0],[
 
 /***/ },
 /* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(60);
-
-/***/ },
-/* 60 */
-66,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */
 /***/ function(module, exports) {
 
 	function webpackContext(req) {
@@ -861,8 +843,18 @@ webpackJsonp([0],[
 	webpackContext.keys = function() { return []; };
 	webpackContext.resolve = webpackContext;
 	module.exports = webpackContext;
-	webpackContext.id = 69;
+	webpackContext.id = 59;
 
 
-/***/ }
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(61);
+
+/***/ },
+/* 61 */
+67
 ]);
