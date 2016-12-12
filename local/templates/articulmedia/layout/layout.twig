@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Articul</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16"> -->
+    <!-- <link rel="icon" type="image/png" href="favicon32x32.ico" sizes="32x32"> -->
+
+    <!-- CSS -->
+    
+    <!-- main styles -->
+    <link rel="stylesheet" type="text/css" href="../local/templates/articulmedia/assets/vendor.css">
+    <link rel="stylesheet" type="text/css" href="../local/templates/articulmedia/assets/styles.css">
+    
+    <!-- eof CSS -->
+
+    <!-- js -->
+
+    <!-- main js -->
+    <script src="../local/templates/articulmedia/assets/vendor.js"></script>
+    <script src="../local/templates/articulmedia/assets/bundle.js"></script>
+
+    <!-- libs -->
+    
+   
+    <!-- eof libs -->
+
+</head>
+
+<body>
+<!-- header -->
+{% block header %}
+<header class="header container">
+
+  <a href="#" class="header__logo">
+    <img src="../local/templates/articulmedia/img/icon/logo.png" alt="Articul">
+  </a>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="" class="nav__link">КОМПАНИЯ</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Экспертиза</a>
+        <ul class="submenu">
+          <li class="submenu__item"><a href="" class="submenu__link">Уникальный опыт</a></li>
+          <li class="submenu__item"><a href="" class="submenu__link">Развивам digital-индустрию</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Работы</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Достижения</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Новости</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Карьера</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+  <a href="" class="header__link">
+    <img src="../local/templates/articulmedia/img/icon/icon-с.png" alt="">
+  </a>
+  <a href="" class="header__link">
+    <img src="../local/templates/articulmedia/img/icon/icon-p.png" alt="">
+  </a>
+
+</header>
+<!-- eof header -->
+{% endblock %}
+
+{% block main %}
+<main class="main remodal-bg">
+  <section class="content">
+      <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nobis tempore vero, sapiente, modi cumque delectus, sed veritatis eligendi quibusdam facilis libero voluptatibus ad quaerat accusamus hic fugiat quod nam. lorem*50</p>
+     <a data-remodal-target="modal">Call the</a>
+      </div>
+  </section>
+
+  <div class="remodal" data-remodal-id="modal"
+    data-remodal-options="hashTracking: false">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h1>Remodal</h1>
+    <p>
+      Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+    </p>
+    <br>
+    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+    <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+  </div>
+</main> 
+{% endblock %}
+
+{% block test %}
+{% endblock %}
+
+{% block footer %}
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__copy">
+      ©1998-2016. Articul Media
+    </p>
+    <div class="footer__icon">
+      <img src="../local/templates/articulmedia/img/icon/logo-raek.png" alt="РАЭК" class="footer__img">
+    </div>
+    <div class="footer__icon">
+      <img src="../local/templates/articulmedia/img/icon/logo-party.png" alt="Учаастник" class="footer__img">
+    </div>
+    <div class="footer__icon">
+      <img src="../local/templates/articulmedia/img/icon/logo-microsoft.png" alt="" class="footer__img">
+    </div>
+    <div class="footer__social">
+
+      <a href="#" class="footer__link">
+        <span class="svg-icon">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-fb"></use>
+          </svg>
+        </span>
+      </a>
+
+      <a href="" class="footer__link">
+        <span class="svg-icon">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-yt"></use>
+          </svg>
+        </span>
+      </a>
+
+      <a href="" class="footer__link">
+        <span class="svg-icon">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-icon-instagram"></use>
+          </svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</footer>
+<!-- eof footer -->
+{% endblock %}
+
+</body>
+</html>

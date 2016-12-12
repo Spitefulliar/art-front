@@ -1,0 +1,15 @@
+{
+    "config": {
+        "vendor-dir": "local/vendor",
+        "discard-changes": true
+    },
+    "name": "articul/articulmedia",
+    "minimum-stability": "dev",
+    "require": {
+        "twig/twig": "^1.28"
+    },
+    "autoload": {
+      "psr-4": {
+      }
+    }
+}
