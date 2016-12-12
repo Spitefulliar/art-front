@@ -16,6 +16,16 @@ webpackJsonp([0],[
 	var jquery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(2);
 	var sprite = __webpack_require__(5);
 
+	//reqire all files from ./components
+	function requireAll(requireContext) {
+	  return requireContext.keys().map(requireContext);
+	}
+
+	//custom modules
+	var components = __webpack_require__(69);
+	// components.keys().forEach(components);
+	requireAll(components);
+
 	$(document).ready(function () {});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(2)))
 
@@ -833,5 +843,26 @@ webpackJsonp([0],[
 
 /***/ },
 /* 60 */
-66
+66,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */
+/***/ function(module, exports) {
+
+	function webpackContext(req) {
+		throw new Error("Cannot find module '" + req + "'.");
+	}
+	webpackContext.keys = function() { return []; };
+	webpackContext.resolve = webpackContext;
+	module.exports = webpackContext;
+	webpackContext.id = 69;
+
+
+/***/ }
 ]);
