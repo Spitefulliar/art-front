@@ -6,19 +6,18 @@ var autoprefixer = require('autoprefixer-core');
 var csswring     = require('csswring');
 var CopyPlugin = require('copy-webpack-plugin');
 
-var projectRootPath = path.join(__dirname, 'local/templates/articulmedia');      //path to root
-var entryPath = path.join(__dirname, 'local/templates/articulmedia/js');         //path to input dir
-var assetsPath = path.join(__dirname, 'local/templates/articulmedia/assets');    //path to output dir
+var projectRootPath = path.join(__dirname, '/local/templates/articulmedia');      //path to root
+var entryPath = path.join(projectRootPath, '/js');         //path to input dir
+var assetsPath = path.join(projectRootPath, '/assets');    //path to output dir
 
 var config = {
     context: entryPath,
     entry: {
-      // icof: './custom_font.font.js', //For custom svg font building 
-      // 'libs-styles': './libs-styles.js', // файл для сборки стилей библиотек
-      // bootstrap: './bootstrap.js', // файл для сборки бутстрапа
-      // 'angular-material': './angular-material.js', // файл для сборки angular material
-      styles: './styles.js', // файл для сборки стилей 
-      bundle: './index.js', // файл для сборки cкриптов, если несколько - указываем hash (entry name => filename)
+      bundle: [
+        './index.js', // файл для сборки cкриптов, если несколько - указываем hash (entry name => filename)
+        './styles.js', // файл для сборки стилей
+      ],
+      vendor: './vendor.js' // файл для сборки либ
     },
     output: {
       path: assetsPath,
@@ -31,8 +30,8 @@ var config = {
             {
               test: /\.less$/,
               exclude: /(node_modules)/,
-              // loader: ExtractTextPlugin.extract('style-loader','css-raw-loader?-minimize!less-loader') //fastest build for dev, no autoprefix
-              loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?pack=defaults!less-loader')
+              loader: ExtractTextPlugin.extract('style-loader','css-raw-loader?-minimize!postcss-loader?package=defaults!less-loader') //fastest build for dev, no autoprefix
+              // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?pack=defaults!less-loader')
               // loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize!postcss-loader?pack=defaults!less-loader?sourceMap') //sourcemap
             },
             {
@@ -43,8 +42,10 @@ var config = {
             },
             {
               test: /\.css$/,
-              exclude: /(node_modules)/,
-              loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?package=defaults')
+              // exclude: /(node_modules)/,
+              loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize')
+              // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?package=defaults')
+              // loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize')
             },
             {
               test: /\.(png|jpg|gif)$/,
@@ -80,27 +81,50 @@ var config = {
             },
             {
               test: /\.js$/ ,
-              exclude: /(node_modules|libs|\.config\.|\.font\.|\.min\.js)/,
-              loader: 'babel'
-            },
-            {
-              test: /\.font\.(js|json)$/,
-              exclude: /(node_modules)/,
-              loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader!postcss-loader?package=defaults!less-loader!fontgen-loader')
+              exclude: /(node_modules|bower_components|libs|\.config\.|\.font\.|\.min\.js)/,
+              loader: 'babel',
+              query: {
+                presets: ['es2015']
+              }
             },
             // {
             //   test: /bootstrap\.config\.js$/, 
             //   exclude: /(node_modules)/,
             //   loader: 'bootstrap-webpack'
-            // }
+            // },
+            { 
+              test: require.resolve("jquery"), 
+              loader: "expose-loader?$!expose-loader?jQuery" 
+            },
         ]
     },
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin(), //uglify
-        //new webpack.optimize.DedupePlugin(), //remove dublicated modules
+        new webpack.optimize.DedupePlugin(), //remove dublicated modules
         new webpack.DefinePlugin({
+            'NODE_ENV': JSON.stringify('develop') //setting environment variable
             // 'NODE_ENV': JSON.stringify('production'), //setting environment variable
-            'NODE_ENV': JSON.stringify('dev')
+        }),
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js"),
+        // new webpack.optimize.UglifyJsPlugin({
+        //   compress: {
+        //     warnings: false
+        //   },
+        //   mangle: false,
+        //   sourceMap: false
+        // } ),
+        new webpack.ProvidePlugin({
+          //configs
+          'NODE_ENV': 'NODE_ENV',
+          'PRODUCTION': 'NODE_ENV' == 'production',
+          'CONFIG': path.join(entryPath, "/helper_config.js"),
+          //libs
+          '$': 'jquery',
+          'jQuery': 'jquery',
+          'window.jQuery': 'jquery',
+          'Slick': 'slick-carousel',
+          // 'async': "async",
+          // 'moment': 'moment',
+          // ScrollMagic: 'scrollmagic',
         }),
         new ExtractTextPlugin('[name].css'),
         // new CopyPlugin([
@@ -119,12 +143,12 @@ var config = {
         // })
     ],
     postcss: function () {
-        return {
-            oldsup: [autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] }), csswring], //with minification
-            defaults:  [autoprefixer({ browsers: ['last 3 version'] })]
-        };
+      return {
+        oldsup: [autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] }), csswring], //with minification
+        defaults:  [autoprefixer({ browsers: ['last 3 version'] })]
+      };
     },
-    watch: false
+    watch: true
 };
 
 module.exports = config;
