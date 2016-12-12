@@ -1,20 +1,44 @@
 {% extends "layout.twig" %}
 
+{% set case = {
+  'title': 'всегда<br>отвечай<br>на звонок',
+  'content': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',
+  'date': '2014/02',
+  'logo': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+  'style': {
+    'color': '#000000',
+    'background-color': '#222222',
+    'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+  },
+  'blocks': [
+    {
+      'type': 'brief',
+      'title': 'БРИФ',
+      'content': '«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.',
+      'style': {
+        'color': '#000000',
+        'background-color': '#222222',
+        'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+      }
+    }
+  ],
+} %}
+
 
 {% block main %}
 <section class="case-1">
   <div class="container">
-    <h3 class="case-1__title">всегда<br>отвечай<br>на звонок</h3>
+    <h3 class="case-1__title">[[title | raw]]</h3>
     <p class="case-1__slogan">
-      кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX
+      [[case.title | raw]]
     </p>
     <div class="about-block">
-      <div class="about-block__item about-block__item--client" style="background-image: url('../local/templates/articulmedia/img/desktop/about-fox.jpg');">
+      <div class="about-block__item about-block__item--client" style="background-image: url('[[case.logo]]');">
         <span class="about-block__title">клиент</span>
       </div>
       <div class="about-block__item about-block__item--date">
         <span class="about-block__title">релиз</span>
-        <span class="about-block__date">2014/02</span>
+        <span class="about-block__date">[[case.date]]</span>
       </div>
       <div class="about-block__item about-block__item--project">
         <span class="about-block__title">о проекте</span>
@@ -29,7 +53,7 @@
         БРИФ
       </h2>
       <p class="brief__text">
-        «Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.
+        [[case.brief | raw]]
       </p>
     </div>
     <div class="idea">
