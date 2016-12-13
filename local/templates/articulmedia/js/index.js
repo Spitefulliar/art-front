@@ -13,5 +13,11 @@ let components = require.context('./components/', true, /^\.\/.*(module)\.js$/);
 requireAll(components);
 
 $(document).ready(function() {
-    
+    $('.slick-slider').slick({
+		  dots: true,
+		  infinite: true,
+		  speed: 300,
+		  slidesToShow: 1,
+		  arrows: false
+		});
 });
