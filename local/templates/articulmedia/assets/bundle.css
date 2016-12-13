@@ -480,12 +480,12 @@ html.remodal-is-locked {
     margin-top: 55px;
     margin-left: 10px; }
 
-.case-1 {
+.case__announce {
   padding-top: 180px;
   background: url("../img/desktop/case1.jpg") center no-repeat;
   background-size: cover;
   height: 100vh; }
-  .case-1__title {
+  .case__announce__title {
     font-size: 80px;
     font-style: normal;
     font-weight: 900;
@@ -493,7 +493,7 @@ html.remodal-is-locked {
     color: #F3E3CC;
     margin: 0 0 50px 0;
     text-transform: uppercase; }
-  .case-1__slogan {
+  .case__announce__summery {
     font-style: normal;
     font-weight: 100;
     color: #F3E3CC;

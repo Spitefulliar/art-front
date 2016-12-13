@@ -667,7 +667,7 @@ html.remodal-is-locked {
   }
 }
 
-.case-1 {
+.case__announce {
   padding-top: 180px;
   background: url('../img/desktop/case1.jpg') center no-repeat;
   background-size: cover;
@@ -683,7 +683,7 @@ html.remodal-is-locked {
     text-transform: uppercase;
   }
 
-  &__slogan {
+  &__summery {
     font-style: normal;
     font-weight: 100;
     color: $albescentWhite;

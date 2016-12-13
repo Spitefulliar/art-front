@@ -2,37 +2,61 @@
 
 {% set case = {
   'title': 'всегда<br>отвечай<br>на звонок',
-  'content': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',
+  'titleImg': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+  'summary': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',
   'date': '2014/02',
   'logo': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
   'style': {
-    'color': '#000000',
-    'background-color': '#222222',
+    'color': '#f3e3cc',
+    'background-color': '#1e2532',
     'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
   },
   'blocks': [
     {
       'type': 'brief',
-      'title': 'БРИФ',
-      'content': '«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.',
-      'style': {
-        'color': '#000000',
-        'background-color': '#222222',
-        'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
-      }
+      'brief': {
+        'title': 'БРИФ',
+        'content': '<p>«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.</p>
+        <h3>Цели кампании:</h3>
+        <ul>
+          <li>Продвижение сериала «Сосны»</li>
+          <li>Увеличение аудитории телеканала FOX</li>
+          <li>Увеличение дистрибуции телеканала</li>
+          <li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li>
+        </ul>',
+        'style': {
+          'color': '#f3e3cc',
+          'background-color': '#1e2532',
+          'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+        }
+      },
+      'idea': {
+        'title': 'Идея',
+        'content': 'погрузить пользователей 
+          в атмосферу сериала, дав возможность почувствовать 
+          себя на месте жителей мистического города, 
+          и с замиранием сердца 
+          ожидать таинственного 
+          звонка на свой телефон.',
+        'style': {
+          'color': '#000000',
+          'background-color': '#f3e3cc',
+          'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+        }
+      },
     }
   ],
 } %}
 
 
 {% block main %}
-<section class="case-1">
+<section class="case__announce">
   <div class="container">
-    <h3 class="case-1__title">[[title | raw]]</h3>
-    <p class="case-1__slogan">
-      [[case.title | raw]]
+    <h3 class="case__announce__title">[[case.title | raw]]</h3>
+    <p class="case__announce__summary">
+      [[case.content | raw]]
     </p>
-    <div class="about-block">
+    <div class="case__announce__about-block about-block">
       <div class="about-block__item about-block__item--client" style="background-image: url('[[case.logo]]');">
         <span class="about-block__title">клиент</span>
       </div>
@@ -46,31 +70,37 @@
     </div>
   </div>
 </section>
-<section class="case-2">
-  <div class="container">
-    <div class="brief">
-      <h2 class="brief__title">
-        БРИФ
-      </h2>
-      <p class="brief__text">
-        [[case.brief | raw]]
-      </p>
-    </div>
-    <div class="idea">
-      <h2 class="idea__title">
-        идея
-      </h2>
-      <p class="idea__text">
-        погрузить пользователей 
-        в атмосферу сериала, дав возможность почувствовать 
-        себя на месте жителей мистического города, 
-        и с замиранием сердца 
-        ожидать таинственного 
-        звонка на свой телефон. 
-      </p>
-    </div>
-  </div>
-</section>
+
+{% for block in case.blocks %}
+  {% if block.type == 'brief' %}
+    <section class="case__brief">
+      <div class="container">
+        <div class="brief">
+          <h2 class="brief__title">
+            БРИФ
+          </h2>
+          <p class="brief__text">
+            [[case.brief | raw]]
+          </p>
+        </div>
+        <div class="idea">
+          <h2 class="idea__title">
+            идея
+          </h2>
+          <p class="idea__text">
+            погрузить пользователей 
+            в атмосферу сериала, дав возможность почувствовать 
+            себя на месте жителей мистического города, 
+            и с замиранием сердца 
+            ожидать таинственного 
+            звонка на свой телефон. 
+          </p>
+        </div>
+      </div>
+    </section>
+  {% elseif block.type == 'brief' %}
+  {% endif %}
+{% endfor %}
 
 <section class="case-3">
   <div class="container">
