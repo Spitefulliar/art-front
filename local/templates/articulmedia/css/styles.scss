@@ -71,7 +71,10 @@ svg {
 	margin-top: 50px;
 	height: 40px;
 	display: flex;
-  position: relative;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
 	&__logo {
 		display: inline-block;
@@ -745,23 +748,44 @@ html.remodal-is-locked {
 
 .slick-slider {
 
-  position: relative;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+  
 
   &__item {
+    padding-top: 150px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     height: 100vh;
   }
+
+  &__text {
+    font-size: 40px;
+    color: $black;
+    font-weight: 100;
+    line-height: 35px;
+  }
+}
+
+.slick-slider {
+  margin: 0 !important;
 }
 
 .slick-dots {
-  background: #000;
+  bottom: 100px;
 
+  li {
+    background: #c2c2c2;
+    background: rgba(174,174,174,.6);
+    border-radius: 50%;
+
+    &.slick-active {
+      background: $white;
+    }
+
+    button {
+      display: none;
+    }
+  } 
 }
 
 
