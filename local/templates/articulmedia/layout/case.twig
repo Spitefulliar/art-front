@@ -2,14 +2,13 @@
 
 {% set case = {
   'title': 'всегда<br>отвечай<br>на звонок',
-  'titleImg': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
   'summary': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',
   'date': '2014/02',
-  'logo': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+  'logo': '../local/templates/articulmedia/img/case/case_logo.jpg',
   'style': {
     'color': '#f3e3cc',
     'background-color': '#1e2532',
-    'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+    'background-image': '../local/templates/articulmedia/img/case/case_1.jpg',
   },
   'blocks': [
     {
@@ -27,7 +26,7 @@
         'style': {
           'color': '#f3e3cc',
           'background-color': '#1e2532',
-          'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+          'background-image': '../local/templates/articulmedia/img/case/case_logo.jpg',
         }
       },
       'idea': {
@@ -41,7 +40,7 @@
         'style': {
           'color': '#000000',
           'background-color': '#f3e3cc',
-          'background-image': '../local/templates/articulmedia/img/desktop/about-fox.jpg',
+          'background-image': '../local/templates/articulmedia/img/case/case_2.jpg',
         }
       },
     }
@@ -50,13 +49,13 @@
 
 
 {% block main %}
-<section class="case__announce">
-  <div class="container">
-    <h3 class="case__announce__title">[[case.title | raw]]</h3>
-    <p class="case__announce__summary">
+<section class="case-announce case-block">
+  <div class="case-block__container">
+    <h3 class="case-announce__title">[[case.title | raw]]</h3>
+    <p class="case-announce__summary">
       [[case.content | raw]]
     </p>
-    <div class="case__announce__about-block about-block">
+    <div class="case-announce__about-block about-block">
       <div class="about-block__item about-block__item--client" style="background-image: url('[[case.logo]]');">
         <span class="about-block__title">клиент</span>
       </div>
@@ -73,8 +72,8 @@
 
 {% for block in case.blocks %}
   {% if block.type == 'brief' %}
-    <section class="case__brief">
-      <div class="container">
+    <section class="case-brief case-block">
+      <div class="case-block__container">
         <div class="brief">
           <h2 class="brief__title">
             БРИФ

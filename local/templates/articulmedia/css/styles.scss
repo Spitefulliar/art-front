@@ -2,6 +2,41 @@
 @import 'fonts.scss';
 @import 'elements.scss';
 
+//elements
+.h1 {
+  font-family: $ffreg;
+  font-size: $fsh1;
+  font-weight: $fwblack;
+  @media screen and (max-width: $screen-md) {
+    font-size: $fsh1md;
+  }
+}
+.h2 {
+  font-family: $ffreg;
+  font-size: $fsh2;
+  font-weight: $fwblack;
+  @media screen and (max-width: $screen-md) {
+    font-size: $fsh2md;
+  }
+}
+.h3 {
+  font-family: $ffreg;
+  font-size: $fsh3;
+  font-weight: $fwblack;
+  @media screen and (max-width: $screen-md) {
+    font-size: $fsh3md;
+  }
+}
+.h4 {
+  font-family: $ffreg;
+  font-size: $fsh4;
+  font-weight: $fwblack;
+  @media screen and (max-width: $screen-md) {
+    font-size: $fsh4md;
+  }
+}
+//eof elements
+
 html {
   min-height: 100%;
   padding: 0;
@@ -672,12 +707,25 @@ html.remodal-is-locked {
   }
 }
 
-.case__announce {
+.case-block {
+  &__container {
+    padding: 100px 82px 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.case-announce {
   padding-top: 180px;
   background: url('../img/desktop/case1.jpg') center no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  height: 862px;
   height: 100vh;
-
+  
   &__title {
     font-size: 80px;
     font-style: normal;
