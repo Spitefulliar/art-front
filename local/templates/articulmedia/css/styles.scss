@@ -109,15 +109,16 @@ svg {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			display: flex;
 
-			@media (max-width: $screen-sm) {
-				flex-direction: column;
-			}
 		}
 
 		&__item {
 			position: relative;
+      display: inline-block;
+
+      @media (max-width: $screen-sm) {
+        display: block;
+      }
 
 			&:hover {
 				.submenu {
