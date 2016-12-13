@@ -751,7 +751,6 @@ html.remodal-is-locked {
   
 
   &__item {
-    padding-top: 150px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -763,6 +762,10 @@ html.remodal-is-locked {
     color: $black;
     font-weight: 100;
     line-height: 35px;
+  }
+
+  &__wrap {
+    padding-top: 150px;
   }
 }
 

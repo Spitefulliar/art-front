@@ -541,7 +541,6 @@ html.remodal-is-locked {
       text-transform: uppercase; }
 
 .slick-slider__item {
-  padding-top: 150px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -552,6 +551,9 @@ html.remodal-is-locked {
   color: #000000;
   font-weight: 100;
   line-height: 35px; }
+
+.slick-slider__wrap {
+  padding-top: 150px; }
 
 .slick-slider {
   margin: 0 !important; }
