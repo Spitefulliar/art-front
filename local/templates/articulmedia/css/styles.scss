@@ -71,6 +71,7 @@ svg {
 	margin-top: 50px;
 	height: 40px;
 	display: flex;
+  position: relative;
 
 	&__logo {
 		display: inline-block;
@@ -180,13 +181,17 @@ svg {
 }
 
 .main {
-	height: 80vh;
+	// height: 80vh;
 	padding-top: 50px;
 }
 
 .content {
 
 }
+
+
+
+
 
 .footer {
 	background: rgba(204,204,204,.4);
@@ -738,11 +743,26 @@ html.remodal-is-locked {
   }
 }
 
+.slick-slider {
 
+  position: relative;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 
+  &__item {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100vh;
+  }
+}
 
+.slick-dots {
+  background: #000;
 
-
+}
 
 
 
