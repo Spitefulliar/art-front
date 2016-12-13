@@ -18,7 +18,7 @@ webpackJsonp([0],[
 
 	//reqire all files from ./components
 	function requireAll(requireContext) {
-	  return requireContext.keys().map(requireContext);
+			return requireContext.keys().map(requireContext);
 	}
 
 	//custom modules
@@ -26,7 +26,15 @@ webpackJsonp([0],[
 	// components.keys().forEach(components);
 	requireAll(components);
 
-	$(document).ready(function () {});
+	$(document).ready(function () {
+			$('.slick-slider').slick({
+					dots: true,
+					infinite: true,
+					speed: 300,
+					slidesToShow: 1,
+					arrows: false
+			});
+	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(2)))
 
 /***/ },
