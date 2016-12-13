@@ -1,6 +1,5 @@
 @import 'variables.scss';
 @import 'fonts.scss';
-@import 'elements.scss';
 
 //elements
 .h1 {
@@ -106,7 +105,10 @@ svg {
 	margin-top: 50px;
 	height: 40px;
 	display: flex;
-  position: relative;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
 	&__logo {
 		display: inline-block;
@@ -142,15 +144,16 @@ svg {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			display: flex;
 
-			@media (max-width: $screen-sm) {
-				flex-direction: column;
-			}
 		}
 
 		&__item {
 			position: relative;
+      display: inline-block;
+
+      @media (max-width: $screen-sm) {
+        display: block;
+      }
 
 			&:hover {
 				.submenu {
@@ -793,11 +796,7 @@ html.remodal-is-locked {
 
 .slick-slider {
 
-  position: relative;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+  
 
   &__item {
     background-repeat: no-repeat;
@@ -805,11 +804,39 @@ html.remodal-is-locked {
     background-size: cover;
     height: 100vh;
   }
+
+  &__text {
+    font-size: 40px;
+    color: $black;
+    font-weight: 100;
+    line-height: 35px;
+  }
+
+  &__wrap {
+    padding-top: 150px;
+  }
+}
+
+.slick-slider {
+  margin: 0 !important;
 }
 
 .slick-dots {
-  background: #000;
+  bottom: 100px;
 
+  li {
+    background: #c2c2c2;
+    background: rgba(174,174,174,.6);
+    border-radius: 50%;
+
+    &.slick-active {
+      background: $white;
+    }
+
+    button {
+      display: none;
+    }
+  } 
 }
 
 
