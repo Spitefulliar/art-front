@@ -67,9 +67,9 @@ svg {
 }
 
 .header {
-	margin-top: 50px;
-	height: 40px;
-	display: flex;
+  margin-top: 50px;
+  height: 40px;
+  display: flex;
   z-index: 2;
   position: absolute;
   left: 50%;
@@ -101,6 +101,52 @@ svg {
 			display: none;
 		}
 	}
+
+    &__mobile-toggle {
+      display: none;
+      width: 40px;
+      height: 40px;
+      background: $alto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+
+      &__line {
+        position: absolute;
+        width: 75%;
+        height: 2px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        background: $black;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: -7px;
+          left: 0;
+          height: 2px;
+          background: $black;
+          width: 100%;
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          bottom: -7px;
+          left: 0;
+          width: 100%;
+          background: $black;
+          height: 2px;
+        }
+
+      }
+
+      @media (max-width: $screen-md) {
+        display: inline-block;
+      }
+    }
 
 	.nav {
 		background: $silver;
@@ -217,14 +263,18 @@ svg {
 		display: inline-block;
 		margin-right: 95px;
 		@media (max-width: $screen-md) {
-
+          margin: 0;
 		}
 	}
 
 	&__icon {
-		display: inline-block;
-		margin-right: 25px;
-		vertical-align: middle;
+      display: inline-block;
+      margin-right: 25px;
+      vertical-align: middle;
+
+      @media (max-width: $screen-md) {
+        display: none;
+      }
 	}
 
 	&__img {
@@ -752,8 +802,6 @@ html.remodal-is-locked {
 }
 
 .slick-slider {
-
-  
 
   &__item {
     background-repeat: no-repeat;
