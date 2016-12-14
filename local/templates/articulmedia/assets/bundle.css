@@ -120,12 +120,15 @@ svg {
     .header__link img {
       max-width: 100%;
       display: block; }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .header__link {
         display: none; } }
   .header .nav {
     background: #cccccc;
     background: rgba(204, 204, 204, 0.2); }
+    @media (max-width: 1024px) {
+      .header .nav {
+        display: none; } }
     .header .nav__list {
       margin: 0;
       padding: 0;
