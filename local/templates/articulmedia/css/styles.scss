@@ -107,16 +107,39 @@ svg {
       width: 40px;
       height: 40px;
       background: $alto;
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
 
       &__line {
         position: absolute;
-        width: 100%;
+        width: 75%;
         height: 2px;
-        left: 0;
+        left: 50%;
         top: 50%;
-        
+        transform: translateX(-50%);
         background: $black;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: -7px;
+          left: 0;
+          height: 2px;
+          background: $black;
+          width: 100%;
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          bottom: -7px;
+          left: 0;
+          width: 100%;
+          background: $black;
+          height: 2px;
+        }
 
       }
 
@@ -240,14 +263,18 @@ svg {
 		display: inline-block;
 		margin-right: 95px;
 		@media (max-width: $screen-md) {
-
+          margin: 0;
 		}
 	}
 
 	&__icon {
-		display: inline-block;
-		margin-right: 25px;
-		vertical-align: middle;
+      display: inline-block;
+      margin-right: 25px;
+      vertical-align: middle;
+
+      @media (max-width: $screen-md) {
+        display: none;
+      }
 	}
 
 	&__img {
