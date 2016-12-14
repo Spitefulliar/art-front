@@ -12,7 +12,7 @@
   },
   'blocks': [
     {
-      'type': 'brief',
+      'type': 'briefidea',
       'brief': {
         'title': 'БРИФ',
         'content': '<p>«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.</p>
@@ -49,11 +49,11 @@
 
 
 {% block main %}
-<section class="case-announce case-block">
+<section class="case-announce case-block" style="color: [[case.style.color]]; background-color: [[ case.style['background-color'] ]]; background-image: url('[[ case.style['background-image'] ]]');">
   <div class="case-block__container">
-    <h3 class="case-announce__title">[[case.title | raw]]</h3>
+    <h2 class="case-announce__title">[[case.title | raw]]</h2>
     <p class="case-announce__summary">
-      [[case.content | raw]]
+      [[case.summary | raw]]
     </p>
     <div class="case-announce__about-block about-block">
       <div class="about-block__item about-block__item--client" style="background-image: url('[[case.logo]]');">
@@ -71,22 +71,24 @@
 </section>
 
 {% for block in case.blocks %}
-  {% if block.type == 'brief' %}
-    <section class="case-brief case-block">
-      <div class="case-block__container">
-        <div class="brief">
-          <h2 class="brief__title">
+  {% if block.type == 'briefidea' %}
+    <section class="case-briefidea">
+      <div class="case-brief case-block" style="color: [[briefidea.brief.style.color]]; background-color: [[ briefidea.brief.style['background-color'] ]]; background-image: url('[[ briefidea.brief.style['background-image'] ]]');">
+        <div class="case-block__container">
+          <h2 class="case-brief__title">
             БРИФ
           </h2>
-          <p class="brief__text">
+          <p class="case-brief__text">
             [[case.brief | raw]]
           </p>
         </div>
-        <div class="idea">
-          <h2 class="idea__title">
+      </div>
+      <div class="case-idea case-block" style="color: [[briefidea.idea.style.color]]; background-color: [[ briefidea.idea.style['background-color'] ]]; background-image: url('[[ briefidea.idea.style['background-image'] ]]');">
+        <div class="case-block__container">
+          <h2 class="case-idea__title">
             идея
           </h2>
-          <p class="idea__text">
+          <p class="case-idea__text">
             погрузить пользователей 
             в атмосферу сериала, дав возможность почувствовать 
             себя на месте жителей мистического города, 

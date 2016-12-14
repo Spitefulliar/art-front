@@ -1,6 +1,11 @@
 //misc
 $node_modules: '../../../../node_modules/';
 
+//base vars
+$scrh: 865; //layout screen height in px
+$scrw: 1400; // layout screen width in px
+//eof base vars
+
 //container
 $container-max-width: 1284px;
 
@@ -40,11 +45,11 @@ $fs: 18px;
 
 
 //font sizes
-$fsh1md: 140px/2;
-$fsh2md: 120px/2;
-$fsh3md: 60px/2;
-$fsh4md: 48px/2;
-$fsmd: 36px/2;
-@media screen and (max-width: $screen-md) {
-}
+$fsh1md: 70px;
+$fsh2md: 60px;
+$fsh3md: 30px;
+$fsh4md: 24px;
+$fsmd: 18px;
+
+// @media screen and (max-width: $screen-md) {}
 

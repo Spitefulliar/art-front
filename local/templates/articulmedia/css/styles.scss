@@ -1,37 +1,63 @@
 @import 'variables.scss';
 @import 'fonts.scss';
+@import '../../../../node_modules/bourbon-neat/app/assets/stylesheets/neat.scss';
+
+/*
+ * functions
+ */
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function vh($size) {
+  @return (strip-unit($size)/$scrh*100)+vh;
+}
+
+@function vw($size) {
+  @return (strip-unit($size)/$scrw*100)+vw;
+}
+
+/*
+ * eof functions
+ */
 
 //elements
-.h1 {
+h1 {
   font-family: $ffreg;
-  font-size: $fsh1;
+  font-size: vh($fsh1);
   font-weight: $fwblack;
   @media screen and (max-width: $screen-md) {
-    font-size: $fsh1md;
+    font-size: vh($fsh1md);
   }
 }
-.h2 {
+h2 {
   font-family: $ffreg;
-  font-size: $fsh2;
+  font-size: vh($fsh2);
   font-weight: $fwblack;
+  line-height: 1.2;
   @media screen and (max-width: $screen-md) {
-    font-size: $fsh2md;
+    font-size: vh($fsh2md);
   }
 }
-.h3 {
+h3 {
   font-family: $ffreg;
-  font-size: $fsh3;
+  font-size: vh($fsh3);
   font-weight: $fwblack;
+  line-height: 1.2;
   @media screen and (max-width: $screen-md) {
-    font-size: $fsh3md;
+    font-size: vh($fsh3md);
   }
 }
-.h4 {
+h4 {
   font-family: $ffreg;
-  font-size: $fsh4;
+  font-size: vh($fsh4);
   font-weight: $fwblack;
+  line-height: 1.2;
   @media screen and (max-width: $screen-md) {
-    font-size: $fsh4md;
+    font-size: vh($fsh4md);
   }
 }
 //eof elements
@@ -712,7 +738,8 @@ html.remodal-is-locked {
 
 .case-block {
   &__container {
-    padding: 100px 82px 0;
+    min-height: 100vh;
+    padding: vh(100px) vw(82px) 0;
     display: block;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -726,11 +753,8 @@ html.remodal-is-locked {
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 862px;
-  height: 100vh;
-  
   &__title {
-    font-size: 80px;
+    // font-size: 80px;
     font-style: normal;
     font-weight: 900;
     line-height: 65px;
@@ -747,50 +771,58 @@ html.remodal-is-locked {
     line-height: 35px;
     margin: 0 0 85px 0;
   }
+  &__about-block {
+    padding-bottom: 150px;
+  }
 }
 
-.case-2 {
+.case-briefidea {
   overflow: hidden;
-  background:transparent url('../img/desktop/idea-bg.jpg') left top no-repeat;
-  .brief {
-    display: inline-block;
-    width: 45%;
-    background: $ebonyClay;
-    padding: 175px 80px 0 80px;
-
-    &__title {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 65px;
-      color: $albescentWhite;
-      margin: 0 0 50px 0;
-      text-transform: uppercase;
-    }
-
-    &__text {
-      font-size: 18px;
-      color: $albescentWhite;
-      font-weight: 100;
-      font-style: normal;
+  @include outer-container;
+  max-width: 100%;
+  .case-block {
+    @include span-columns(6);
+    @include omega();
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+  }
+  @media screen and (max-width: $screen-md) {
+    .case-block {
+      @include span-columns(12);
     }
   }
+}
+.case-brief {
+  &__title {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 65px;
+    color: $albescentWhite;
+    margin: 0 0 50px 0;
+    text-transform: uppercase;
+  }
 
-  .idea {
-    display: inline-block;
-    padding: 175px 80px 0 80px;
-    width: 55%;
-    background:transparent url('../img/desktop/idea-bg.jpg') left top no-repeat;
-    
-    &__title {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 65px;
-      color: $black;
-      margin: 0 0 50px 0;
-      text-transform: uppercase;
-    }
+  &__text {
+    font-size: 18px;
+    color: $albescentWhite;
+    font-weight: 100;
+    font-style: normal;
+  }
+}
+
+.case-idea {
+  &__title {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 65px;
+    color: $black;
+    margin: 0 0 50px 0;
+    text-transform: uppercase;
   }
 }
 
