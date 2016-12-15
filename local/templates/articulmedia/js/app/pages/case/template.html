@@ -1,0 +1,104 @@
+<span ng-init="case = {
+  'title': 'всегда<br>отвечай<br>на звонок',
+  'summary': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',
+  'date': '2014/02',
+  'logo': '../local/templates/articulmedia/img/case/case_logo.jpg',
+  'style': {
+    'color': '#f3e3cc',
+    'background-color': '#1e2532',
+    'background-image': '../local/templates/articulmedia/img/case/case_1.jpg',
+  },
+  'blocks': [
+    {
+      'type': 'briefidea',
+      'brief': {
+        'title': 'БРИФ',
+        'content': '<p>«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.</p>
+        <h3>Цели кампании:</h3>
+        <ul>
+          <li>Продвижение сериала «Сосны»</li>
+          <li>Увеличение аудитории телеканала FOX</li>
+          <li>Увеличение дистрибуции телеканала</li>
+          <li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li>
+        </ul>',
+        'style': {
+          'color': '#f3e3cc',
+          'background-color': '#1e2532',
+          'background-image': '../local/templates/articulmedia/img/case/case_logo.jpg',
+        }
+      },
+      'idea': {
+        'title': 'Идея',
+        'content': 'погрузить пользователей 
+          в атмосферу сериала, дав возможность почувствовать 
+          себя на месте жителей мистического города, 
+          и с замиранием сердца 
+          ожидать таинственного 
+          звонка на свой телефон.',
+        'style': {
+          'color': '#000000',
+          'background-color': '#f3e3cc',
+          'background-image': '../local/templates/articulmedia/img/case/case_2.jpg',
+        }
+      },
+    }
+  ],
+  "
+  ></span> 
+
+<section class="case-announce case-block" style="color: {{case.style.color}}; background-color: {{ case.style['background-color'] }}; background-image: url('{{ case.style['background-image'] }}');">
+  <div class="case-block__container">
+    <h2 class="case-announce__title">{{case.title}}</h2>
+    <p class="case-announce__summary">
+      {{case.summary}}
+    </p>
+    <div class="case-announce__about-block about-block">
+      <div class="about-block__item about-block__item--client" style="background-image: url('{{case.logo}}');">
+        <span class="about-block__title">клиент</span>
+      </div>
+      <div class="about-block__item about-block__item--date">
+        <span class="about-block__title">релиз</span>
+        <span class="about-block__date">{{case.date}}</span>
+      </div>
+      <div class="about-block__item about-block__item--project">
+        <span class="about-block__title">о проекте</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-briefidea" ng-repeat="block in case.blocks">
+  <div class="case-brief case-block" style="color: {{block.brief.style.color}}; background-color: {{ block.brief.style['background-color'] }}; background-image: url('{{ briefidea.brief.style['background-image'] }}');">
+    <div class="case-block__container">
+      <h2 class="case-brief__title">
+        БРИФ
+      </h2>
+      <p class="case-brief__text">
+        {{block.brief}}
+      </p>
+    </div>
+  </div>
+  <div class="case-idea case-block" style="color: {{block.idea.style.color}}; background-color: {{ block.idea.style['background-color'] }}; background-image: url('{{ block.idea.style['background-image'] }}');">
+    <div class="case-block__container">
+      <h2 class="case-idea__title">
+        идея
+      </h2>
+      <p class="case-idea__text">
+        погрузить пользователей 
+        в атмосферу сериала, дав возможность почувствовать 
+        себя на месте жителей мистического города, 
+        и с замиранием сердца 
+        ожидать таинственного 
+        звонка на свой телефон. 
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="case-3">
+  <div class="container">
+    
+  </div>
+</section>
+
+{% endblock %}

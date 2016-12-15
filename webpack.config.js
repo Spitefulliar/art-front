@@ -152,6 +152,12 @@ var config = {
         defaults:  [autoprefixer({ browsers: ['last 3 version'] })]
       };
     },
+    htmlLoader: {
+      ignoreCustomFragments: [/\{\{.*?}}/],
+      root: path.resolve(__dirname),
+      attrs: ['link:href']
+      // attrs: ['img:src', 'link:href']
+    },
     watch: true
 };
 

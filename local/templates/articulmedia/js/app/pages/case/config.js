@@ -1,6 +1,6 @@
 export default  {  
-  name: 'Index',
+  name: 'Case',
   title: 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения',
-  url: '/',
-  state: 'index',
+  state: 'case',
+  url: '/case/',
 };

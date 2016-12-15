@@ -1052,8 +1052,8 @@ webpackJsonp([0],[
 	var MODULE_CONFIG = ['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
 	    //mode declaration
-	    // $locationProvider.html5Mode(false);//.hashPrefix('!'); 
-	    $locationProvider.html5Mode(true); //.hashPrefix('!'); 
+	    $locationProvider.html5Mode(false); //.hashPrefix('!'); 
+	    // $locationProvider.html5Mode(true);//.hashPrefix('!'); 
 
 	    // let config = require('../../helper_config.js');
 	    // let viewsDir = "/dist/views/pages/";
@@ -77147,6 +77147,7 @@ webpackJsonp([0],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
+		"./case/module.js": 115,
 		"./index/module.js": 91
 	};
 	function webpackContext(req) {
@@ -77165,35 +77166,10 @@ webpackJsonp([0],[
 
 /***/ },
 /* 91 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _route = __webpack_require__(93);
-
-	var _route2 = _interopRequireDefault(_route);
-
-	var _controller = __webpack_require__(94);
-
-	var _controller2 = _interopRequireDefault(_controller);
-
-	var _config = __webpack_require__(92);
-
-	var _config2 = _interopRequireDefault(_config);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var PAGE_NAME = _config2.default.name;
-	// const Routing = require('./route');
-	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
-
-/***/ },
+[120, 92, 95, 93],
 /* 92 */
+[121, 93, 94],
+/* 93 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -77204,60 +77180,18 @@ webpackJsonp([0],[
 	exports.default = {
 	  name: 'Index',
 	  title: 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения',
-	  url: '/'
+	  url: '/',
+	  state: 'index'
 	};
 
 /***/ },
-/* 93 */
-/***/ function(module, exports, __webpack_require__) {
+/* 94 */
+/***/ function(module, exports) {
 
-	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _config = __webpack_require__(92);
-
-	var _config2 = _interopRequireDefault(_config);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var template = __webpack_require__(95);
-	// import controller from './controller';
-
-	var PAGE_NAME = _config2.default.name;
-	var PAGE_STATE = _config2.default.state;
-	var PAGE_TITLE = _config2.default.title;
-
-	// function routing($stateProvider) {
-	//   $stateProvider
-	//     .state('index', {
-	//       url: '/',
-	//       template: template,
-	//       controller: controller,
-	//       controllerAs: 'pageCtrl'
-	//     });
-	// }
-
-	// routing.$inject = ['$stateProvider'];
-
-	// module.exports = routing;
-
-	var routing = ['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-	  $stateProvider.state('index', {
-	    url: '/',
-	    template: template,
-	    controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
-	    controllerAs: 'pageCtrl'
-	  });
-	}];
-
-	exports.default = routing;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	module.exports = "<div class=\"slick-slider\">\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/case1.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg2.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -77276,12 +77210,6 @@ webpackJsonp([0],[
 
 
 	}];
-
-/***/ },
-/* 95 */
-/***/ function(module, exports) {
-
-	module.exports = "<h1>Index</h1>";
 
 /***/ },
 /* 96 */
@@ -77340,6 +77268,99 @@ webpackJsonp([0],[
 	var MODULE_NAME = _config2.default.name;
 
 	exports.default = angular.module(CONFIG.APP.PREFIX + MODULE_NAME, []).controller(CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default).directive(CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.DIRECTIVE_POSTFIX, _directive2.default).service(CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, _service2.default);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+
+/***/ },
+/* 115 */
+[120, 116, 119, 117],
+/* 116 */
+[121, 117, 118],
+/* 117 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'Case',
+	  title: 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения',
+	  state: 'case',
+	  url: '/case/'
+	};
+
+/***/ },
+/* 118 */
+/***/ function(module, exports) {
+
+	module.exports = "<span ng-init=\"case = {\r\n  'title': 'всегда<br>отвечай<br>на звонок',\r\n  'summary': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',\r\n  'date': '2014/02',\r\n  'logo': '../local/templates/articulmedia/img/case/case_logo.jpg',\r\n  'style': {\r\n    'color': '#f3e3cc',\r\n    'background-color': '#1e2532',\r\n    'background-image': '../local/templates/articulmedia/img/case/case_1.jpg',\r\n  },\r\n  'blocks': [\r\n    {\r\n      'type': 'briefidea',\r\n      'brief': {\r\n        'title': 'БРИФ',\r\n        'content': '<p>«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.</p>\r\n        <h3>Цели кампании:</h3>\r\n        <ul>\r\n          <li>Продвижение сериала «Сосны»</li>\r\n          <li>Увеличение аудитории телеканала FOX</li>\r\n          <li>Увеличение дистрибуции телеканала</li>\r\n          <li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li>\r\n        </ul>',\r\n        'style': {\r\n          'color': '#f3e3cc',\r\n          'background-color': '#1e2532',\r\n          'background-image': '../local/templates/articulmedia/img/case/case_logo.jpg',\r\n        }\r\n      },\r\n      'idea': {\r\n        'title': 'Идея',\r\n        'content': 'погрузить пользователей \r\n          в атмосферу сериала, дав возможность почувствовать \r\n          себя на месте жителей мистического города, \r\n          и с замиранием сердца \r\n          ожидать таинственного \r\n          звонка на свой телефон.',\r\n        'style': {\r\n          'color': '#000000',\r\n          'background-color': '#f3e3cc',\r\n          'background-image': '../local/templates/articulmedia/img/case/case_2.jpg',\r\n        }\r\n      },\r\n    }\r\n  ],\"></span> \r\n\r\n<section class=\"case-announce case-block\" style=\"color: {{case.style.color}}; background-color: {{ case.style['background-color'] }}; background-image: url('{{ case.style['background-image'] }}');\">\r\n  <div class=\"case-block__container\">\r\n    <h2 class=\"case-announce__title\">{{case.title}}</h2>\r\n    <p class=\"case-announce__summary\">\r\n      {{case.summary}}\r\n    </p>\r\n    <div class=\"case-announce__about-block about-block\">\r\n      <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('{{case.logo}}');\">\r\n        <span class=\"about-block__title\">клиент</span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--date\">\r\n        <span class=\"about-block__title\">релиз</span>\r\n        <span class=\"about-block__date\">{{case.date}}</span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--project\">\r\n        <span class=\"about-block__title\">о проекте</span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"case-briefidea\">\r\n  <div class=\"case-brief case-block\" style=\"color: {{briefidea.brief.style.color}}; background-color: {{ briefidea.brief.style['background-color'] }}; background-image: url('{{ briefidea.brief.style['background-image'] }}');\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-brief__title\">\r\n        БРИФ\r\n      </h2>\r\n      <p class=\"case-brief__text\">\r\n        {{case.brief}}\r\n      </p>\r\n    </div>\r\n  </div>\r\n  <div class=\"case-idea case-block\" style=\"color: {{briefidea.idea.style.color}}; background-color: {{ briefidea.idea.style['background-color'] }}; background-image: url('{{ briefidea.idea.style['background-image'] }}');\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-idea__title\">\r\n        идея\r\n      </h2>\r\n      <p class=\"case-idea__text\">\r\n        погрузить пользователей \r\n        в атмосферу сериала, дав возможность почувствовать \r\n        себя на месте жителей мистического города, \r\n        и с замиранием сердца \r\n        ожидать таинственного \r\n        звонка на свой телефон. \r\n      </p>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"case-3\">\r\n  <div class=\"container\">\r\n    \r\n  </div>\r\n</section>\r\n\r\n{% endblock %}\r\n";
+
+/***/ },
+/* 119 */
+95,
+/* 120 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
+
+	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _route = __webpack_require__(__webpack_module_template_argument_0__);
+
+	var _route2 = _interopRequireDefault(_route);
+
+	var _controller = __webpack_require__(__webpack_module_template_argument_1__);
+
+	var _controller2 = _interopRequireDefault(_controller);
+
+	var _config = __webpack_require__(__webpack_module_template_argument_2__);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var PAGE_NAME = _config2.default.name;
+	// const Routing = require('./route');
+	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+
+/***/ },
+/* 121 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__) {
+
+	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _config = __webpack_require__(__webpack_module_template_argument_0__);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var template = __webpack_require__(__webpack_module_template_argument_1__);
+	// import controller from './controller';
+
+	var PAGE_NAME = _config2.default.name;
+	var PAGE_STATE = _config2.default.state;
+	var PAGE_URL = _config2.default.url;
+	var PAGE_TITLE = _config2.default.title;
+
+	var routing = ['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+	  $stateProvider.state(PAGE_STATE, {
+	    url: PAGE_URL,
+	    template: template,
+	    controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
+	    controllerAs: 'pageCtrl'
+	  });
+	}];
+
+	exports.default = routing;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
 
 /***/ }
