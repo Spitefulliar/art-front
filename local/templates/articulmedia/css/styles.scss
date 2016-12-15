@@ -1,6 +1,6 @@
 @import 'variables.scss';
 @import 'fonts.scss';
-@import '../../../../node_modules/bourbon-neat/app/assets/stylesheets/neat.scss';
+// @import '../../../../node_modules/bourbon-neat/app/assets/stylesheets/neat.scss';
 
 /*
  * functions
@@ -833,11 +833,11 @@ html.remodal-is-locked {
 
 .case-briefidea {
   overflow: hidden;
-  @include outer-container;
+  // @include outer-container;
   max-width: 100%;
   .case-block {
-    @include span-columns(6);
-    @include omega();
+    // @include span-columns(6);
+    // @include omega();
     background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -846,7 +846,7 @@ html.remodal-is-locked {
   }
   @media screen and (max-width: $screen-md) {
     .case-block {
-      @include span-columns(12);
+      // @include span-columns(12);
     }
   }
 }

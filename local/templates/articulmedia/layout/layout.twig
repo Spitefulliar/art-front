@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" ng-app="app" art-main-dir>
 <head>
-    <title>Articul</title>
+    <title ng-bind="pageData.title || 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения'">Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base href="/">
     <!-- <link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16"> -->
     <!-- <link rel="icon" type="image/png" href="favicon32x32.ico" sizes="32x32"> -->
 
@@ -26,6 +27,9 @@
 </head>
 
 <body>
+
+<ui-view></ui-view>
+
 <!-- header -->
 {% block header %}
 <header class="header container">

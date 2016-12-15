@@ -40,12 +40,6 @@
   font-weight: 100;
   font-style: normal; }
 
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /*
  * functions
  */
@@ -604,33 +598,11 @@ html.remodal-is-locked {
 
 .case-briefidea {
   overflow: hidden;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 100%; }
-  .case-briefidea::after {
-    clear: both;
-    content: "";
-    display: block; }
   .case-briefidea .case-block {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-right: 0;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover; }
-    .case-briefidea .case-block:last-child {
-      margin-right: 0; }
-  @media screen and (max-width: 1024px) {
-    .case-briefidea .case-block {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .case-briefidea .case-block:last-child {
-        margin-right: 0; } }
 
 .case-brief__title {
   font-size: 80px;

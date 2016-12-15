@@ -1,6 +1,6 @@
-// reqiurements
-var jquery = window.$ = window.jQuery = require('jquery');
-var sprite = require('./sprite.js');
+import sprite from './sprite.js'; //Генератор svg спрайта
+import app from './app/app.js'; //angular app
+
 
 //reqire all files from ./components
 function requireAll(requireContext) {
@@ -8,9 +8,9 @@ function requireAll(requireContext) {
 }
 
 //custom modules
-let components = require.context('./components/', true, /^\.\/.*(module)\.js$/);
+// let components = require.context('./components/', true, /^\.\/.*(module)\.js$/);
 // components.keys().forEach(components);
-requireAll(components);
+// requireAll(components);
 
 $(document).ready(function() {
     $('.slick-slider').slick({

@@ -28,6 +28,10 @@ var config = {
     module: {
         loaders: [
             {
+              test: /\.html$/,
+              loader: 'html-loader'
+            },
+            {
               test: /\.less$/,
               exclude: /(node_modules)/,
               loader: ExtractTextPlugin.extract('style-loader','css-raw-loader?-minimize!postcss-loader?package=defaults!less-loader') //fastest build for dev, no autoprefix

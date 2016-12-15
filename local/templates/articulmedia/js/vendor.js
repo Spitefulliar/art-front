@@ -1,6 +1,5 @@
 //vendor libs
 require('jquery');
-require('remodal');
 import slick from 'slick-carousel';
 
 
