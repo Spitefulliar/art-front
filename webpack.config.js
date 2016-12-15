@@ -28,6 +28,10 @@ var config = {
     module: {
         loaders: [
             {
+              test: /\.html$/,
+              loader: 'html-loader'
+            },
+            {
               test: /\.less$/,
               exclude: /(node_modules)/,
               loader: ExtractTextPlugin.extract('style-loader','css-raw-loader?-minimize!postcss-loader?package=defaults!less-loader') //fastest build for dev, no autoprefix
@@ -147,6 +151,12 @@ var config = {
         oldsup: [autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] }), csswring], //with minification
         defaults:  [autoprefixer({ browsers: ['last 3 version'] })]
       };
+    },
+    htmlLoader: {
+      ignoreCustomFragments: [/\{\{.*?}}/],
+      root: path.resolve(__dirname),
+      attrs: ['link:href']
+      // attrs: ['img:src', 'link:href']
     },
     watch: true
 };

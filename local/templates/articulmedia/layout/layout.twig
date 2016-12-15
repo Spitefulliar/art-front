@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" ng-app="app" art-main-dir>
 <head>
-    <title>Articul</title>
+    <title ng-bind="pageData.title || 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения'">Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base href="/">
     <!-- <link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16"> -->
     <!-- <link rel="icon" type="image/png" href="favicon32x32.ico" sizes="32x32"> -->
 
@@ -77,111 +78,7 @@
 {% endblock %}
 
 {% block main %}
-
-<div class="slick-slider">
-  <div class="slick-slider__item" style="background-image: url('../local/templates/articulmedia/img/desktop/bg.jpg');">
-    <div class="container">
-      <div class="slick-slider__wrap">
-        <div>
-          <img src="../local/templates/articulmedia/img/desktop/hair.png" alt="">
-        </div>
-        <p class="slick-slider__text">
-          рекламная кампания<br>
-          в социальных сетях<br>
-          и landing-page<br>
-          мероприятия
-        </p>
-        <div class="about-block">
-          <div class="about-block__item about-block__item--client" style="background-image: url('../local/templates/articulmedia/img/desktop/about-fox.jpg');">
-            <span class="about-block__title">клиент</span>
-          </div>
-          <div class="about-block__item about-block__item--date">
-            <span class="about-block__title">релиз</span>
-            <span class="about-block__date">2014/02</span>
-          </div>
-          <div class="about-block__item about-block__item--project">
-            <span class="about-block__title">о проекте</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slick-slider__item" style="background-image: url('../local/templates/articulmedia/img/desktop/case1.jpg');">
-    <div class="container">
-      <div class="slick-slider__wrap">
-        <div>
-          <img src="../local/templates/articulmedia/img/desktop/hair.png" alt="">
-        </div>
-        <p class="slick-slider__text">
-          рекламная кампания<br>
-          в социальных сетях<br>
-          и landing-page<br>
-          мероприятия
-        </p>
-        <div class="about-block">
-          <div class="about-block__item about-block__item--client" style="background-image: url('../local/templates/articulmedia/img/desktop/about-fox.jpg');">
-            <span class="about-block__title">клиент</span>
-          </div>
-          <div class="about-block__item about-block__item--date">
-            <span class="about-block__title">релиз</span>
-            <span class="about-block__date">2014/02</span>
-          </div>
-          <div class="about-block__item about-block__item--project">
-            <span class="about-block__title">о проекте</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slick-slider__item" style="background-image: url('../local/templates/articulmedia/img/desktop/bg2.jpg');">
-    <div class="container">
-      <div class="slick-slider__wrap">
-        <div>
-          <img src="../local/templates/articulmedia/img/desktop/hair.png" alt="">
-        </div>
-        <p class="slick-slider__text">
-          рекламная кампания<br>
-          в социальных сетях<br>
-          и landing-page<br>
-          мероприятия
-        </p>
-        <div class="about-block">
-          <div class="about-block__item about-block__item--client" style="background-image: url('../local/templates/articulmedia/img/desktop/about-fox.jpg');">
-            <span class="about-block__title">клиент</span>
-          </div>
-          <div class="about-block__item about-block__item--date">
-            <span class="about-block__title">релиз</span>
-            <span class="about-block__date">2014/02</span>
-          </div>
-          <div class="about-block__item about-block__item--project">
-            <span class="about-block__title">о проекте</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- <main class="main remodal-bg">
-  <section class="content">
-      <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nobis tempore vero, sapiente, modi cumque delectus, sed veritatis eligendi quibusdam facilis libero voluptatibus ad quaerat accusamus hic fugiat quod nam. lorem*50</p>
-     <a data-remodal-target="modal">Call the</a>
-      </div>
-  </section>
-
-  <div class="remodal" data-remodal-id="modal"
-    data-remodal-options="hashTracking: false">
-    <button data-remodal-action="close" class="remodal-close"></button>
-    <h1>Remodal</h1>
-    <p>
-      Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
-    </p>
-    <br>
-    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-    <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
-  </div>
-</main>  -->
+<ui-view></ui-view>
 {% endblock %}
 
 {% block test %}

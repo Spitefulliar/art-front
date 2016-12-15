@@ -40,6 +40,47 @@
   font-weight: 100;
   font-style: normal; }
 
+/*
+ * functions
+ */
+/*
+ * eof functions
+ */
+h1 {
+  font-family: "Articul";
+  font-size: 13.87283vh;
+  font-weight: 900; }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 8.09249vh; } }
+
+h2 {
+  font-family: "Articul";
+  font-size: 9.24855vh;
+  font-weight: 900;
+  line-height: 1.2; }
+  @media screen and (max-width: 1024px) {
+    h2 {
+      font-size: 6.93642vh; } }
+
+h3 {
+  font-family: "Articul";
+  font-size: 4.62428vh;
+  font-weight: 900;
+  line-height: 1.2; }
+  @media screen and (max-width: 1024px) {
+    h3 {
+      font-size: 3.46821vh; } }
+
+h4 {
+  font-family: "Articul";
+  font-size: 2.77457vh;
+  font-weight: 900;
+  line-height: 1.2; }
+  @media screen and (max-width: 1024px) {
+    h4 {
+      font-size: 2.77457vh; } }
+
 html {
   min-height: 100%;
   padding: 0;
@@ -528,61 +569,64 @@ html.remodal-is-locked {
     margin-top: 55px;
     margin-left: 10px; }
 
-.case-1 {
+.case-block__container {
+  min-height: 100vh;
+  padding: 11.56069vh 5.85714vw 0;
+  display: block;
+  box-sizing: border-box; }
+
+.case-announce {
   padding-top: 180px;
   background: url("../img/desktop/case1.jpg") center no-repeat;
-  background-size: cover;
-  height: 100vh; }
-  .case-1__title {
-    font-size: 80px;
+  background-size: cover; }
+  .case-announce__title {
     font-style: normal;
     font-weight: 900;
     line-height: 65px;
     color: #F3E3CC;
     margin: 0 0 50px 0;
     text-transform: uppercase; }
-  .case-1__slogan {
+  .case-announce__summery {
     font-style: normal;
     font-weight: 100;
     color: #F3E3CC;
     font-size: 40px;
     line-height: 35px;
     margin: 0 0 85px 0; }
+  .case-announce__about-block {
+    padding-bottom: 150px; }
 
-.case-2 {
+.case-briefidea {
   overflow: hidden;
-  background: transparent url("../img/desktop/idea-bg.jpg") left top no-repeat; }
-  .case-2 .brief {
-    display: inline-block;
-    width: 45%;
-    background: #1E2532;
-    padding: 175px 80px 0 80px; }
-    .case-2 .brief__title {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 65px;
-      color: #F3E3CC;
-      margin: 0 0 50px 0;
-      text-transform: uppercase; }
-    .case-2 .brief__text {
-      font-size: 18px;
-      color: #F3E3CC;
-      font-weight: 100;
-      font-style: normal; }
-  .case-2 .idea {
-    display: inline-block;
-    padding: 175px 80px 0 80px;
-    width: 55%;
-    background: transparent url("../img/desktop/idea-bg.jpg") left top no-repeat; }
-    .case-2 .idea__title {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 65px;
-      color: #000000;
-      margin: 0 0 50px 0;
-      text-transform: uppercase; }
+  max-width: 100%; }
+  .case-briefidea .case-block {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.case-brief__title {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 65px;
+  color: #F3E3CC;
+  margin: 0 0 50px 0;
+  text-transform: uppercase; }
+
+.case-brief__text {
+  font-size: 18px;
+  color: #F3E3CC;
+  font-weight: 100;
+  font-style: normal; }
+
+.case-idea__title {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 65px;
+  color: #000000;
+  margin: 0 0 50px 0;
+  text-transform: uppercase; }
 
 .slick-slider__item {
   background-repeat: no-repeat;

@@ -1,3 +1,11 @@
+//misc
+$node_modules: '../../../../node_modules/';
+
+//base vars
+$scrh: 865; //layout screen height in px
+$scrw: 1400; // layout screen width in px
+//eof base vars
+
 //container
 $container-max-width: 1284px;
 
@@ -18,3 +26,31 @@ $screen-xs: 480px;
 $screen-sm: 768px;
 $screen-md: 1024px;
 $screen-lg: 1200px;
+
+//font families
+$ffreg: 'Articul';
+
+//font weights
+$fwreg: normal;
+$fwmd: 500;
+$fwblack: 900;
+$fwbold: bold;
+$fwlight: 300;
+
+//font sizes
+$fsh1: 120px;
+$fsh2: 80px;
+$fsh3: 40px;
+$fsh4: 24px;
+$fs: 18px;
+
+
+//font sizes
+$fsh1md: 70px;
+$fsh2md: 60px;
+$fsh3md: 30px;
+$fsh4md: 24px;
+$fsmd: 18px;
+
+// @media screen and (max-width: $screen-md) {}
+
