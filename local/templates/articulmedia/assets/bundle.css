@@ -52,7 +52,7 @@ h1 {
   font-weight: 900; }
   @media screen and (max-width: 1024px) {
     h1 {
-      font-size: 8.09249vh; } }
+      font-size: 10.49475vh; } }
 
 h2 {
   font-family: "Articul";
@@ -61,7 +61,7 @@ h2 {
   line-height: 1.2; }
   @media screen and (max-width: 1024px) {
     h2 {
-      font-size: 6.93642vh; } }
+      font-size: 8.9955vh; } }
 
 h3 {
   font-family: "Articul";
@@ -70,7 +70,7 @@ h3 {
   line-height: 1.2; }
   @media screen and (max-width: 1024px) {
     h3 {
-      font-size: 3.46821vh; } }
+      font-size: 4.49775vh; } }
 
 h4 {
   font-family: "Articul";
@@ -79,7 +79,7 @@ h4 {
   line-height: 1.2; }
   @media screen and (max-width: 1024px) {
     h4 {
-      font-size: 2.77457vh; } }
+      font-size: 3.5982vh; } }
 
 html {
   min-height: 100%;
