@@ -78398,6 +78398,29 @@ webpackJsonp([0],[
 	    $scope.isMobile = mquery;
 	  });
 
+	  var myAppModule = angular.module('MyApp', ['slickCarousel']);
+
+	  $scope.slickConfigMenu = {
+	    enabled: true,
+	    // autoplay: true,
+	    draggable: true,
+	    // adaptiveHeight: true,
+	    autoplaySpeed: 6000,
+	    infinite: true,
+	    cssEase: false,
+	    useCSS: false,
+	    dots: true,
+	    arrows: false,
+	    mobileFirst: true,
+	    respondTo: 'slider',
+	    swipe: true,
+	    easing: 'linear',
+	    swipeToSlide: true,
+	    slidesToScroll: 1,
+	    variableWidth: false,
+	    centerMode: true
+	  };
+
 	  //sidenav
 	  $scope.sidenavToggle = function () {
 	    $mdSidenav('sidenav-right').toggle();
@@ -78626,7 +78649,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	   value: true
 	});
 	//CONTROLLER
 	// import moduleConfig from './config';
@@ -78635,55 +78658,32 @@ webpackJsonp([0],[
 	exports.default = ['$scope', '$rootScope', '$location', '$log', '$timeout', '$window', '$state', '$http',
 	// '$mdSidenav','$mdMedia', 
 	function ($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
-	  // $mdSidenav, $mdMedia, 
+	   // $mdSidenav, $mdMedia, 
 
-	  var myAppModule = angular.module('MyApp', ['slickCarousel']);
+	   var myAppModule = angular.module('MyApp', ['slickCarousel']);
 
-	  $scope.slickConfig = {
-	    enabled: true,
-	    autoplay: true,
-	    draggable: true,
-	    adaptiveHeight: true,
-	    autoplaySpeed: 6000,
-	    infinite: true,
-	    centerMode: true,
-	    centerPadding: '0px',
-	    cssEase: false,
-	    useCSS: false,
-	    dots: true,
-	    arrows: false,
-	    mobileFirst: true,
-	    respondTo: 'slider',
-	    swipe: true,
-	    easing: 'linear',
-	    swipeToSlide: true,
-	    slidesToScroll: 1,
-	    variableWidth: false
+	   $scope.slickConfig = {
+	      enabled: true,
+	      autoplay: true,
+	      draggable: true,
+	      adaptiveHeight: true,
+	      autoplaySpeed: 6000,
+	      infinite: true,
+	      centerMode: true,
+	      centerPadding: '0px',
+	      cssEase: false,
+	      useCSS: false,
+	      dots: true,
+	      arrows: false,
+	      mobileFirst: true,
+	      respondTo: 'slider',
+	      swipe: true,
+	      easing: 'linear',
+	      swipeToSlide: true,
+	      slidesToScroll: 1,
+	      variableWidth: false
 
-	  };
-
-	  $scope.slickConfigMenu = {
-	    enabled: true,
-	    autoplay: true,
-	    draggable: true,
-	    adaptiveHeight: true,
-	    autoplaySpeed: 6000,
-	    infinite: true,
-	    centerMode: true,
-	    centerPadding: '0px',
-	    cssEase: false,
-	    useCSS: false,
-	    dots: true,
-	    arrows: false,
-	    mobileFirst: true,
-	    respondTo: 'slider',
-	    swipe: true,
-	    easing: 'linear',
-	    swipeToSlide: true,
-	    slidesToScroll: 1,
-	    variableWidth: false
-
-	  };
+	   };
 	}];
 
 /***/ },

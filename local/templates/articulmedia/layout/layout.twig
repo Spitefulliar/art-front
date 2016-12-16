@@ -94,17 +94,52 @@
       </svg>
     </span>
   </md-button>
-  <slick settings="slickConfigMenu">
-    <div class="mobileMenu">
+  <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
+    <div class="mobileMenu__slide">
+      <h5 class="mobileMenu__title">
+        КОМПАНИЯ
+      </h5>
+      <ul class="mobileMenu__list">
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Мы – Articul</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Клиенты</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Команда</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Articul Group</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobileMenu__slide">
+      <h5 class="mobileMenu__title">
+        Работы
+      </h5>
+      <ul class="mobileMenu__list">
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Все подряд</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Выбрать<br>по виду</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Выбрать<br>по бренду</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobileMenu__slide">
       <h5 class="mobileMenu__title">
         Экспертиза
       </h5>
       <ul class="mobileMenu__list">
         <li class="mobileMenu__item">
-          Уникальный<br>опыт
+          <a href="" class="mobileMenu__link">Уникальный<br>опыт</a>
         </li>
         <li class="mobileMenu__item">
-          Развиваем<br>digital-индустрию
+          <a href="" class="mobileMenu__link">Развиваем<br>digital-индустрию</a>
         </li>
       </ul>
     </div>
