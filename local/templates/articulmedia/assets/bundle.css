@@ -278,10 +278,30 @@ svg {
   box-shadow: none !important;
   background-color: #ffffff !important; }
 
+.sidenav .slick-dots li.slick-active {
+  background: #f78429; }
+
+.sidenav .slick-dots {
+  position: relative;
+  bottom: 0; }
+
 .sidenav .mobileMenu__list {
   margin: 0;
   padding: 0;
   text-align: center; }
+
+.sidenav .mobileMenu__item {
+  margin-bottom: 30px; }
+
+.sidenav .mobileMenu__link {
+  text-decoration: none;
+  color: #000000; }
+
+.sidenav .mobileMenu__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  margin: 30px 0; }
 
 .footer {
   background: rgba(204, 204, 204, 0.4);

@@ -18,6 +18,31 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     $scope.isMobile = mquery;
   });
 
+  var myAppModule = angular.module('MyApp', ['slickCarousel'])
+
+  $scope.slickConfigMenu = {
+    enabled: true,
+    // autoplay: true,
+    draggable: true,
+    // adaptiveHeight: true,
+    autoplaySpeed: 6000,
+    infinite: true,
+    cssEase: false,
+    useCSS: false,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    respondTo: 'slider',
+    swipe: true,
+    easing: 'linear',
+    swipeToSlide: true,
+    slidesToScroll: 1,
+    variableWidth: false,
+    centerMode: true,
+    // slidesToShow: 3,
+    
+
+  };
 
 
   //sidenav
