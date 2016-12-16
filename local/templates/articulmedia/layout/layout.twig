@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <base href="/">
+
+    <link rel="apple-touch-icon" href="../local/templates/articulmedia/img/favicon/a-57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../local/templates/articulmedia/img/favicon/a-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../local/templates/articulmedia/img/favicon/a-114.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="icon" href="../local/templates/articulmedia/img/favicon/favicon.ico" type="image/x-icon" />
     <!-- <link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16"> -->
     <!-- <link rel="icon" type="image/png" href="favicon32x32.ico" sizes="32x32"> -->
 
@@ -28,7 +37,7 @@
 <header class="header container">
 
   <a href="#" class="header__logo">
-    <img src="../local/templates/articulmedia/img/icon/logo.png" alt="Articul">
+    
   </a>
   <nav class="nav">
     <ul class="nav__list">
@@ -87,13 +96,63 @@
   md-whiteframe="4"
   md-is-open="sidenavIsOpen"
   >
-  <md-button class="md-raised md-mini" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
+  <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
     <span class="sidenav__nav-item__icon svg-icon">
       <svg>
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-burger" />
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-close" />
       </svg>
     </span>
   </md-button>
+  <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
+    <div class="mobileMenu__slide">
+      <h5 class="mobileMenu__title">
+        КОМПАНИЯ
+      </h5>
+      <ul class="mobileMenu__list">
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Мы – Articul</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Клиенты</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Команда</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Articul Group</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobileMenu__slide">
+      <h5 class="mobileMenu__title">
+        Работы
+      </h5>
+      <ul class="mobileMenu__list">
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Все подряд</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Выбрать<br>по виду</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Выбрать<br>по бренду</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobileMenu__slide">
+      <h5 class="mobileMenu__title">
+        Экспертиза
+      </h5>
+      <ul class="mobileMenu__list">
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Уникальный<br>опыт</a>
+        </li>
+        <li class="mobileMenu__item">
+          <a href="" class="mobileMenu__link">Развиваем<br>digital-индустрию</a>
+        </li>
+      </ul>
+    </div>
+  </slick>
 </md-sidenav>
 {% endblock %}
 
