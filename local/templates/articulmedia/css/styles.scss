@@ -310,7 +310,28 @@ svg {
 
 }
 
+.sidenav {
 
+  &__close {
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    background-color: $white !important;
+  }
+
+  .mobileMenu {
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    &__item {
+
+    }
+  }
+}
 
 
 
