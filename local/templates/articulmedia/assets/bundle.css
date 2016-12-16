@@ -93,9 +93,10 @@ body {
   margin: 0;
   position: relative;
   top: 0;
-  font-family: 'Articul';
+  font-family: "Articul";
   background: #a8a5a4;
-  background-size: cover; }
+  -ms-overflow-x: hidden !important;
+  overflow-x: hidden !important; }
 
 .container {
   margin-right: auto;
@@ -170,7 +171,15 @@ svg {
     position: absolute;
     right: 0;
     top: 0;
-    cursor: pointer; }
+    margin: 0;
+    padding: 0;
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    cursor: pointer;
+    border-radius: 0;
+    box-shadow: none !important; }
     .header__mobile-toggle__line {
       position: absolute;
       width: 75%;

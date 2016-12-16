@@ -11,18 +11,14 @@
     <!-- <link rel="icon" type="image/png" href="favicon32x32.ico" sizes="32x32"> -->
 
     <!-- CSS -->
-    
-    <!-- main styles -->
     <link rel="stylesheet" type="text/css" href="../local/templates/articulmedia/assets/vendor.css">
     <link rel="stylesheet" type="text/css" href="../local/templates/articulmedia/assets/bundle.css">
-    
     <!-- eof CSS -->
 
     <!-- js -->
-
-    <!-- main js -->
     <script src="../local/templates/articulmedia/assets/vendor.js"></script>
     <script src="../local/templates/articulmedia/assets/bundle.js"></script>
+    <!-- eof js -->
 
 </head>
 
@@ -69,12 +65,36 @@
   <a href="" class="header__link">
     <img src="../local/templates/articulmedia/img/icon/icon-p.png" alt="">
   </a>
-  <div class="header__mobile-toggle">
+  {# <div class="header__mobile-toggle" ng-click="sidenavToggle()">
     <span class="header__mobile-toggle__line"></span>
-  </div>
+  </div> #}
+  <md-button class="header__mobile-toggle md-raised md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
+    <span class="sidenav__nav-item__icon svg-icon">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-burger" />
+      </svg>
+    </span>
+  </md-button>
 
 </header>
 <!-- eof header -->
+{% endblock %}
+
+{% block sidenav %}
+<md-sidenav class="sidenav md-sidenav-right"
+  layout="column"
+  md-component-id="sidenav-right"
+  md-whiteframe="4"
+  md-is-open="sidenavIsOpen"
+  >
+  <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
+    <span class="sidenav__nav-item__icon svg-icon">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-close" />
+      </svg>
+    </span>
+  </md-button>
+</md-sidenav>
 {% endblock %}
 
 {% block main %}
