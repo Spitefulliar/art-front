@@ -9,7 +9,7 @@ import routeProvider from './providers/routeProvider.js';
 //angular modules
 import angular from 'angular';
 import ngAria from 'angular-aria';
-import touch from 'angular-touch';
+// import touch from 'angular-touch';
 import uirouter from 'angular-ui-router';
 import animate from 'angular-animate';
 import svgBaseFix from 'angular-svg-base-fix';
@@ -21,8 +21,8 @@ import storage from 'ngstorage';
 // import translate from 'angular-translate';
 // import truncate from 'angular-truncate-2';
 // import youtubeMb from 'angular-youtube-embed';
-// import messages from 'angular-messages';
-// import mdSteppers from 'md-steppers';
+import messages from 'angular-messages';
+import mdSteppers from 'md-steppers';
 // import ngPinchZoom from './../../libs/angular-pinch-zoom/ng-pinch-zoom.min.js';
 // import ngLazyImg from 'angular-lazy-image';
 // import ngViedoBg from './../../../../../node_modules/angular-video-background/src/video-background.module.js';
@@ -68,9 +68,9 @@ Pages.keys().forEach(function(item, i, arr) {
 
 //all dependent modules
 let appModulesArr = AppModulesArr.concat([
-    // 'ngMaterial',
+    'ngMaterial',
     'ngAria', 
-    'ngTouch', //not included with material
+    // 'ngTouch', //not included with material
     'ui.router', 
     'ngAnimate',
     'svgBaseFix',

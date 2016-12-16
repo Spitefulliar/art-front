@@ -145,7 +145,7 @@
 
 	'use strict';
 
-	var _slickCarousel = __webpack_require__(101);
+	var _slickCarousel = __webpack_require__(114);
 
 	var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
@@ -156,9 +156,10 @@
 
 
 	// vendor-styles
-	__webpack_require__(102);
-	__webpack_require__(105);
-	__webpack_require__(107);
+	__webpack_require__(115);
+	__webpack_require__(118);
+	__webpack_require__(120);
+	__webpack_require__(127);
 
 /***/ },
 
@@ -9999,7 +10000,7 @@
 
 /***/ },
 
-/***/ 101:
+/***/ 114:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -12898,17 +12899,20 @@
 
 /***/ },
 
-/***/ 102:
+/***/ 115:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 105:
-102,
+/***/ 118:
+115,
 
-/***/ 107:
-102
+/***/ 120:
+115,
+
+/***/ 127:
+115
 
 /******/ })));

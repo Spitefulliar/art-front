@@ -1,7 +1,6 @@
 'use strict';
 
 const PAGE_NAME = moduleConfig.name;
-// const Routing = require('./route');
 import Routing from './route';
 import Controller from './controller';
 import moduleConfig from './config';
