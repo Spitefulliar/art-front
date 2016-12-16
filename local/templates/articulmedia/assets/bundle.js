@@ -3,7 +3,7 @@ webpackJsonp([0],[
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(96);
+	module.exports = __webpack_require__(109);
 
 
 /***/ },
@@ -873,41 +873,45 @@ webpackJsonp([0],[
 
 	var _angularAria2 = _interopRequireDefault(_angularAria);
 
-	var _angularTouch = __webpack_require__(66);
-
-	var _angularTouch2 = _interopRequireDefault(_angularTouch);
-
-	var _angularUiRouter = __webpack_require__(68);
+	var _angularUiRouter = __webpack_require__(66);
 
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-	var _angularAnimate = __webpack_require__(69);
+	var _angularAnimate = __webpack_require__(67);
 
 	var _angularAnimate2 = _interopRequireDefault(_angularAnimate);
 
-	var _angularSvgBaseFix = __webpack_require__(71);
+	var _angularSvgBaseFix = __webpack_require__(69);
 
 	var _angularSvgBaseFix2 = _interopRequireDefault(_angularSvgBaseFix);
 
-	var _angularBaronScrollbar = __webpack_require__(72);
+	var _angularBaronScrollbar = __webpack_require__(70);
 
 	var _angularBaronScrollbar2 = _interopRequireDefault(_angularBaronScrollbar);
 
-	var _angularSlickCarousel = __webpack_require__(73);
+	var _angularSlickCarousel = __webpack_require__(71);
 
 	var _angularSlickCarousel2 = _interopRequireDefault(_angularSlickCarousel);
 
-	var _angularMaterial = __webpack_require__(74);
+	var _angularMaterial = __webpack_require__(72);
 
 	var _angularMaterial2 = _interopRequireDefault(_angularMaterial);
 
-	var _angularCookies = __webpack_require__(76);
+	var _angularCookies = __webpack_require__(74);
 
 	var _angularCookies2 = _interopRequireDefault(_angularCookies);
 
-	var _ngstorage = __webpack_require__(78);
+	var _ngstorage = __webpack_require__(76);
 
 	var _ngstorage2 = _interopRequireDefault(_ngstorage);
+
+	var _angularMessages = __webpack_require__(77);
+
+	var _angularMessages2 = _interopRequireDefault(_angularMessages);
+
+	var _mdSteppers = __webpack_require__(79);
+
+	var _mdSteppers2 = _interopRequireDefault(_mdSteppers);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -921,11 +925,12 @@ webpackJsonp([0],[
 
 	//angular modules
 
+	// import touch from 'angular-touch';
+
 	// import translate from 'angular-translate';
 	// import truncate from 'angular-truncate-2';
 	// import youtubeMb from 'angular-youtube-embed';
-	// import messages from 'angular-messages';
-	// import mdSteppers from 'md-steppers';
+
 	// import ngPinchZoom from './../../libs/angular-pinch-zoom/ng-pinch-zoom.min.js';
 	// import ngLazyImg from 'angular-lazy-image';
 	// import ngViedoBg from './../../../../../node_modules/angular-video-background/src/video-background.module.js';
@@ -946,12 +951,12 @@ webpackJsonp([0],[
 	}
 
 	//custom modules
-	var AppModules = __webpack_require__(79);
+	var AppModules = __webpack_require__(80);
 	// AppModules.keys().forEach(AppModules);
 	requireAll(AppModules);
 
 	//pages
-	var Pages = __webpack_require__(90);
+	var Pages = __webpack_require__(98);
 	// Pages.keys().forEach(Pages);
 	requireAll(Pages);
 
@@ -969,9 +974,8 @@ webpackJsonp([0],[
 	});
 
 	//all dependent modules
-	var appModulesArr = AppModulesArr.concat([
-	// 'ngMaterial',
-	'ngAria', 'ngTouch', //not included with material
+	var appModulesArr = AppModulesArr.concat(['ngMaterial', 'ngAria',
+	// 'ngTouch', //not included with material
 	'ui.router', 'ngAnimate', 'svgBaseFix', 'angular-baron-scrollbar', 'slickCarousel']);
 	// console.log(appModulesArr);
 
@@ -33293,767 +33297,6 @@ webpackJsonp([0],[
 
 /***/ },
 /* 66 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(67);
-	module.exports = 'ngTouch';
-
-
-/***/ },
-/* 67 */
-/***/ function(module, exports) {
-
-	/**
-	 * @license AngularJS v1.6.0
-	 * (c) 2010-2016 Google, Inc. http://angularjs.org
-	 * License: MIT
-	 */
-	(function(window, angular) {'use strict';
-
-	/* global ngTouchClickDirectiveFactory: false */
-
-	/**
-	 * @ngdoc module
-	 * @name ngTouch
-	 * @description
-	 *
-	 * # ngTouch
-	 *
-	 * The `ngTouch` module provides touch events and other helpers for touch-enabled devices.
-	 * The implementation is based on jQuery Mobile touch event handling
-	 * ([jquerymobile.com](http://jquerymobile.com/)).
-	 *
-	 *
-	 * See {@link ngTouch.$swipe `$swipe`} for usage.
-	 *
-	 * <div doc-module-components="ngTouch"></div>
-	 *
-	 */
-
-	// define ngTouch module
-	/* global -ngTouch */
-	var ngTouch = angular.module('ngTouch', []);
-
-	ngTouch.provider('$touch', $TouchProvider);
-
-	function nodeName_(element) {
-	  return angular.lowercase(element.nodeName || (element[0] && element[0].nodeName));
-	}
-
-	/**
-	 * @ngdoc provider
-	 * @name $touchProvider
-	 *
-	 * @description
-	 * The `$touchProvider` allows enabling / disabling {@link ngTouch.ngClick ngTouch's ngClick directive}.
-	 */
-	$TouchProvider.$inject = ['$provide', '$compileProvider'];
-	function $TouchProvider($provide, $compileProvider) {
-
-	  /**
-	   * @ngdoc method
-	   * @name  $touchProvider#ngClickOverrideEnabled
-	   *
-	   * @param {boolean=} enabled update the ngClickOverrideEnabled state if provided, otherwise just return the
-	   * current ngClickOverrideEnabled state
-	   * @returns {*} current value if used as getter or itself (chaining) if used as setter
-	   *
-	   * @kind function
-	   *
-	   * @description
-	   * Call this method to enable/disable {@link ngTouch.ngClick ngTouch's ngClick directive}. If enabled,
-	   * the default ngClick directive will be replaced by a version that eliminates the 300ms delay for
-	   * click events on browser for touch-devices.
-	   *
-	   * The default is `false`.
-	   *
-	   */
-	  var ngClickOverrideEnabled = false;
-	  var ngClickDirectiveAdded = false;
-	  // eslint-disable-next-line no-invalid-this
-	  this.ngClickOverrideEnabled = function(enabled) {
-	    if (angular.isDefined(enabled)) {
-
-	      if (enabled && !ngClickDirectiveAdded) {
-	        ngClickDirectiveAdded = true;
-
-	        // Use this to identify the correct directive in the delegate
-	        ngTouchClickDirectiveFactory.$$moduleName = 'ngTouch';
-	        $compileProvider.directive('ngClick', ngTouchClickDirectiveFactory);
-
-	        $provide.decorator('ngClickDirective', ['$delegate', function($delegate) {
-	          if (ngClickOverrideEnabled) {
-	            // drop the default ngClick directive
-	            $delegate.shift();
-	          } else {
-	            // drop the ngTouch ngClick directive if the override has been re-disabled (because
-	            // we cannot de-register added directives)
-	            var i = $delegate.length - 1;
-	            while (i >= 0) {
-	              if ($delegate[i].$$moduleName === 'ngTouch') {
-	                $delegate.splice(i, 1);
-	                break;
-	              }
-	              i--;
-	            }
-	          }
-
-	          return $delegate;
-	        }]);
-	      }
-
-	      ngClickOverrideEnabled = enabled;
-	      return this;
-	    }
-
-	    return ngClickOverrideEnabled;
-	  };
-
-	  /**
-	  * @ngdoc service
-	  * @name $touch
-	  * @kind object
-	  *
-	  * @description
-	  * Provides the {@link ngTouch.$touch#ngClickOverrideEnabled `ngClickOverrideEnabled`} method.
-	  *
-	  */
-	  // eslint-disable-next-line no-invalid-this
-	  this.$get = function() {
-	    return {
-	      /**
-	       * @ngdoc method
-	       * @name  $touch#ngClickOverrideEnabled
-	       *
-	       * @returns {*} current value of `ngClickOverrideEnabled` set in the {@link ngTouch.$touchProvider $touchProvider},
-	       * i.e. if {@link ngTouch.ngClick ngTouch's ngClick} directive is enabled.
-	       *
-	       * @kind function
-	       */
-	      ngClickOverrideEnabled: function() {
-	        return ngClickOverrideEnabled;
-	      }
-	    };
-	  };
-
-	}
-
-	/* global ngTouch: false */
-
-	    /**
-	     * @ngdoc service
-	     * @name $swipe
-	     *
-	     * @description
-	     * The `$swipe` service is a service that abstracts the messier details of hold-and-drag swipe
-	     * behavior, to make implementing swipe-related directives more convenient.
-	     *
-	     * Requires the {@link ngTouch `ngTouch`} module to be installed.
-	     *
-	     * `$swipe` is used by the `ngSwipeLeft` and `ngSwipeRight` directives in `ngTouch`.
-	     *
-	     * # Usage
-	     * The `$swipe` service is an object with a single method: `bind`. `bind` takes an element
-	     * which is to be watched for swipes, and an object with four handler functions. See the
-	     * documentation for `bind` below.
-	     */
-
-	ngTouch.factory('$swipe', [function() {
-	  // The total distance in any direction before we make the call on swipe vs. scroll.
-	  var MOVE_BUFFER_RADIUS = 10;
-
-	  var POINTER_EVENTS = {
-	    'mouse': {
-	      start: 'mousedown',
-	      move: 'mousemove',
-	      end: 'mouseup'
-	    },
-	    'touch': {
-	      start: 'touchstart',
-	      move: 'touchmove',
-	      end: 'touchend',
-	      cancel: 'touchcancel'
-	    },
-	    'pointer': {
-	      start: 'pointerdown',
-	      move: 'pointermove',
-	      end: 'pointerup',
-	      cancel: 'pointercancel'
-	    }
-	  };
-
-	  function getCoordinates(event) {
-	    var originalEvent = event.originalEvent || event;
-	    var touches = originalEvent.touches && originalEvent.touches.length ? originalEvent.touches : [originalEvent];
-	    var e = (originalEvent.changedTouches && originalEvent.changedTouches[0]) || touches[0];
-
-	    return {
-	      x: e.clientX,
-	      y: e.clientY
-	    };
-	  }
-
-	  function getEvents(pointerTypes, eventType) {
-	    var res = [];
-	    angular.forEach(pointerTypes, function(pointerType) {
-	      var eventName = POINTER_EVENTS[pointerType][eventType];
-	      if (eventName) {
-	        res.push(eventName);
-	      }
-	    });
-	    return res.join(' ');
-	  }
-
-	  return {
-	    /**
-	     * @ngdoc method
-	     * @name $swipe#bind
-	     *
-	     * @description
-	     * The main method of `$swipe`. It takes an element to be watched for swipe motions, and an
-	     * object containing event handlers.
-	     * The pointer types that should be used can be specified via the optional
-	     * third argument, which is an array of strings `'mouse'`, `'touch'` and `'pointer'`. By default,
-	     * `$swipe` will listen for `mouse`, `touch` and `pointer` events.
-	     *
-	     * The four events are `start`, `move`, `end`, and `cancel`. `start`, `move`, and `end`
-	     * receive as a parameter a coordinates object of the form `{ x: 150, y: 310 }` and the raw
-	     * `event`. `cancel` receives the raw `event` as its single parameter.
-	     *
-	     * `start` is called on either `mousedown`, `touchstart` or `pointerdown`. After this event, `$swipe` is
-	     * watching for `touchmove`, `mousemove` or `pointermove` events. These events are ignored until the total
-	     * distance moved in either dimension exceeds a small threshold.
-	     *
-	     * Once this threshold is exceeded, either the horizontal or vertical delta is greater.
-	     * - If the horizontal distance is greater, this is a swipe and `move` and `end` events follow.
-	     * - If the vertical distance is greater, this is a scroll, and we let the browser take over.
-	     *   A `cancel` event is sent.
-	     *
-	     * `move` is called on `mousemove`, `touchmove` and `pointermove` after the above logic has determined that
-	     * a swipe is in progress.
-	     *
-	     * `end` is called when a swipe is successfully completed with a `touchend`, `mouseup` or `pointerup`.
-	     *
-	     * `cancel` is called either on a `touchcancel` or `pointercancel`  from the browser, or when we begin scrolling
-	     * as described above.
-	     *
-	     */
-	    bind: function(element, eventHandlers, pointerTypes) {
-	      // Absolute total movement, used to control swipe vs. scroll.
-	      var totalX, totalY;
-	      // Coordinates of the start position.
-	      var startCoords;
-	      // Last event's position.
-	      var lastPos;
-	      // Whether a swipe is active.
-	      var active = false;
-
-	      pointerTypes = pointerTypes || ['mouse', 'touch', 'pointer'];
-	      element.on(getEvents(pointerTypes, 'start'), function(event) {
-	        startCoords = getCoordinates(event);
-	        active = true;
-	        totalX = 0;
-	        totalY = 0;
-	        lastPos = startCoords;
-	        if (eventHandlers['start']) {
-	          eventHandlers['start'](startCoords, event);
-	        }
-	      });
-	      var events = getEvents(pointerTypes, 'cancel');
-	      if (events) {
-	        element.on(events, function(event) {
-	          active = false;
-	          if (eventHandlers['cancel']) {
-	            eventHandlers['cancel'](event);
-	          }
-	        });
-	      }
-
-	      element.on(getEvents(pointerTypes, 'move'), function(event) {
-	        if (!active) return;
-
-	        // Android will send a touchcancel if it thinks we're starting to scroll.
-	        // So when the total distance (+ or - or both) exceeds 10px in either direction,
-	        // we either:
-	        // - On totalX > totalY, we send preventDefault() and treat this as a swipe.
-	        // - On totalY > totalX, we let the browser handle it as a scroll.
-
-	        if (!startCoords) return;
-	        var coords = getCoordinates(event);
-
-	        totalX += Math.abs(coords.x - lastPos.x);
-	        totalY += Math.abs(coords.y - lastPos.y);
-
-	        lastPos = coords;
-
-	        if (totalX < MOVE_BUFFER_RADIUS && totalY < MOVE_BUFFER_RADIUS) {
-	          return;
-	        }
-
-	        // One of totalX or totalY has exceeded the buffer, so decide on swipe vs. scroll.
-	        if (totalY > totalX) {
-	          // Allow native scrolling to take over.
-	          active = false;
-	          if (eventHandlers['cancel']) {
-	            eventHandlers['cancel'](event);
-	          }
-	          return;
-	        } else {
-	          // Prevent the browser from scrolling.
-	          event.preventDefault();
-	          if (eventHandlers['move']) {
-	            eventHandlers['move'](coords, event);
-	          }
-	        }
-	      });
-
-	      element.on(getEvents(pointerTypes, 'end'), function(event) {
-	        if (!active) return;
-	        active = false;
-	        if (eventHandlers['end']) {
-	          eventHandlers['end'](getCoordinates(event), event);
-	        }
-	      });
-	    }
-	  };
-	}]);
-
-	/* global ngTouch: false,
-	  nodeName_: false
-	*/
-
-	/**
-	 * @ngdoc directive
-	 * @name ngClick
-	 * @deprecated
-	 * sinceVersion="v1.5.0"
-	 * This directive is deprecated and **disabled** by default.
-	 * The directive will receive no further support and might be removed from future releases.
-	 * If you need the directive, you can enable it with the {@link ngTouch.$touchProvider $touchProvider#ngClickOverrideEnabled}
-	 * function. We also recommend that you migrate to [FastClick](https://github.com/ftlabs/fastclick).
-	 * To learn more about the 300ms delay, this [Telerik article](http://developer.telerik.com/featured/300-ms-click-delay-ios-8/)
-	 * gives a good overview.
-	 *
-	 * @description
-	 * A more powerful replacement for the default ngClick designed to be used on touchscreen
-	 * devices. Most mobile browsers wait about 300ms after a tap-and-release before sending
-	 * the click event. This version handles them immediately, and then prevents the
-	 * following click event from propagating.
-	 *
-	 * Requires the {@link ngTouch `ngTouch`} module to be installed.
-	 *
-	 * This directive can fall back to using an ordinary click event, and so works on desktop
-	 * browsers as well as mobile.
-	 *
-	 * This directive also sets the CSS class `ng-click-active` while the element is being held
-	 * down (by a mouse click or touch) so you can restyle the depressed element if you wish.
-	 *
-	 * @element ANY
-	 * @param {expression} ngClick {@link guide/expression Expression} to evaluate
-	 * upon tap. (Event object is available as `$event`)
-	 *
-	 * @example
-	    <example module="ngClickExample" deps="angular-touch.js" name="ng-touch-ng-click">
-	      <file name="index.html">
-	        <button ng-click="count = count + 1" ng-init="count=0">
-	          Increment
-	        </button>
-	        count: {{ count }}
-	      </file>
-	      <file name="script.js">
-	        angular.module('ngClickExample', ['ngTouch']);
-	      </file>
-	    </example>
-	 */
-
-	var ngTouchClickDirectiveFactory = ['$parse', '$timeout', '$rootElement',
-	    function($parse, $timeout, $rootElement) {
-	  var TAP_DURATION = 750; // Shorter than 750ms is a tap, longer is a taphold or drag.
-	  var MOVE_TOLERANCE = 12; // 12px seems to work in most mobile browsers.
-	  var PREVENT_DURATION = 2500; // 2.5 seconds maximum from preventGhostClick call to click
-	  var CLICKBUSTER_THRESHOLD = 25; // 25 pixels in any dimension is the limit for busting clicks.
-
-	  var ACTIVE_CLASS_NAME = 'ng-click-active';
-	  var lastPreventedTime;
-	  var touchCoordinates;
-	  var lastLabelClickCoordinates;
-
-
-	  // TAP EVENTS AND GHOST CLICKS
-	  //
-	  // Why tap events?
-	  // Mobile browsers detect a tap, then wait a moment (usually ~300ms) to see if you're
-	  // double-tapping, and then fire a click event.
-	  //
-	  // This delay sucks and makes mobile apps feel unresponsive.
-	  // So we detect touchstart, touchcancel and touchend ourselves and determine when
-	  // the user has tapped on something.
-	  //
-	  // What happens when the browser then generates a click event?
-	  // The browser, of course, also detects the tap and fires a click after a delay. This results in
-	  // tapping/clicking twice. We do "clickbusting" to prevent it.
-	  //
-	  // How does it work?
-	  // We attach global touchstart and click handlers, that run during the capture (early) phase.
-	  // So the sequence for a tap is:
-	  // - global touchstart: Sets an "allowable region" at the point touched.
-	  // - element's touchstart: Starts a touch
-	  // (- touchcancel ends the touch, no click follows)
-	  // - element's touchend: Determines if the tap is valid (didn't move too far away, didn't hold
-	  //   too long) and fires the user's tap handler. The touchend also calls preventGhostClick().
-	  // - preventGhostClick() removes the allowable region the global touchstart created.
-	  // - The browser generates a click event.
-	  // - The global click handler catches the click, and checks whether it was in an allowable region.
-	  //     - If preventGhostClick was called, the region will have been removed, the click is busted.
-	  //     - If the region is still there, the click proceeds normally. Therefore clicks on links and
-	  //       other elements without ngTap on them work normally.
-	  //
-	  // This is an ugly, terrible hack!
-	  // Yeah, tell me about it. The alternatives are using the slow click events, or making our users
-	  // deal with the ghost clicks, so I consider this the least of evils. Fortunately Angular
-	  // encapsulates this ugly logic away from the user.
-	  //
-	  // Why not just put click handlers on the element?
-	  // We do that too, just to be sure. If the tap event caused the DOM to change,
-	  // it is possible another element is now in that position. To take account for these possibly
-	  // distinct elements, the handlers are global and care only about coordinates.
-
-	  // Checks if the coordinates are close enough to be within the region.
-	  function hit(x1, y1, x2, y2) {
-	    return Math.abs(x1 - x2) < CLICKBUSTER_THRESHOLD && Math.abs(y1 - y2) < CLICKBUSTER_THRESHOLD;
-	  }
-
-	  // Checks a list of allowable regions against a click location.
-	  // Returns true if the click should be allowed.
-	  // Splices out the allowable region from the list after it has been used.
-	  function checkAllowableRegions(touchCoordinates, x, y) {
-	    for (var i = 0; i < touchCoordinates.length; i += 2) {
-	      if (hit(touchCoordinates[i], touchCoordinates[i + 1], x, y)) {
-	        touchCoordinates.splice(i, i + 2);
-	        return true; // allowable region
-	      }
-	    }
-	    return false; // No allowable region; bust it.
-	  }
-
-	  // Global click handler that prevents the click if it's in a bustable zone and preventGhostClick
-	  // was called recently.
-	  function onClick(event) {
-	    if (Date.now() - lastPreventedTime > PREVENT_DURATION) {
-	      return; // Too old.
-	    }
-
-	    var touches = event.touches && event.touches.length ? event.touches : [event];
-	    var x = touches[0].clientX;
-	    var y = touches[0].clientY;
-	    // Work around desktop Webkit quirk where clicking a label will fire two clicks (on the label
-	    // and on the input element). Depending on the exact browser, this second click we don't want
-	    // to bust has either (0,0), negative coordinates, or coordinates equal to triggering label
-	    // click event
-	    if (x < 1 && y < 1) {
-	      return; // offscreen
-	    }
-	    if (lastLabelClickCoordinates &&
-	        lastLabelClickCoordinates[0] === x && lastLabelClickCoordinates[1] === y) {
-	      return; // input click triggered by label click
-	    }
-	    // reset label click coordinates on first subsequent click
-	    if (lastLabelClickCoordinates) {
-	      lastLabelClickCoordinates = null;
-	    }
-	    // remember label click coordinates to prevent click busting of trigger click event on input
-	    if (nodeName_(event.target) === 'label') {
-	      lastLabelClickCoordinates = [x, y];
-	    }
-
-	    // Look for an allowable region containing this click.
-	    // If we find one, that means it was created by touchstart and not removed by
-	    // preventGhostClick, so we don't bust it.
-	    if (checkAllowableRegions(touchCoordinates, x, y)) {
-	      return;
-	    }
-
-	    // If we didn't find an allowable region, bust the click.
-	    event.stopPropagation();
-	    event.preventDefault();
-
-	    // Blur focused form elements
-	    if (event.target && event.target.blur) {
-	      event.target.blur();
-	    }
-	  }
-
-
-	  // Global touchstart handler that creates an allowable region for a click event.
-	  // This allowable region can be removed by preventGhostClick if we want to bust it.
-	  function onTouchStart(event) {
-	    var touches = event.touches && event.touches.length ? event.touches : [event];
-	    var x = touches[0].clientX;
-	    var y = touches[0].clientY;
-	    touchCoordinates.push(x, y);
-
-	    $timeout(function() {
-	      // Remove the allowable region.
-	      for (var i = 0; i < touchCoordinates.length; i += 2) {
-	        if (touchCoordinates[i] === x && touchCoordinates[i + 1] === y) {
-	          touchCoordinates.splice(i, i + 2);
-	          return;
-	        }
-	      }
-	    }, PREVENT_DURATION, false);
-	  }
-
-	  // On the first call, attaches some event handlers. Then whenever it gets called, it creates a
-	  // zone around the touchstart where clicks will get busted.
-	  function preventGhostClick(x, y) {
-	    if (!touchCoordinates) {
-	      $rootElement[0].addEventListener('click', onClick, true);
-	      $rootElement[0].addEventListener('touchstart', onTouchStart, true);
-	      touchCoordinates = [];
-	    }
-
-	    lastPreventedTime = Date.now();
-
-	    checkAllowableRegions(touchCoordinates, x, y);
-	  }
-
-	  // Actual linking function.
-	  return function(scope, element, attr) {
-	    var clickHandler = $parse(attr.ngClick),
-	        tapping = false,
-	        tapElement,  // Used to blur the element after a tap.
-	        startTime,   // Used to check if the tap was held too long.
-	        touchStartX,
-	        touchStartY;
-
-	    function resetState() {
-	      tapping = false;
-	      element.removeClass(ACTIVE_CLASS_NAME);
-	    }
-
-	    element.on('touchstart', function(event) {
-	      tapping = true;
-	      tapElement = event.target ? event.target : event.srcElement; // IE uses srcElement.
-	      // Hack for Safari, which can target text nodes instead of containers.
-	      if (tapElement.nodeType === 3) {
-	        tapElement = tapElement.parentNode;
-	      }
-
-	      element.addClass(ACTIVE_CLASS_NAME);
-
-	      startTime = Date.now();
-
-	      // Use jQuery originalEvent
-	      var originalEvent = event.originalEvent || event;
-	      var touches = originalEvent.touches && originalEvent.touches.length ? originalEvent.touches : [originalEvent];
-	      var e = touches[0];
-	      touchStartX = e.clientX;
-	      touchStartY = e.clientY;
-	    });
-
-	    element.on('touchcancel', function(event) {
-	      resetState();
-	    });
-
-	    element.on('touchend', function(event) {
-	      var diff = Date.now() - startTime;
-
-	      // Use jQuery originalEvent
-	      var originalEvent = event.originalEvent || event;
-	      var touches = (originalEvent.changedTouches && originalEvent.changedTouches.length) ?
-	          originalEvent.changedTouches :
-	          ((originalEvent.touches && originalEvent.touches.length) ? originalEvent.touches : [originalEvent]);
-	      var e = touches[0];
-	      var x = e.clientX;
-	      var y = e.clientY;
-	      var dist = Math.sqrt(Math.pow(x - touchStartX, 2) + Math.pow(y - touchStartY, 2));
-
-	      if (tapping && diff < TAP_DURATION && dist < MOVE_TOLERANCE) {
-	        // Call preventGhostClick so the clickbuster will catch the corresponding click.
-	        preventGhostClick(x, y);
-
-	        // Blur the focused element (the button, probably) before firing the callback.
-	        // This doesn't work perfectly on Android Chrome, but seems to work elsewhere.
-	        // I couldn't get anything to work reliably on Android Chrome.
-	        if (tapElement) {
-	          tapElement.blur();
-	        }
-
-	        if (!angular.isDefined(attr.disabled) || attr.disabled === false) {
-	          element.triggerHandler('click', [event]);
-	        }
-	      }
-
-	      resetState();
-	    });
-
-	    // Hack for iOS Safari's benefit. It goes searching for onclick handlers and is liable to click
-	    // something else nearby.
-	    element.onclick = function(event) { };
-
-	    // Actual click handler.
-	    // There are three different kinds of clicks, only two of which reach this point.
-	    // - On desktop browsers without touch events, their clicks will always come here.
-	    // - On mobile browsers, the simulated "fast" click will call this.
-	    // - But the browser's follow-up slow click will be "busted" before it reaches this handler.
-	    // Therefore it's safe to use this directive on both mobile and desktop.
-	    element.on('click', function(event, touchend) {
-	      scope.$apply(function() {
-	        clickHandler(scope, {$event: (touchend || event)});
-	      });
-	    });
-
-	    element.on('mousedown', function(event) {
-	      element.addClass(ACTIVE_CLASS_NAME);
-	    });
-
-	    element.on('mousemove mouseup', function(event) {
-	      element.removeClass(ACTIVE_CLASS_NAME);
-	    });
-
-	  };
-	}];
-
-	/* global ngTouch: false */
-
-	/**
-	 * @ngdoc directive
-	 * @name ngSwipeLeft
-	 *
-	 * @description
-	 * Specify custom behavior when an element is swiped to the left on a touchscreen device.
-	 * A leftward swipe is a quick, right-to-left slide of the finger.
-	 * Though ngSwipeLeft is designed for touch-based devices, it will work with a mouse click and drag
-	 * too.
-	 *
-	 * To disable the mouse click and drag functionality, add `ng-swipe-disable-mouse` to
-	 * the `ng-swipe-left` or `ng-swipe-right` DOM Element.
-	 *
-	 * Requires the {@link ngTouch `ngTouch`} module to be installed.
-	 *
-	 * @element ANY
-	 * @param {expression} ngSwipeLeft {@link guide/expression Expression} to evaluate
-	 * upon left swipe. (Event object is available as `$event`)
-	 *
-	 * @example
-	    <example module="ngSwipeLeftExample" deps="angular-touch.js" name="ng-swipe-left">
-	      <file name="index.html">
-	        <div ng-show="!showActions" ng-swipe-left="showActions = true">
-	          Some list content, like an email in the inbox
-	        </div>
-	        <div ng-show="showActions" ng-swipe-right="showActions = false">
-	          <button ng-click="reply()">Reply</button>
-	          <button ng-click="delete()">Delete</button>
-	        </div>
-	      </file>
-	      <file name="script.js">
-	        angular.module('ngSwipeLeftExample', ['ngTouch']);
-	      </file>
-	    </example>
-	 */
-
-	/**
-	 * @ngdoc directive
-	 * @name ngSwipeRight
-	 *
-	 * @description
-	 * Specify custom behavior when an element is swiped to the right on a touchscreen device.
-	 * A rightward swipe is a quick, left-to-right slide of the finger.
-	 * Though ngSwipeRight is designed for touch-based devices, it will work with a mouse click and drag
-	 * too.
-	 *
-	 * Requires the {@link ngTouch `ngTouch`} module to be installed.
-	 *
-	 * @element ANY
-	 * @param {expression} ngSwipeRight {@link guide/expression Expression} to evaluate
-	 * upon right swipe. (Event object is available as `$event`)
-	 *
-	 * @example
-	    <example module="ngSwipeRightExample" deps="angular-touch.js" name="ng-swipe-right">
-	      <file name="index.html">
-	        <div ng-show="!showActions" ng-swipe-left="showActions = true">
-	          Some list content, like an email in the inbox
-	        </div>
-	        <div ng-show="showActions" ng-swipe-right="showActions = false">
-	          <button ng-click="reply()">Reply</button>
-	          <button ng-click="delete()">Delete</button>
-	        </div>
-	      </file>
-	      <file name="script.js">
-	        angular.module('ngSwipeRightExample', ['ngTouch']);
-	      </file>
-	    </example>
-	 */
-
-	function makeSwipeDirective(directiveName, direction, eventName) {
-	  ngTouch.directive(directiveName, ['$parse', '$swipe', function($parse, $swipe) {
-	    // The maximum vertical delta for a swipe should be less than 75px.
-	    var MAX_VERTICAL_DISTANCE = 75;
-	    // Vertical distance should not be more than a fraction of the horizontal distance.
-	    var MAX_VERTICAL_RATIO = 0.3;
-	    // At least a 30px lateral motion is necessary for a swipe.
-	    var MIN_HORIZONTAL_DISTANCE = 30;
-
-	    return function(scope, element, attr) {
-	      var swipeHandler = $parse(attr[directiveName]);
-
-	      var startCoords, valid;
-
-	      function validSwipe(coords) {
-	        // Check that it's within the coordinates.
-	        // Absolute vertical distance must be within tolerances.
-	        // Horizontal distance, we take the current X - the starting X.
-	        // This is negative for leftward swipes and positive for rightward swipes.
-	        // After multiplying by the direction (-1 for left, +1 for right), legal swipes
-	        // (ie. same direction as the directive wants) will have a positive delta and
-	        // illegal ones a negative delta.
-	        // Therefore this delta must be positive, and larger than the minimum.
-	        if (!startCoords) return false;
-	        var deltaY = Math.abs(coords.y - startCoords.y);
-	        var deltaX = (coords.x - startCoords.x) * direction;
-	        return valid && // Short circuit for already-invalidated swipes.
-	            deltaY < MAX_VERTICAL_DISTANCE &&
-	            deltaX > 0 &&
-	            deltaX > MIN_HORIZONTAL_DISTANCE &&
-	            deltaY / deltaX < MAX_VERTICAL_RATIO;
-	      }
-
-	      var pointerTypes = ['touch'];
-	      if (!angular.isDefined(attr['ngSwipeDisableMouse'])) {
-	        pointerTypes.push('mouse');
-	      }
-	      $swipe.bind(element, {
-	        'start': function(coords, event) {
-	          startCoords = coords;
-	          valid = true;
-	        },
-	        'cancel': function(event) {
-	          valid = false;
-	        },
-	        'end': function(coords, event) {
-	          if (validSwipe(coords)) {
-	            scope.$apply(function() {
-	              element.triggerHandler(eventName);
-	              swipeHandler(scope, {$event: event});
-	            });
-	          }
-	        }
-	      }, pointerTypes);
-	    };
-	  }]);
-	}
-
-	// Left is negative X-coordinate, right is positive.
-	makeSwipeDirective('ngSwipeLeft', -1, 'swipeleft');
-	makeSwipeDirective('ngSwipeRight', 1, 'swiperight');
-
-
-
-	})(window, window.angular);
-
-
-/***/ },
-/* 68 */
 /***/ function(module, exports) {
 
 	/**
@@ -38597,15 +37840,15 @@ webpackJsonp([0],[
 	})(window, window.angular);
 
 /***/ },
-/* 69 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(70);
+	__webpack_require__(68);
 	module.exports = 'ngAnimate';
 
 
 /***/ },
-/* 70 */
+/* 68 */
 /***/ function(module, exports) {
 
 	/**
@@ -42763,7 +42006,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 71 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -42825,7 +42068,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 72 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var require;/* WEBPACK VAR INJECTION */(function(global, __webpack_provided_window_dot_jQuery) {(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.angularBaronScrollbar = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
@@ -43054,7 +42297,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(2)))
 
 /***/ },
-/* 73 */
+/* 71 */
 /***/ function(module, exports) {
 
 	/*!
@@ -43361,25 +42604,25 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 74 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Should already be required, here for clarity
 	__webpack_require__(62);
 
 	// Load Angular and dependent libs
-	__webpack_require__(69);
+	__webpack_require__(67);
 	__webpack_require__(64);
 
 	// Now load Angular Material
-	__webpack_require__(75);
+	__webpack_require__(73);
 
 	// Export namespace
 	module.exports = 'ngMaterial';
 
 
 /***/ },
-/* 75 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*!
@@ -76335,15 +75578,15 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 76 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(77);
+	__webpack_require__(75);
 	module.exports = 'ngCookies';
 
 
 /***/ },
-/* 77 */
+/* 75 */
 /***/ function(module, exports) {
 
 	/**
@@ -76679,7 +75922,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 78 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -76922,12 +76165,1944 @@ webpackJsonp([0],[
 
 
 /***/ },
+/* 77 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(78);
+	module.exports = 'ngMessages';
+
+
+/***/ },
+/* 78 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license AngularJS v1.6.0
+	 * (c) 2010-2016 Google, Inc. http://angularjs.org
+	 * License: MIT
+	 */
+	(function(window, angular) {'use strict';
+
+	var forEach;
+	var isArray;
+	var isString;
+	var jqLite;
+
+	/**
+	 * @ngdoc module
+	 * @name ngMessages
+	 * @description
+	 *
+	 * The `ngMessages` module provides enhanced support for displaying messages within templates
+	 * (typically within forms or when rendering message objects that return key/value data).
+	 * Instead of relying on JavaScript code and/or complex ng-if statements within your form template to
+	 * show and hide error messages specific to the state of an input field, the `ngMessages` and
+	 * `ngMessage` directives are designed to handle the complexity, inheritance and priority
+	 * sequencing based on the order of how the messages are defined in the template.
+	 *
+	 * Currently, the ngMessages module only contains the code for the `ngMessages`, `ngMessagesInclude`
+	 * `ngMessage` and `ngMessageExp` directives.
+	 *
+	 * # Usage
+	 * The `ngMessages` directive allows keys in a key/value collection to be associated with a child element
+	 * (or 'message') that will show or hide based on the truthiness of that key's value in the collection. A common use
+	 * case for `ngMessages` is to display error messages for inputs using the `$error` object exposed by the
+	 * {@link ngModel ngModel} directive.
+	 *
+	 * The child elements of the `ngMessages` directive are matched to the collection keys by a `ngMessage` or
+	 * `ngMessageExp` directive. The value of these attributes must match a key in the collection that is provided by
+	 * the `ngMessages` directive.
+	 *
+	 * Consider the following example, which illustrates a typical use case of `ngMessages`. Within the form `myForm` we
+	 * have a text input named `myField` which is bound to the scope variable `field` using the {@link ngModel ngModel}
+	 * directive.
+	 *
+	 * The `myField` field is a required input of type `email` with a maximum length of 15 characters.
+	 *
+	 * ```html
+	 * <form name="myForm">
+	 *   <label>
+	 *     Enter text:
+	 *     <input type="email" ng-model="field" name="myField" required maxlength="15" />
+	 *   </label>
+	 *   <div ng-messages="myForm.myField.$error" role="alert">
+	 *     <div ng-message="required">Please enter a value for this field.</div>
+	 *     <div ng-message="email">This field must be a valid email address.</div>
+	 *     <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+	 *   </div>
+	 * </form>
+	 * ```
+	 *
+	 * In order to show error messages corresponding to `myField` we first create an element with an `ngMessages` attribute
+	 * set to the `$error` object owned by the `myField` input in our `myForm` form.
+	 *
+	 * Within this element we then create separate elements for each of the possible errors that `myField` could have.
+	 * The `ngMessage` attribute is used to declare which element(s) will appear for which error - for example,
+	 * setting `ng-message="required"` specifies that this particular element should be displayed when there
+	 * is no value present for the required field `myField` (because the key `required` will be `true` in the object
+	 * `myForm.myField.$error`).
+	 *
+	 * ### Message order
+	 *
+	 * By default, `ngMessages` will only display one message for a particular key/value collection at any time. If more
+	 * than one message (or error) key is currently true, then which message is shown is determined by the order of messages
+	 * in the HTML template code (messages declared first are prioritised). This mechanism means the developer does not have
+	 * to prioritize messages using custom JavaScript code.
+	 *
+	 * Given the following error object for our example (which informs us that the field `myField` currently has both the
+	 * `required` and `email` errors):
+	 *
+	 * ```javascript
+	 * <!-- keep in mind that ngModel automatically sets these error flags -->
+	 * myField.$error = { required : true, email: true, maxlength: false };
+	 * ```
+	 * The `required` message will be displayed to the user since it appears before the `email` message in the DOM.
+	 * Once the user types a single character, the `required` message will disappear (since the field now has a value)
+	 * but the `email` message will be visible because it is still applicable.
+	 *
+	 * ### Displaying multiple messages at the same time
+	 *
+	 * While `ngMessages` will by default only display one error element at a time, the `ng-messages-multiple` attribute can
+	 * be applied to the `ngMessages` container element to cause it to display all applicable error messages at once:
+	 *
+	 * ```html
+	 * <!-- attribute-style usage -->
+	 * <div ng-messages="myForm.myField.$error" ng-messages-multiple>...</div>
+	 *
+	 * <!-- element-style usage -->
+	 * <ng-messages for="myForm.myField.$error" multiple>...</ng-messages>
+	 * ```
+	 *
+	 * ## Reusing and Overriding Messages
+	 * In addition to prioritization, ngMessages also allows for including messages from a remote or an inline
+	 * template. This allows for generic collection of messages to be reused across multiple parts of an
+	 * application.
+	 *
+	 * ```html
+	 * <script type="text/ng-template" id="error-messages">
+	 *   <div ng-message="required">This field is required</div>
+	 *   <div ng-message="minlength">This field is too short</div>
+	 * </script>
+	 *
+	 * <div ng-messages="myForm.myField.$error" role="alert">
+	 *   <div ng-messages-include="error-messages"></div>
+	 * </div>
+	 * ```
+	 *
+	 * However, including generic messages may not be useful enough to match all input fields, therefore,
+	 * `ngMessages` provides the ability to override messages defined in the remote template by redefining
+	 * them within the directive container.
+	 *
+	 * ```html
+	 * <!-- a generic template of error messages known as "my-custom-messages" -->
+	 * <script type="text/ng-template" id="my-custom-messages">
+	 *   <div ng-message="required">This field is required</div>
+	 *   <div ng-message="minlength">This field is too short</div>
+	 * </script>
+	 *
+	 * <form name="myForm">
+	 *   <label>
+	 *     Email address
+	 *     <input type="email"
+	 *            id="email"
+	 *            name="myEmail"
+	 *            ng-model="email"
+	 *            minlength="5"
+	 *            required />
+	 *   </label>
+	 *   <!-- any ng-message elements that appear BEFORE the ng-messages-include will
+	 *        override the messages present in the ng-messages-include template -->
+	 *   <div ng-messages="myForm.myEmail.$error" role="alert">
+	 *     <!-- this required message has overridden the template message -->
+	 *     <div ng-message="required">You did not enter your email address</div>
+	 *
+	 *     <!-- this is a brand new message and will appear last in the prioritization -->
+	 *     <div ng-message="email">Your email address is invalid</div>
+	 *
+	 *     <!-- and here are the generic error messages -->
+	 *     <div ng-messages-include="my-custom-messages"></div>
+	 *   </div>
+	 * </form>
+	 * ```
+	 *
+	 * In the example HTML code above the message that is set on required will override the corresponding
+	 * required message defined within the remote template. Therefore, with particular input fields (such
+	 * email addresses, date fields, autocomplete inputs, etc...), specialized error messages can be applied
+	 * while more generic messages can be used to handle other, more general input errors.
+	 *
+	 * ## Dynamic Messaging
+	 * ngMessages also supports using expressions to dynamically change key values. Using arrays and
+	 * repeaters to list messages is also supported. This means that the code below will be able to
+	 * fully adapt itself and display the appropriate message when any of the expression data changes:
+	 *
+	 * ```html
+	 * <form name="myForm">
+	 *   <label>
+	 *     Email address
+	 *     <input type="email"
+	 *            name="myEmail"
+	 *            ng-model="email"
+	 *            minlength="5"
+	 *            required />
+	 *   </label>
+	 *   <div ng-messages="myForm.myEmail.$error" role="alert">
+	 *     <div ng-message="required">You did not enter your email address</div>
+	 *     <div ng-repeat="errorMessage in errorMessages">
+	 *       <!-- use ng-message-exp for a message whose key is given by an expression -->
+	 *       <div ng-message-exp="errorMessage.type">{{ errorMessage.text }}</div>
+	 *     </div>
+	 *   </div>
+	 * </form>
+	 * ```
+	 *
+	 * The `errorMessage.type` expression can be a string value or it can be an array so
+	 * that multiple errors can be associated with a single error message:
+	 *
+	 * ```html
+	 *   <label>
+	 *     Email address
+	 *     <input type="email"
+	 *            ng-model="data.email"
+	 *            name="myEmail"
+	 *            ng-minlength="5"
+	 *            ng-maxlength="100"
+	 *            required />
+	 *   </label>
+	 *   <div ng-messages="myForm.myEmail.$error" role="alert">
+	 *     <div ng-message-exp="'required'">You did not enter your email address</div>
+	 *     <div ng-message-exp="['minlength', 'maxlength']">
+	 *       Your email must be between 5 and 100 characters long
+	 *     </div>
+	 *   </div>
+	 * ```
+	 *
+	 * Feel free to use other structural directives such as ng-if and ng-switch to further control
+	 * what messages are active and when. Be careful, if you place ng-message on the same element
+	 * as these structural directives, Angular may not be able to determine if a message is active
+	 * or not. Therefore it is best to place the ng-message on a child element of the structural
+	 * directive.
+	 *
+	 * ```html
+	 * <div ng-messages="myForm.myEmail.$error" role="alert">
+	 *   <div ng-if="showRequiredError">
+	 *     <div ng-message="required">Please enter something</div>
+	 *   </div>
+	 * </div>
+	 * ```
+	 *
+	 * ## Animations
+	 * If the `ngAnimate` module is active within the application then the `ngMessages`, `ngMessage` and
+	 * `ngMessageExp` directives will trigger animations whenever any messages are added and removed from
+	 * the DOM by the `ngMessages` directive.
+	 *
+	 * Whenever the `ngMessages` directive contains one or more visible messages then the `.ng-active` CSS
+	 * class will be added to the element. The `.ng-inactive` CSS class will be applied when there are no
+	 * messages present. Therefore, CSS transitions and keyframes as well as JavaScript animations can
+	 * hook into the animations whenever these classes are added/removed.
+	 *
+	 * Let's say that our HTML code for our messages container looks like so:
+	 *
+	 * ```html
+	 * <div ng-messages="myMessages" class="my-messages" role="alert">
+	 *   <div ng-message="alert" class="some-message">...</div>
+	 *   <div ng-message="fail" class="some-message">...</div>
+	 * </div>
+	 * ```
+	 *
+	 * Then the CSS animation code for the message container looks like so:
+	 *
+	 * ```css
+	 * .my-messages {
+	 *   transition:1s linear all;
+	 * }
+	 * .my-messages.ng-active {
+	 *   // messages are visible
+	 * }
+	 * .my-messages.ng-inactive {
+	 *   // messages are hidden
+	 * }
+	 * ```
+	 *
+	 * Whenever an inner message is attached (becomes visible) or removed (becomes hidden) then the enter
+	 * and leave animation is triggered for each particular element bound to the `ngMessage` directive.
+	 *
+	 * Therefore, the CSS code for the inner messages looks like so:
+	 *
+	 * ```css
+	 * .some-message {
+	 *   transition:1s linear all;
+	 * }
+	 *
+	 * .some-message.ng-enter {}
+	 * .some-message.ng-enter.ng-enter-active {}
+	 *
+	 * .some-message.ng-leave {}
+	 * .some-message.ng-leave.ng-leave-active {}
+	 * ```
+	 *
+	 * {@link ngAnimate Click here} to learn how to use JavaScript animations or to learn more about ngAnimate.
+	 */
+	angular.module('ngMessages', [], function initAngularHelpers() {
+	  // Access helpers from angular core.
+	  // Do it inside a `config` block to ensure `window.angular` is available.
+	  forEach = angular.forEach;
+	  isArray = angular.isArray;
+	  isString = angular.isString;
+	  jqLite = angular.element;
+	})
+
+	  /**
+	   * @ngdoc directive
+	   * @module ngMessages
+	   * @name ngMessages
+	   * @restrict AE
+	   *
+	   * @description
+	   * `ngMessages` is a directive that is designed to show and hide messages based on the state
+	   * of a key/value object that it listens on. The directive itself complements error message
+	   * reporting with the `ngModel` $error object (which stores a key/value state of validation errors).
+	   *
+	   * `ngMessages` manages the state of internal messages within its container element. The internal
+	   * messages use the `ngMessage` directive and will be inserted/removed from the page depending
+	   * on if they're present within the key/value object. By default, only one message will be displayed
+	   * at a time and this depends on the prioritization of the messages within the template. (This can
+	   * be changed by using the `ng-messages-multiple` or `multiple` attribute on the directive container.)
+	   *
+	   * A remote template can also be used to promote message reusability and messages can also be
+	   * overridden.
+	   *
+	   * {@link module:ngMessages Click here} to learn more about `ngMessages` and `ngMessage`.
+	   *
+	   * @usage
+	   * ```html
+	   * <!-- using attribute directives -->
+	   * <ANY ng-messages="expression" role="alert">
+	   *   <ANY ng-message="stringValue">...</ANY>
+	   *   <ANY ng-message="stringValue1, stringValue2, ...">...</ANY>
+	   *   <ANY ng-message-exp="expressionValue">...</ANY>
+	   * </ANY>
+	   *
+	   * <!-- or by using element directives -->
+	   * <ng-messages for="expression" role="alert">
+	   *   <ng-message when="stringValue">...</ng-message>
+	   *   <ng-message when="stringValue1, stringValue2, ...">...</ng-message>
+	   *   <ng-message when-exp="expressionValue">...</ng-message>
+	   * </ng-messages>
+	   * ```
+	   *
+	   * @param {string} ngMessages an angular expression evaluating to a key/value object
+	   *                 (this is typically the $error object on an ngModel instance).
+	   * @param {string=} ngMessagesMultiple|multiple when set, all messages will be displayed with true
+	   *
+	   * @example
+	   * <example name="ngMessages-directive" module="ngMessagesExample"
+	   *          deps="angular-messages.js"
+	   *          animations="true" fixBase="true">
+	   *   <file name="index.html">
+	   *     <form name="myForm">
+	   *       <label>
+	   *         Enter your name:
+	   *         <input type="text"
+	   *                name="myName"
+	   *                ng-model="name"
+	   *                ng-minlength="5"
+	   *                ng-maxlength="20"
+	   *                required />
+	   *       </label>
+	   *       <pre>myForm.myName.$error = {{ myForm.myName.$error | json }}</pre>
+	   *
+	   *       <div ng-messages="myForm.myName.$error" style="color:maroon" role="alert">
+	   *         <div ng-message="required">You did not enter a field</div>
+	   *         <div ng-message="minlength">Your field is too short</div>
+	   *         <div ng-message="maxlength">Your field is too long</div>
+	   *       </div>
+	   *     </form>
+	   *   </file>
+	   *   <file name="script.js">
+	   *     angular.module('ngMessagesExample', ['ngMessages']);
+	   *   </file>
+	   * </example>
+	   */
+	  .directive('ngMessages', ['$animate', function($animate) {
+	    var ACTIVE_CLASS = 'ng-active';
+	    var INACTIVE_CLASS = 'ng-inactive';
+
+	    return {
+	      require: 'ngMessages',
+	      restrict: 'AE',
+	      controller: ['$element', '$scope', '$attrs', function NgMessagesCtrl($element, $scope, $attrs) {
+	        var ctrl = this;
+	        var latestKey = 0;
+	        var nextAttachId = 0;
+
+	        this.getAttachId = function getAttachId() { return nextAttachId++; };
+
+	        var messages = this.messages = {};
+	        var renderLater, cachedCollection;
+
+	        this.render = function(collection) {
+	          collection = collection || {};
+
+	          renderLater = false;
+	          cachedCollection = collection;
+
+	          // this is true if the attribute is empty or if the attribute value is truthy
+	          var multiple = isAttrTruthy($scope, $attrs.ngMessagesMultiple) ||
+	                         isAttrTruthy($scope, $attrs.multiple);
+
+	          var unmatchedMessages = [];
+	          var matchedKeys = {};
+	          var messageItem = ctrl.head;
+	          var messageFound = false;
+	          var totalMessages = 0;
+
+	          // we use != instead of !== to allow for both undefined and null values
+	          while (messageItem != null) {
+	            totalMessages++;
+	            var messageCtrl = messageItem.message;
+
+	            var messageUsed = false;
+	            if (!messageFound) {
+	              forEach(collection, function(value, key) {
+	                if (!messageUsed && truthy(value) && messageCtrl.test(key)) {
+	                  // this is to prevent the same error name from showing up twice
+	                  if (matchedKeys[key]) return;
+	                  matchedKeys[key] = true;
+
+	                  messageUsed = true;
+	                  messageCtrl.attach();
+	                }
+	              });
+	            }
+
+	            if (messageUsed) {
+	              // unless we want to display multiple messages then we should
+	              // set a flag here to avoid displaying the next message in the list
+	              messageFound = !multiple;
+	            } else {
+	              unmatchedMessages.push(messageCtrl);
+	            }
+
+	            messageItem = messageItem.next;
+	          }
+
+	          forEach(unmatchedMessages, function(messageCtrl) {
+	            messageCtrl.detach();
+	          });
+
+	          if (unmatchedMessages.length !== totalMessages) {
+	            $animate.setClass($element, ACTIVE_CLASS, INACTIVE_CLASS);
+	          } else {
+	            $animate.setClass($element, INACTIVE_CLASS, ACTIVE_CLASS);
+	          }
+	        };
+
+	        $scope.$watchCollection($attrs.ngMessages || $attrs['for'], ctrl.render);
+
+	        // If the element is destroyed, proactively destroy all the currently visible messages
+	        $element.on('$destroy', function() {
+	          forEach(messages, function(item) {
+	            item.message.detach();
+	          });
+	        });
+
+	        this.reRender = function() {
+	          if (!renderLater) {
+	            renderLater = true;
+	            $scope.$evalAsync(function() {
+	              if (renderLater && cachedCollection) {
+	                ctrl.render(cachedCollection);
+	              }
+	            });
+	          }
+	        };
+
+	        this.register = function(comment, messageCtrl) {
+	          var nextKey = latestKey.toString();
+	          messages[nextKey] = {
+	            message: messageCtrl
+	          };
+	          insertMessageNode($element[0], comment, nextKey);
+	          comment.$$ngMessageNode = nextKey;
+	          latestKey++;
+
+	          ctrl.reRender();
+	        };
+
+	        this.deregister = function(comment) {
+	          var key = comment.$$ngMessageNode;
+	          delete comment.$$ngMessageNode;
+	          removeMessageNode($element[0], comment, key);
+	          delete messages[key];
+	          ctrl.reRender();
+	        };
+
+	        function findPreviousMessage(parent, comment) {
+	          var prevNode = comment;
+	          var parentLookup = [];
+
+	          while (prevNode && prevNode !== parent) {
+	            var prevKey = prevNode.$$ngMessageNode;
+	            if (prevKey && prevKey.length) {
+	              return messages[prevKey];
+	            }
+
+	            // dive deeper into the DOM and examine its children for any ngMessage
+	            // comments that may be in an element that appears deeper in the list
+	            if (prevNode.childNodes.length && parentLookup.indexOf(prevNode) === -1) {
+	              parentLookup.push(prevNode);
+	              prevNode = prevNode.childNodes[prevNode.childNodes.length - 1];
+	            } else if (prevNode.previousSibling) {
+	              prevNode = prevNode.previousSibling;
+	            } else {
+	              prevNode = prevNode.parentNode;
+	              parentLookup.push(prevNode);
+	            }
+	          }
+	        }
+
+	        function insertMessageNode(parent, comment, key) {
+	          var messageNode = messages[key];
+	          if (!ctrl.head) {
+	            ctrl.head = messageNode;
+	          } else {
+	            var match = findPreviousMessage(parent, comment);
+	            if (match) {
+	              messageNode.next = match.next;
+	              match.next = messageNode;
+	            } else {
+	              messageNode.next = ctrl.head;
+	              ctrl.head = messageNode;
+	            }
+	          }
+	        }
+
+	        function removeMessageNode(parent, comment, key) {
+	          var messageNode = messages[key];
+
+	          var match = findPreviousMessage(parent, comment);
+	          if (match) {
+	            match.next = messageNode.next;
+	          } else {
+	            ctrl.head = messageNode.next;
+	          }
+	        }
+	      }]
+	    };
+
+	    function isAttrTruthy(scope, attr) {
+	     return (isString(attr) && attr.length === 0) || //empty attribute
+	            truthy(scope.$eval(attr));
+	    }
+
+	    function truthy(val) {
+	      return isString(val) ? val.length : !!val;
+	    }
+	  }])
+
+	  /**
+	   * @ngdoc directive
+	   * @name ngMessagesInclude
+	   * @restrict AE
+	   * @scope
+	   *
+	   * @description
+	   * `ngMessagesInclude` is a directive with the purpose to import existing ngMessage template
+	   * code from a remote template and place the downloaded template code into the exact spot
+	   * that the ngMessagesInclude directive is placed within the ngMessages container. This allows
+	   * for a series of pre-defined messages to be reused and also allows for the developer to
+	   * determine what messages are overridden due to the placement of the ngMessagesInclude directive.
+	   *
+	   * @usage
+	   * ```html
+	   * <!-- using attribute directives -->
+	   * <ANY ng-messages="expression" role="alert">
+	   *   <ANY ng-messages-include="remoteTplString">...</ANY>
+	   * </ANY>
+	   *
+	   * <!-- or by using element directives -->
+	   * <ng-messages for="expression" role="alert">
+	   *   <ng-messages-include src="expressionValue1">...</ng-messages-include>
+	   * </ng-messages>
+	   * ```
+	   *
+	   * {@link module:ngMessages Click here} to learn more about `ngMessages` and `ngMessage`.
+	   *
+	   * @param {string} ngMessagesInclude|src a string value corresponding to the remote template.
+	   */
+	  .directive('ngMessagesInclude',
+	    ['$templateRequest', '$document', '$compile', function($templateRequest, $document, $compile) {
+
+	    return {
+	      restrict: 'AE',
+	      require: '^^ngMessages', // we only require this for validation sake
+	      link: function($scope, element, attrs) {
+	        var src = attrs.ngMessagesInclude || attrs.src;
+	        $templateRequest(src).then(function(html) {
+	          if ($scope.$$destroyed) return;
+
+	          if (isString(html) && !html.trim()) {
+	            // Empty template - nothing to compile
+	            replaceElementWithMarker(element, src);
+	          } else {
+	            // Non-empty template - compile and link
+	            $compile(html)($scope, function(contents) {
+	              element.after(contents);
+	              replaceElementWithMarker(element, src);
+	            });
+	          }
+	        });
+	      }
+	    };
+
+	    // Helpers
+	    function replaceElementWithMarker(element, src) {
+	      // A comment marker is placed for debugging purposes
+	      var comment = $compile.$$createComment ?
+	          $compile.$$createComment('ngMessagesInclude', src) :
+	          $document[0].createComment(' ngMessagesInclude: ' + src + ' ');
+	      var marker = jqLite(comment);
+	      element.after(marker);
+
+	      // Don't pollute the DOM anymore by keeping an empty directive element
+	      element.remove();
+	    }
+	  }])
+
+	  /**
+	   * @ngdoc directive
+	   * @name ngMessage
+	   * @restrict AE
+	   * @scope
+	   *
+	   * @description
+	   * `ngMessage` is a directive with the purpose to show and hide a particular message.
+	   * For `ngMessage` to operate, a parent `ngMessages` directive on a parent DOM element
+	   * must be situated since it determines which messages are visible based on the state
+	   * of the provided key/value map that `ngMessages` listens on.
+	   *
+	   * More information about using `ngMessage` can be found in the
+	   * {@link module:ngMessages `ngMessages` module documentation}.
+	   *
+	   * @usage
+	   * ```html
+	   * <!-- using attribute directives -->
+	   * <ANY ng-messages="expression" role="alert">
+	   *   <ANY ng-message="stringValue">...</ANY>
+	   *   <ANY ng-message="stringValue1, stringValue2, ...">...</ANY>
+	   * </ANY>
+	   *
+	   * <!-- or by using element directives -->
+	   * <ng-messages for="expression" role="alert">
+	   *   <ng-message when="stringValue">...</ng-message>
+	   *   <ng-message when="stringValue1, stringValue2, ...">...</ng-message>
+	   * </ng-messages>
+	   * ```
+	   *
+	   * @param {expression} ngMessage|when a string value corresponding to the message key.
+	   */
+	  .directive('ngMessage', ngMessageDirectiveFactory())
+
+
+	  /**
+	   * @ngdoc directive
+	   * @name ngMessageExp
+	   * @restrict AE
+	   * @priority 1
+	   * @scope
+	   *
+	   * @description
+	   * `ngMessageExp` is a directive with the purpose to show and hide a particular message.
+	   * For `ngMessageExp` to operate, a parent `ngMessages` directive on a parent DOM element
+	   * must be situated since it determines which messages are visible based on the state
+	   * of the provided key/value map that `ngMessages` listens on.
+	   *
+	   * @usage
+	   * ```html
+	   * <!-- using attribute directives -->
+	   * <ANY ng-messages="expression">
+	   *   <ANY ng-message-exp="expressionValue">...</ANY>
+	   * </ANY>
+	   *
+	   * <!-- or by using element directives -->
+	   * <ng-messages for="expression">
+	   *   <ng-message when-exp="expressionValue">...</ng-message>
+	   * </ng-messages>
+	   * ```
+	   *
+	   * {@link module:ngMessages Click here} to learn more about `ngMessages` and `ngMessage`.
+	   *
+	   * @param {expression} ngMessageExp|whenExp an expression value corresponding to the message key.
+	   */
+	  .directive('ngMessageExp', ngMessageDirectiveFactory());
+
+	function ngMessageDirectiveFactory() {
+	  return ['$animate', function($animate) {
+	    return {
+	      restrict: 'AE',
+	      transclude: 'element',
+	      priority: 1, // must run before ngBind, otherwise the text is set on the comment
+	      terminal: true,
+	      require: '^^ngMessages',
+	      link: function(scope, element, attrs, ngMessagesCtrl, $transclude) {
+	        var commentNode = element[0];
+
+	        var records;
+	        var staticExp = attrs.ngMessage || attrs.when;
+	        var dynamicExp = attrs.ngMessageExp || attrs.whenExp;
+	        var assignRecords = function(items) {
+	          records = items
+	              ? (isArray(items)
+	                  ? items
+	                  : items.split(/[\s,]+/))
+	              : null;
+	          ngMessagesCtrl.reRender();
+	        };
+
+	        if (dynamicExp) {
+	          assignRecords(scope.$eval(dynamicExp));
+	          scope.$watchCollection(dynamicExp, assignRecords);
+	        } else {
+	          assignRecords(staticExp);
+	        }
+
+	        var currentElement, messageCtrl;
+	        ngMessagesCtrl.register(commentNode, messageCtrl = {
+	          test: function(name) {
+	            return contains(records, name);
+	          },
+	          attach: function() {
+	            if (!currentElement) {
+	              $transclude(function(elm, newScope) {
+	                $animate.enter(elm, null, element);
+	                currentElement = elm;
+
+	                // Each time we attach this node to a message we get a new id that we can match
+	                // when we are destroying the node later.
+	                var $$attachId = currentElement.$$attachId = ngMessagesCtrl.getAttachId();
+
+	                // in the event that the element or a parent element is destroyed
+	                // by another structural directive then it's time
+	                // to deregister the message from the controller
+	                currentElement.on('$destroy', function() {
+	                  if (currentElement && currentElement.$$attachId === $$attachId) {
+	                    ngMessagesCtrl.deregister(commentNode);
+	                    messageCtrl.detach();
+	                  }
+	                  newScope.$destroy();
+	                });
+	              });
+	            }
+	          },
+	          detach: function() {
+	            if (currentElement) {
+	              var elm = currentElement;
+	              currentElement = null;
+	              $animate.leave(elm);
+	            }
+	          }
+	        });
+	      }
+	    };
+	  }];
+
+	  function contains(collection, key) {
+	    if (collection) {
+	      return isArray(collection)
+	          ? collection.indexOf(key) >= 0
+	          : collection.hasOwnProperty(key);
+	    }
+	  }
+	}
+
+
+	})(window, window.angular);
+
+
+/***/ },
 /* 79 */
+/***/ function(module, exports) {
+
+	;(function(angular, window) {
+	/*
+	* Credit: Credit to angular md-tabs
+	*         All codes are based on md-tabs by angular material
+	* Reference: https://github.com/angular/material
+	*/
+
+	MdSteppersController.$inject = ["$scope", "$element", "$window", "$mdConstant", "$mdStepInkRipple", "$mdUtil", "$animateCss", "$attrs", "$compile", "$mdTheming"];
+	MdSteppersTemplate.$inject = ["$compile", "$mdUtil"];
+	MdStepScroll.$inject = ["$parse"];
+	angular.module('md-steppers', [
+	  'material.core',
+	  'material.components.icon']);
+
+	/**
+	 * @ngdoc directive
+	 * @name mdStep
+	 * @module md-steppers
+	 *
+	 * @restrict E
+	 *
+	 * @description TODO DOCS
+	 * Based on md-tabs by angular material https://github.com/angular/material
+	 *
+	 */
+	angular
+	    .module('md-steppers')
+	    .directive('mdStep', MdStep);
+
+	function MdStep() {
+	    return {
+	        require: '^?mdSteppers',
+	        terminal: true,
+	        compile: function (element, attr) {
+	            var label = firstChild(element, 'md-step-label'),
+	                body = firstChild(element, 'md-step-body'),
+	                actions = firstChild(element, 'md-step-actions');
+
+	            if (label.length == 0) {
+	                label = angular.element('<md-step-label></md-step-label>');
+	                if (attr.label) label.text(attr.label);
+	                else label.append(element.contents());
+
+	                if (body.length == 0) {
+	                    var contents = element.contents().detach();
+	                    body = angular.element('<md-step-body></md-step-body>');
+	                    body.append(contents);
+	                }
+	            }
+
+	            element.append(label);
+	            if (body.html()) element.append(body);
+
+	            return postLink;
+	        },
+	        scope: {
+	            complete: '=?mdComplete',
+	            active: '=?mdActive',
+	            disabled: '=?ngDisabled',
+	            select: '&?mdOnSelect',
+	            deselect: '&?mdOnDeselect'
+	        }
+	    };
+
+	    function postLink(scope, element, attr, ctrl) {
+	        if (!ctrl) return;
+	        var index = ctrl.getStepElementIndex(element),
+	            body = firstChild(element, 'md-step-body').remove(),
+	            label = firstChild(element, 'md-step-label').remove(),
+	            data = ctrl.insertStep({
+	                scope: scope,
+	                parent: scope.$parent,
+	                index: index,
+	                element: element,
+	                template: body.html(),
+	                label: label.html()
+	            }, index);
+
+	        scope.select = scope.select || angular.noop;
+	        scope.deselect = scope.deselect || angular.noop;
+
+	        scope.$watch('active', function (active) { if (active) ctrl.select(data.getIndex()); });
+	        scope.$watch('complete', function () { ctrl.refreshIndex(); });
+	        scope.$watch('disabled', function () { ctrl.refreshIndex(); });
+	        scope.$watch(
+	            function () {
+	                return ctrl.getStepElementIndex(element);
+	            },
+	            function (newIndex) {
+	                data.index = newIndex;
+	                ctrl.updateStepOrder();
+	            }
+	        );
+	        scope.$on('$destroy', function () { ctrl.removeStep(data); });
+	    }
+
+	    function firstChild(element, tagName) {
+	        var children = element[0].children;
+	        for (var i = 0, len = children.length; i < len; i++) {
+	            var child = children[i];
+	            if (child.tagName === tagName.toUpperCase()) return angular.element(child);
+	        }
+	        return angular.element();
+	    }
+	}
+
+	angular
+	    .module('md-steppers')
+	    .directive('mdStepItem', MdStepItem);
+
+	function MdStepItem() {
+	    return {
+	        require: '^?mdSteppers',
+	        link: function link(scope, element, attr, ctrl) {
+	            if (!ctrl) return;
+	            ctrl.attachRipple(scope, element);
+	        }
+	    };
+	}
+
+	angular
+	    .module('md-steppers')
+	    .directive('mdStepLabel', MdStepLabel);
+
+	function MdStepLabel() {
+	    return { terminal: true };
+	}
+
+
+	angular
+	  .module('md-steppers')
+	  .controller('MdSteppersController', MdSteppersController);
+
+	/**
+	 * @ngInject
+	 */
+	function MdSteppersController($scope, $element, $window, $mdConstant, $mdStepInkRipple,
+	  $mdUtil, $animateCss, $attrs, $compile, $mdTheming) {
+	  // define private properties
+	  var ctrl = this,
+	    locked = false,
+	    elements = getElements(),
+	    queue = [],
+	    destroyed = false,
+	    loaded = false;
+
+	  // define one-way bindings
+	  defineOneWayBinding('stretchSteppers', handleStretchSteppers);
+
+	  // define public properties with change handlers
+	  defineProperty('focusIndex', handleFocusIndexChange, ctrl.selectedIndex || 0);
+	  defineProperty('offsetLeft', handleOffsetChange, 0);
+	  defineProperty('hasContent', handleHasContent, false);
+	  defineProperty('maxStepWidth', handleMaxStepWidth, getMaxStepWidth());
+	  defineProperty('shouldPaginate', handleShouldPaginate, false);
+
+	  // define boolean attributes
+	  defineBooleanAttribute('noInkBar', handleInkBar, true);
+	  defineBooleanAttribute('dynamicHeight', handleDynamicHeight);
+	  defineBooleanAttribute('noPagination');
+	  defineBooleanAttribute('swipeContent');
+	  defineBooleanAttribute('noDisconnect');
+	  defineBooleanAttribute('autoselect');
+	  defineBooleanAttribute('centerSteppers', handleCenterSteppers, true);
+	  defineBooleanAttribute('enableDisconnect');
+
+	  // define public properties
+	  ctrl.scope = $scope;
+	  ctrl.parent = $scope.$parent;
+	  ctrl.steppers = [];
+	  ctrl.lastSelectedIndex = null;
+	  ctrl.hasFocus = false;
+	  ctrl.lastClick = true;
+	  ctrl.shouldCenterSteppers = shouldCenterSteppers();
+
+	  // define public methods
+	  ctrl.updatePagination = $mdUtil.debounce(updatePagination, 100);
+	  ctrl.redirectFocus = redirectFocus;
+	  ctrl.attachRipple = attachRipple;
+	  ctrl.insertStep = insertStep;
+	  ctrl.removeStep = removeStep;
+	  ctrl.select = select;
+	  ctrl.scroll = scroll;
+	  ctrl.nextPage = nextPage;
+	  ctrl.previousPage = previousPage;
+	  ctrl.keydown = keydown;
+	  ctrl.canPageForward = canPageForward;
+	  ctrl.canPageBack = canPageBack;
+	  ctrl.refreshIndex = refreshIndex;
+	  ctrl.incrementIndex = incrementIndex;
+	  ctrl.getStepElementIndex = getStepElementIndex;
+	  ctrl.updateInkBarStyles = $mdUtil.debounce(updateInkBarStyles, 100);
+	  ctrl.updateStepOrder = $mdUtil.debounce(updateStepOrder, 100);
+
+	  init();
+
+	  /**
+	   * Perform initialization for the controller, setup events and watcher(s)
+	   */
+	  function init() {
+	    ctrl.selectedIndex = ctrl.selectedIndex || 0;
+	    compileTemplate();
+	    configureWatchers();
+	    bindEvents();
+	    $mdTheming($element);
+	    $mdUtil.nextTick(function() {
+	      updateHeightFromContent();
+	      adjustOffset();
+	      updateInkBarStyles();
+	      ctrl.steppers[ctrl.selectedIndex] && ctrl.steppers[ctrl.selectedIndex].scope.select();
+	      loaded = true;
+	      updatePagination();
+	    });
+	  }
+
+	  /**
+	   * Compiles the template provided by the user.  This is passed as an attribute from the steppers
+	   * directive's template function.
+	   */
+	  function compileTemplate() {
+	    var template = $attrs.$mdSteppersTemplate,
+	      element = angular.element(elements.data);
+	    element.html(template);
+	    $compile(element.contents())(ctrl.parent);
+	    delete $attrs.$mdSteppersTemplate;
+	  }
+
+	  /**
+	   * Binds events used by the steppers component.
+	   */
+	  function bindEvents() {
+	    angular.element($window).on('resize', handleWindowResize);
+	    $scope.$on('$destroy', cleanup);
+	  }
+
+	  /**
+	   * Configure watcher(s) used by Steppers
+	   */
+	  function configureWatchers() {
+	    $scope.$watch('$mdSteppersCtrl.selectedIndex', handleSelectedIndexChange);
+	  }
+
+	  /**
+	   * Creates a one-way binding manually rather than relying on Angular's isolated scope
+	   * @param key
+	   * @param handler
+	   */
+	  function defineOneWayBinding(key, handler) {
+	    var attr = $attrs.$normalize('md-' + key);
+	    if (handler) defineProperty(key, handler);
+	    $attrs.$observe(attr, function(newValue) {
+	      ctrl[key] = newValue;
+	    });
+	  }
+
+	  /**
+	   * Defines boolean attributes with default value set to true.  (ie. md-stretch-steppers with no value
+	   * will be treated as being truthy)
+	   * @param key
+	   * @param handler
+	   */
+	  function defineBooleanAttribute(key, handler) {
+	    var attr = $attrs.$normalize('md-' + key);
+	    if (handler) defineProperty(key, handler);
+	    if ($attrs.hasOwnProperty(attr)) updateValue($attrs[attr]);
+	    $attrs.$observe(attr, updateValue);
+	    function updateValue(newValue) {
+	      ctrl[key] = newValue !== 'false';
+	    }
+	  }
+
+	  /**
+	   * Remove any events defined by this controller
+	   */
+	  function cleanup() {
+	    destroyed = true;
+	    angular.element($window).off('resize', handleWindowResize);
+	  }
+
+	  // Change handlers
+
+	  /**
+	   * Toggles stretch steppers class and updates inkbar when step stretching changes
+	   * @param stretchSteppers
+	   */
+	  function handleStretchSteppers(stretchSteppers) {
+	    angular.element(elements.wrapper).toggleClass('md-stretch-steppers', shouldStretchSteppers());
+	    updateInkBarStyles();
+	  }
+
+	  function handleCenterSteppers(newValue) {
+	    ctrl.shouldCenterSteppers = shouldCenterSteppers();
+	  }
+
+	  function handleMaxStepWidth(newWidth, oldWidth) {
+	    if (newWidth !== oldWidth) {
+	      $mdUtil.nextTick(ctrl.updateInkBarStyles);
+	    }
+	  }
+
+	  function handleShouldPaginate(newValue, oldValue) {
+	    if (newValue !== oldValue) {
+	      ctrl.maxStepWidth = getMaxStepWidth();
+	      ctrl.shouldCenterSteppers = shouldCenterSteppers();
+	      $mdUtil.nextTick(function() {
+	        ctrl.maxStepWidth = getMaxStepWidth();
+	        adjustOffset(ctrl.selectedIndex);
+	      });
+	    }
+	  }
+
+	  /**
+	   * Add/remove the `md-no-step-content` class depending on `ctrl.hasContent`
+	   * @param hasContent
+	   */
+	  function handleHasContent(hasContent) {
+	    $element[hasContent ? 'removeClass' : 'addClass']('md-no-step-content');
+	  }
+
+	  /**
+	   * Apply ctrl.offsetLeft to the paging element when it changes
+	   * @param left
+	   */
+	  function handleOffsetChange(left) {
+	    var newValue = ctrl.shouldCenterSteppers ? '' : '-' + left + 'px';
+	    angular.element(elements.paging).css($mdConstant.CSS.TRANSFORM, 'translate3d(' + newValue + ', 0, 0)');
+	    $scope.$broadcast('$mdSteppersPaginationChanged');
+	  }
+
+	  /**
+	   * Update the UI whenever `ctrl.focusIndex` is updated
+	   * @param newIndex
+	   * @param oldIndex
+	   */
+	  function handleFocusIndexChange(newIndex, oldIndex) {
+	    if (newIndex === oldIndex) return;
+	    if (!elements.steppers[newIndex]) return;
+	    adjustOffset();
+	    redirectFocus();
+	  }
+
+	  /**
+	   * Update the UI whenever the selected index changes. Calls user-defined select/deselect methods.
+	   * @param newValue
+	   * @param oldValue
+	   */
+	  function handleSelectedIndexChange(newValue, oldValue) {
+	    if (newValue === oldValue) return;
+
+	    ctrl.selectedIndex = getNearestSafeIndex(newValue);
+	    ctrl.lastSelectedIndex = oldValue;
+	    ctrl.updateInkBarStyles();
+	    updateHeightFromContent();
+	    adjustOffset(newValue);
+	    $scope.$broadcast('$mdSteppersChanged');
+	    ctrl.steppers[oldValue] && ctrl.steppers[oldValue].scope.deselect();
+	    ctrl.steppers[newValue] && ctrl.steppers[newValue].scope.select();
+	  }
+
+	  function getStepElementIndex(stepEl) {
+	    var steppers = $element[0].getElementsByTagName('md-step');
+	    return Array.prototype.indexOf.call(steppers, stepEl[0]);
+	  }
+
+	  /**
+	   * Queues up a call to `handleWindowResize` when a resize occurs while the steppers component is
+	   * hidden.
+	   */
+	  function handleResizeWhenVisible() {
+	    // if there is already a watcher waiting for resize, do nothing
+	    if (handleResizeWhenVisible.watcher) return;
+	    // otherwise, we will abuse the $watch function to check for visible
+	    handleResizeWhenVisible.watcher = $scope.$watch(function() {
+	      // since we are checking for DOM size, we use $mdUtil.nextTick() to wait for after the DOM updates
+	      $mdUtil.nextTick(function() {
+	        // if the watcher has already run (ie. multiple digests in one cycle), do nothing
+	        if (!handleResizeWhenVisible.watcher) return;
+
+	        if ($element.prop('offsetParent')) {
+	          handleResizeWhenVisible.watcher();
+	          handleResizeWhenVisible.watcher = null;
+
+	          handleWindowResize();
+	        }
+	      }, false);
+	    });
+	  }
+
+	  // Event handlers / actions
+
+	  /**
+	   * Handle user keyboard interactions
+	   * @param event
+	   */
+	  function keydown(event) {
+	    switch (event.keyCode) {
+	      case $mdConstant.KEY_CODE.LEFT_ARROW:
+	        event.preventDefault();
+	        incrementIndex(-1, true);
+	        break;
+	      case $mdConstant.KEY_CODE.RIGHT_ARROW:
+	        event.preventDefault();
+	        incrementIndex(1, true);
+	        break;
+	      case $mdConstant.KEY_CODE.SPACE:
+	      case $mdConstant.KEY_CODE.ENTER:
+	        event.preventDefault();
+	        if (!locked)
+	          ctrl.selectedIndex = ctrl.focusIndex;
+	        break;
+	    }
+	    ctrl.lastClick = false;
+	  }
+
+	  /**
+	   * Update the selected index and trigger a click event on the original `md-step` element in order
+	   * to fire user-added click events.
+	   * @param index
+	   */
+	  function select(index) {
+	    if (!locked)
+	      ctrl.focusIndex = ctrl.selectedIndex = index;
+	    ctrl.lastClick = true;
+	    // nextTick is required to prevent errors in user-defined click events
+	    $mdUtil.nextTick(function() {
+	      ctrl.steppers[index].element.triggerHandler('click');
+	    }, false);
+	  }
+
+	  /**
+	   * When pagination is on, this makes sure the selected index is in view.
+	   * @param event
+	   */
+	  function scroll(event) {
+	    if (!ctrl.shouldPaginate) return;
+	    event.preventDefault();
+	    ctrl.offsetLeft = fixOffset(ctrl.offsetLeft - event.wheelDelta);
+	  }
+
+	  /**
+	   * Slides the steppers over approximately one page forward.
+	   */
+	  function nextPage() {
+	    var viewportWidth = elements.canvas.clientWidth,
+	      totalWidth = viewportWidth + ctrl.offsetLeft,
+	      i,
+	      step;
+	    for (i = 0; i < elements.steppers.length; i++) {
+	      step = elements.steppers[i];
+	      if (step.offsetLeft + step.offsetWidth > totalWidth) break;
+	    }
+	    ctrl.offsetLeft = fixOffset(step.offsetLeft);
+	  }
+
+	  /**
+	   * Slides the steppers over approximately one page backward.
+	   */
+	  function previousPage() {
+	    var i,
+	      step;
+	    for (i = 0; i < elements.steppers.length; i++) {
+	      step = elements.steppers[i];
+	      if (step.offsetLeft + step.offsetWidth >= ctrl.offsetLeft) break;
+	    }
+	    ctrl.offsetLeft = fixOffset(step.offsetLeft + step.offsetWidth - elements.canvas.clientWidth);
+	  }
+
+	  /**
+	   * Update size calculations when the window is resized.
+	   */
+	  function handleWindowResize() {
+	    ctrl.lastSelectedIndex = ctrl.selectedIndex;
+	    ctrl.offsetLeft = fixOffset(ctrl.offsetLeft);
+	    $mdUtil.nextTick(function() {
+	      ctrl.updateInkBarStyles();
+	      updatePagination();
+	    });
+	  }
+
+	  function handleInkBar(hide) {
+	    angular.element(elements.inkBar).toggleClass('ng-hide', hide);
+	  }
+
+	  /**
+	   * Toggle dynamic height class when value changes
+	   * @param value
+	   */
+	  function handleDynamicHeight(value) {
+	    $element.toggleClass('md-dynamic-height', value);
+	  }
+
+	  /**
+	   * Remove a step from the data and select the nearest valid step.
+	   * @param stepData
+	   */
+	  function removeStep(stepData) {
+	    if (destroyed) return;
+	    var selectedIndex = ctrl.selectedIndex,
+	      step = ctrl.steppers.splice(stepData.getIndex(), 1)[0];
+	    refreshIndex();
+	    // when removing a step, if the selected index did not change, we have to manually trigger the
+	    //   step select/deselect events
+	    if (ctrl.selectedIndex === selectedIndex) {
+	      step.scope.deselect();
+	      ctrl.steppers[ctrl.selectedIndex] && ctrl.steppers[ctrl.selectedIndex].scope.select();
+	    }
+	    $mdUtil.nextTick(function() {
+	      updatePagination();
+	      ctrl.offsetLeft = fixOffset(ctrl.offsetLeft);
+	    });
+	  }
+
+	  /**
+	   * Create an entry in the steppers array for a new step at the specified index.
+	   * @param stepData
+	   * @param index
+	   * @returns {*}
+	   */
+	  function insertStep(stepData, index) {
+	    var hasLoaded = loaded;
+	    var proto = {
+	        getIndex: function() {
+	          return ctrl.steppers.indexOf(step);
+	        },
+	        isActive: function() {
+	          return this.getIndex() === ctrl.selectedIndex;
+	        },
+	        isLeft: function() {
+	          return this.getIndex() < ctrl.selectedIndex;
+	        },
+	        isRight: function() {
+	          return this.getIndex() > ctrl.selectedIndex;
+	        },
+	        shouldRender: function() {
+	          return !ctrl.noDisconnect || this.isActive();
+	        },
+	        hasFocus: function() {
+	          return !ctrl.lastClick
+	            && ctrl.hasFocus && this.getIndex() === ctrl.focusIndex;
+	        },
+	        id: $mdUtil.nextUid()
+	      },
+	      step = angular.extend(proto, stepData);
+	    if (angular.isDefined(index)) {
+	      ctrl.steppers.splice(index, 0, step);
+	    } else {
+	      ctrl.steppers.push(step);
+	    }
+	    processQueue();
+	    updateHasContent();
+	    $mdUtil.nextTick(function() {
+	      updatePagination();
+	      // if autoselect is enabled, select the newly added step
+	      if (hasLoaded && ctrl.autoselect) $mdUtil.nextTick(function() {
+	          $mdUtil.nextTick(function() {
+	            select(ctrl.steppers.indexOf(step));
+	          });
+	        });
+	    });
+	    return step;
+	  }
+
+	  // Getter methods
+
+	  /**
+	   * Gathers references to all of the DOM elements used by this controller.
+	   * @returns {{}}
+	   */
+	  function getElements() {
+	    var elements = {};
+
+	    // gather step bar elements
+	    elements.wrapper = $element[0].getElementsByTagName('md-steppers-wrapper')[0];
+	    elements.data = $element[0].getElementsByTagName('md-step-data')[0];
+	    elements.canvas = elements.wrapper.getElementsByTagName('md-steppers-canvas')[0];
+	    elements.paging = elements.canvas.getElementsByTagName('md-pagination-wrapper')[0];
+	    elements.steppers = elements.paging.getElementsByTagName('md-step-item');
+	    elements.dummies = elements.canvas.getElementsByTagName('md-dummy-step');
+	    elements.inkBar = elements.paging.getElementsByTagName('md-ink-bar')[0];
+
+	    // gather step content elements
+	    elements.contentsWrapper = $element[0].getElementsByTagName('md-steppers-content-wrapper')[0];
+	    elements.contents = elements.contentsWrapper.getElementsByTagName('md-step-content');
+
+	    return elements;
+	  }
+
+	  /**
+	   * Determines whether or not the left pagination arrow should be enabled.
+	   * @returns {boolean}
+	   */
+	  function canPageBack() {
+	    return ctrl.offsetLeft > 0;
+	  }
+
+	  /**
+	   * Determines whether or not the right pagination arrow should be enabled.
+	   * @returns {*|boolean}
+	   */
+	  function canPageForward() {
+	    var lastStep = elements.steppers[elements.steppers.length - 1];
+	    return lastStep && lastStep.offsetLeft + lastStep.offsetWidth > elements.canvas.clientWidth +
+	      ctrl.offsetLeft;
+	  }
+
+	  /**
+	   * Determines if the UI should stretch the steppers to fill the available space.
+	   * @returns {*}
+	   */
+	  function shouldStretchSteppers() {
+	    switch (ctrl.stretchSteppers) {
+	      case 'always':
+	        return true;
+	      case 'never':
+	        return false;
+	      default:
+	        return !ctrl.shouldPaginate
+	          && $window.matchMedia('(max-width: 600px)').matches;
+	    }
+	  }
+
+	  /**
+	   * Determines if the steppers should appear centered.
+	   * @returns {string|boolean}
+	   */
+	  function shouldCenterSteppers() {
+	    return ctrl.centerSteppers && !ctrl.shouldPaginate;
+	  }
+
+	  /**
+	   * Determines if pagination is necessary to display the steppers within the available space.
+	   * @returns {boolean}
+	   */
+	  function shouldPaginate() {
+	    if (ctrl.noPagination || !loaded) return false;
+	    var canvasWidth = $element.prop('clientWidth');
+	    angular.forEach(getElements().dummies, function(step) {
+	      canvasWidth -= step.offsetWidth;
+	    });
+	    return canvasWidth < 0;
+	  }
+
+	  /**
+	   * Finds the nearest step index that is available.  This is primarily used for when the active
+	   * step is removed.
+	   * @param newIndex
+	   * @returns {*}
+	   */
+	  function getNearestSafeIndex(newIndex) {
+	    if (newIndex === -1) return -1;
+	    var maxOffset = Math.max(ctrl.steppers.length - newIndex, newIndex),
+	      i,
+	      step;
+	    for (i = 0; i <= maxOffset; i++) {
+	      step = ctrl.steppers[newIndex + i];
+	      if (step && (step.scope.disabled !== true)) return step.getIndex();
+	      step = ctrl.steppers[newIndex - i];
+	      if (step && (step.scope.disabled !== true)) return step.getIndex();
+	    }
+	    return newIndex;
+	  }
+
+	  // Utility methods
+
+	  /**
+	   * Defines a property using a getter and setter in order to trigger a change handler without
+	   * using `$watch` to observe changes.
+	   * @param key
+	   * @param handler
+	   * @param value
+	   */
+	  function defineProperty(key, handler, value) {
+	    Object.defineProperty(ctrl, key, {
+	      get: function() {
+	        return value;
+	      },
+	      set: function(newValue) {
+	        var oldValue = value;
+	        value = newValue;
+	        handler && handler(newValue, oldValue);
+	      }
+	    });
+	  }
+
+	  /**
+	   * Updates whether or not pagination should be displayed.
+	   */
+	  function updatePagination() {
+	    if (!shouldStretchSteppers()) updatePagingWidth();
+	    ctrl.maxStepWidth = getMaxStepWidth();
+	    ctrl.shouldPaginate = shouldPaginate();
+	  }
+
+	  function updatePagingWidth() {
+	    var width = 1;
+	    angular.forEach(getElements().dummies, function(element) {
+	      width += Math.ceil(element.offsetWidth);
+	    });
+	    angular.element(elements.paging).css('width', width + 'px');
+	  }
+
+	  function getMaxStepWidth() {
+	    return $element.prop('clientWidth');
+	  }
+
+	  /**
+	   * Re-orders the steppers and updates the selected and focus indexes to their new positions.
+	   * This is triggered by `stepDirective.js` when the user's steppers have been re-ordered.
+	   */
+	  function updateStepOrder() {
+	    var selectedItem = ctrl.steppers[ctrl.selectedIndex],
+	      focusItem = ctrl.steppers[ctrl.focusIndex];
+	    ctrl.steppers = ctrl.steppers.sort(function(a, b) {
+	      return a.index - b.index;
+	    });
+	    ctrl.selectedIndex = ctrl.steppers.indexOf(selectedItem);
+	    ctrl.focusIndex = ctrl.steppers.indexOf(focusItem);
+	  }
+
+	  /**
+	   * This moves the selected or focus index left or right.  This is used by the keydown handler.
+	   * @param inc
+	   */
+	  function incrementIndex(inc, focus) {
+	    var newIndex,
+	      key = focus ? 'focusIndex' : 'selectedIndex',
+	      index = ctrl[key];
+	    for (newIndex = index + inc;
+	      ctrl.steppers[newIndex] && ctrl.steppers[newIndex].scope.disabled;
+	      newIndex += inc) {
+	    }
+	    if (ctrl.steppers[newIndex]) {
+	      ctrl[key] = newIndex;
+	    }
+	  }
+
+	  /**
+	   * This is used to forward focus to dummy elements.  This method is necessary to avoid animation
+	   * issues when attempting to focus an item that is out of view.
+	   */
+	  function redirectFocus() {
+	    getElements().dummies[ctrl.focusIndex].focus();
+	  }
+
+	  /**
+	   * Forces the pagination to move the focused step into view.
+	   */
+	  function adjustOffset(index) {
+	    if (index == null)
+	      index = ctrl.focusIndex;
+	    if (!elements.steppers[index]) return;
+	    if (ctrl.shouldCenterSteppers) return;
+	    var step = elements.steppers[index],
+	      left = step.offsetLeft,
+	      right = step.offsetWidth + left;
+	    ctrl.offsetLeft = Math.max(ctrl.offsetLeft, fixOffset(right - elements.canvas.clientWidth + 32 * 2));
+	    ctrl.offsetLeft = Math.min(ctrl.offsetLeft, fixOffset(left));
+	  }
+
+	  /**
+	   * Iterates through all queued functions and clears the queue.  This is used for functions that
+	   * are called before the UI is ready, such as size calculations.
+	   */
+	  function processQueue() {
+	    queue.forEach(function(func) {
+	      $mdUtil.nextTick(func);
+	    });
+	    queue = [];
+	  }
+
+	  /**
+	   * Determines if the step content area is needed.
+	   */
+	  function updateHasContent() {
+	    var hasContent = false;
+	    angular.forEach(ctrl.steppers, function(step) {
+	      if (step.template)
+	        hasContent = true;
+	    });
+	    ctrl.hasContent = hasContent;
+	  }
+
+	  /**
+	   * Moves the indexes to their nearest valid values.
+	   */
+	  function refreshIndex() {
+	    ctrl.selectedIndex = getNearestSafeIndex(ctrl.selectedIndex);
+	    ctrl.focusIndex = getNearestSafeIndex(ctrl.focusIndex);
+	  }
+
+	  /**
+	   * Calculates the content height of the current step.
+	   * @returns {*}
+	   */
+	  function updateHeightFromContent() {
+	    if (!ctrl.dynamicHeight) return $element.css('height', '');
+	    if (!ctrl.steppers.length) return queue.push(updateHeightFromContent);
+
+	    var stepContent = elements.contents[ctrl.selectedIndex],
+	      contentHeight = stepContent ? stepContent.offsetHeight : 0,
+	      steppersHeight = elements.wrapper.offsetHeight,
+	      newHeight = contentHeight + steppersHeight,
+	      currentHeight = $element.prop('offsetHeight');
+
+	    // Adjusts calculations for when the buttons are bottom-aligned since this relies on absolute
+	    // positioning.  This should probably be cleaned up if a cleaner solution is possible.
+	    if ($element.attr('md-align-steppers') === 'bottom') {
+	      currentHeight -= steppersHeight;
+	      newHeight -= steppersHeight;
+	      // Need to include bottom border in these calculations
+	      if ($element.attr('md-border-bottom') !== undefined) ++currentHeight;
+	    }
+
+	    // Lock during animation so the user can't change steppers
+	    locked = true;
+
+	    var fromHeight = {
+	        height: currentHeight + 'px'
+	      },
+	      toHeight = {
+	        height: newHeight + 'px'
+	      };
+
+	    // Set the height to the current, specific pixel height to fix a bug on iOS where the height
+	    // first animates to 0, then back to the proper height causing a visual glitch
+	    $element.css(fromHeight);
+
+	    // Animate the height from the old to the new
+	    $animateCss($element, {
+	      from: fromHeight,
+	      to: toHeight,
+	      easing: 'cubic-bezier(0.35, 0, 0.25, 1)',
+	      duration: 0.5
+	    }).start().done(function() {
+	      // Then (to fix the same iOS issue as above), disable transitions and remove the specific
+	      // pixel height so the height can size with browser width/content changes, etc.
+	      $element.css({
+	        transition: 'none',
+	        height: ''
+	      });
+
+	      // In the next tick, re-allow transitions (if we do it all at once, $element.css is "smart"
+	      // enough to batch it for us instead of doing it immediately, which undoes the original
+	      // transition: none)
+	      $mdUtil.nextTick(function() {
+	        $element.css('transition', '');
+	      });
+
+	      // And unlock so step changes can occur
+	      locked = false;
+	    });
+	  }
+
+	  /**
+	   * Repositions the ink bar to the selected step.
+	   * @returns {*}
+	   */
+	  function updateInkBarStyles() {
+	    if (!elements.steppers[ctrl.selectedIndex]) {
+	      angular.element(elements.inkBar).css({
+	        left: 'auto',
+	        right: 'auto'
+	      });
+	      return;
+	    }
+	    if (!ctrl.steppers.length) return queue.push(ctrl.updateInkBarStyles);
+	    // if the element is not visible, we will not be able to calculate sizes until it is
+	    // we should treat that as a resize event rather than just updating the ink bar
+	    if (!$element.prop('offsetParent')) return handleResizeWhenVisible();
+	    var index = ctrl.selectedIndex,
+	      totalWidth = elements.paging.offsetWidth,
+	      step = elements.steppers[index],
+	      left = step.offsetLeft,
+	      right = totalWidth - left - step.offsetWidth,
+	      stepWidth;
+	    if (ctrl.shouldCenterSteppers) {
+	      stepWidth = Array.prototype.slice.call(elements.steppers).reduce(function(value, element) {
+	        return value + element.offsetWidth;
+	      }, 0);
+	      if (totalWidth > stepWidth) $mdUtil.nextTick(updateInkBarStyles, false);
+	    }
+	    updateInkBarClassName();
+	    //angular.element(elements.inkBar).css({ left: left + 'px', right: right + 'px' });
+	    angular.element(elements.inkBar).css({
+	      left: 32 + 'px',
+	      right: totalWidth - left + 'px'
+	    });
+	  }
+
+	  /**
+	   * Adds left/right classes so that the ink bar will animate properly.
+	   */
+	  function updateInkBarClassName() {
+	    var newIndex = ctrl.selectedIndex,
+	      oldIndex = ctrl.lastSelectedIndex,
+	      ink = angular.element(elements.inkBar);
+	    if (!angular.isNumber(oldIndex)) return;
+	    ink
+	      .toggleClass('md-left', newIndex < oldIndex)
+	      .toggleClass('md-right', newIndex > oldIndex);
+	  }
+
+	  /**
+	   * Takes an offset value and makes sure that it is within the min/max allowed values.
+	   * @param value
+	   * @returns {*}
+	   */
+	  function fixOffset(value) {
+	    if (!elements.steppers.length || !ctrl.shouldPaginate) return 0;
+	    var lastStep = elements.steppers[elements.steppers.length - 1],
+	      totalWidth = lastStep.offsetLeft + lastStep.offsetWidth;
+	    value = Math.max(0, value);
+	    value = Math.min(totalWidth - elements.canvas.clientWidth, value);
+	    return value;
+	  }
+
+	  /**
+	   * Attaches a ripple to the step item element.
+	   * @param scope
+	   * @param element
+	   */
+	  function attachRipple(scope, element) {
+	    if (!ctrl.disableTabsBehavior) {
+	      var options = {
+	        colorElement: angular.element(elements.inkBar)
+	      };
+	      $mdStepInkRipple.attach(scope, element, options);
+	    }
+	  }
+	}
+
+
+	/**
+	 * @ngdoc directive
+	 * @name mdSteppers
+	 * @module md-steppers
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * TODO DOCS
+	 *
+	 */
+	angular
+	  .module('md-steppers')
+	  .directive('mdSteppers', MdSteppers);
+
+	function MdSteppers() {
+	  return {
+	    scope: {
+	      selectedIndex: '=?mdSelected',
+	      busyText: '=?mdBusyText',
+	      busy: '=?mdBusy',
+	      disableTabsBehavior: '=?mdDisableTabsBehavior'
+	    },
+	    template: function(element, attr) {
+	      attr["$mdSteppersTemplate"] = element.html();
+
+	      var ngClick = attr.mdDisableTabsBehavior ?
+	        '' :
+	        'ng-click="$mdSteppersCtrl.select(step.getIndex())" ';
+	        var mdStepClass = attr.mdDisableTabsBehavior ? 'class="md-step md-step-nopointer" ': 'class="md-step" ';
+	      return ['',
+	        '<md-steppers-wrapper> ',
+	        '<md-step-data></md-step-data> ' ,
+	        // '<md-prev-button ' ,
+	        //     'tabindex="-1" ' ,
+	        //     'role="button" ' ,
+	        //     'aria-label="Previous Page" ' ,
+	        //     'aria-disabled="{{!$mdSteppersCtrl.canPageBack()}}" ' ,
+	        //     'ng-class="{ \'md-disabled\': !$mdSteppersCtrl.canPageBack() }" ' ,
+	        //     'ng-if="$mdSteppersCtrl.shouldPaginate" ' ,
+	        //     'ng-click="$mdSteppersCtrl.previousPage()"> ' ,
+	        //   '<md-icon md-svg-icon="md-tabs-arrow"></md-icon> ' ,
+	        // '</md-prev-button> ' ,
+	        // '<md-next-button ' ,
+	        //     'tabindex="-1" ' ,
+	        //     'role="button" ' ,
+	        //     'aria-label="Next Page" ' ,
+	        //     'aria-disabled="{{!$mdSteppersCtrl.canPageForward()}}" ' ,
+	        //     'ng-class="{ \'md-disabled\': !$mdSteppersCtrl.canPageForward() }" ' ,
+	        //     'ng-if="$mdSteppersCtrl.shouldPaginate" ' ,
+	        //     'ng-click="$mdSteppersCtrl.nextPage()"> ' ,
+	        //   '<md-icon md-svg-icon="md-tabs-arrow"></md-icon> ' ,
+	        // '</md-next-button> ' ,
+	        '<md-steppers-canvas ',
+	        'tabindex="{{ $mdSteppersCtrl.hasFocus ? -1 : 0 }}" ',
+	        'aria-activedescendant="step-item-{{$mdSteppersCtrl.steppers[$mdSteppersCtrl.focusIndex].id}}" ',
+	        'ng-focus="$mdSteppersCtrl.redirectFocus()" ',
+	        'ng-class="{ ',
+	        '\'md-paginated\': $mdSteppersCtrl.shouldPaginate, ',
+	        '\'md-center-steppers\': $mdSteppersCtrl.shouldCenterSteppers ',
+	        '}" ',
+	        'ng-keydown="$mdSteppersCtrl.keydown($event)" ',
+	        'role="steplist"> ',
+	        '<md-busy ng-show="$mdSteppersCtrl.busy">{{$mdSteppersCtrl.busyText}}</md-busy>',
+	        '<md-pagination-wrapper ',
+	        'ng-class="{ \'md-center-steppers\': $mdSteppersCtrl.shouldCenterSteppers }" ',
+	        'md-step-scroll="$mdSteppersCtrl.scroll($event)"> ',
+	        '<md-step-item ',
+	        'tabindex="-1" ',
+	        mdStepClass,
+	        'style="max-width: {{ $mdSteppersCtrl.maxStepWidth + \'px\' }}" ',
+	        'ng-repeat="step in $mdSteppersCtrl.steppers" ',
+	        'role="step" ',
+	        'aria-controls="step-content-{{::step.id}}" ',
+	        'aria-selected="{{step.isActive()}}" ',
+	        'aria-disabled="{{step.scope.disabled || \'false\'}}" ',
+	        ngClick,
+	        'ng-class="{ ',
+	        '\'md-active\':    step.isActive(), ',
+	        '\'md-focused\':   step.hasFocus(), ',
+	        '\'md-disabled\':  step.scope.disabled, ',
+	        '\'md-complete\':  step.scope.complete ',
+	        '}" ',
+	        'ng-disabled="step.scope.disabled" ',
+	        'md-swipe-left="$mdSteppersCtrl.nextPage()" ',
+	        'md-swipe-right="$mdSteppersCtrl.previousPage()" ',
+	        'md-scope="::step.parent"><md-step-label-wrapper ',
+	        'stepindex="{{::$index+1}}" ',
+	        'md-steppers-template="::step.label" ',
+	        'md-scope="::step.parent" ',
+	        '></md-step-label-wrapper>',
+	        '</md-step-item> ',
+	        //'<md-ink-bar></md-ink-bar> ' ,
+	        '</md-pagination-wrapper> ',
+	        '<div class="md-visually-hidden md-dummy-wrapper"> ',
+	        '<md-dummy-step ',
+	        'class="md-step" ',
+	        'tabindex="-1" ',
+	        'stepindex="{{::$index+1}}" ',
+	        'id="step-item-{{::step.id}}" ',
+	        'role="step" ',
+	        'aria-controls="step-content-{{::step.id}}" ',
+	        'aria-selected="{{step.isActive()}}" ',
+	        'aria-disabled="{{step.scope.disabled || \'false\'}}" ',
+	        'ng-focus="$mdSteppersCtrl.hasFocus = true" ',
+	        'ng-blur="$mdSteppersCtrl.hasFocus = false" ',
+	        'ng-repeat="step in $mdSteppersCtrl.steppers" ',
+	        'md-scope="::step.parent"><md-step-label-wrapper ',
+	        'stepindex="{{::$index+1}}" ',
+	        'md-steppers-template="::step.label" ',
+	        'md-scope="::step.parent" ',
+	        '></md-step-label-wrapper></md-dummy-step> ',
+	        '</div> ',
+	        '</md-steppers-canvas> ',
+	        '</md-steppers-wrapper> ',
+	        '<md-steppers-content-wrapper ng-show="$mdSteppersCtrl.hasContent && $mdSteppersCtrl.selectedIndex >= 0"> ',
+	        '<md-step-content ',
+	        'id="step-content-{{::step.id}}" ',
+	        'role="steppanel" ',
+	        'aria-labelledby="step-item-{{::step.id}}" ',
+	        'md-swipe-left="$mdSteppersCtrl.swipeContent && $mdSteppersCtrl.incrementIndex(1)" ',
+	        'md-swipe-right="$mdSteppersCtrl.swipeContent && $mdSteppersCtrl.incrementIndex(-1)" ',
+	        'ng-if="$mdSteppersCtrl.hasContent" ',
+	        'ng-repeat="(index, step) in $mdSteppersCtrl.steppers" ',
+	        'ng-class="{ ',
+	        '\'md-no-transition\': $mdSteppersCtrl.lastSelectedIndex == null, ',
+	        '\'md-active\':        step.isActive(), ',
+	        '\'md-left\':          step.isLeft(), ',
+	        '\'md-right\':         step.isRight(), ',
+	        '\'md-no-scroll\':     $mdSteppersCtrl.dynamicHeight ',
+	        '}"> ',
+	        '<div ',
+	        'md-steppers-template="::step.template" ',
+	        'md-connected-if="step.isActive()" ',
+	        'md-scope="::step.parent" ',
+	        'ng-if="$mdSteppersCtrl.enableDisconnect || step.shouldRender()"></div> ',
+	        '</md-step-content> ',
+	        '</md-steppers-content-wrapper>'].join('');
+	    },
+	    controller: 'MdSteppersController',
+	    controllerAs: '$mdSteppersCtrl',
+	    bindToController: true
+	  };
+	}
+	angular
+	    .module('md-steppers')
+	    .directive('mdSteppersTemplate', MdSteppersTemplate);
+
+	function MdSteppersTemplate($compile, $mdUtil) {
+	    return {
+	        restrict: 'A',
+	        link: link,
+	        scope: {
+	            template: '=mdSteppersTemplate',
+	            connected: '=?mdConnectedIf',
+	            compileScope: '=mdScope'
+	        },
+	        require: '^?mdSteppers'
+	    };
+	    function link(scope, element, attr, ctrl) {
+	        if (!ctrl) return;
+	        var compileScope = ctrl.enableDisconnect ? scope.compileScope.$new() : scope.compileScope;
+	        element.html(scope.template);
+	        $compile(element.contents())(compileScope);
+	        element.on('DOMSubtreeModified', function () {
+	            ctrl.updatePagination();
+	            ctrl.updateInkBarStyles();
+	        });
+	        return $mdUtil.nextTick(handleScope);
+
+	        function handleScope() {
+	            scope.$watch('connected', function (value) { value === false ? disconnect() : reconnect(); });
+	            scope.$on('$destroy', reconnect);
+	        }
+
+	        function disconnect() {
+	            if (ctrl.enableDisconnect) $mdUtil.disconnectScope(compileScope);
+	        }
+
+	        function reconnect() {
+	            if (ctrl.enableDisconnect) $mdUtil.reconnectScope(compileScope);
+	        }
+	    }
+	}
+
+	(function () {
+	    'use strict';
+
+	    /**
+	   * @ngdoc service
+	   * @name $mdStepInkRipple
+	   * @module md-steppers
+	   *
+	   * @description
+	   * TODO DOCS
+	   *
+	   */
+
+	    MdStepInkRipple.$inject = ["$mdInkRipple"];
+	    angular.module('md-steppers')
+	      .factory('$mdStepInkRipple', MdStepInkRipple);
+
+	    /**
+	    * @ngInject
+	    */
+	    function MdStepInkRipple($mdInkRipple) {
+	        return {
+	            attach: attach
+	        };
+
+	        function attach(scope, element, options) {
+	            return $mdInkRipple.attach(scope, element, angular.extend({
+	                center: false,
+	                dimBackground: true,
+	                outline: false,
+	                rippleSize: 'full'
+	            }, options));
+	        };
+	    };
+	})();
+
+	angular.module('md-steppers')
+	    .directive('mdStepScroll', MdStepScroll);
+
+	function MdStepScroll($parse) {
+	    return {
+	        restrict: 'A',
+	        compile: function ($element, attr) {
+	            var fn = $parse(attr.mdStepScroll, null, true);
+	            return function ngEventHandler(scope, element) {
+	                element.on('mousewheel', function (event) {
+	                    scope.$apply(function () { fn(scope, { $event: event }); });
+	                });
+	            };
+	        }
+	    }
+	}
+
+	})(angular, window);
+
+/***/ },
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./default/module.js": 80,
-		"./main/module.js": 85
+		"./case/module.js": 81,
+		"./default/module.js": 87,
+		"./main/module.js": 93
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -76940,13 +78115,13 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 79;
+	webpackContext.id = 80;
 
 
 /***/ },
-/* 80 */
-[114, 81, 83, 84, 82],
 /* 81 */
+[129, 82, 84, 86, 83],
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -76955,7 +78130,147 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(82);
+	var _config = __webpack_require__(83);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MODULE_NAME = _config2.default.name; //CONTROLLER
+	exports.default = ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http',
+	// '$mdSidenav','$mdMedia', 
+	function ($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http) {
+	  // $mdSidenav, $mdMedia, 
+
+	  $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
+
+	  $scope.case = $moduleService.getCase();
+	}];
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+
+/***/ },
+/* 83 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'Case'
+	};
+
+/***/ },
+/* 84 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _config = __webpack_require__(83);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MODULE_NAME = _config2.default.name; //DIRECTIVE
+	exports.default = ['$rootScope', '$http', '$timeout', '$window', '$state', function ($rootScope, $http, $timeout, $window, $state) {
+	  var linkFunction = function linkFunction($scope, $element, $attributes) {
+	    console.log($scope.case);
+	  };
+	  return {
+	    restrict: "AE",
+	    link: linkFunction,
+	    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+	    template: __webpack_require__(85)
+	  };
+	}];
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+
+/***/ },
+/* 85 */
+/***/ function(module, exports) {
+
+	module.exports = "<section class=\"case-announce case-block\" \r\n  ng-style=\"{\r\n    'color': case.style.color, \r\n    'background-color': case.style.bgColor, \r\n    'background-image': case.style.bgImg && 'url(' + (isDesktop && case.style.bgImg.desktop || case.style.bgImg.mobile) + ')' || false\r\n  }\">\r\n  <div class=\"case-block__container\">\r\n    <h2 class=\"case-announce__title\" ng-bind-html=\"trustAsHtml(case.title)\"></h2>\r\n    <p class=\"case-announce__summary\" ng-bind-html=\"trustAsHtml(case.summary)\"></p>\r\n    <div class=\"case-announce__about-block about-block\">\r\n      <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('{{case.logo}}');\">\r\n        <span class=\"about-block__title\">клиент</span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--date\">\r\n        <span class=\"about-block__title\">релиз</span>\r\n        <span class=\"about-block__date\" ng-bind=\"case.date\"></span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--project\">\r\n        <span class=\"about-block__title\">о проекте</span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section ng-if=\"block.type == 'briefidea'\" \r\n  ng-class=\"{'case-{{block.type}}': block.type}\" \r\n  layout=\"row\"\r\n  layout-align=\"center\"\r\n  layout-wrap\r\n  ng-repeat-start=\"block in case.blocks\"\r\n   >\r\n  <!-- brief -->\r\n  <div  class=\"case-brief case-block\" \r\n    flex=\"100\" flex-gt-md=\"50\"\r\n    ng-repeat=\"brief in [block.brief]\" \r\n    ng-style=\"{\r\n      'color': brief.style.color, \r\n      'background-color': brief.style.bgColor, \r\n      'background-image': brief.style.bgImg && 'url(' + (isDesktop && brief.style.bgImg.desktop || brief.style.bgImg.mobile) + ')' || false\r\n    }\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-brief__title\">\r\n        БРИФ\r\n      </h2>\r\n      <div class=\"case-brief__text\" ng-bind-html=\"trustAsHtml(brief.content)\"></div>\r\n    </div>\r\n  </div>\r\n  <!-- eof brief -->\r\n  <!-- idea -->\r\n  <div ng-if=\"block.type == 'briefidea'\" \r\n    class=\"case-idea case-block\" \r\n    flex=\"100\" flex-gt-md=\"50\"\r\n    ng-repeat=\"idea in [block.idea]\" \r\n    ng-style=\"{\r\n      'color': idea.style.color, \r\n      'background-color': idea.style.bgColor, \r\n      'background-image': idea.style.bgImg && 'url(' + (isDesktop && idea.style.bgImg.desktop || idea.style.bgImg.mobile) + ')' || false\r\n    }\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-idea__title\">\r\n        идея\r\n      </h2>\r\n      <div class=\"case-idea__text\" ng-bind-html=\"trustAsHtml(idea.content)\"></div>\r\n    </div>\r\n  </div>\r\n  <!-- eof idea -->\r\n</section>\r\n\r\n<!-- video -->\r\n<section ng-if=\"block.type == 'video'\" ng-class=\"{'case-{{block.type}}': block.type}\" ng-repeat-end \r\n  ng-style=\"{\r\n      'color': idea.style.color, \r\n      'background-color': idea.style.bgColor, \r\n      'background-image': idea.style.bgImg && 'url(' + (isDesktop && idea.style.bgImg.desktop || idea.style.bgImg.mobile) + ')' || false\r\n    }\">\r\n  <div  class=\"case-block\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-brief__title\">\r\n        Video\r\n      </h2>\r\n    </div>\r\n  </div>\r\n</section>\r\n<!-- eof video -->";
+
+/***/ },
+/* 86 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//SERVICE
+	exports.default = [function () {
+	  var service = {};
+
+	  var data = {
+	    'title': 'всегда<br>отвечай<br>на звонок',
+	    'summary': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',
+	    'date': '2014/02',
+	    'logo': '../local/templates/articulmedia/img/case/case_logo.jpg',
+	    'style': {
+	      'color': '#f3e3cc',
+	      'bgColor': '#1e2532',
+	      'bgImg': {
+	        'desktop': '../local/templates/articulmedia/img/case/case_1.jpg',
+	        'mobile': '../local/templates/articulmedia/img/case/case_1.jpg'
+	      }
+	    },
+	    'blocks': [{
+	      'type': 'briefidea',
+	      'brief': {
+	        'title': 'БРИФ',
+	        'content': '<p>\xAB\u0421\u043E\u0441\u043D\u044B\xBB \u2013 10-\u0441\u0435\u0440\u0438\u0439\u043D\u044B\u0439 \u043E\u0441\u0442\u0440\u043E\u0441\u044E\u0436\u0435\u0442\u043D\u044B\u0439 \u0442\u0440\u0438\u043B\u043B\u0435\u0440. \u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0441\u0435\u0440\u0438\u0430\u043B\u0430 \u0440\u0430\u0437\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0432 \u0433\u043E\u0440\u043E\u0434\u0435 \u0423\u044D\u0439\u0443\u043E\u0440\u0434 \u041F\u0430\u0439\u043D\u0437, \u043E\u0434\u043D\u043E \u0438\u0437 \u0433\u043B\u0430\u0432\u043D\u044B\u0445 \u043F\u0440\u0430\u0432\u0438\u043B \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u2013\xA0\u0432\u0441\u0435\u0433\u0434\u0430 \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C \u043D\u0430 \u043C\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0437\u0432\u043E\u043D\u043A\u0438.</p>\n            <h3>\u0426\u0435\u043B\u0438 \u043A\u0430\u043C\u043F\u0430\u043D\u0438\u0438:</h3>\n            <ul>\n              <li>\u041F\u0440\u043E\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435 \u0441\u0435\u0440\u0438\u0430\u043B\u0430\xA0\xAB\u0421\u043E\u0441\u043D\u044B\xBB</li>\n              <li>\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0430\u0443\u0434\u0438\u0442\u043E\u0440\u0438\u0438 \u0442\u0435\u043B\u0435\u043A\u0430\u043D\u0430\u043B\u0430 FOX</li>\n              <li>\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0446\u0438\u0438 \u0442\u0435\u043B\u0435\u043A\u0430\u043D\u0430\u043B\u0430</li>\n              <li>\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u043F\u043E\u0434\u043F\u0438\u0441\u0447\u0438\u043A\u043E\u0432 \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0445 <br/>\u0433\u0440\u0443\u043F\u043F FOX \u0432 \u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0445 \u0441\u0435\u0442\u044F\u0445</li>\n            </ul>',
+	        'style': {
+	          'color': '#f3e3cc',
+	          'bgColor': '#1e2532',
+	          'bgImg': false
+	        }
+	      },
+	      'idea': {
+	        'title': 'Идея',
+	        'content': '\u043F\u043E\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439 \n              \u0432 \u0430\u0442\u043C\u043E\u0441\u0444\u0435\u0440\u0443 \u0441\u0435\u0440\u0438\u0430\u043B\u0430, \u0434\u0430\u0432 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C \u043F\u043E\u0447\u0443\u0432\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C \n              \u0441\u0435\u0431\u044F \u043D\u0430 \u043C\u0435\u0441\u0442\u0435 \u0436\u0438\u0442\u0435\u043B\u0435\u0439 \u043C\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430, \n              \u0438 \u0441 \u0437\u0430\u043C\u0438\u0440\u0430\u043D\u0438\u0435\u043C \u0441\u0435\u0440\u0434\u0446\u0430 \n              \u043E\u0436\u0438\u0434\u0430\u0442\u044C \u0442\u0430\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0433\u043E \n              \u0437\u0432\u043E\u043D\u043A\u0430 \u043D\u0430 \u0441\u0432\u043E\u0439 \u0442\u0435\u043B\u0435\u0444\u043E\u043D.',
+	        'style': {
+	          'color': '#000000',
+	          'bgColor': '#f3e3cc',
+	          'bgImg': {
+	            'desktop': '../local/templates/articulmedia/img/case/case_2.jpg',
+	            'mobile': '../local/templates/articulmedia/img/case/case_2.jpg'
+	          }
+	        }
+	      }
+	    }, {
+	      'type': 'video'
+	    }]
+	  };
+
+	  service.getCase = function () {
+	    return data;
+	  };
+
+	  return service;
+	}];
+
+/***/ },
+/* 87 */
+[129, 88, 90, 92, 89],
+/* 88 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _config = __webpack_require__(89);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -76972,7 +78287,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
 
 /***/ },
-/* 82 */
+/* 89 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -76985,7 +78300,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 83 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -76994,7 +78309,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(82);
+	var _config = __webpack_require__(89);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -77006,13 +78321,20 @@ webpackJsonp([0],[
 	  return {
 	    restrict: "AE",
 	    link: linkFunction,
-	    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX
+	    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+	    template: __webpack_require__(91)
 	  };
 	}];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
 
 /***/ },
-/* 84 */
+/* 91 */
+/***/ function(module, exports) {
+
+	module.exports = "";
+
+/***/ },
+/* 92 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -77027,9 +78349,9 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 85 */
-[114, 86, 88, 89, 87],
-/* 86 */
+/* 93 */
+[129, 94, 96, 97, 95],
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -77038,51 +78360,51 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(87);
+	var _config = __webpack_require__(95);
 
 	var _config2 = _interopRequireDefault(_config);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var MODULE_NAME = _config2.default.name; //CONTROLLER
-	exports.default = ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http',
-	// '$mdSidenav','$mdMedia', 
-	function ($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http) {
-	  // $mdSidenav, $mdMedia, 
+	exports.default = ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http', '$mdSidenav', '$mdMedia', function ($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http, $mdSidenav, $mdMedia) {
 
 	  $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
 	  //media
-	  // $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
-	  //   $scope.isDesktop = mquery;
-	  // });
-	  // $scope.$watch(function() { return $mdMedia('sm'); }, function(mquery) {
-	  //   $scope.isTablet = mquery;
-	  // });
-	  // $scope.$watch(function() { return $mdMedia('xs'); }, function(mquery) {
-	  //   $scope.isMobile = mquery;
-	  // });
+	  $scope.$watch(function () {
+	    return $mdMedia('gt-md');
+	  }, function (mquery) {
+	    $scope.isDesktop = mquery;
+	  });
+	  $scope.$watch(function () {
+	    return $mdMedia('md');
+	  }, function (mquery) {
+	    $scope.isTablet = mquery;
+	  });
+	  $scope.$watch(function () {
+	    return $mdMedia('xs');
+	  }, function (mquery) {
+	    $scope.isMobile = mquery;
+	  });
 
+	  //sidenav
+	  $scope.sidenavToggle = function () {
+	    $mdSidenav('sidenav-right').toggle();
+	  };
 
-	  // //sidenav
-	  // $scope.sidenavToggle = function(){
-	  //   $mdSidenav('sidenav-right').toggle();
-	  //   // $scope.sidenavIsOpen = !$scope.sidenavIsOpen;
-	  // }
+	  $scope.sidenavHide = function () {
+	    $mdSidenav('sidenav-right').close();
+	  };
 
-	  // $scope.sidenavHide = function() {
-	  //   $mdSidenav('sidenav-right').close();
-	  //   // $scope.sidenavIsOpen = false;
-	  // }
+	  $scope.sidenavHideMedia = function () {
+	    if ($mdMedia('gt-sm')) {
+	      $scope.sidenavHide();
+	    }
+	    return $mdMedia('gt-sm');
+	  };
 
-	  // $scope.sidenavHideMedia = function() {
-	  //   if ($mdMedia('gt-sm')) {
-	  //     $scope.sidenavHide();
-	  //   }
-	  //   return $mdMedia('gt-sm');
-	  // }
-
-	  // $scope.$watch($scope.sidenavHideMedia);
+	  $scope.$watch($scope.sidenavHideMedia);
 
 	  //eof sidenav
 
@@ -77098,7 +78420,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
 
 /***/ },
-/* 87 */
+/* 95 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -77111,7 +78433,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 88 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -77120,17 +78442,14 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(87);
+	var _config = __webpack_require__(95);
 
 	var _config2 = _interopRequireDefault(_config);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var MODULE_NAME = _config2.default.name; //DIRECTIVE
-	exports.default = ['$rootScope', '$http', '$timeout', '$window', '$state',
-	// '$mdMedia', 
-	function ($rootScope, $http, $timeout, $window, $state) {
-	  // $mdMedia, 
+	exports.default = ['$rootScope', '$http', '$timeout', '$window', '$state', function ($rootScope, $http, $timeout, $window, $state) {
 	  var linkFunction = function linkFunction($scope, $element, $attributes) {};
 	  return {
 	    restrict: "A",
@@ -77141,14 +78460,14 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
 
 /***/ },
-/* 89 */
-84,
-/* 90 */
+/* 97 */
+92,
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./case/module.js": 115,
-		"./index/module.js": 91
+		"./case/module.js": 99,
+		"./index/module.js": 104
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -77161,15 +78480,42 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 90;
+	webpackContext.id = 98;
 
 
 /***/ },
-/* 91 */
-[120, 92, 95, 93],
-/* 92 */
-[121, 93, 94],
-/* 93 */
+/* 99 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _route = __webpack_require__(100);
+
+	var _route2 = _interopRequireDefault(_route);
+
+	var _controller = __webpack_require__(103);
+
+	var _controller2 = _interopRequireDefault(_controller);
+
+	var _config = __webpack_require__(101);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var PAGE_NAME = _config2.default.name;
+	// const Routing = require('./route');
+	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+
+/***/ },
+/* 100 */
+[130, 101, 102],
+/* 101 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -77178,20 +78524,20 @@ webpackJsonp([0],[
 	  value: true
 	});
 	exports.default = {
-	  name: 'Index',
+	  name: 'Case',
 	  title: 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения',
-	  url: '/',
-	  state: 'index'
+	  state: 'case',
+	  url: '/case/'
 	};
 
 /***/ },
-/* 94 */
+/* 102 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"slick-slider\">\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/case1.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg2.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+	module.exports = "<art-case-dir></art-case-dir>";
 
 /***/ },
-/* 95 */
+/* 103 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -77212,33 +78558,89 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 96 */
+/* 104 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _route = __webpack_require__(105);
+
+	var _route2 = _interopRequireDefault(_route);
+
+	var _controller = __webpack_require__(108);
+
+	var _controller2 = _interopRequireDefault(_controller);
+
+	var _config = __webpack_require__(106);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var PAGE_NAME = _config2.default.name;
+	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+
+/***/ },
+/* 105 */
+[130, 106, 107],
+/* 106 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'Index',
+	  title: 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения',
+	  url: '',
+	  state: 'index'
+	};
+
+/***/ },
+/* 107 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"slick-slider\">\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/case1.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg2.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+
+/***/ },
+/* 108 */
+103,
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(97);
+	__webpack_require__(110);
 
 /***/ },
-/* 97 */
-102,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
+/* 110 */
+115,
 /* 111 */,
 /* 112 */,
 /* 113 */,
-/* 114 */
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__, __webpack_module_template_argument_3__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -77271,64 +78673,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
 
 /***/ },
-/* 115 */
-[120, 116, 119, 117],
-/* 116 */
-[121, 117, 118],
-/* 117 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {
-	  name: 'Case',
-	  title: 'Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения',
-	  state: 'case',
-	  url: '/case/'
-	};
-
-/***/ },
-/* 118 */
-/***/ function(module, exports) {
-
-	module.exports = "<span ng-init=\"case = {\r\n  'title': 'всегда<br>отвечай<br>на звонок',\r\n  'summary': 'кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX',\r\n  'date': '2014/02',\r\n  'logo': '../local/templates/articulmedia/img/case/case_logo.jpg',\r\n  'style': {\r\n    'color': '#f3e3cc',\r\n    'background-color': '#1e2532',\r\n    'background-image': '../local/templates/articulmedia/img/case/case_1.jpg',\r\n  },\r\n  'blocks': [\r\n    {\r\n      'type': 'briefidea',\r\n      'brief': {\r\n        'title': 'БРИФ',\r\n        'content': '<p>«Сосны» – 10-серийный остросюжетный триллер. Действие сериала разворачивается в городе Уэйуорд Пайнз, одно из главных правил которого – всегда отвечать на мистические звонки.</p>\r\n        <h3>Цели кампании:</h3>\r\n        <ul>\r\n          <li>Продвижение сериала «Сосны»</li>\r\n          <li>Увеличение аудитории телеканала FOX</li>\r\n          <li>Увеличение дистрибуции телеканала</li>\r\n          <li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li>\r\n        </ul>',\r\n        'style': {\r\n          'color': '#f3e3cc',\r\n          'background-color': '#1e2532',\r\n          'background-image': '../local/templates/articulmedia/img/case/case_logo.jpg',\r\n        }\r\n      },\r\n      'idea': {\r\n        'title': 'Идея',\r\n        'content': 'погрузить пользователей \r\n          в атмосферу сериала, дав возможность почувствовать \r\n          себя на месте жителей мистического города, \r\n          и с замиранием сердца \r\n          ожидать таинственного \r\n          звонка на свой телефон.',\r\n        'style': {\r\n          'color': '#000000',\r\n          'background-color': '#f3e3cc',\r\n          'background-image': '../local/templates/articulmedia/img/case/case_2.jpg',\r\n        }\r\n      },\r\n    }\r\n  ],\"></span> \r\n\r\n<section class=\"case-announce case-block\" style=\"color: {{case.style.color}}; background-color: {{ case.style['background-color'] }}; background-image: url('{{ case.style['background-image'] }}');\">\r\n  <div class=\"case-block__container\">\r\n    <h2 class=\"case-announce__title\">{{case.title}}</h2>\r\n    <p class=\"case-announce__summary\">\r\n      {{case.summary}}\r\n    </p>\r\n    <div class=\"case-announce__about-block about-block\">\r\n      <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('{{case.logo}}');\">\r\n        <span class=\"about-block__title\">клиент</span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--date\">\r\n        <span class=\"about-block__title\">релиз</span>\r\n        <span class=\"about-block__date\">{{case.date}}</span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--project\">\r\n        <span class=\"about-block__title\">о проекте</span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"case-briefidea\">\r\n  <div class=\"case-brief case-block\" style=\"color: {{briefidea.brief.style.color}}; background-color: {{ briefidea.brief.style['background-color'] }}; background-image: url('{{ briefidea.brief.style['background-image'] }}');\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-brief__title\">\r\n        БРИФ\r\n      </h2>\r\n      <p class=\"case-brief__text\">\r\n        {{case.brief}}\r\n      </p>\r\n    </div>\r\n  </div>\r\n  <div class=\"case-idea case-block\" style=\"color: {{briefidea.idea.style.color}}; background-color: {{ briefidea.idea.style['background-color'] }}; background-image: url('{{ briefidea.idea.style['background-image'] }}');\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-idea__title\">\r\n        идея\r\n      </h2>\r\n      <p class=\"case-idea__text\">\r\n        погрузить пользователей \r\n        в атмосферу сериала, дав возможность почувствовать \r\n        себя на месте жителей мистического города, \r\n        и с замиранием сердца \r\n        ожидать таинственного \r\n        звонка на свой телефон. \r\n      </p>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"case-3\">\r\n  <div class=\"container\">\r\n    \r\n  </div>\r\n</section>\r\n\r\n{% endblock %}\r\n";
-
-/***/ },
-/* 119 */
-95,
-/* 120 */
-/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
-
-	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _route = __webpack_require__(__webpack_module_template_argument_0__);
-
-	var _route2 = _interopRequireDefault(_route);
-
-	var _controller = __webpack_require__(__webpack_module_template_argument_1__);
-
-	var _controller2 = _interopRequireDefault(_controller);
-
-	var _config = __webpack_require__(__webpack_module_template_argument_2__);
-
-	var _config2 = _interopRequireDefault(_config);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var PAGE_NAME = _config2.default.name;
-	// const Routing = require('./route');
-	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
-
-/***/ },
-/* 121 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';

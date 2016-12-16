@@ -74,9 +74,10 @@ body {
   margin: 0;
   position: relative; 
   top: 0;
-  font-family: 'Articul';
+  font-family: $ffreg;
   background: #a8a5a4;
-	background-size: cover;
+  -ms-overflow-x: hidden !important;
+      overflow-x: hidden !important;
 }
 
 
