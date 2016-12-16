@@ -148,10 +148,8 @@ svg {
   .header__logo {
     display: inline-block;
     width: 230px;
-    height: 40px; }
-    .header__logo img {
-      max-width: 100%;
-      display: block; }
+    height: 40px;
+    background: transparent url("../img/sprite/articul-logo.svg") left top no-repeat; }
   .header__link {
     display: inline-block;
     text-decoration: none;
@@ -543,7 +541,8 @@ html.remodal-is-locked {
       background-size: cover; }
     .about-block__item--project {
       position: relative;
-      background: rgba(255, 255, 255, 0.4); }
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer; }
       .about-block__item--project:after {
         position: absolute;
         content: '';

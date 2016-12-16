@@ -140,10 +140,7 @@ svg {
 		display: inline-block;
 		width: 230px;
 		height: 40px;
-		img {
-			max-width: 100%;
-			display: block;
-		}
+		background: transparent url('../img/sprite/articul-logo.svg') left top no-repeat;
 	}
 
 	&__link {
@@ -754,6 +751,7 @@ html.remodal-is-locked {
     &--project {
       position: relative;
       background: rgba(255,255,255,.4);
+      cursor: pointer;
 
       &:after {
         position: absolute;
