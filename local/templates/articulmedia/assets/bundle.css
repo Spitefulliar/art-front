@@ -52,7 +52,7 @@ h1 {
   font-weight: 900; }
   @media screen and (max-width: 1024px) {
     h1 {
-      font-size: 8.09249vh; } }
+      font-size: 10.49475vh; } }
 
 h2 {
   font-family: "Articul";
@@ -61,7 +61,7 @@ h2 {
   line-height: 1.2; }
   @media screen and (max-width: 1024px) {
     h2 {
-      font-size: 6.93642vh; } }
+      font-size: 8.9955vh; } }
 
 h3 {
   font-family: "Articul";
@@ -70,7 +70,7 @@ h3 {
   line-height: 1.2; }
   @media screen and (max-width: 1024px) {
     h3 {
-      font-size: 3.46821vh; } }
+      font-size: 4.49775vh; } }
 
 h4 {
   font-family: "Articul";
@@ -79,7 +79,7 @@ h4 {
   line-height: 1.2; }
   @media screen and (max-width: 1024px) {
     h4 {
-      font-size: 2.77457vh; } }
+      font-size: 3.5982vh; } }
 
 html {
   min-height: 100%;
@@ -268,9 +268,6 @@ svg {
         display: block;
         padding: 0 15px;
         transition: all .3s ease; }
-
-.main {
-  padding-top: 50px; }
 
 .sidenav__close {
   margin: 0;
@@ -615,15 +612,12 @@ html.remodal-is-locked {
   box-sizing: border-box; }
 
 .case-announce {
-  padding-top: 180px;
+  padding-top: 100px;
   background: url("../img/desktop/case1.jpg") center no-repeat;
   background-size: cover; }
   .case-announce__title {
     font-style: normal;
-    font-weight: 900;
-    line-height: 65px;
-    color: #F3E3CC;
-    margin: 0 0 50px 0;
+    margin: 0 0 5.78035vh 0;
     text-transform: uppercase; }
   .case-announce__summery {
     font-style: normal;
@@ -633,7 +627,9 @@ html.remodal-is-locked {
     line-height: 35px;
     margin: 0 0 85px 0; }
   .case-announce__about-block {
-    padding-bottom: 150px; }
+    padding-bottom: 17.34104vh; }
+  .case-announce .case-block {
+    padding-top: 9.24855vh; }
 
 .case-briefidea {
   overflow: hidden;
