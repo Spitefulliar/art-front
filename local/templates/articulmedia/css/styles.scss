@@ -12,13 +12,27 @@
   @return $number;
 }
 
-@function vh($size) {
-  @return (strip-unit($size)/$scrh*100)+vh;
+@function vh($size,$relsize: null) {
+  @if $relsize == 'md' {
+    @return (strip-unit($size)/strip-unit($scrhMd)*100)+vh;
+  } @else if $relsize {
+    @return (strip-unit($size)/strip-unit($relsize)*100)+vh;
+  } @else {
+    @return (strip-unit($size)/strip-unit($scrh)*100)+vh;
+  }
 }
 
-@function vw($size) {
-  @return (strip-unit($size)/$scrw*100)+vw;
+
+@function vw($size,$relsize: null) {
+  @if $relsize == 'md' {
+    @return (strip-unit($size)/strip-unit($scrwMd)*100)+vw;
+  } @else if $relsize {
+    @return (strip-unit($size)/strip-unit($relsize)*100)+vw;
+  } @else {
+    @return (strip-unit($size)/strip-unit($scrw)*100)+vw;
+  }
 }
+
 
 /*
  * eof functions
@@ -30,7 +44,7 @@ h1 {
   font-size: vh($fsh1);
   font-weight: $fwblack;
   @media screen and (max-width: $screen-md) {
-    font-size: vh($fsh1md);
+    font-size: vh($fsh1Md,'md');
   }
 }
 h2 {
@@ -39,7 +53,7 @@ h2 {
   font-weight: $fwblack;
   line-height: 1.2;
   @media screen and (max-width: $screen-md) {
-    font-size: vh($fsh2md);
+    font-size: vh($fsh2Md,'md');
   }
 }
 h3 {
@@ -48,7 +62,7 @@ h3 {
   font-weight: $fwblack;
   line-height: 1.2;
   @media screen and (max-width: $screen-md) {
-    font-size: vh($fsh3md);
+    font-size: vh($fsh3Md,'md');
   }
 }
 h4 {
@@ -57,7 +71,7 @@ h4 {
   font-weight: $fwblack;
   line-height: 1.2;
   @media screen and (max-width: $screen-md) {
-    font-size: vh($fsh4md);
+    font-size: vh($fsh4Md,'md');
   }
 }
 //eof elements
@@ -297,8 +311,6 @@ svg {
 }
 
 .main {
-	// height: 80vh;
-	padding-top: 50px;
 }
 
 .content {
@@ -804,18 +816,14 @@ html.remodal-is-locked {
 }
 
 .case-announce {
-  padding-top: 180px;
+  padding-top: 100px;//vh(100px);
   background: url('../img/desktop/case1.jpg') center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   &__title {
-    // font-size: 80px;
     font-style: normal;
-    font-weight: 900;
-    line-height: 65px;
-    color: $albescentWhite;
-    margin: 0 0 50px 0;
+    margin: 0 0 vh(50px) 0;
     text-transform: uppercase;
   }
 
@@ -828,7 +836,10 @@ html.remodal-is-locked {
     margin: 0 0 85px 0;
   }
   &__about-block {
-    padding-bottom: 150px;
+    padding-bottom: vh(150px);
+  }
+  .case-block {
+    padding-top: vh(80px);
   }
 }
 

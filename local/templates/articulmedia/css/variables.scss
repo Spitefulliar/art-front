@@ -2,8 +2,8 @@
 $node_modules: '../../../../node_modules/';
 
 //base vars
-$scrh: 865; //layout screen height in px
-$scrw: 1400; // layout screen width in px
+$scrh: 865px; //layout screen height in px
+$scrw: 1400px; // layout screen width in px
 //eof base vars
 
 //container
@@ -44,6 +44,14 @@ $fsh3: 40px;
 $fsh4: 24px;
 $fs: 18px;
 
+//
+//md vars
+//
+
+//base vars
+$scrhmd: 667px; //layout screen height in px
+$scrwmd: 1024px; // layout screen width in px
+//eof base vars
 
 //font sizes
 $fsh1md: 70px;

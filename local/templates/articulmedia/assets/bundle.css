@@ -263,9 +263,6 @@ svg {
         padding: 0 15px;
         transition: all .3s ease; }
 
-.main {
-  padding-top: 50px; }
-
 .footer {
   background: rgba(204, 204, 204, 0.4);
   max-height: 50px;
@@ -577,15 +574,12 @@ html.remodal-is-locked {
   box-sizing: border-box; }
 
 .case-announce {
-  padding-top: 180px;
+  padding-top: 100px;
   background: url("../img/desktop/case1.jpg") center no-repeat;
   background-size: cover; }
   .case-announce__title {
     font-style: normal;
-    font-weight: 900;
-    line-height: 65px;
-    color: #F3E3CC;
-    margin: 0 0 50px 0;
+    margin: 0 0 5.78035vh 0;
     text-transform: uppercase; }
   .case-announce__summery {
     font-style: normal;
@@ -595,7 +589,9 @@ html.remodal-is-locked {
     line-height: 35px;
     margin: 0 0 85px 0; }
   .case-announce__about-block {
-    padding-bottom: 150px; }
+    padding-bottom: 17.34104vh; }
+  .case-announce .case-block {
+    padding-top: 9.24855vh; }
 
 .case-briefidea {
   overflow: hidden;
