@@ -3,7 +3,7 @@ webpackJsonp([0],[
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(109);
+	module.exports = __webpack_require__(110);
 
 
 /***/ },
@@ -16,7 +16,7 @@ webpackJsonp([0],[
 
 	var _sprite2 = _interopRequireDefault(_sprite);
 
-	var _app = __webpack_require__(59);
+	var _app = __webpack_require__(60);
 
 	var _app2 = _interopRequireDefault(_app);
 
@@ -37,13 +37,13 @@ webpackJsonp([0],[
 
 	//Генератор svg спрайта
 	$(document).ready(function () {
-			$('.slick-slider').slick({
-					dots: true,
-					infinite: true,
-					speed: 300,
-					slidesToShow: 1,
-					arrows: false
-			});
+			//   $('.slick-slider').slick({
+			//   dots: true,
+			//   infinite: true,
+			//   speed: 300,
+			//   slidesToShow: 1,
+			//   arrows: false
+			// });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -74,50 +74,51 @@ webpackJsonp([0],[
 		"./arrow-right-light.svg": 12,
 		"./arrow-right-small.svg": 13,
 		"./arrow-right.svg": 14,
-		"./breadcrumb-arrow.svg": 15,
-		"./burger-mini.svg": 16,
-		"./burger.svg": 17,
-		"./burger1.svg": 18,
-		"./card-zoom.svg": 19,
-		"./caret.svg": 20,
-		"./check.svg": 21,
-		"./close-icon.svg": 22,
-		"./close.svg": 23,
-		"./cross-thick.svg": 24,
-		"./cross.svg": 25,
-		"./fast-forward.svg": 26,
-		"./funnel.svg": 27,
-		"./icon-fb.svg": 28,
-		"./icon-inst.svg": 29,
-		"./icon-instagram.svg": 30,
-		"./icon-youtube.svg": 31,
-		"./link.svg": 32,
-		"./list.svg": 33,
-		"./login.svg": 34,
-		"./logo.svg": 35,
-		"./logosm.svg": 36,
-		"./noresult.svg": 37,
-		"./pdf.svg": 38,
-		"./pin.svg": 39,
-		"./print.svg": 40,
-		"./reload.svg": 41,
-		"./rss.svg": 42,
-		"./scroll-down.svg": 43,
-		"./search.svg": 44,
-		"./service-city.svg": 45,
-		"./service-consulting.svg": 46,
-		"./service-outoftown.svg": 47,
-		"./service-rent.svg": 48,
-		"./skype.svg": 49,
-		"./slider-arrow-left.svg": 50,
-		"./social-icon-fb.svg": 51,
-		"./social-icon-g.svg": 52,
-		"./social-icon-ok.svg": 53,
-		"./social-icon-tw.svg": 54,
-		"./social-icon-vk.svg": 55,
-		"./social-icon-yt.svg": 56,
-		"./sort.svg": 57,
-		"./zoom.svg": 58
+		"./articul-logo.svg": 15,
+		"./breadcrumb-arrow.svg": 16,
+		"./burger-mini.svg": 17,
+		"./burger.svg": 18,
+		"./burger1.svg": 19,
+		"./card-zoom.svg": 20,
+		"./caret.svg": 21,
+		"./check.svg": 22,
+		"./close-icon.svg": 23,
+		"./close.svg": 24,
+		"./cross-thick.svg": 25,
+		"./cross.svg": 26,
+		"./fast-forward.svg": 27,
+		"./funnel.svg": 28,
+		"./icon-fb.svg": 29,
+		"./icon-inst.svg": 30,
+		"./icon-instagram.svg": 31,
+		"./icon-youtube.svg": 32,
+		"./link.svg": 33,
+		"./list.svg": 34,
+		"./login.svg": 35,
+		"./logo.svg": 36,
+		"./logosm.svg": 37,
+		"./noresult.svg": 38,
+		"./pdf.svg": 39,
+		"./pin.svg": 40,
+		"./print.svg": 41,
+		"./reload.svg": 42,
+		"./rss.svg": 43,
+		"./scroll-down.svg": 44,
+		"./search.svg": 45,
+		"./service-city.svg": 46,
+		"./service-consulting.svg": 47,
+		"./service-outoftown.svg": 48,
+		"./service-rent.svg": 49,
+		"./skype.svg": 50,
+		"./slider-arrow-left.svg": 51,
+		"./social-icon-fb.svg": 52,
+		"./social-icon-g.svg": 53,
+		"./social-icon-ok.svg": 54,
+		"./social-icon-tw.svg": 55,
+		"./social-icon-vk.svg": 56,
+		"./social-icon-yt.svg": 57,
+		"./sort.svg": 58,
+		"./zoom.svg": 59
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -461,11 +462,20 @@ webpackJsonp([0],[
 
 	;
 	var sprite = __webpack_require__(8);;
+	var image = "<symbol viewBox=\"0 0 250 44\" id=\"spr-articul-logo\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <style type=\"text/css\"> .st0{fill:#f78429;} .st1{fill:#ffffff;} </style> <rect x=\"0\" y=\"0\" class=\"st0\" width=\"250\" height=\"44\"/> <path class=\"st1\" d=\"M53.4,22.7v10.4h4.9V22.7c0-0.8,0.8-2.5,3.3-2.5h2.5v-3.7h-2.5C56.6,16.6,53.4,19.8,53.4,22.7\"/> <path class=\"st1\" d=\"M70.9,10.1l-5,1.3v15.4c0,3.5,3.7,6.4,8.3,6.4h2.5v-3.8h-2.5c-1.8,0-3.3-1.2-3.3-2.6v-6.3h5.8v-3.8h-5.8V10.1z\"/> <path class=\"st1\" d=\"M113.6,26.7c0,1.7-1.1,2.6-3.3,2.6c-3.1,0-3.3-2-3.3-2.6V15.9h-5v10.9c0,3.7,3.5,6.4,8.2,6.4\r\n\tc4.9,0,8.3-2.6,8.3-6.4V15.9h-4.9V26.7z\"/> <rect x=\"192\" y=\"16.2\" class=\"st1\" width=\"5\" height=\"16.9\"/> <path class=\"st1\" d=\"M194.5,9.1c-1.4,0-2.5,1.1-2.5,2.5v0c0,1.4,1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5v0C197,10.2,195.8,9.1,194.5,9.1\"/> <rect x=\"79.5\" y=\"16.2\" class=\"st1\" width=\"5\" height=\"16.9\"/> <path class=\"st1\" d=\"M82,9.1c-1.4,0-2.5,1.1-2.5,2.5v0c0,1.4,1.1,2.5,2.5,2.5c1.4,0,2.5-1.1,2.5-2.5v0C84.5,10.2,83.3,9.1,82,9.1\"/> <path class=\"st1\" d=\"M146.6,15.9c-1.8,0-3.6,0.7-5,1.8c0,0-0.1,0.1-0.1,0.1c-1.4-1.2-3.3-1.9-5.2-1.9c-3.8,0-7.3,3-7.3,6.4v10.8h4.4\r\n\tV22.3c0-1.3,1.7-2.5,2.9-2.5c1.2,0,2.9,1,2.9,2.5v10.8h4.4V22.3c0-1.4,1.6-2.5,2.9-2.5c1.2,0,2.9,1.3,2.9,2.5v10.8h4.4V22.3\r\n\tC153.9,19,150.3,15.9,146.6,15.9\"/> <path class=\"st1\" d=\"M87.1,25.5v-1.2c0-5.4,3.3-7.7,8.8-7.7h4.1v3.8h-4.1c-2.6,0-4.1,1-4.1,3.9v1.3c0,2.9,1.5,3.9,4.1,3.9h4.1v3.8\r\n\th-4.1C90.3,33.2,87.1,30.9,87.1,25.5z\"/> <path class=\"st1\" d=\"M155.5,25.5v-1.6c0-5.4,3.3-7.7,8.1-7.7c4.8,0,8.1,2.3,8.1,7.7v2.8h-11.4v0.1c0,1.9,1.8,2.5,4,2.5h3.5l1.6,3.8\r\n\th-5C158.8,33.2,155.5,30.9,155.5,25.5z M167,23v-0.2c0-2.1-1.7-2.8-3.4-2.8c-1.7,0-3.4,0.8-3.4,2.9V23H167z\"/> <path class=\"st1\" d=\"M173.7,27v-3.6c0-3.9,1.9-6.1,5.8-6.1h4.8v-6.8h4.5v22.6h-9.3C175.7,33.2,173.7,30.9,173.7,27z M184.4,29.6\r\n\tv-8.7h-3.9c-1.5,0-2.2,0.9-2.2,2.5V27c0,1.7,0.8,2.5,2.3,2.5H184.4z\"/> <path class=\"st1\" d=\"M198.5,28.2c0-2.6,1.6-5,5.9-5h5.6v-0.3c0-1.8-0.8-2.6-2.4-2.6h-7.8v-3.8h8.8c4.1,0,6.1,2.3,6.1,6.4v10.2h-10.3\r\n\tC200.1,33.2,198.5,30.9,198.5,28.2z M210,29.4V27h-5.4c-0.8,0-1.5,0.4-1.5,1.3c0,0.8,0.6,1.2,1.6,1.2H210z\"/> <path class=\"st1\" d=\"M35.2,28.2c0-2.6,1.6-5,5.9-5h5.6v-0.3c0-1.8-0.8-2.6-2.4-2.6h-7.8v-3.8h8.8c4.1,0,6.1,2.3,6.1,6.4v10.2H41.2\r\n\tC36.8,33.2,35.2,30.9,35.2,28.2z M46.8,29.4V27h-5.4c-0.8,0-1.5,0.4-1.5,1.3c0,0.8,0.6,1.2,1.6,1.2H46.8z\"/> <path class=\"st1\" d=\"M127.2,29.2c-1.4-0.5-1.6-1.7-1.6-2.3v-18l-5,1.2v16.8c0,3.3,2.6,5.8,6.6,6.3V29.2z\"/> </symbol>";
+	module.exports = sprite.add(image, "spr-articul-logo");
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;
+	var sprite = __webpack_require__(8);;
 	var image = "<symbol viewBox=\"0 0 11 11\" id=\"spr-breadcrumb-arrow\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M-579-2085.5c3.038,0,5.5,2.462,5.5,5.5s-2.462,5.5-5.5,5.5\r\n\ts-5.5-2.462-5.5-5.5S-582.038-2085.5-579-2085.5z\"/> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M-577.854-2082.854l0.707,0.708l-3,3l-0.707-0.708L-577.854-2082.854z\r\n\t\"/> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M-580.854-2080.147l0.707-0.707l3,3l-0.707,0.707L-580.854-2080.147z\"/> <g> <path d=\"M5.5,0C2.462,0,0,2.462,0,5.5S2.462,11,5.5,11S11,8.538,11,5.5S8.538,0,5.5,0z M7.354,7.646L6.646,8.353\r\n\t\tL4.5,6.207L4.354,6.354L3.646,5.646L3.793,5.5L3.646,5.353l0.708-0.707L4.5,4.792l2.146-2.146l0.707,0.708L5.208,5.5L7.354,7.646z\"/> </g> </symbol>";
 	module.exports = sprite.add(image, "spr-breadcrumb-arrow");
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -474,7 +484,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-burger-mini");
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -483,7 +493,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-burger");
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -492,7 +502,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-burger1");
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -501,7 +511,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-card-zoom");
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -510,7 +520,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-caret");
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -519,7 +529,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-check");
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -528,7 +538,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-close-icon");
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -537,7 +547,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-close");
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -546,7 +556,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-cross-thick");
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -555,7 +565,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-cross");
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -564,7 +574,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-fast-forward");
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -573,7 +583,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-funnel");
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -582,7 +592,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-icon-fb");
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -591,7 +601,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-icon-inst");
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -600,7 +610,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-icon-instagram");
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -609,7 +619,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-icon-youtube");
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -618,7 +628,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-link");
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -627,7 +637,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-list");
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -636,7 +646,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-login");
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -645,7 +655,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-logo");
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -654,7 +664,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-logosm");
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -663,7 +673,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-noresult");
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -672,7 +682,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-pdf");
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -681,7 +691,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-pin");
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -690,7 +700,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-print");
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -699,7 +709,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-reload");
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -708,7 +718,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-rss");
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -717,7 +727,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-scroll-down");
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -726,7 +736,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-search");
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -735,7 +745,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-service-city");
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -744,7 +754,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-service-consulting");
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -753,7 +763,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-service-outoftown");
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -762,7 +772,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-service-rent");
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -771,7 +781,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-skype");
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -780,7 +790,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-slider-arrow-left");
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -789,7 +799,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-social-icon-fb");
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -798,7 +808,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-social-icon-g");
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -807,7 +817,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-social-icon-ok");
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -816,7 +826,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-social-icon-tw");
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -825,7 +835,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-social-icon-vk");
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -834,7 +844,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-social-icon-yt");
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -843,7 +853,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-sort");
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;
@@ -852,7 +862,7 @@ webpackJsonp([0],[
 	module.exports = sprite.add(image, "spr-zoom");
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -861,55 +871,55 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _routeProvider = __webpack_require__(61);
+	var _routeProvider = __webpack_require__(62);
 
 	var _routeProvider2 = _interopRequireDefault(_routeProvider);
 
-	var _angular = __webpack_require__(62);
+	var _angular = __webpack_require__(63);
 
 	var _angular2 = _interopRequireDefault(_angular);
 
-	var _angularAria = __webpack_require__(64);
+	var _angularAria = __webpack_require__(65);
 
 	var _angularAria2 = _interopRequireDefault(_angularAria);
 
-	var _angularUiRouter = __webpack_require__(66);
+	var _angularUiRouter = __webpack_require__(67);
 
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-	var _angularAnimate = __webpack_require__(67);
+	var _angularAnimate = __webpack_require__(68);
 
 	var _angularAnimate2 = _interopRequireDefault(_angularAnimate);
 
-	var _angularSvgBaseFix = __webpack_require__(69);
+	var _angularSvgBaseFix = __webpack_require__(70);
 
 	var _angularSvgBaseFix2 = _interopRequireDefault(_angularSvgBaseFix);
 
-	var _angularBaronScrollbar = __webpack_require__(70);
+	var _angularBaronScrollbar = __webpack_require__(71);
 
 	var _angularBaronScrollbar2 = _interopRequireDefault(_angularBaronScrollbar);
 
-	var _angularSlickCarousel = __webpack_require__(71);
+	var _angularSlickCarousel = __webpack_require__(72);
 
 	var _angularSlickCarousel2 = _interopRequireDefault(_angularSlickCarousel);
 
-	var _angularMaterial = __webpack_require__(72);
+	var _angularMaterial = __webpack_require__(73);
 
 	var _angularMaterial2 = _interopRequireDefault(_angularMaterial);
 
-	var _angularCookies = __webpack_require__(74);
+	var _angularCookies = __webpack_require__(75);
 
 	var _angularCookies2 = _interopRequireDefault(_angularCookies);
 
-	var _ngstorage = __webpack_require__(76);
+	var _ngstorage = __webpack_require__(77);
 
 	var _ngstorage2 = _interopRequireDefault(_ngstorage);
 
-	var _angularMessages = __webpack_require__(77);
+	var _angularMessages = __webpack_require__(78);
 
 	var _angularMessages2 = _interopRequireDefault(_angularMessages);
 
-	var _mdSteppers = __webpack_require__(79);
+	var _mdSteppers = __webpack_require__(80);
 
 	var _mdSteppers2 = _interopRequireDefault(_mdSteppers);
 
@@ -951,12 +961,12 @@ webpackJsonp([0],[
 	}
 
 	//custom modules
-	var AppModules = __webpack_require__(80);
+	var AppModules = __webpack_require__(81);
 	// AppModules.keys().forEach(AppModules);
 	requireAll(AppModules);
 
 	//pages
-	var Pages = __webpack_require__(98);
+	var Pages = __webpack_require__(99);
 	// Pages.keys().forEach(Pages);
 	requireAll(Pages);
 
@@ -1023,10 +1033,10 @@ webpackJsonp([0],[
 	}]);
 
 	exports.default = MODULE_NAME;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1045,7 +1055,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1098,15 +1108,15 @@ webpackJsonp([0],[
 	exports.default = MODULE_CONFIG;
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(63);
+	__webpack_require__(64);
 	module.exports = angular;
 
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/**
@@ -32880,15 +32890,15 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(65);
+	__webpack_require__(66);
 	module.exports = 'ngAria';
 
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports) {
 
 	/**
@@ -33296,7 +33306,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports) {
 
 	/**
@@ -37840,15 +37850,15 @@ webpackJsonp([0],[
 	})(window, window.angular);
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(68);
+	__webpack_require__(69);
 	module.exports = 'ngAnimate';
 
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports) {
 
 	/**
@@ -42006,14 +42016,14 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
 	  'use strict';
 	  if (true) {
 	    // AMD. Register as an anonymous module.
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(62)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(63)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
 	    // CommonJS support (for us webpack/browserify/ComponentJS folks)
 	    module.exports = factory(require('angular'));
@@ -42068,7 +42078,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var require;/* WEBPACK VAR INJECTION */(function(global, __webpack_provided_window_dot_jQuery) {(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.angularBaronScrollbar = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
@@ -42297,7 +42307,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(2)))
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports) {
 
 	/*!
@@ -42604,25 +42614,25 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Should already be required, here for clarity
-	__webpack_require__(62);
+	__webpack_require__(63);
 
 	// Load Angular and dependent libs
-	__webpack_require__(67);
-	__webpack_require__(64);
+	__webpack_require__(68);
+	__webpack_require__(65);
 
 	// Now load Angular Material
-	__webpack_require__(73);
+	__webpack_require__(74);
 
 	// Export namespace
 	module.exports = 'ngMaterial';
 
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*!
@@ -75578,15 +75588,15 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(75);
+	__webpack_require__(76);
 	module.exports = 'ngCookies';
 
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	/**
@@ -75922,14 +75932,14 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
 	  'use strict';
 
 	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(62)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(63)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if (root.hasOwnProperty('angular')) {
 	    // Browser globals (root is window), we don't register it.
 	    factory(root.angular);
@@ -76165,15 +76175,15 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(78);
+	__webpack_require__(79);
 	module.exports = 'ngMessages';
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports) {
 
 	/**
@@ -76920,7 +76930,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports) {
 
 	;(function(angular, window) {
@@ -78096,13 +78106,13 @@ webpackJsonp([0],[
 	})(angular, window);
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./case/module.js": 81,
-		"./default/module.js": 87,
-		"./main/module.js": 93
+		"./case/module.js": 82,
+		"./default/module.js": 88,
+		"./main/module.js": 94
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -78115,13 +78125,13 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 80;
+	webpackContext.id = 81;
 
 
 /***/ },
-/* 81 */
-[129, 82, 84, 86, 83],
 /* 82 */
+[130, 83, 85, 87, 84],
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78130,7 +78140,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(83);
+	var _config = __webpack_require__(84);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78146,10 +78156,10 @@ webpackJsonp([0],[
 
 	  $scope.case = $moduleService.getCase();
 	}];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78162,7 +78172,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78171,7 +78181,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(83);
+	var _config = __webpack_require__(84);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78186,19 +78196,19 @@ webpackJsonp([0],[
 	    restrict: "AE",
 	    link: linkFunction,
 	    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
-	    template: __webpack_require__(85)
+	    template: __webpack_require__(86)
 	  };
 	}];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = "<section class=\"case-announce case-block\" \r\n  ng-style=\"{\r\n    'color': case.style.color, \r\n    'background-color': case.style.bgColor, \r\n    'background-image': case.style.bgImg && 'url(' + (isDesktop && case.style.bgImg.desktop || case.style.bgImg.mobile) + ')' || false\r\n  }\">\r\n  <div class=\"case-block__container\">\r\n    <h2 class=\"case-announce__title\" ng-bind-html=\"trustAsHtml(case.title)\"></h2>\r\n    <p class=\"case-announce__summary\" ng-bind-html=\"trustAsHtml(case.summary)\"></p>\r\n    <div class=\"case-announce__about-block about-block\">\r\n      <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('{{case.logo}}');\">\r\n        <span class=\"about-block__title\">клиент</span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--date\">\r\n        <span class=\"about-block__title\">релиз</span>\r\n        <span class=\"about-block__date\" ng-bind=\"case.date\"></span>\r\n      </div>\r\n      <div class=\"about-block__item about-block__item--project\">\r\n        <span class=\"about-block__title\">о проекте</span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section ng-if=\"block.type == 'briefidea'\" \r\n  ng-class=\"{'case-{{block.type}}': block.type}\" \r\n  layout=\"row\"\r\n  layout-align=\"center\"\r\n  layout-wrap\r\n  ng-repeat-start=\"block in case.blocks\"\r\n   >\r\n  <!-- brief -->\r\n  <div  class=\"case-brief case-block\" \r\n    flex=\"100\" flex-gt-md=\"50\"\r\n    ng-repeat=\"brief in [block.brief]\" \r\n    ng-style=\"{\r\n      'color': brief.style.color, \r\n      'background-color': brief.style.bgColor, \r\n      'background-image': brief.style.bgImg && 'url(' + (isDesktop && brief.style.bgImg.desktop || brief.style.bgImg.mobile) + ')' || false\r\n    }\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-brief__title\">\r\n        БРИФ\r\n      </h2>\r\n      <div class=\"case-brief__text\" ng-bind-html=\"trustAsHtml(brief.content)\"></div>\r\n    </div>\r\n  </div>\r\n  <!-- eof brief -->\r\n  <!-- idea -->\r\n  <div ng-if=\"block.type == 'briefidea'\" \r\n    class=\"case-idea case-block\" \r\n    flex=\"100\" flex-gt-md=\"50\"\r\n    ng-repeat=\"idea in [block.idea]\" \r\n    ng-style=\"{\r\n      'color': idea.style.color, \r\n      'background-color': idea.style.bgColor, \r\n      'background-image': idea.style.bgImg && 'url(' + (isDesktop && idea.style.bgImg.desktop || idea.style.bgImg.mobile) + ')' || false\r\n    }\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-idea__title\">\r\n        идея\r\n      </h2>\r\n      <div class=\"case-idea__text\" ng-bind-html=\"trustAsHtml(idea.content)\"></div>\r\n    </div>\r\n  </div>\r\n  <!-- eof idea -->\r\n</section>\r\n\r\n<!-- video -->\r\n<section ng-if=\"block.type == 'video'\" ng-class=\"{'case-{{block.type}}': block.type}\" ng-repeat-end \r\n  ng-style=\"{\r\n      'color': idea.style.color, \r\n      'background-color': idea.style.bgColor, \r\n      'background-image': idea.style.bgImg && 'url(' + (isDesktop && idea.style.bgImg.desktop || idea.style.bgImg.mobile) + ')' || false\r\n    }\">\r\n  <div  class=\"case-block\">\r\n    <div class=\"case-block__container\">\r\n      <h2 class=\"case-brief__title\">\r\n        Video\r\n      </h2>\r\n    </div>\r\n  </div>\r\n</section>\r\n<!-- eof video -->";
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78259,9 +78269,9 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 87 */
-[129, 88, 90, 92, 89],
 /* 88 */
+[130, 89, 91, 93, 90],
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78270,7 +78280,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(89);
+	var _config = __webpack_require__(90);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78284,10 +78294,10 @@ webpackJsonp([0],[
 
 	  $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 	}];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78300,7 +78310,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78309,7 +78319,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(89);
+	var _config = __webpack_require__(90);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78322,19 +78332,19 @@ webpackJsonp([0],[
 	    restrict: "AE",
 	    link: linkFunction,
 	    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
-	    template: __webpack_require__(91)
+	    template: __webpack_require__(92)
 	  };
 	}];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "";
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -78349,9 +78359,9 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 93 */
-[129, 94, 96, 97, 95],
 /* 94 */
+[130, 95, 97, 98, 96],
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78360,7 +78370,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(95);
+	var _config = __webpack_require__(96);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78417,10 +78427,10 @@ webpackJsonp([0],[
 	    $scope.pageData = $state.current.data;
 	  });
 	}];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78433,7 +78443,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78442,7 +78452,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _config = __webpack_require__(95);
+	var _config = __webpack_require__(96);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78457,17 +78467,17 @@ webpackJsonp([0],[
 	    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX
 	  };
 	}];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 97 */
-92,
 /* 98 */
+93,
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./case/module.js": 99,
-		"./index/module.js": 104
+		"./case/module.js": 100,
+		"./index/module.js": 105
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -78480,11 +78490,11 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 98;
+	webpackContext.id = 99;
 
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78493,15 +78503,15 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _route = __webpack_require__(100);
+	var _route = __webpack_require__(101);
 
 	var _route2 = _interopRequireDefault(_route);
 
-	var _controller = __webpack_require__(103);
+	var _controller = __webpack_require__(104);
 
 	var _controller2 = _interopRequireDefault(_controller);
 
-	var _config = __webpack_require__(101);
+	var _config = __webpack_require__(102);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78510,12 +78520,12 @@ webpackJsonp([0],[
 	var PAGE_NAME = _config2.default.name;
 	// const Routing = require('./route');
 	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 100 */
-[130, 101, 102],
 /* 101 */
+[131, 102, 103],
+/* 102 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78531,13 +78541,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = "<art-case-dir></art-case-dir>";
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78558,7 +78568,7 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78567,15 +78577,15 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _route = __webpack_require__(105);
+	var _route = __webpack_require__(106);
 
 	var _route2 = _interopRequireDefault(_route);
 
-	var _controller = __webpack_require__(108);
+	var _controller = __webpack_require__(109);
 
 	var _controller2 = _interopRequireDefault(_controller);
 
-	var _config = __webpack_require__(106);
+	var _config = __webpack_require__(107);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -78583,12 +78593,12 @@ webpackJsonp([0],[
 
 	var PAGE_NAME = _config2.default.name;
 	exports.default = angular.module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router']).config(_route2.default).controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 105 */
-[130, 106, 107],
 /* 106 */
+[131, 107, 108],
+/* 107 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -78604,25 +78614,78 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"slick-slider\">\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/case1.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg2.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+	module.exports = "<slick settings=\"slickConfig\">\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/case1.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"slick-slider__item\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/bg2.jpg');\">\r\n    <div class=\"container\">\r\n      <div class=\"slick-slider__wrap\">\r\n        <div>\r\n          <img src=\"/local/templates/articulmedia/img/desktop/hair.png\" alt=\"\">\r\n        </div>\r\n        <p class=\"slick-slider__text\">\r\n          рекламная кампания<br>\r\n          в социальных сетях<br>\r\n          и landing-page<br>\r\n          мероприятия\r\n        </p>\r\n        <div class=\"about-block\">\r\n          <div class=\"about-block__item about-block__item--client\" style=\"background-image: url('/local/templates/articulmedia/img/desktop/about-fox.jpg');\">\r\n            <span class=\"about-block__title\">клиент</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--date\">\r\n            <span class=\"about-block__title\">релиз</span>\r\n            <span class=\"about-block__date\">2014/02</span>\r\n          </div>\r\n          <div class=\"about-block__item about-block__item--project\">\r\n            <span class=\"about-block__title\">о проекте</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</slick>";
 
 /***/ },
-/* 108 */
-103,
 /* 109 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	   value: true
+	});
+	//CONTROLLER
+	// import moduleConfig from './config';
+	// const MODULE_NAME = moduleConfig.name;
+
+	exports.default = ['$scope', '$rootScope', '$location', '$log', '$timeout', '$window', '$state', '$http',
+	// '$mdSidenav','$mdMedia', 
+	function ($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
+	   // $mdSidenav, $mdMedia, 
+
+	   var myAppModule = angular.module('MyApp', ['slickCarousel']);
+
+	   $scope.slickConfig = {
+	      // enabled: true,
+	      // autoplay: true,
+	      // dots: true,
+	      //  infinite: true,
+	      //  speed: 300,
+	      //  slidesToShow: 1,
+	      //  adaptiveHeight: true,
+	      //  swipe: true,
+	      //  swipeToSlide: true,
+	      //  arrows: false
+
+
+	      enabled: true,
+	      autoplay: true,
+	      draggable: true,
+	      adaptiveHeight: true,
+	      autoplaySpeed: 6000,
+	      infinite: true,
+	      centerMode: true,
+	      centerPadding: '0px',
+	      cssEase: false,
+	      useCSS: false,
+	      dots: true,
+	      arrows: false,
+	      mobileFirst: true,
+	      respondTo: 'slider',
+	      swipe: true,
+	      easing: 'linear',
+	      swipeToSlide: true,
+	      slidesToScroll: 1,
+	      variableWidth: false
+
+	   };
+	}];
+
+/***/ },
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(110);
+	__webpack_require__(111);
 
 /***/ },
-/* 110 */
-115,
-/* 111 */,
+/* 111 */
+116,
 /* 112 */,
 /* 113 */,
 /* 114 */,
@@ -78640,7 +78703,8 @@ webpackJsonp([0],[
 /* 126 */,
 /* 127 */,
 /* 128 */,
-/* 129 */
+/* 129 */,
+/* 130 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__, __webpack_module_template_argument_3__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78670,10 +78734,10 @@ webpackJsonp([0],[
 	var MODULE_NAME = _config2.default.name;
 
 	exports.default = angular.module(CONFIG.APP.PREFIX + MODULE_NAME, []).controller(CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX, _controller2.default).directive(CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.DIRECTIVE_POSTFIX, _directive2.default).service(CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, _service2.default);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ },
-/* 130 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__) {
 
 	/* WEBPACK VAR INJECTION */(function(CONFIG) {'use strict';
@@ -78706,7 +78770,7 @@ webpackJsonp([0],[
 	}];
 
 	exports.default = routing;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61)))
 
 /***/ }
 ]);
