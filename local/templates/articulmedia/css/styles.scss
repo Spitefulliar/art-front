@@ -260,7 +260,6 @@ svg {
 	.nav {
 		background: $silver;
 		background: rgba(204,204,204,.2);
-    background: #000;
 
     @media (max-width: $screen-md) {
       display: none;
@@ -482,8 +481,7 @@ md-sidenav {
 }
 
 .about-block {
-  display: flex;
-  
+  display: flex;  
   &__item {
     vertical-align: middle;
     width: 120px;
