@@ -78389,12 +78389,12 @@ webpackJsonp([0],[
 
 	  //media
 	  $scope.$watch(function () {
-	    return $mdMedia('gt-md');
+	    return $mdMedia('gt-sm');
 	  }, function (mquery) {
 	    $scope.isDesktop = mquery;
 	  });
 	  $scope.$watch(function () {
-	    return $mdMedia('md');
+	    return $mdMedia('sm');
 	  }, function (mquery) {
 	    $scope.isTablet = mquery;
 	  });

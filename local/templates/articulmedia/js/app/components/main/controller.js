@@ -8,10 +8,10 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
   //media
-  $scope.$watch(function() { return $mdMedia('gt-md'); }, function(mquery) {
+  $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
     $scope.isDesktop = mquery;
   });
-  $scope.$watch(function() { return $mdMedia('md'); }, function(mquery) {
+  $scope.$watch(function() { return $mdMedia('sm'); }, function(mquery) {
     $scope.isTablet = mquery;
   });
   $scope.$watch(function() { return $mdMedia('xs'); }, function(mquery) {
