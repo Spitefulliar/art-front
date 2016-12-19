@@ -271,13 +271,15 @@ svg {
 
 md-sidenav {
   max-width: 100% !important;
-  width: 100% !important; }
+  width: 100% !important;
+  height: 100%; }
 
 .sidenav__close {
   margin: 0;
   padding: 0;
   box-shadow: none !important;
-  background-color: #ffffff !important; }
+  background-color: #ffffff !important;
+  width: 100%; }
 
 .sidenav .slick-dots li.slick-active {
   background: #f78429; }
@@ -285,6 +287,19 @@ md-sidenav {
 .sidenav .slick-dots {
   position: relative;
   bottom: 0; }
+
+.sidenav .slick-slide {
+  opacity: .3;
+  transition: all .8s ease; }
+
+.sidenav .slick-active {
+  opacity: 1;
+  transition: all .8s ease; }
+
+.sidenav__footer {
+  padding: 20px 0;
+  background: #e1dfdf;
+  margin-top: 20px; }
 
 .sidenav .mobileMenu__list {
   margin: 0;
