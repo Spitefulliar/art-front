@@ -1,7 +1,7 @@
 {
-  "name": "fanid",
+  "name": "articulmedia",
   "version": "1.0.0",
-  "description": "fanid",
+  "description": "articulmedia",
   "main": "bundle.js",
   "scripts": {
     "build": "webpack --progress",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:articul/fanid.git"
+    "url": "git@bitbucket.org:articul/articulmedia.git"
   },
   "author": "ArticulMedia",
   "license": "ISC",
