@@ -179,11 +179,21 @@ svg {
   left: 50%;
   transform: translateX(-50%);
 
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
 	&__logo {
 		display: inline-block;
 		width: 230px;
 		height: 40px;
 		background: transparent url('../img/sprite/articul-logo.svg') left top no-repeat;
+
+    @media (max-width: $screen-sm) {
+      margin-left: 15px;
+    }
 	}
 
 	&__link {
@@ -220,6 +230,10 @@ svg {
       cursor: pointer;
       border-radius: 0;
       box-shadow: none !important;
+
+      @media (max-width: $screen-sm) {
+        right: 15px;
+      }
 
       &__line {
         position: absolute;
@@ -354,6 +368,8 @@ md-sidenav {
   max-width: 100% !important;
   width: 100% !important;
   height: 100%;
+  background: $white;
+  position: fixed;
 }
 
 .sidenav {
@@ -364,6 +380,12 @@ md-sidenav {
     box-shadow: none !important;
     background-color: $white !important;
     width: 100%;
+  }
+
+  &__wrap {
+    position: relative;
+    padding-bottom: -150px;
+    height: 100%;
   }
 
   .slick-dots li.slick-active {
@@ -394,6 +416,10 @@ md-sidenav {
     padding: 20px 0;
     background: #e1dfdf;
     margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 
   .mobileMenu {
