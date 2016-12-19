@@ -5,6 +5,23 @@
 /*
  * functions
  */
+@mixin text-content() {
+  &:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+/*
+ * eof functions
+ */
+
+/*
+ * functions
+ */
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
@@ -43,6 +60,7 @@ h1 {
   font-family: $ffreg;
   font-size: vh($fsh1);
   font-weight: $fwblack;
+  line-height: $lhh1;
   @media screen and (max-width: $screen-md) {
     font-size: vh($fsh1Md,'md');
   }
@@ -51,7 +69,8 @@ h2 {
   font-family: $ffreg;
   font-size: vh($fsh2);
   font-weight: $fwblack;
-  line-height: 1.2;
+  line-height: $lhh2;
+  text-transform: uppercase;
   @media screen and (max-width: $screen-md) {
     font-size: vh($fsh2Md,'md');
   }
@@ -59,8 +78,8 @@ h2 {
 h3 {
   font-family: $ffreg;
   font-size: vh($fsh3);
-  font-weight: $fwblack;
-  line-height: 1.2;
+  font-weight: $fwhtin;
+  line-height: $lhh3;
   @media screen and (max-width: $screen-md) {
     font-size: vh($fsh3Md,'md');
   }
@@ -68,11 +87,17 @@ h3 {
 h4 {
   font-family: $ffreg;
   font-size: vh($fsh4);
-  font-weight: $fwblack;
-  line-height: 1.2;
+  font-weight: $fwbold;
+  line-height: $lhh4;
+  text-transform: uppercase;
   @media screen and (max-width: $screen-md) {
     font-size: vh($fsh4Md,'md');
   }
+}
+
+p {
+  margin: 0;
+  line-height: $lhreg;
 }
 //eof elements
 
@@ -89,6 +114,9 @@ body {
   position: relative; 
   top: 0;
   font-family: $ffreg;
+  font-size: vh($fsreg);
+  font-weight: $fwreg;
+  line-height: $lhreg;
   background: #a8a5a4;
   -ms-overflow-x: hidden !important;
       overflow-x: hidden !important;
@@ -520,24 +548,21 @@ md-sidenav {
 }
 
 .case-announce {
-  padding-top: 100px;//vh(100px);
+  padding-top: 90px;//vh(100px);
   background: url('../img/desktop/case1.jpg') center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   &__title {
     font-style: normal;
-    margin: 0 0 vh(50px) 0;
+    margin: 0 0 vh(40px) 0;
     text-transform: uppercase;
   }
 
   &__summery {
     font-style: normal;
     font-weight: 100;
-    color: $albescentWhite;
-    font-size: 40px;
-    line-height: 35px;
-    margin: 0 0 85px 0;
+    margin: 0 0 vh(80px) 0;
   }
   &__about-block {
     padding-bottom: vh(150px);
@@ -549,11 +574,8 @@ md-sidenav {
 
 .case-briefidea {
   overflow: hidden;
-  // @include outer-container;
   max-width: 100%;
   .case-block {
-    // @include span-columns(6);
-    // @include omega();
     background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -562,38 +584,49 @@ md-sidenav {
   }
   @media screen and (max-width: $screen-md) {
     .case-block {
-      // @include span-columns(12);
     }
   }
 }
 .case-brief {
   &__title {
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 65px;
-    color: $albescentWhite;
-    margin: 0 0 50px 0;
-    text-transform: uppercase;
+    color: inherit;
+    margin: 0 0 vh(50px) 0;
   }
 
-  &__text {
-    font-size: 18px;
-    color: $albescentWhite;
+  &__summery {
     font-weight: 100;
     font-style: normal;
+    @include text-content();
+  }
+
+  &__content {
+    @include text-content();
+    padding-bottom: vh(50px);
+  }
+
+  h4 {
+    margin: vh(60px) 0 vh(25px);
+  }
+
+  ul {
+    font-size: vh($fsh4);
+    padding: 0 0 0 1em;
+    margin: vh(25px) 0;
   }
 }
 
 .case-idea {
   &__title {
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 65px;
     color: $black;
     margin: 0 0 50px 0;
     text-transform: uppercase;
+  }
+  &__content {
+    @include text-content();
+    padding-bottom: vh(50px);
+    font-size: vh($fsh4);
+    text-transform: uppercase;
+    font-weight: $fwbold;
   }
 }
 

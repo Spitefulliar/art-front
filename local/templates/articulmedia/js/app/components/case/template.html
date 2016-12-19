@@ -6,7 +6,7 @@
   }">
   <div class="case-block__container">
     <h2 class="case-announce__title" ng-bind-html="trustAsHtml(case.title)"></h2>
-    <p class="case-announce__summary" ng-bind-html="trustAsHtml(case.summary)"></p>
+    <h3 class="case-announce__summery" ng-bind-html="trustAsHtml(case.summery)"></h3>
     <div class="case-announce__about-block about-block">
       <div class="about-block__item about-block__item--client" style="background-image: url('{{case.logo}}');">
         <span class="about-block__title">клиент</span>
@@ -31,7 +31,7 @@
    >
   <!-- brief -->
   <div  class="case-brief case-block" 
-    flex="100" flex-gt-md="50"
+    flex="100" flex-gt-sm="50"
     ng-repeat="brief in [block.brief]" 
     ng-style="{
       'color': brief.style.color, 
@@ -42,14 +42,15 @@
       <h2 class="case-brief__title">
         БРИФ
       </h2>
-      <div class="case-brief__text" ng-bind-html="trustAsHtml(brief.content)"></div>
+      <div class="case-brief__summery" ng-bind-html="trustAsHtml(brief.summery)"></div>
+      <div class="case-brief__content" ng-bind-html="trustAsHtml(brief.content)"></div>
     </div>
   </div>
   <!-- eof brief -->
   <!-- idea -->
   <div ng-if="block.type == 'briefidea'" 
     class="case-idea case-block" 
-    flex="100" flex-gt-md="50"
+    flex="100" flex-gt-sm="50"
     ng-repeat="idea in [block.idea]" 
     ng-style="{
       'color': idea.style.color, 
@@ -58,9 +59,9 @@
     }">
     <div class="case-block__container">
       <h2 class="case-idea__title">
-        идея
+        ИДЕЯ
       </h2>
-      <div class="case-idea__text" ng-bind-html="trustAsHtml(idea.content)"></div>
+      <div class="case-idea__content" ng-bind-html="trustAsHtml(idea.content)"></div>
     </div>
   </div>
   <!-- eof idea -->

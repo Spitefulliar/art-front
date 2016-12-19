@@ -24,9 +24,14 @@ $crusta: #f78429;
 
 $screen-xxs: 320px;
 $screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 1024px;
-$screen-lg: 1200px;
+//material breakpoints:
+$screen-sm: 600px; 
+$screen-md: 960px;
+$screen-lg: 1280px;
+$screen-xl: 1920px;
+
+//main breakpoint
+// @media screen and (max-width: $screen-md) {}
 
 //font families
 $ffreg: 'Articul';
@@ -37,21 +42,29 @@ $fwmd: 500;
 $fwblack: 900;
 $fwbold: bold;
 $fwlight: 300;
+$fwhtin: 100;
 
 //font sizes
 $fsh1: 120px;
 $fsh2: 80px;
 $fsh3: 40px;
 $fsh4: 24px;
-$fs: 18px;
+$fsreg: 18px;
+
+//line height
+$lhh1: 0.8125;
+$lhh2: 0.8125;
+$lhh3:  0.875;
+$lhh4: 1.1;
+$lhreg: 1.1;
 
 //
 //md vars
 //
 
 //base vars
-$scrhMd: 667px; //layout screen height in px
-$scrwMd: 1024px; // layout screen width in px
+$scrhMd: 848px; //layout screen height in px
+$scrwMd: 540px; // layout screen width in px
 //eof base vars
 
 //font sizes
@@ -61,5 +74,5 @@ $fsh3Md: 30px;
 $fsh4Md: 24px;
 $fsMd: 18px;
 
-// @media screen and (max-width: $screen-md) {}
+
 

@@ -158,7 +158,7 @@ var config = {
       attrs: ['link:href']
       // attrs: ['img:src', 'link:href']
     },
-    watch: true
+    watch: false
 };
 
 module.exports = config;
