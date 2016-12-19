@@ -27,6 +27,9 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     // adaptiveHeight: true,
     autoplaySpeed: 6000,
     infinite: true,
+    centerMode: true,
+    centerPadding: '18%',
+    slidesToShow: 1,
     cssEase: false,
     useCSS: false,
     dots: true,
@@ -39,6 +42,20 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     slidesToScroll: 1,
     variableWidth: false,
     centerMode: true,
+    responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        centerPadding: '30%',
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        centerPadding: '25%',
+      }
+    }
+  ]
     // slidesToShow: 3,
     
 

@@ -78376,8 +78376,13 @@ webpackJsonp([0],[
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MODULE_NAME = _config2.default.name; //CONTROLLER
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } //CONTROLLER
+
+
+	var MODULE_NAME = _config2.default.name;
+
 	exports.default = ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http', '$mdSidenav', '$mdMedia', function ($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http, $mdSidenav, $mdMedia) {
+	  var _$scope$slickConfigMe;
 
 	  $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
@@ -78400,13 +78405,16 @@ webpackJsonp([0],[
 
 	  var myAppModule = angular.module('MyApp', ['slickCarousel']);
 
-	  $scope.slickConfigMenu = {
+	  $scope.slickConfigMenu = (_$scope$slickConfigMe = {
 	    enabled: true,
 	    // autoplay: true,
 	    draggable: true,
 	    // adaptiveHeight: true,
 	    autoplaySpeed: 6000,
 	    infinite: true,
+	    centerMode: true,
+	    centerPadding: '18%',
+	    slidesToShow: 1,
 	    cssEase: false,
 	    useCSS: false,
 	    dots: true,
@@ -78417,9 +78425,18 @@ webpackJsonp([0],[
 	    easing: 'linear',
 	    swipeToSlide: true,
 	    slidesToScroll: 1,
-	    variableWidth: false,
-	    centerMode: true
-	  };
+	    variableWidth: false
+	  }, _defineProperty(_$scope$slickConfigMe, 'centerMode', true), _defineProperty(_$scope$slickConfigMe, 'responsive', [{
+	    breakpoint: 600,
+	    settings: {
+	      centerPadding: '30%'
+	    }
+	  }, {
+	    breakpoint: 480,
+	    settings: {
+	      centerPadding: '25%'
+	    }
+	  }]), _$scope$slickConfigMe);
 
 	  //sidenav
 	  $scope.sidenavToggle = function () {
