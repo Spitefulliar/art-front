@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress",
     "watch": "webpack -w",
-    "pull": "git pull origin master && npm i && webpack --progress",
+    "pull": "git pull origin master && yarn && webpack --progress"
   },
   "repository": {
     "type": "git",
