@@ -226,7 +226,8 @@ svg {
         display: inline-block; } }
   .header .nav {
     background: #cccccc;
-    background: rgba(204, 204, 204, 0.2); }
+    background: rgba(204, 204, 204, 0.2);
+    background: #000; }
     @media (max-width: 960px) {
       .header .nav {
         display: none; } }
