@@ -1,5 +1,105 @@
 @import 'variables.scss';
 @import 'fonts.scss';
+// @import '../../../../node_modules/bourbon-neat/app/assets/stylesheets/neat.scss';
+
+/*
+ * functions
+ */
+@mixin text-content() {
+  &:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+/*
+ * eof functions
+ */
+
+/*
+ * functions
+ */
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function vh($size,$relsize: null) {
+  @if $relsize == 'md' {
+    @return (strip-unit($size)/strip-unit($scrhMd)*100)+vh;
+  } @else if $relsize {
+    @return (strip-unit($size)/strip-unit($relsize)*100)+vh;
+  } @else {
+    @return (strip-unit($size)/strip-unit($scrh)*100)+vh;
+  }
+}
+
+
+@function vw($size,$relsize: null) {
+  @if $relsize == 'md' {
+    @return (strip-unit($size)/strip-unit($scrwMd)*100)+vw;
+  } @else if $relsize {
+    @return (strip-unit($size)/strip-unit($relsize)*100)+vw;
+  } @else {
+    @return (strip-unit($size)/strip-unit($scrw)*100)+vw;
+  }
+}
+
+
+/*
+ * eof functions
+ */
+
+//elements
+h1 {
+  font-family: $ffreg;
+  font-size: vh($fsh1);
+  font-weight: $fwblack;
+  line-height: $lhh1;
+  @media screen and (max-width: $screen-md) {
+    font-size: vh($fsh1Md,'md');
+  }
+}
+h2 {
+  font-family: $ffreg;
+  font-size: vh($fsh2);
+  font-weight: $fwblack;
+  line-height: $lhh2;
+  text-transform: uppercase;
+  @media screen and (max-width: $screen-md) {
+    font-size: vh($fsh2Md,'md');
+  }
+}
+h3 {
+  font-family: $ffreg;
+  font-size: vh($fsh3);
+  font-weight: $fwhtin;
+  line-height: $lhh3;
+  @media screen and (max-width: $screen-md) {
+    font-size: vh($fsh3Md,'md');
+  }
+}
+h4 {
+  font-family: $ffreg;
+  font-size: vh($fsh4);
+  font-weight: $fwbold;
+  line-height: $lhh4;
+  text-transform: uppercase;
+  @media screen and (max-width: $screen-md) {
+    font-size: vh($fsh4Md,'md');
+  }
+}
+
+p {
+  margin: 0;
+  line-height: $lhreg;
+}
+//eof elements
 
 html {
   min-height: 100%;
@@ -13,9 +113,13 @@ body {
   margin: 0;
   position: relative; 
   top: 0;
-  font-family: 'Articul';
+  font-family: $ffreg;
+  font-size: vh($fsreg);
+  font-weight: $fwreg;
+  line-height: $lhreg;
   background: #a8a5a4;
-	background-size: cover;
+  -ms-overflow-x: hidden !important;
+      overflow-x: hidden !important;
 }
 
 
@@ -79,10 +183,7 @@ svg {
 		display: inline-block;
 		width: 230px;
 		height: 40px;
-		img {
-			max-width: 100%;
-			display: block;
-		}
+		background: transparent url('../img/sprite/articul-logo.svg') left top no-repeat;
 	}
 
 	&__link {
@@ -110,7 +211,15 @@ svg {
       position: absolute;
       right: 0;
       top: 0;
+      margin: 0;
+      padding: 0;
+      max-width: 40px;
+      max-height: 40px;
+      min-width: 40px;
+      max-height: 40px;
       cursor: pointer;
+      border-radius: 0;
+      box-shadow: none !important;
 
       &__line {
         position: absolute;
@@ -235,15 +344,88 @@ svg {
 }
 
 .main {
-	// height: 80vh;
-	padding-top: 50px;
 }
 
 .content {
 
 }
 
+md-sidenav {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100%;
+}
 
+.sidenav {
+
+  &__close {
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    background-color: $white !important;
+    width: 100%;
+  }
+
+  .slick-dots li.slick-active {
+    background: $crusta;
+  }
+
+  .slick-dots {
+    position: relative;
+    bottom: 0;
+  }
+
+  .slick-slide {
+    opacity: .3;
+    transition: all .8s ease;
+  }
+
+  .slick-active {
+    opacity: 1;
+    transition: all .8s ease;
+  }
+
+  .slick-slider {
+    
+  }
+
+  &__footer {
+    
+    padding: 20px 0;
+    background: #e1dfdf;
+    margin-top: 20px;
+  }
+
+  .mobileMenu {
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+      
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $black;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 30px;
+      margin: 30px 0;
+    }
+
+    &__slide {
+
+    }
+  }
+}
 
 
 
@@ -298,383 +480,6 @@ svg {
 	}
 }
 
-html.remodal-is-locked {
-  overflow: hidden;
-
-  -ms-touch-action: none;
-  touch-action: none;
-}
-
-/* Anti FOUC */
-
-.remodal,
-[data-remodal-id] {
-  display: none;
-}
-
-/* Necessary styles of the overlay */
-
-.remodal-overlay {
-  position: fixed;
-  z-index: 9999;
-  top: -5000px;
-  right: -5000px;
-  bottom: -5000px;
-  left: -5000px;
-
-  display: none;
-}
-
-/* Necessary styles of the wrapper */
-
-.remodal-wrapper {
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  display: none;
-  overflow: auto;
-
-  text-align: center;
-
-  -webkit-overflow-scrolling: touch;
-}
-
-.remodal-wrapper:after {
-  display: inline-block;
-
-  height: 100%;
-  margin-left: -0.05em;
-
-  content: "";
-}
-
-/* Fix iPad, iPhone glitches */
-
-.remodal-overlay,
-.remodal-wrapper {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-/* Necessary styles of the modal dialog */
-
-.remodal {
-  position: relative;
-
-  outline: none;
-
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-.remodal-is-initialized {
-  /* Disable Anti-FOUC */
-  display: inline-block;
-}
-
-/* Default theme styles of the overlay */
-
-.remodal-overlay {
-  background: rgba(0, 0, 0, .6);
-}
-
-.remodal-overlay.remodal-is-opening,
-.remodal-overlay.remodal-is-closing {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.remodal-overlay.remodal-is-opening {
-  -webkit-animation-name: remodal-overlay-opening-keyframes;
-  animation-name: remodal-overlay-opening-keyframes;
-}
-
-.remodal-overlay.remodal-is-closing {
-  -webkit-animation-name: remodal-overlay-closing-keyframes;
-  animation-name: remodal-overlay-closing-keyframes;
-}
-
-/* Default theme styles of the wrapper */
-
-.remodal-wrapper {
-  padding: 10px 10px 0;
-}
-
-/* Default theme styles of the modal dialog */
-
-.remodal {
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 35px;
-
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-
-  color: #2b2e38;
-  background: #fff;
-}
-
-.remodal.remodal-is-opening,
-.remodal.remodal-is-closing {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.remodal.remodal-is-opening {
-  -webkit-animation-name: remodal-opening-keyframes;
-  animation-name: remodal-opening-keyframes;
-}
-
-.remodal.remodal-is-closing {
-  -webkit-animation-name: remodal-closing-keyframes;
-  animation-name: remodal-closing-keyframes;
-}
-
-/* Vertical align of the modal dialog */
-
-.remodal,
-.remodal-wrapper:after {
-  vertical-align: middle;
-}
-
-/* Close button */
-
-.remodal-close {
-  position: absolute;
-  top: 0;
-  right: -50px;
-
-  display: block;
-  overflow: visible;
-
-  width: 35px;
-  height: 35px;
-  margin: 0;
-  padding: 0;
-
-  cursor: pointer;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  text-decoration: none;
-
-  color: #95979c;
-  border: 0;
-  outline: 0;
-  background: transparent;
-
-  @media (max-width: $screen-md) {
-  	right: 0;
-  	top: -50px;
-  }
-}
-
-.remodal-close:hover,
-.remodal-close:focus {
-  color: #2b2e38;
-}
-
-.remodal-close:before {
-  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
-  font-size: 25px;
-  line-height: 35px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: block;
-
-	height: 30px;
-  width: 30px;
-
-  content: "";
-  background:transparent url('../img/sprite/cross.svg') left top no-repeat;
-  text-align: center;
-}
-
-/* Dialog buttons */
-
-.remodal-confirm,
-.remodal-cancel {
-  font: inherit;
-
-  display: inline-block;
-  overflow: visible;
-
-  min-width: 110px;
-  margin: 0;
-  padding: 12px 0;
-
-  cursor: pointer;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-
-  border: 0;
-  outline: 0;
-}
-
-.remodal-confirm {
-  color: #fff;
-  background: #81c784;
-}
-
-.remodal-confirm:hover,
-.remodal-confirm:focus {
-  background: #66bb6a;
-}
-
-.remodal-cancel {
-  color: #fff;
-  background: #e57373;
-}
-
-.remodal-cancel:hover,
-.remodal-cancel:focus {
-  background: #ef5350;
-}
-
-/* Remove inner padding and border in Firefox 4+ for the button tag. */
-
-.remodal-confirm::-moz-focus-inner,
-.remodal-cancel::-moz-focus-inner,
-.remodal-close::-moz-focus-inner {
-  padding: 0;
-
-  border: 0;
-}
-
-/* Keyframes
-   ========================================================================== */
-
-@-webkit-keyframes remodal-opening-keyframes {
-  from {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: none;
-    transform: none;
-
-    opacity: 1;
-  }
-}
-
-@keyframes remodal-opening-keyframes {
-  from {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: none;
-    transform: none;
-
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes remodal-closing-keyframes {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-
-    opacity: 0;
-  }
-}
-
-@keyframes remodal-closing-keyframes {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes remodal-overlay-opening-keyframes {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes remodal-overlay-opening-keyframes {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes remodal-overlay-closing-keyframes {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes remodal-overlay-closing-keyframes {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-/* Media queries
-   ========================================================================== */
-
-@media only screen and (min-width: 641px) {
-  .remodal {
-    max-width: 800px;
-  }
-}
-
-/* IE8
-   ========================================================================== */
-
-.lt-ie9 .remodal-overlay {
-  background: #2b2e38;
-}
-
-.lt-ie9 .remodal {
-  width: 700px;
-}
-
 .about-block {
   display: flex;
   
@@ -693,6 +498,7 @@ html.remodal-is-locked {
     &--project {
       position: relative;
       background: rgba(255,255,255,.4);
+      cursor: pointer;
 
       &:after {
         position: absolute;
@@ -730,74 +536,97 @@ html.remodal-is-locked {
   }
 }
 
-.case-1 {
-  padding-top: 180px;
-  background: url('../img/desktop/case1.jpg') center no-repeat;
-  background-size: cover;
-  height: 100vh;
-
-  &__title {
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 65px;
-    color: $albescentWhite;
-    margin: 0 0 50px 0;
-    text-transform: uppercase;
-  }
-
-  &__slogan {
-    font-style: normal;
-    font-weight: 100;
-    color: $albescentWhite;
-    font-size: 40px;
-    line-height: 35px;
-    margin: 0 0 85px 0;
+.case-block {
+  &__container {
+    min-height: 100vh;
+    padding: vh(100px) vw(82px) 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
-.case-2 {
-  overflow: hidden;
-  background:transparent url('../img/desktop/idea-bg.jpg') left top no-repeat;
-  .brief {
-    display: inline-block;
-    width: 45%;
-    background: $ebonyClay;
-    padding: 175px 80px 0 80px;
-
-    &__title {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 65px;
-      color: $albescentWhite;
-      margin: 0 0 50px 0;
-      text-transform: uppercase;
-    }
-
-    &__text {
-      font-size: 18px;
-      color: $albescentWhite;
-      font-weight: 100;
-      font-style: normal;
-    }
+.case-announce {
+  padding-top: 90px;//vh(100px);
+  background: url('../img/desktop/case1.jpg') center no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  &__title {
+    font-style: normal;
+    margin: 0 0 vh(40px) 0;
+    text-transform: uppercase;
   }
 
-  .idea {
-    display: inline-block;
-    padding: 175px 80px 0 80px;
-    width: 55%;
-    background:transparent url('../img/desktop/idea-bg.jpg') left top no-repeat;
-    
-    &__title {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 65px;
-      color: $black;
-      margin: 0 0 50px 0;
-      text-transform: uppercase;
+  &__summery {
+    font-style: normal;
+    font-weight: 100;
+    margin: 0 0 vh(80px) 0;
+  }
+  &__about-block {
+    padding-bottom: vh(150px);
+  }
+  .case-block {
+    padding-top: vh(80px);
+  }
+}
+
+.case-briefidea {
+  overflow: hidden;
+  max-width: 100%;
+  .case-block {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+  }
+  @media screen and (max-width: $screen-md) {
+    .case-block {
     }
+  }
+}
+.case-brief {
+  &__title {
+    color: inherit;
+    margin: 0 0 vh(50px) 0;
+  }
+
+  &__summery {
+    font-weight: 100;
+    font-style: normal;
+    @include text-content();
+  }
+
+  &__content {
+    @include text-content();
+    padding-bottom: vh(50px);
+  }
+
+  h4 {
+    margin: vh(60px) 0 vh(25px);
+  }
+
+  ul {
+    font-size: vh($fsh4);
+    padding: 0 0 0 1em;
+    margin: vh(25px) 0;
+  }
+}
+
+.case-idea {
+  &__title {
+    color: $black;
+    margin: 0 0 50px 0;
+    text-transform: uppercase;
+  }
+  &__content {
+    @include text-content();
+    padding-bottom: vh(50px);
+    font-size: vh($fsh4);
+    text-transform: uppercase;
+    font-weight: $fwbold;
   }
 }
 

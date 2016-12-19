@@ -1,0 +1,85 @@
+<section class="case-announce case-block" 
+  ng-style="{
+    'color': case.style.color, 
+    'background-color': case.style.bgColor, 
+    'background-image': case.style.bgImg && 'url(' + (isDesktop && case.style.bgImg.desktop || case.style.bgImg.mobile) + ')' || false
+  }">
+  <div class="case-block__container">
+    <h2 class="case-announce__title" ng-bind-html="trustAsHtml(case.title)"></h2>
+    <h3 class="case-announce__summery" ng-bind-html="trustAsHtml(case.summery)"></h3>
+    <div class="case-announce__about-block about-block">
+      <div class="about-block__item about-block__item--client" style="background-image: url('{{case.logo}}');">
+        <span class="about-block__title">клиент</span>
+      </div>
+      <div class="about-block__item about-block__item--date">
+        <span class="about-block__title">релиз</span>
+        <span class="about-block__date" ng-bind="case.date"></span>
+      </div>
+      <div class="about-block__item about-block__item--project">
+        <span class="about-block__title">о проекте</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section ng-if="block.type == 'briefidea'" 
+  ng-class="{'case-{{block.type}}': block.type}" 
+  layout="row"
+  layout-align="center"
+  layout-wrap
+  ng-repeat-start="block in case.blocks"
+   >
+  <!-- brief -->
+  <div  class="case-brief case-block" 
+    flex="100" flex-gt-sm="50"
+    ng-repeat="brief in [block.brief]" 
+    ng-style="{
+      'color': brief.style.color, 
+      'background-color': brief.style.bgColor, 
+      'background-image': brief.style.bgImg && 'url(' + (isDesktop && brief.style.bgImg.desktop || brief.style.bgImg.mobile) + ')' || false
+    }">
+    <div class="case-block__container">
+      <h2 class="case-brief__title">
+        БРИФ
+      </h2>
+      <div class="case-brief__summery" ng-bind-html="trustAsHtml(brief.summery)"></div>
+      <div class="case-brief__content" ng-bind-html="trustAsHtml(brief.content)"></div>
+    </div>
+  </div>
+  <!-- eof brief -->
+  <!-- idea -->
+  <div ng-if="block.type == 'briefidea'" 
+    class="case-idea case-block" 
+    flex="100" flex-gt-sm="50"
+    ng-repeat="idea in [block.idea]" 
+    ng-style="{
+      'color': idea.style.color, 
+      'background-color': idea.style.bgColor, 
+      'background-image': idea.style.bgImg && 'url(' + (isDesktop && idea.style.bgImg.desktop || idea.style.bgImg.mobile) + ')' || false
+    }">
+    <div class="case-block__container">
+      <h2 class="case-idea__title">
+        ИДЕЯ
+      </h2>
+      <div class="case-idea__content" ng-bind-html="trustAsHtml(idea.content)"></div>
+    </div>
+  </div>
+  <!-- eof idea -->
+</section>
+
+<!-- video -->
+<section ng-if="block.type == 'video'" ng-class="{'case-{{block.type}}': block.type}" ng-repeat-end 
+  ng-style="{
+      'color': idea.style.color, 
+      'background-color': idea.style.bgColor, 
+      'background-image': idea.style.bgImg && 'url(' + (isDesktop && idea.style.bgImg.desktop || idea.style.bgImg.mobile) + ')' || false
+    }">
+  <div  class="case-block">
+    <div class="case-block__container">
+      <h2 class="case-brief__title">
+        Video
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- eof video -->

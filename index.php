@@ -13,6 +13,7 @@ $obLexer = new Twig_Lexer($obTwig, [
 
 $obTwig->setLexer($obLexer);
 
-$layout = $_GET['l'] ? $_GET['l'] : 'layout';
+// $layout = $_GET['l'] ? $_GET['l'] : 'layout';
+$layout = 'layout';
 
 echo $obTwig->render("{$layout}.twig");

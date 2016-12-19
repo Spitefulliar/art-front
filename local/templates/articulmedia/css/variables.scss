@@ -1,3 +1,11 @@
+//misc
+$node_modules: '../../../../node_modules/';
+
+//base vars
+$scrh: 865px; //layout screen height in px
+$scrw: 1400px; // layout screen width in px
+//eof base vars
+
 //container
 $container-max-width: 1284px;
 
@@ -10,11 +18,61 @@ $alto: #DFDCDC;
 $albescentWhite: #F3E3CC;
 $ebonyClay: #1E2532;
 $alto: #dfdcdc;
+$crusta: #f78429;
 
 //Media queries breakpoints
 
 $screen-xxs: 320px;
 $screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 1024px;
-$screen-lg: 1200px;
+//material breakpoints:
+$screen-sm: 600px; 
+$screen-md: 960px;
+$screen-lg: 1280px;
+$screen-xl: 1920px;
+
+//main breakpoint
+// @media screen and (max-width: $screen-md) {}
+
+//font families
+$ffreg: 'Articul';
+
+//font weights
+$fwreg: normal;
+$fwmd: 500;
+$fwblack: 900;
+$fwbold: bold;
+$fwlight: 300;
+$fwhtin: 100;
+
+//font sizes
+$fsh1: 120px;
+$fsh2: 80px;
+$fsh3: 40px;
+$fsh4: 24px;
+$fsreg: 18px;
+
+//line height
+$lhh1: 0.8125;
+$lhh2: 0.8125;
+$lhh3:  0.875;
+$lhh4: 1.1;
+$lhreg: 1.1;
+
+//
+//md vars
+//
+
+//base vars
+$scrhMd: 848px; //layout screen height in px
+$scrwMd: 540px; // layout screen width in px
+//eof base vars
+
+//font sizes
+$fsh1Md: 70px;
+$fsh2Md: 60px;
+$fsh3Md: 30px;
+$fsh4Md: 24px;
+$fsMd: 18px;
+
+
+
