@@ -179,7 +179,7 @@ svg {
   left: 50%;
   transform: translateX(-50%);
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-md) {
     width: 100%;
     left: 0;
     transform: none;
@@ -191,7 +191,7 @@ svg {
 		height: 40px;
 		background: transparent url('../img/sprite/articul-logo.svg') left top no-repeat;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       margin-left: 15px;
     }
 	}
@@ -231,7 +231,7 @@ svg {
       border-radius: 0;
       box-shadow: none !important;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         right: 15px;
       }
 
@@ -316,7 +316,7 @@ svg {
 			line-height: 40px;
 			padding: 0 15px;
 			color: $black;
-			transition: all .3s ease;
+			transition: color .3s ease, background-color .5s ease;
 
       @media (max-width: $screen-lg) {
         font-size: 13px;
@@ -356,7 +356,7 @@ svg {
 				font-weight: 500;
 				display: block;
 				padding: 0 15px;
-				transition: all .3s ease;
+				transition: color .3s ease, background-color .5s ease;
 			}
 		}
 	}
@@ -410,7 +410,14 @@ md-sidenav {
 
   &__wrap {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
     height: 100%;
+  }
+
+  .slick-slider {
+    flex: 1 0 auto;
   }
 
   .slick-dots li.slick-active {
@@ -444,6 +451,8 @@ md-sidenav {
     bottom: 0;
     left: 0;
     width: 100%;
+
+    flex: 0 0 auto;
   }
 
   .mobileMenu {
