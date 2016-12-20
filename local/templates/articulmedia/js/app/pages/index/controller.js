@@ -11,7 +11,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   
   $scope.slickConfig = {
 	  enabled: true,
-    autoplay: true,
+    autoplay: false,
     draggable: true,
     adaptiveHeight: true,
     autoplaySpeed: 6000,
