@@ -387,9 +387,29 @@ md-sidenav {
     width: 100%;
   }
 
+  &__text {
+    font-size: 16px;
+    margin: 1em 0;
+    padding: 0 10px;
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .footer__copy {
+    margin-left: 10px;
+    float: none;
+    vertical-align: middle;
+  }
+
+  .footer__link {
+    margin: 0 8px;
+  }
+
   &__wrap {
     position: relative;
-    padding-bottom: -150px;
     height: 100%;
   }
 
@@ -421,7 +441,6 @@ md-sidenav {
     padding: 20px 0;
     background: #e1dfdf;
     margin-top: 20px;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -443,12 +462,13 @@ md-sidenav {
     &__link {
       text-decoration: none;
       color: $black;
+      font-size: 20px;
     }
 
     &__title {
       text-transform: uppercase;
       text-align: center;
-      font-size: 30px;
+      font-size: 25px;
       margin: 30px 0;
     }
 
@@ -508,6 +528,7 @@ md-sidenav {
 		margin: 0 10px;
 		vertical-align: middle;
 		text-decoration: none;
+    font-size: 20px;
 	}
 }
 
