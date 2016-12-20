@@ -96,103 +96,105 @@
   md-whiteframe="4"
   md-is-open="sidenavIsOpen"
   >
-  <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
-    <span class="sidenav__nav-item__icon svg-icon">
-      <svg>
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-close" />
-      </svg>
-    </span>
-  </md-button>
-  <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
-    <div class="mobileMenu__slide">
-      <h5 class="mobileMenu__title">
-        КОМПАНИЯ
-      </h5>
-      <ul class="mobileMenu__list">
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Мы – Articul</a>
-        </li>
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Клиенты</a>
-        </li>
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Команда</a>
-        </li>
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Articul Group</a>
-        </li>
-      </ul>
-    </div>
-    <div class="mobileMenu__slide">
-      <h5 class="mobileMenu__title">
-        Работы
-      </h5>
-      <ul class="mobileMenu__list">
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Все подряд</a>
-        </li>
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Выбрать по виду</a>
-        </li>
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Выбрать по бренду</a>
-        </li>
-      </ul>
-    </div>
-    <div class="mobileMenu__slide">
-      <h5 class="mobileMenu__title">
-        Экспертиза
-      </h5>
-      <ul class="mobileMenu__list">
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Уникальный опыт</a>
-        </li>
-        <li class="mobileMenu__item">
-          <a href="" class="mobileMenu__link">Развиваем digital-индустрию</a>
-        </li>
-      </ul>
-    </div>
-  </slick>
-  <div class="sidenav__footer">
-      <p class="footer__copy">
-        ©1998-2016. Articul Media
-      </p>
-      <div class="footer__social">
-
-        <a href="#" class="footer__link">
-          <span class="svg-icon">
-            <svg>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-fb"></use>
-            </svg>
-          </span>
-        </a>
-
-        <a href="" class="footer__link">
-          <span class="svg-icon">
-            <svg>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-yt"></use>
-            </svg>
-          </span>
-        </a>
-
-        <a href="" class="footer__link">
-          <span class="svg-icon">
-            <svg>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-icon-instagram"></use>
-            </svg>
-          </span>
-        </a>
-
+  <div class="sidenav__wrap">
+    <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
+      <span class="sidenav__nav-item__icon svg-icon">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-close" />
+        </svg>
+      </span>
+    </md-button>
+    <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
+      <div class="mobileMenu__slide">
+        <h5 class="mobileMenu__title">
+          КОМПАНИЯ
+        </h5>
+        <ul class="mobileMenu__list">
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Мы – Articul</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Клиенты</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Команда</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Articul Group</a>
+          </li>
+        </ul>
       </div>
-      <p>
-        Россия, 105066, Москва, <br>ул. Александра Лукьянова, д. 3
-      </p>
-      <p>
-        Телефон/факс: <br>+7 (495) 739-07-41, +7 (495) 739-07-42
-      </p>
-      <p>
-        Электронная почта: <br>info@articulmedia.ru
-      </p>
+      <div class="mobileMenu__slide">
+        <h5 class="mobileMenu__title">
+          Работы
+        </h5>
+        <ul class="mobileMenu__list">
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Все подряд</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Выбрать по виду</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Выбрать по бренду</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobileMenu__slide">
+        <h5 class="mobileMenu__title">
+          Экспертиза
+        </h5>
+        <ul class="mobileMenu__list">
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Уникальный опыт</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="" class="mobileMenu__link">Развиваем digital-индустрию</a>
+          </li>
+        </ul>
+      </div>
+    </slick>
+    <div class="sidenav__footer">
+        <p class="footer__copy">
+          ©1998-2016. Articul Media
+        </p>
+        <div class="footer__social">
+
+          <a href="#" class="footer__link">
+            <span class="svg-icon">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-fb"></use>
+              </svg>
+            </span>
+          </a>
+
+          <a href="" class="footer__link">
+            <span class="svg-icon">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-yt"></use>
+              </svg>
+            </span>
+          </a>
+
+          <a href="" class="footer__link">
+            <span class="svg-icon">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-icon-instagram"></use>
+              </svg>
+            </span>
+          </a>
+
+        </div>
+        <p class="sidenav__text">
+          Россия, 105066, Москва, <br>ул. Александра Лукьянова, д. 3
+        </p>
+        <p class="sidenav__text">
+          Телефон/факс: <br>+7 (495) 739-07-41, +7 (495) 739-07-42
+        </p>
+        <p class="sidenav__text">
+          Электронная почта: <br>info@articulmedia.ru
+        </p>
+    </div>
   </div>
 </md-sidenav>
 {% endblock %}
