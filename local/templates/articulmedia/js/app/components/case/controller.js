@@ -9,6 +9,10 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
-  $scope.case = $moduleService.getCase();
+
+  $moduleService.getCase().then(function(data){
+    $scope.case = $moduleService.case;
+    console.log($moduleService.case);
+  });
 
 }];

@@ -1,21 +1,34 @@
-<section class="case-announce case-block" 
+<section 
+  ng-repeat-start="block in case.blocks"
+  ng-if="block.type == 'announce'" 
+  ng-class="{'case-{{block.type}}': block.type}" 
   ng-style="{
-    'color': case.style.color, 
-    'background-color': case.style.bgColor, 
-    'background-image': case.style.bgImg && 'url(' + (isDesktop && case.style.bgImg.desktop || case.style.bgImg.mobile) + ')' || false
+    'color': block.style.color, 
+    'background-color': block.style.bgColor, 
+    'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')'
   }">
   <div class="case-block__container">
-    <h2 class="case-announce__title" ng-bind-html="trustAsHtml(case.title)"></h2>
-    <h3 class="case-announce__summery" ng-bind-html="trustAsHtml(case.summery)"></h3>
-    <div class="case-announce__about-block about-block">
-      <div class="about-block__item about-block__item--client" style="background-image: url('{{case.logo}}');">
+    <h2 class="case-announce__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+    <h3 class="case-announce__summery" ng-bind-html="trustAsHtml(block.summery)"></h3>
+    <div class="case-announce__about-block about-block" 
+      ng-style="{'color': block.style.aboutColor}">
+      <div class="about-block__item about-block__item--client" 
+        ng-style="{ 
+          'background-image': 'url(' + (isDesktop && block.style.aboutBg.desktop || block.style.aboutBg.mobile) + ')',
+          'background-color': block.style.aboutBgColors[0],
+        }">
         <span class="about-block__title">клиент</span>
       </div>
-      <div class="about-block__item about-block__item--date">
+      <div class="about-block__item about-block__item--date"
+        ng-style="{ 
+          'background-color': block.style.aboutBgColors[1]
+        }">
         <span class="about-block__title">релиз</span>
         <span class="about-block__date" ng-bind="case.date"></span>
       </div>
-      <div class="about-block__item about-block__item--project">
+      <div class="about-block__item about-block__item--project" ng-style="{ 
+          'background-color': block.style.aboutBgColors[2]
+        }">
         <span class="about-block__title">о проекте</span>
       </div>
     </div>
@@ -27,7 +40,6 @@
   layout="row"
   layout-align="center"
   layout-wrap
-  ng-repeat-start="block in case.blocks"
    >
   <!-- brief -->
   <div  class="case-brief case-block" 
@@ -42,8 +54,8 @@
       <h2 class="case-brief__title">
         БРИФ
       </h2>
-      <div class="case-brief__summery" ng-bind-html="trustAsHtml(brief.summery)"></div>
-      <div class="case-brief__content" ng-bind-html="trustAsHtml(brief.content)"></div>
+      <div class="case-brief__summery case-block__content" ng-bind-html="trustAsHtml(brief.summery)"></div>
+      <div class="case-brief__content case-block__content" ng-bind-html="trustAsHtml(brief.content)"></div>
     </div>
   </div>
   <!-- eof brief -->
@@ -61,11 +73,33 @@
       <h2 class="case-idea__title">
         ИДЕЯ
       </h2>
-      <div class="case-idea__content" ng-bind-html="trustAsHtml(idea.content)"></div>
+      <div class="case-idea__content case-block__content" ng-bind-html="trustAsHtml(idea.content)"></div>
     </div>
   </div>
   <!-- eof idea -->
 </section>
+
+<!-- solution-carousel -->
+<section ng-if="block.type == 'solution-carousel'" ng-class="{'case-{{block.type}}': block.type}"
+  ng-style="{
+      'color': block.style.color, 
+      'background-color': block.style.bgColor, 
+      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+    }">
+  <div  class="case-block">
+    <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="case-block__col" flex="100" flex-gt-sm="50">
+        <h2 class="case-solution-carousel__title">
+          РЕШЕНИЕ
+        </h2>
+      </div>
+      <div class="case-block__col" flex="100" flex-gt-sm="50">
+        <div class="case-solution-carousel__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- eof solution-carousel -->
 
 <!-- video -->
 <section ng-if="block.type == 'video'" ng-class="{'case-{{block.type}}': block.type}" ng-repeat-end 

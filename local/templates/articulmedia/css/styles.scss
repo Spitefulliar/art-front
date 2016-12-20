@@ -6,11 +6,12 @@
  * functions
  */
 @mixin text-content() {
-  &:first-child {
+  overflow: hidden;
+  & > *:first-child {
     margin-top: 0;
     padding-top: 0;
   }
-  &:last-child {
+  & > *:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -482,13 +483,13 @@ md-sidenav {
 
 .about-block {
   display: flex;  
+  color: $black;
   &__item {
     vertical-align: middle;
     width: 120px;
     height: 120px;
     background: #e8e9ed;
     background: rgba(232, 233, 237, .8);
-    
 
     &--client {
       background-size: cover;
@@ -544,10 +545,37 @@ md-sidenav {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  &__col {
+    padding: vh(100px) vw(82px) 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &__content {
+    @include text-content();
+    p {
+      margin: 1em 0;
+    }
+  }
+  @media screen and (max-width: $screen-md) {
+    &__container {
+      padding: vh(100px) vw(25px) 0;
+    }
+    &__col {
+      padding: vh(100px) vw(25px) 0;
+      & ~ & {
+        padding-top: 0;
+      }
+    }
+  }
 }
 
 .case-announce {
+  height: 100vh;
   padding-top: 90px;//vh(100px);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   background: url('../img/desktop/case1.jpg') center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -567,6 +595,7 @@ md-sidenav {
     padding-bottom: vh(150px);
   }
   .case-block {
+    height: 100%;
     padding-top: vh(80px);
   }
 }
@@ -599,7 +628,7 @@ md-sidenav {
   }
 
   &__content {
-    @include text-content();
+    margin-top: vh(60px);
     padding-bottom: vh(50px);
   }
 
@@ -616,16 +645,30 @@ md-sidenav {
 
 .case-idea {
   &__title {
-    color: $black;
-    margin: 0 0 50px 0;
+    margin: 0 0 vh(50px) 0;
     text-transform: uppercase;
   }
   &__content {
-    @include text-content();
     padding-bottom: vh(50px);
     font-size: vh($fsh4);
     text-transform: uppercase;
     font-weight: $fwbold;
+  }
+}
+
+.case-solution-carousel {
+  &__row {
+  }
+  &__col {
+    height: auto;
+    min-height: initial;
+  }
+  &__title {
+    margin: 0 0 vh(50px) 0;
+    text-transform: uppercase;
+  }
+  &__content {
+    padding-bottom: vh(20px);
   }
 }
 

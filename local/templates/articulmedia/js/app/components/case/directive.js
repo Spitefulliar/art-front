@@ -5,7 +5,6 @@ const MODULE_NAME = moduleConfig.name;
 export default ['$rootScope','$http', '$timeout', '$window', '$state', 
   function ($rootScope, $http, $timeout, $window, $state) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
-      console.log($scope.case);
     };
   return {
     restrict: "AE",

@@ -26,6 +26,7 @@ import mdSteppers from 'md-steppers';
 // import ngPinchZoom from './../../libs/angular-pinch-zoom/ng-pinch-zoom.min.js';
 // import ngLazyImg from 'angular-lazy-image';
 // import ngViedoBg from './../../../../../node_modules/angular-video-background/src/video-background.module.js';
+import ngMousewheel from 'angular-mousewheel';
 
 
 // require('angular-i18n/angular-locale_'+ 'ru-ru' +'.js');
