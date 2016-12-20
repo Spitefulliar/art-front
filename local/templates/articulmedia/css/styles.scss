@@ -560,25 +560,24 @@ md-sidenav {
       background: rgba(255,255,255,.4);
       cursor: pointer;
 
-      &:after {
-        position: absolute;
-        content: '';
-        bottom: 15px;
-        right: 15px;
-        background:transparent url('../img/sprite/cross-thick.svg') left top no-repeat;
-        width: 15px;
-        height: 15px;
-        transition: all .7s ease;
-        transform: rotate(0);
-
-      }
-
-      &:hover:after {
-        transform: rotate(180deg);
+      &:hover {
+        .about-block__cross {
+          transform: rotate(360deg);
+        }
       }
     }
   }
 
+  &__cross {
+    position: absolute;
+    content: '';
+    bottom: 15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    transition: transform .7s ease;
+    transform: rotate(45deg);
+  }
  
 
   &__title {
