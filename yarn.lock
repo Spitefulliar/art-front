@@ -66,6 +66,13 @@ angular-model@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/angular-model/-/angular-model-0.6.0.tgz#bc6c8770d45b5d2380a5f7291ec03a837b8283a4"
 
+angular-mousewheel@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/angular-mousewheel/-/angular-mousewheel-1.0.5.tgz#fdf038e529d3d8af75c0ee8815fbbbd7b800754a"
+  dependencies:
+    angular "^1.0.6"
+    hamsterjs "^1.0.2"
+
 angular-slick-carousel@^3.1.7:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/angular-slick-carousel/-/angular-slick-carousel-3.1.7.tgz#9894fc23b37b90833758731ba488f60cd4cc890a"
@@ -84,7 +91,7 @@ angular-ui-router@^0.2.18:
   dependencies:
     angular "^1.0.8"
 
-angular@=1.5.8, angular@^1.0.8, angular@^1.4.8:
+angular@=1.5.8, angular@^1.0.6, angular@^1.0.8, angular@^1.4.8:
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.8.tgz#925a5392b8c212d09572dc446db7e01264e094cb"
 
@@ -1654,6 +1661,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
 "graceful-readlink@>= 1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
+
+hamsterjs@^1.0.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/hamsterjs/-/hamsterjs-1.1.2.tgz#b11eeafa6c2afab86ae891bceac82b1201787d2d"
 
 handlebars@^2.0.0:
   version "2.0.0"
