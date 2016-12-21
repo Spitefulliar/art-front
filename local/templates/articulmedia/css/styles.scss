@@ -500,6 +500,7 @@ md-sidenav {
   }
 
   .page-block-text {
+    padding-right: 120px;
 
     &__title {
       font-weight: 100;
@@ -518,7 +519,6 @@ md-sidenav {
       width: vw(240px);
       height: vw(240px);
       position: relative;
-      background: $white;
       max-width: 240px;
       max-height: 240px;
       overflow: hidden;
@@ -531,12 +531,28 @@ md-sidenav {
         }
 
         .page-block-list__title {
-          font-size: vh(12px);
+          transform: scale(.7);
+          padding: 0;
         }
-        
-        .page-block-list__cross {
-          transform: rotate(360deg);
+      }
+
+      &--text {
+        .page-block-list__title {
+          color: $black;
         }
+        .page-block-list__image {
+          opacity: 0;
+          transition: all 1s ease;
+        }
+        &:hover {
+          .page-block-list__image {
+            opacity: 1;
+          }
+        }
+      }
+
+      &--image {
+
       }
     }
 
@@ -549,7 +565,6 @@ md-sidenav {
       width: 15px;
       height: 15px;
       z-index: 3;
-      transition: transform .7s ease;
       transform: rotate(45deg);
     }
 
@@ -563,7 +578,7 @@ md-sidenav {
       background-position: 50% 50%;
       background-size: cover;
       background-repeat: no-repeat;
-      transition: transform .8s ease;
+      transition: transform 1s ease;
       transform: scale(1);
 
     }
@@ -580,10 +595,11 @@ md-sidenav {
       margin: 0;
       color: $white;
       font-size: vh(18px);
-      line-height: vh(18px);
+      line-height: 1.5;
       padding: 20px 20px 0 20px;
       box-sizing: border-box;
-      transition: font-size .8s ease;
+      transition: all .8s ease;
+      transform: scale(1);
     }
   }
 
