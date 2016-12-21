@@ -91,7 +91,13 @@ angular-ui-router@^0.2.18:
   dependencies:
     angular "^1.0.8"
 
-angular@=1.5.8, angular@^1.0.6, angular@^1.0.8, angular@^1.4.8:
+angular-youtube-embed@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/angular-youtube-embed/-/angular-youtube-embed-1.3.1.tgz#2290bdbea1b7cbe7510511f62059acc96d76a69b"
+  dependencies:
+    angular ""
+
+angular@, angular@=1.5.8, angular@^1.0.6, angular@^1.0.8, angular@^1.4.8:
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.8.tgz#925a5392b8c212d09572dc446db7e01264e094cb"
 
@@ -1662,7 +1668,7 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-hamsterjs@^1.0.2:
+hamsterjs@^1.0.2, hamsterjs@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/hamsterjs/-/hamsterjs-1.1.2.tgz#b11eeafa6c2afab86ae891bceac82b1201787d2d"
 

@@ -78,14 +78,37 @@ export default [
           },
         },
         {
-          'type': 'solution-caroousel',
+          'type': 'solution-carousel',
           'content': `<p>Реализована PR-кампания по поддержке и продвижению сериала, основанная на его концепции и содержании, как в онлайне, так и в оффлайне. </p>
           <p>Создан промо-сайт с активацией-звонком из города Уэйуорд Пайнс, где разворачиваются события фильма.</p>`,
           'style': {
             'color': false,
             'bgColor': '#f3e3cc',
             'bgImg': false,
-          }
+          },
+          'slides': [
+            {
+              'original': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'desktop': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'mobile': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+            },{
+              'original': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'desktop': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'mobile': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+            },{
+              'original': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'desktop': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'mobile': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+            },{
+              'original': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'desktop': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'mobile': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+            },{
+              'original': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'desktop': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+              'mobile': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
+            }
+          ]
         },
         {
           'type': 'video',

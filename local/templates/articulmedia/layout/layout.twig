@@ -26,6 +26,7 @@
 
     <!-- js -->
     <script src="../local/templates/articulmedia/assets/vendor.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="../local/templates/articulmedia/assets/bundle.js"></script>
     <!-- eof js -->
 
@@ -210,7 +211,7 @@
 
 {% block footer %}
 <!-- footer -->
-<footer class="footer">
+<footer class="footer" ng-class="{'footer--fixed': footerIsFixed}">
   <div class="container">
     <p class="footer__copy">
       ©1998-2016. Articul Media

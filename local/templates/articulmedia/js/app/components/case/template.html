@@ -102,6 +102,11 @@
         <div class="case-solution-carousel__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
       </div>
     </div>
+    <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="case-block__col" flex="100">
+        <art-carousel-waterwheel-dir class="case-solution-carousel__carousel" slides="block.slides"></art-carousel-waterwheel-dir>
+      </div>
+    </div>
   </div>
 </section>
 <!-- eof solution-carousel -->
