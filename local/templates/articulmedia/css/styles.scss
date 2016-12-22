@@ -128,11 +128,6 @@ body {
   -ms-overflow-x: hidden !important;
       overflow-x: hidden !important;
 
-  &:hover {
-    .wheel {
-      transform: rotate(720deg);
-    }
-  }
 }
 
 
@@ -198,6 +193,7 @@ $wheel: 400vh;
   @include circle($wheel);
 }
 .wheel {
+  display: none;
   overflow: hidden;
   width: $wheel;
   height: $wheel;
@@ -558,6 +554,7 @@ md-sidenav {
 
 .inner-page {
   padding-top: 90px;
+  padding-bottom: 60px;
 
   &__container {
     padding: vh(100px) vw(82px) 0;
@@ -604,8 +601,12 @@ md-sidenav {
       @media (max-width: $screen-md) {
         min-width: 120px;
         min-height: 120px;
-        height: auto;
-        width: auto;
+        height: 15em;
+        width: 15em;
+      }
+
+      @media (max-width: $screen-xs) {
+        min-width: 50%;
       }
 
       &:hover {
