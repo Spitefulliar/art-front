@@ -126,6 +126,7 @@ var config = {
           'jQuery': 'jquery',
           'window.jQuery': 'jquery',
           'Slick': 'slick-carousel',
+          'Hamster': 'hamsterjs',
           // 'async': "async",
           // 'moment': 'moment',
           // ScrollMagic: 'scrollmagic',

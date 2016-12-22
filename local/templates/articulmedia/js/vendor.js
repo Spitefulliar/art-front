@@ -1,6 +1,8 @@
 //vendor libs
 require('jquery');
 import slick from 'slick-carousel';
+require('hamsterjs');
+require('../libs/jQuery-Waterwheel-Carousel/js/jquery.waterwheelCarousel.min.js');
 
 
 // vendor-styles

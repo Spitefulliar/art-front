@@ -102,6 +102,11 @@ p {
 }
 //eof elements
 
+*:focus,
+*:active {
+  outline: none;
+}
+
 html {
   min-height: 100%;
   padding: 0;
@@ -768,6 +773,9 @@ md-sidenav {
   }
 }
 
+/*
+ * case
+ */
 .case-block {
   &__container {
     min-height: 100vh;
@@ -782,6 +790,13 @@ md-sidenav {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  &__row {
+    & ~ & {
+      .case-block__col {
+        padding-top: 0;
+      }
+    } 
   }
   &__content {
     @include text-content();
@@ -798,6 +813,13 @@ md-sidenav {
       & ~ & {
         padding-top: 0;
       }
+    }
+    &__row {
+      & ~ & {
+        .case-block__col {
+          padding-top: 0;
+        }
+      } 
     }
   }
 }
@@ -902,8 +924,64 @@ md-sidenav {
   &__content {
     padding-bottom: vh(20px);
   }
+  &__carousel {
+    width: 100%;
+  }
+  @media screen and (max-width: $screen-md) {
+    .case-block__row ~ .case-block__row .case-block__col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
+/*
+ * eof case
+ */
+
+/*
+ * carousel-waterwheel
+ */
+art-carousel-waterwheel-dir {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.carousel-waterwheel {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: vh(540px);
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  &__container {
+    display: block;
+    width: auto;
+    position: relative;
+    left: -20% * 0.7;
+    margin-right: -20% * 0.7;
+  }
+  &__slide {
+    visibility: hidden;
+    cursor: pointer;
+    max-height: 100%;
+  }
+  @media screen and (max-width: $screen-md) {
+    &__container {
+      left: 0;
+      margin-right: 0;
+    }
+  }
+}
+/*
+ * eof carousel-waterwheel
+ */
+
+/*
+ * slick
+ */
 .slick-slider {
 
   &__item {
@@ -947,6 +1025,9 @@ md-sidenav {
   } 
 }
 
+/*
+ * eof slick
+ */
 
 
 

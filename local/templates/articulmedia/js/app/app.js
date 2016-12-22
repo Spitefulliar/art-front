@@ -20,14 +20,13 @@ import cookies from 'angular-cookies';
 import storage from 'ngstorage';
 // import translate from 'angular-translate';
 // import truncate from 'angular-truncate-2';
-// import youtubeMb from 'angular-youtube-embed';
+import youtubeMb from 'angular-youtube-embed';
 import messages from 'angular-messages';
 import mdSteppers from 'md-steppers';
 // import ngPinchZoom from './../../libs/angular-pinch-zoom/ng-pinch-zoom.min.js';
 // import ngLazyImg from 'angular-lazy-image';
 // import ngViedoBg from './../../../../../node_modules/angular-video-background/src/video-background.module.js';
-import ngMousewheel from 'angular-mousewheel';
-
+import ngMousewheel from 'angular-mousewheel/mousewheel.js';
 
 // require('angular-i18n/angular-locale_'+ 'ru-ru' +'.js');
 
@@ -86,7 +85,7 @@ let appModulesArr = AppModulesArr.concat([
     // uiSelect,
     // baronScrollbar,
     // 'truncate',
-    // 'youtube-embed'
+    'youtube-embed',
     // 'ngStorage',
     // messages,
     // 'md-steppers',
@@ -95,6 +94,7 @@ let appModulesArr = AppModulesArr.concat([
     // 'angular-carousel',
     // 'afkl.lazyImage',
     // 'video-background',
+    'monospaced.mousewheel',
 ]);
 // console.log(appModulesArr);
 
