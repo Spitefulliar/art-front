@@ -631,7 +631,6 @@
     this.prev = function () {
       autoPlay(true);
       options.autoPlay = 0;
-
       moveOnce('backward');
     }
 

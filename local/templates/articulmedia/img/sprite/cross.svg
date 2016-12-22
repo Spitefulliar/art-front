@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 22.6 22.6" style="enable-background:new 0 0 22.6 22.6;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;}
-</style>
-<polygon id="XMLID_16_" class="st0" fill="#fff" points="22.6,1.4 21.2,0 11.3,9.9 1.4,0 0,1.4 9.9,11.3 0,21.2 1.4,22.6 11.3,12.7 21.2,22.6 
-	22.6,21.2 12.7,11.3 "/>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="29.263px" height="29.263px" viewBox="0 0 29.263 29.263" enable-background="new 0 0 29.263 29.263" xml:space="preserve">
+<path d="M28.764,26.407L16.988,14.631L28.774,2.845c0.651-0.652,0.652-1.706,0.001-2.357
+	c-0.65-0.65-1.705-0.65-2.356,0.001L14.632,12.275L2.856,0.499C2.206-0.152,1.151-0.151,0.5,0.5s-0.651,1.706-0.001,2.356
+	l11.776,11.776L0.489,26.418c-0.651,0.651-0.651,1.706-0.001,2.356c0.651,0.651,1.705,0.65,2.356-0.001L14.63,16.988l11.776,11.776
+	c0.65,0.65,1.705,0.65,2.355-0.001C29.415,28.112,29.415,27.057,28.764,26.407z"/>
 </svg>
