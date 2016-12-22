@@ -176,7 +176,7 @@ svg {
   margin-top: 50px;
   height: 40px;
   display: flex;
-  z-index: 99;
+  z-index: 59;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -527,6 +527,10 @@ md-sidenav {
 
   .page-block-list {
 
+    @media (max-width: $screen-md) {
+      display: flex;
+    }
+
     &__item {
       width: vw(240px);
       height: vw(240px);
@@ -540,6 +544,8 @@ md-sidenav {
       @media (max-width: $screen-md) {
         min-width: 120px;
         min-height: 120px;
+        height: auto;
+        width: auto;
       }
 
       &:hover {
