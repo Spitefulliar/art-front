@@ -827,6 +827,18 @@ md-sidenav {
     margin-top: 55px;
     margin-left: 10px;
   }
+  @media screen and (max-width: $screen-xs) {
+    &__item {
+      width: vw(100px);
+      height: vw(100px);
+    }
+    &__title {
+      font-size: vh(20px);
+    }
+    &__date {
+      font-size: vh(28px);
+    }
+  }
 }
 
 /*
