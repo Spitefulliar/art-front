@@ -102,6 +102,11 @@ p {
 }
 //eof elements
 
+*:focus,
+*:active {
+  outline: none;
+}
+
 html {
   min-height: 100%;
   padding: 0;

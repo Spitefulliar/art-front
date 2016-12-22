@@ -5,61 +5,44 @@ const MODULE_NAME = moduleConfig.name;
 export default ['$rootScope','$http', '$timeout', '$window', '$state', 
   function ($rootScope, $http, $timeout, $window, $state) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
-      // console.log($element,$scope.slides);
       let element = $($element);
       let crouselEl = $($element).find('.carousel-waterwheel');
       let crouselElContainer = $($element).find('.carousel-waterwheel__container');
-
-      $scope.carouselOptions = {
-        separation: 250,
-        separationMultiplier: 0.7,
-        sizeMultiplier: 0.85,
-        opacityMultiplier: 0.7,
-        flankingItems: 2,
-        animationEasing: 'swing',
-        activeClassName: 'carousel-waterwheel__slide--active',
-        keyboardNav: true,
-        // movingToCenter: function ($item) {
-        //   $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-        // },
-        // movedToCenter: function ($item) {
-        //   $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-        // },
-        // movingFromCenter: function ($item) {
-        //   $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-        // },
-        // movedFromCenter: function ($item) {
-        //   $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-        // },
-        // clickedCenter: function ($item) {
-        //   $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-        // }
-      };
-
+      let carouselResizeTimeout;
 
       function carouselOptionsUpdate(newwidth) {
         let elW = crouselElContainer.width();
         $scope.carouselOptions.separation = Math.round(0.2 * elW);//Math.round(200 * (elW/1245));
         // $scope.carouselOptions.shift = Math.round($scope.carouselOptions.separation * Math.pow($scope.carouselOptions.separationMultiplier,$scope.carouselOptions.flankingItems));
-        $scope.carouselOptions.shift = Math.round(-$scope.carouselOptions.separation * Math.pow($scope.carouselOptions.separationMultiplier,$scope.carouselOptions.flankingItems - 1));
       }
 
+      function carouselResize() {
+        if (carouselResizeTimeout) $timeout.cancel(carouselResizeTimeout);
+        carouselResizeTimeout = $timeout(function() {
+          carouselOptionsUpdate();
+          $scope.carousel.reload($scope.carouselOptions);
+        },200);
+      }
 
       $timeout(function(){
+
         carouselOptionsUpdate();
         $scope.carousel = crouselEl.waterwheelCarousel($scope.carouselOptions);
-        // $scope.$watch(function() { return element.width(); }, function(newwidth) {
-        //   carouselStyleUpdate(newwidth);
-        //   console.log(newwidth);
-        //   $scope.carousel.reload($scope.carouselOptions);
-        // });
-        $(window).resize(function() {
-          carouselOptionsUpdate();
-          console.log($scope.carouselOptions);
-          $scope.carousel.reload($scope.carouselOptions);
-        })
+        $(window).resize(carouselResize);
+
       },0);
 
+      $scope.$watch('slides', function() {
+        carouselResize();
+      });
+
+      $scope.$on(
+        "$destroy",
+        function( event ) {
+          $timeout.cancel( carouselResizeTimeout );
+          $(window).off("resize", carouselResize);
+        }
+      );
 
     };
   return {

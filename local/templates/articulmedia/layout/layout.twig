@@ -75,9 +75,6 @@
   <a href="" class="header__link">
     <img src="../local/templates/articulmedia/img/icon/icon-p.png" alt="">
   </a>
-  {# <div class="header__mobile-toggle" ng-click="sidenavToggle()">
-    <span class="header__mobile-toggle__line"></span>
-  </div> #}
   <md-button class="header__mobile-toggle md-raised md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
     <span class="sidenav__nav-item__icon svg-icon">
       <svg>
@@ -211,7 +208,7 @@
 
 {% block footer %}
 <!-- footer -->
-<footer class="footer" ng-class="{'footer--fixed': footerIsFixed}">
+<footer class="footer" ng-class="{'footer--fixed': !footerIsStatic}">
   <div class="container">
     <p class="footer__copy">
       ©1998-2016. Articul Media
@@ -220,7 +217,7 @@
       <img src="../local/templates/articulmedia/img/icon/logo-raek.png" alt="РАЭК" class="footer__img">
     </div>
     <div class="footer__icon">
-      <img src="../local/templates/articulmedia/img/icon/logo-party.png" alt="Учаастник" class="footer__img">
+      <img src="../local/templates/articulmedia/img/icon/logo-party.png" alt="Участник" class="footer__img">
     </div>
     <div class="footer__icon">
       <img src="../local/templates/articulmedia/img/icon/logo-microsoft.png" alt="" class="footer__img">

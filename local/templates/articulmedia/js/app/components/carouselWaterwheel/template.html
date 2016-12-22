@@ -1,15 +1,13 @@
-<div class="carousel-waterwheel__container" 
-  >
-  <!-- style="
-    left: {{carouselOptions.shift && carouselOptions.shift + 'px' || '0'}};
-    margin-right: {{carouselOptions.shift && carouselOptions.shift + 'px' || '0'}};
-  " -->
-<!--     width: {{carouselOptions.width && carouselOptions.width + 'px' || '100%'}};
-  ng-style="{
-    'left': carouselOptions.shift && '-{{carouselOptions.shift}}px',
-    'width': carouselOptions.width && '{{carouselOptions.width}}px'
-  }" -->
+<div class="carousel-waterwheel__container">
   <div class="carousel-waterwheel">
-    <img ng-repeat="slide in slides" ng-src="{{slide.desktop}}" alt="{{slide.title}}" class="carousel-waterwheel__slide"/>
+    <!-- ng-controller="artPopupImgCtrl"  -->
+    <img ng-repeat="slide in slides track by $index" 
+      ng-src="{{ ($rootScope.isDesctop)? slide.desktop : slide.mobile }}" 
+      art-popup-img-dir 
+      ng-click="popupImgCtrl.showImgPopup(slide.original, activeSlideIndex != $index)"
+      alt="{{slide.title}}" 
+      class="carousel-waterwheel__slide" 
+      data-slideindex="{{$index}}"
+      />
   </div>
 </div>
