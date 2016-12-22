@@ -181,7 +181,7 @@ svg {
   margin-top: 50px;
   height: 40px;
   display: flex;
-  z-index: 2;
+  z-index: 59;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -350,7 +350,7 @@ svg {
 
 				&:hover {
 					.submenu__link {
-						background: $white;
+						background: $crusta;
 					}
 				}
 			}
@@ -372,6 +372,10 @@ svg {
 
 .main {
   height: 100vh;
+
+  @media (max-width: $screen-md) {
+    height: auto;
+  }
 }
 
 .content {
@@ -507,6 +511,10 @@ md-sidenav {
   .page-block-text {
     padding-right: 120px;
 
+    @media (max-width: $screen-md) {
+      padding: 0;
+    }
+
     &__title {
       font-weight: 100;
       color: $black;
@@ -518,10 +526,15 @@ md-sidenav {
       font-weight: $fwbold;
       text-transform: uppercase;
       font-size: vh(24px);
+      margin: 1em 0;
     }
   }
 
   .page-block-list {
+
+    @media (max-width: $screen-md) {
+      display: flex;
+    }
 
     &__item {
       width: vw(240px);
@@ -532,6 +545,13 @@ md-sidenav {
       overflow: hidden;
       cursor: pointer;
       z-index: 2;
+
+      @media (max-width: $screen-md) {
+        min-width: 120px;
+        min-height: 120px;
+        height: auto;
+        width: auto;
+      }
 
       &:hover {
         .page-block-list__image {
@@ -625,6 +645,10 @@ md-sidenav {
       box-sizing: border-box;
       transition: all .8s ease;
       transform: scale(1);
+
+      @media (max-width: $screen-md) {
+        font-size: vh(15px);
+      }
     }
   }
 
