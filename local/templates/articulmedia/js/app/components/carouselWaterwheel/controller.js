@@ -24,7 +24,6 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
       // },
       movedToCenter: function ($item) {
         $scope.activeSlideIndex = $item.data('slideindex');
-        $log.debug('movingToCenter: ' + $scope.activeSlideIndex);
       },
       // movingFromCenter: function ($item) {
       //   $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
