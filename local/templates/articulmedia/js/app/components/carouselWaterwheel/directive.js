@@ -2,17 +2,19 @@
 import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
-export default ['$rootScope','$http', '$timeout', '$window', '$state', 
-  function ($rootScope, $http, $timeout, $window, $state) {
+export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
+  function ($rootScope, $http, $timeout, $window, $state, $log) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       let element = $($element);
       let crouselEl = $($element).find('.carousel-waterwheel');
       let crouselElContainer = $($element).find('.carousel-waterwheel__container');
       let carouselResizeTimeout;
 
+      $scope.activeSlideIndex = 0;
+
       function carouselOptionsUpdate(newwidth) {
         let elW = crouselElContainer.width();
-        $scope.carouselOptions.separation = Math.round(0.2 * elW);//Math.round(200 * (elW/1245));
+        $scope.carouselOptions.separation = ($rootScope.isDesktop)? Math.round(0.25 * elW): Math.round(0.12 * elW);//Math.round(200 * (elW/1245));
         // $scope.carouselOptions.shift = Math.round($scope.carouselOptions.separation * Math.pow($scope.carouselOptions.separationMultiplier,$scope.carouselOptions.flankingItems));
       }
 
@@ -28,6 +30,14 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
 
         carouselOptionsUpdate();
         $scope.carousel = crouselEl.waterwheelCarousel($scope.carouselOptions);
+
+        $scope.next = function() { 
+          $scope.carousel.next();
+        };
+        $scope.prev = function() { 
+          $scope.carousel.prev();
+        };
+
         $(window).resize(carouselResize);
 
       },0);

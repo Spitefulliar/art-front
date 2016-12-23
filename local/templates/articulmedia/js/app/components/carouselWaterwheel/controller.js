@@ -18,12 +18,14 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
       animationEasing: 'swing',
       activeClassName: 'carousel-waterwheel__slide--active',
       keyboardNav: true,
-      movingToCenter: function ($item) {
-        $log.debug('movingToCenter: ' + $item.data('slideindex'));
-      },
-      // movedToCenter: function ($item) {
-      //   $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+      // movingToCenter: function ($item) {
+      //   $log.debug('movingToCenter: ' + $item.data('slideindex'));
+      //   $scope.activeSlideIndex = $item.data('slideindex');
       // },
+      movedToCenter: function ($item) {
+        $scope.activeSlideIndex = $item.data('slideindex');
+        $log.debug('movingToCenter: ' + $scope.activeSlideIndex);
+      },
       // movingFromCenter: function ($item) {
       //   $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
       // },

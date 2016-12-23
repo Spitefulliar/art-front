@@ -843,6 +843,18 @@ md-sidenav {
     margin-top: 55px;
     margin-left: 10px;
   }
+  @media screen and (max-width: $screen-xs) {
+    &__item {
+      width: vw(100px);
+      height: vw(100px);
+    }
+    &__title {
+      font-size: vh(20px);
+    }
+    &__date {
+      font-size: vh(28px);
+    }
+  }
 }
 
 /*
@@ -1000,6 +1012,9 @@ md-sidenav {
     width: 100%;
   }
   @media screen and (max-width: $screen-md) {
+    &__carousel {
+      padding-bottom: vh(20px); 
+    }
     .case-block__row ~ .case-block__row .case-block__col {
       padding-left: 0;
       padding-right: 0;
@@ -1041,6 +1056,14 @@ art-carousel-waterwheel-dir {
     max-height: 100%;
   }
   @media screen and (max-width: $screen-md) {
+    height: vh(375px);
+    &__container {
+      left: 0;
+      margin-right: 0;
+    }
+  }
+  @media screen and (max-width: $screen-sm) {
+    height: vh(320px);
     &__container {
       left: 0;
       margin-right: 0;
@@ -1099,6 +1122,33 @@ art-carousel-waterwheel-dir {
 
 /*
  * eof slick
+ */
+
+ /*
+ * popups
+ */
+.popup-img {
+  
+  &__inner {
+    position: relative;
+  
+    img {
+      max-width: 80vw;
+      max-height: 90vh;
+    }
+  }
+  &__close {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    color: $white;
+    font-size: vw(32px);
+    top: 0;
+    right: -2em;
+  }
+}
+ /*
+ * eof popups
  */
 
 

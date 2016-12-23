@@ -1,6 +1,9 @@
-<div class="carousel-waterwheel__container">
-  <div class="carousel-waterwheel">
-    <!-- ng-controller="artPopupImgCtrl"  -->
+<div class="carousel-waterwheel__container" 
+  md-swipe-right="prev()" 
+  md-swipe-left="next()" 
+  >
+  <div class="carousel-waterwheel" 
+    >
     <img ng-repeat="slide in slides track by $index" 
       ng-src="{{ ($rootScope.isDesctop)? slide.desktop : slide.mobile }}" 
       art-popup-img-dir 
