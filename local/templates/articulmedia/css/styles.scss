@@ -128,11 +128,6 @@ body {
   -ms-overflow-x: hidden !important;
       overflow-x: hidden !important;
 
-  &:hover {
-    .wheel {
-      transform: rotate(720deg);
-    }
-  }
 }
 
 
@@ -198,6 +193,7 @@ $wheel: 400vh;
   @include circle($wheel);
 }
 .wheel {
+  display: none;
   overflow: hidden;
   width: $wheel;
   height: $wheel;
@@ -558,6 +554,19 @@ md-sidenav {
 
 .inner-page {
   padding-top: 90px;
+  padding-bottom: 60px;
+  position: relative;
+
+  &__bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('../img/desktop/color-bg.jpg') center no-repeat;
+    background-position: 70% 100%;
+    background-size: cover;
+  }
 
   &__container {
     padding: vh(100px) vw(82px) 0;
@@ -595,8 +604,8 @@ md-sidenav {
       width: vw(240px);
       height: vw(240px);
       position: relative;
-      max-width: 240px;
-      max-height: 240px;
+      // max-width: 240px;
+      // max-height: 240px;
       overflow: hidden;
       cursor: pointer;
       z-index: 2;
@@ -604,8 +613,14 @@ md-sidenav {
       @media (max-width: $screen-md) {
         min-width: 120px;
         min-height: 120px;
-        height: auto;
-        width: auto;
+        height: 15em;
+        width: 15em;
+      }
+
+      @media (max-width: $screen-xs) {
+        min-width: 50%;
+        height: 10em;
+        width: 10em;
       }
 
       &:hover {
@@ -717,6 +732,7 @@ md-sidenav {
 	left: 0;
 	bottom: 0;
   position: relative;
+  z-index: 10;
 
   &--fixed {
     position: fixed;
