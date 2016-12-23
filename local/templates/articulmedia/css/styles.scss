@@ -890,7 +890,6 @@ md-sidenav {
 .case-block {
   &__container {
     min-height: 100vh;
-    max-height: 100vh;
     padding: vh(100px) vw(82px) 0;
     display: block;
     -webkit-box-sizing: border-box;
@@ -918,9 +917,11 @@ md-sidenav {
   }
   @media screen and (max-width: $screen-md) {
     &__container {
+      min-height: initial;
       padding: vh(100px,'md') vw(25px,'md') 0;
     }
     &__col {
+      min-height: initial;
       padding: vh(100px,'md') vw(25px,'md') 0;
       & ~ & {
         padding-top: 0;
@@ -1048,6 +1049,9 @@ md-sidenav {
     text-transform: uppercase;
     font-weight: $fwbold;
   }
+  @media screen and (max-width: $screen-md) {
+    min-height: vh(724px);
+  }
 }
 
 .case-solution-carousel {
@@ -1072,7 +1076,7 @@ md-sidenav {
     }
   }
   @media screen and (max-width: $screen-md) {
-    min-height: 100vh;
+    min-height: initial;
     &__carousel {
       padding-bottom: vh(20px,'md'); 
       .carousel-waterwheel {
@@ -1080,8 +1084,8 @@ md-sidenav {
       }
     }
     .case-block__row {
-      height: vh(375px,'md');
-      
+      // height: vh(375px,'md');
+      height: auto;
       & ~ .case-block__row {
         height: auto;
         & .case-block__col {
@@ -1096,6 +1100,11 @@ md-sidenav {
 .case-solution-media {
   h4 {
     margin: 0 0 1em;
+  }
+  @media screen and (max-width: $screen-md) {
+    .case-block__container {
+      min-height: initial;
+    }
   }
 }
 
@@ -1153,7 +1162,8 @@ md-sidenav {
       margin-bottom: vh(25px,'md');
     }
     &__images {
-      padding-top: 0;
+      position: static;
+      padding: 0;
       height: vh(420px,'md');
       -webkit-box-sizing: border-box;
          -moz-box-sizing: border-box;
@@ -1161,7 +1171,8 @@ md-sidenav {
     }
     .case-block__container {
       padding-top: vh(50px,'md');
-      padding-bottom: vh(430px,'md');
+      padding-bottom: 0;
+      // padding-bottom: vh(430px,'md');
     }
   }
 }
@@ -1189,22 +1200,6 @@ md-sidenav {
     max-width: 58vh;
     height: vh(525px);
   }
-  // &__img {
-  //   max-width: 45%;
-  //   max-height: 45%;
-  //   width: vw(220px);
-  //   height: vw(220px);
-  //   margin-bottom: vw(18px);
-  //   margin-right: vw(18px);
-  //   overflow: hidden;
-  //   -webkit-box-sizing: content-box;
-  //      -moz-box-sizing: content-box;
-  //           box-sizing: content-box;
-  //   &_even {
-  //     margin-right: 0;
-  //     margin-left: 0px;
-  //   }
-  // }
   &__img {
     max-width: 100%;
     max-height: 100%;
@@ -1245,32 +1240,21 @@ md-sidenav {
       margin-bottom: vh(25px,'md');
     }
     &__images {
-      padding-top: 0;
+      position: static;
+      padding: 0 0 18px;
+      height: auto;
     }
     &__images-grid {
       width: 100%;
-      max-width: 58мр;
-      height: vh(500px,'md');
+      max-width: 100%;
+      // height: vh(500px,'md');
+      height: auto;
     }
-    // &__img {
-    //   max-height: 45%;
-    //   width: vw(235px,'md');
-    //   height: vw(235px,'md');
-    //   margin-bottom: vw(18px,'md');
-    //   margin-right: vw(18px,'md');
-    //   &_even {
-    //     margin-right: 0;
-    //     margin-left: 0px;
-    //   }
-    // }
-    // &__img {
-    //   width: vh(235px,'md');
-    //   height: vh(235px,'md');
-    // }
     .case-block__container {
       max-height: initial;
       padding-top: vh(50px,'md');
-      padding-bottom: vh(515px,'md');
+      // padding-bottom: vh(515px,'md');
+      padding-bottom: 0;
     }
   }
 }
