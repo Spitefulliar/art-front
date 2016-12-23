@@ -132,14 +132,16 @@
     <div class="case-block__container">
       <h4 class="case-media-support__title" ng-bind-html="trustAsHtml(block.title)"></h4>
       <div class="case-media-support__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      <div class="case-media-support__img case-block__col">
-        <div class="case-media-support__img-bg"  
-          ng-style="{
-            'background-image': 'url(' + (isDesktop && block.img.desktop || block.img.mobile || false) + ')'
-          }"
-          alt="{{block.img.alt}}" 
-          art-popup-img-dir 
-          ng-click="popupImgCtrl.showImgPopup(block.img.original)"></div>
+      <div class="case-media-support__images case-block__col">
+        <div class="case-media-support__img">
+          <div class="case-media-support__img-bg"  
+            ng-style="{
+              'background-image': 'url(' + (isDesktop && block.img.desktop || block.img.mobile || false) + ')'
+            }"
+            alt="{{block.img.alt}}" 
+            art-popup-img-dir 
+            ng-click="popupImgCtrl.showImgPopup(block.img.original)"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -157,24 +159,35 @@
     <div class="case-block__container">
       <h4 class="case-smm__title" ng-bind-html="trustAsHtml(block.title)"></h4>
       <div class="case-smm__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      <div class="case-smm__images case-block__col" layout="row" layout-align="start start" layout-wrap>
-        <div class="case-smm__img" 
-          ng-repeat="img in block.images" 
-          ng-class="{'case-smm__img_even': $odd}"
-          >
-          <div class="case-smm__img-bg"  
-            ng-style="{
-              'background-image': 'url(' + (isDesktop && img.desktop || img.mobile || false) + ')'
-            }"
-            alt="{{img.alt}}" 
-            art-popup-img-dir 
-            ng-click="popupImgCtrl.showImgPopup(img.original)"></div>
-          <span class="about-block__cross svg-icon">
-            <svg>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-            </svg>
-          </span>
-        </div>
+      <div class="case-smm__images case-block__col">
+        <md-grid-list class="case-smm__images-grid"
+          md-cols="2"
+          md-row-height="1:1"
+          md-gutter="18px" md-gutter-gt-sm="18px" >
+
+          <md-grid-tile 
+            md-rowspan="1" md-colspan="1" 
+            ng-repeat="img in block.images"  
+            >
+            <div class="case-smm__img plus-item" 
+            ng-class="{'case-smm__img_even': $odd}"
+            >
+              <div class="case-smm__img-bg"  
+                ng-style="{
+                  'background-image': 'url(' + (isDesktop && img.desktop || img.mobile || false) + ')'
+                }"
+                alt="{{img.alt}}" 
+                art-popup-img-dir 
+                ng-click="popupImgCtrl.showImgPopup(img.original)"></div>
+              <span class="plus-item__icon">
+                <svg>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+                </svg>
+              </span>
+            </div>
+          </md-grid-tile>
+
+        </md-grid-list>
       </div>
     </div>
   </div>

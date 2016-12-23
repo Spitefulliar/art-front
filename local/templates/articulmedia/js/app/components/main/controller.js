@@ -90,6 +90,10 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   $rootScope.$on('$stateChangeSuccess', 
     function(event, toState, toParams, fromState, fromParams){ 
       $scope.pageData = $state.current.data;
+
+      if ($scope.sidenavIsOpen) {
+        $scope.sidenavHide();
+      }
     }
   );
 

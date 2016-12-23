@@ -105,7 +105,7 @@
 
 {% block sidenav %}
 <md-sidenav class="sidenav md-sidenav-right"
-  
+  ng-cloak 
   md-component-id="sidenav-right"
   md-whiteframe="4"
   md-is-open="sidenavIsOpen"
@@ -121,7 +121,7 @@
     <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
       <div class="mobileMenu__slide">
         <h5 class="mobileMenu__title">
-          КОМПАНИЯ
+          <a href="" class="mobileMenu__link">КОМПАНИЯ</a>
         </h5>
         <ul class="mobileMenu__list">
           <li class="mobileMenu__item">
@@ -140,7 +140,7 @@
       </div>
       <div class="mobileMenu__slide">
         <h5 class="mobileMenu__title">
-          Работы
+          <a href="/#/case/" class="mobileMenu__link">Работы</a>
         </h5>
         <ul class="mobileMenu__list">
           <li class="mobileMenu__item">
@@ -156,11 +156,11 @@
       </div>
       <div class="mobileMenu__slide">
         <h5 class="mobileMenu__title">
-          Экспертиза
+          <a href="" class="mobileMenu__link">Экспертиза</a>
         </h5>
         <ul class="mobileMenu__list">
           <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Уникальный опыт</a>
+            <a href="/#/experience/" class="mobileMenu__link">Уникальный опыт</a>
           </li>
           <li class="mobileMenu__item">
             <a href="" class="mobileMenu__link">Развиваем digital-индустрию</a>
