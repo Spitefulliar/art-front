@@ -469,7 +469,7 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
 md-sidenav {
   max-width: 100% !important;
   width: 100% !important;
-  height: 100%;
+  height: 100% !important;
   background: $white;
   position: fixed;
   top: 0 !important;
@@ -1093,7 +1093,7 @@ md-sidenav {
   }
 }
 
-.case-media {
+.case-solution-media {
   h4 {
     margin: 0 0 1em;
   }
