@@ -1,0 +1,222 @@
+{
+  "success": "true",
+  "case": {
+    "id": 1,
+    "code": "always-answer",
+    "title": "Всегда отвечай на звонок",
+    "client": {
+      "id": 2,
+      "code": "fox"
+    },
+    "slides": [
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "announce",
+            "title": "всегда отвечай на звонок",
+            "summary": "кампания по продвижению телесериала \"Сосны\"",
+            "release": "2014\/02",
+            "video": {
+              "mp4": "",
+              "ogg": "",
+              "webm": ""
+            },
+            "style": {
+              "titleTextColor": "",
+              "summaryTextColor": "",
+              "aboutBgColor": "",
+              "aboutTextColor": "",
+              "bgAboutImage": "",
+              "titleImage": ""
+            }
+          }
+        ]
+      },
+      {
+        "type": "brief-idea",
+        "blocks": [
+          {
+            "type": "brief",
+            "title": "Бриф",
+            "content": "",
+            "style": {
+              "bgColor": ""
+            }
+          },
+          {
+            "type": "idea",
+            "title": "Идея",
+            "content": "",
+            "style": {
+              "bgImage": {
+                "desktop": "",
+                "mobile": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "solution-carousel",
+            "title": "Решение",
+            "content": "",
+            "images": [
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              },
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              },
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              },
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              }
+            ],
+            "style": {
+              "bgColor": ""
+            }
+          }
+        ]
+      },
+      {
+        "type": "solution-gallery",
+        "blocks": [
+          {
+            "type": "solution-gallery-single",
+            "title": "",
+            "content": "",
+            "image": {
+              "alt": "",
+              "original": "",
+              "desktop": "",
+              "mobile": ""
+            }
+          },
+          {
+            "type": "solution-gallery-multi",
+            "title": "",
+            "content": "",
+            "images": [
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              },
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              },
+              {
+                "alt": "",
+                "original": "",
+                "desktop": "",
+                "mobile": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "total",
+            "title": "итоги",
+            "content": "",
+            "slogans": [
+              "более <b>11000<\/b> раз<br>прозвучал звонок<br>из уэуорд пайнз"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "video",
+            "video": ""
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "another",
+            "style": {
+              "textColor": ""
+            },
+            "items": [
+              {
+                "type": "client",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "image": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
