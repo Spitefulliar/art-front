@@ -597,8 +597,13 @@ md-sidenav {
     left: 0;
     top: 0;
     background: url('../img/desktop/color-bg.jpg') center no-repeat;
-    background-position: 70% 100%;
+    background-position: 50% 50%;
     background-size: cover;
+    transition: background-position 1s ease;
+
+    &--experience {
+      background-position: 70% 100%;
+    }
 
     @media (max-width: $screen-md) {
       background: url('../img/mobile/color-bg-mobile.jpg') center no-repeat;
