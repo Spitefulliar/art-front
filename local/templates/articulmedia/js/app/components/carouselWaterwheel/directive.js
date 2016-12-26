@@ -40,11 +40,12 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
 
         $(window).resize(carouselResize);
 
+        $scope.$watch('slides', function() {
+          carouselResize();
+        });
+        
       },0);
 
-      $scope.$watch('slides', function() {
-        carouselResize();
-      });
 
       $scope.$on(
         "$destroy",
