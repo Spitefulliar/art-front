@@ -5,8 +5,6 @@ const MODULE_NAME = moduleConfig.name;
 export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$window', '$state',
   function($scope, $rootScope, $location, $log, $timeout, $window, $state) {
     $scope.$rootScope = $rootScope;
-    $log.debug($scope);
-    // $scope.showImgPopup = artPopupImgCtrl.showImgPopup;
     
     $scope.carouselOptions = {
       linkHandling: 2,
@@ -18,21 +16,16 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
       animationEasing: 'swing',
       activeClassName: 'carousel-waterwheel__slide--active',
       keyboardNav: true,
-      // movingToCenter: function ($item) {
-      //   $log.debug('movingToCenter: ' + $item.data('slideindex'));
-      //   $scope.activeSlideIndex = $item.data('slideindex');
-      // },
       movedToCenter: function ($item) {
         $scope.activeSlideIndex = $item.data('slideindex');
       },
+      // movingToCenter: function ($item) {
+      // },
       // movingFromCenter: function ($item) {
-      //   $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
       // },
       // movedFromCenter: function ($item) {
-      //   $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
       // },
       // clickedCenter: function ($item) {
-      //   $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
       // }
     };
 
