@@ -477,6 +477,28 @@ md-sidenav {
 
 .sidenav {
 
+  .slick-slider {
+    margin: 0 !important;
+  }
+
+  .slick-dots {
+    bottom: 100px;
+
+    li {
+      background: #c2c2c2;
+      background: rgba(174,174,174,.6);
+      border-radius: 50%;
+
+      &.slick-active {
+        background: $white;
+      }
+
+      button {
+        display: none;
+      }
+    } 
+  }
+
   &__close {
     margin: 0;
     padding: 0;
@@ -1352,27 +1374,6 @@ art-carousel-waterwheel-dir {
   }
 }
 
-.slick-slider {
-  margin: 0 !important;
-}
-
-.slick-dots {
-  bottom: 100px;
-
-  li {
-    background: #c2c2c2;
-    background: rgba(174,174,174,.6);
-    border-radius: 50%;
-
-    &.slick-active {
-      background: $white;
-    }
-
-    button {
-      display: none;
-    }
-  } 
-}
 
 /*
  * eof slick
