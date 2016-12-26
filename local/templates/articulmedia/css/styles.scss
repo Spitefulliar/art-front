@@ -599,7 +599,7 @@ md-sidenav {
     background: url('../img/desktop/color-bg.jpg') center no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    transition: background-position 1s ease, transform 5s ease;
+    transition: background-position 1s ease;
 
     &--experience {
       // background-position: 70% 100%;
