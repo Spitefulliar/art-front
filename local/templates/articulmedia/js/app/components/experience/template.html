@@ -1,9 +1,10 @@
-<div class="inner-page__bg inner-page__bg--experience"></div>
+<div class="inner-page__bg" ng-class="{'inner-page__bg--experience': bgMode == 'experience'}"></div>
 <div class="inner-page">
 	<div class="inner-page__container" layout="row" layout-sm="column" layout-wrap>
 		<div class="page-block-text" flex="100" flex-lg="45" flex-xl="45" flex-md="45">
 			<h2 class="page-block-text__title">
 				умнее<br>выше<br>быстрее
+				{{bgMode}}
 			</h2>
 			<p class="page-block-text__info">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.
