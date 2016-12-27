@@ -917,6 +917,7 @@ md-sidenav {
   &__item {
     vertical-align: middle;
     width: vh(120px);
+    position: relative;
     height: vh(120px);
     background: #e8e9ed;
     background: rgba(232, 233, 237, .8);
@@ -944,17 +945,20 @@ md-sidenav {
  
 
   &__title {
-    font-size: 20px;
+    font-size: vh(20px);
     color: $black;
     padding: 10px 0 0 10px;
     display: inline-block;
   }
 
   &__date {
-    font-size: 28px;
+    font-size: vh(28px);
     display: inline-block;
     margin-top: vh(55px);
     margin-left: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   @media screen and (max-width: $screen-xs) {
     &__item {
@@ -965,7 +969,7 @@ md-sidenav {
       font-size: vh(20px,'md');
     }
     &__date {
-      margin-top: vh(55px,'md');
+      // margin-top: vh(55px,'md');
       font-size: vh(28px,'md');
     }
   }
