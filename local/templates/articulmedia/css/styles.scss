@@ -1558,35 +1558,6 @@ art-carousel-waterwheel-dir {
  * eof carousel-waterwheel
  */
 
-/*
- * slick
- */
-.slick-slider {
-
-  &__item {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    height: 100vh;
-  }
-
-  &__text {
-    font-size: 40px;
-    color: $black;
-    font-weight: 100;
-    line-height: 35px;
-  }
-
-  &__wrap {
-    padding-top: 150px;
-  }
-}
-
-
-/*
- * eof slick
- */
-
  /*
  * popups
  */
