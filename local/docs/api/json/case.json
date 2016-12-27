@@ -8,27 +8,32 @@
       "id": 2,
       "code": "fox"
     },
-    "slides": [
+    "sections": [
       {
         "type": "single",
         "blocks": [
           {
             "type": "announce",
-            "title": "всегда отвечай на звонок",
-            "summary": "кампания по продвижению телесериала \"Сосны\"",
-            "release": "2014\/02",
+            "title": "всегда<br>отвечай<br>на звонок",
+            "summary": "кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX",
+            "release": "2014/02",
             "video": {
               "mp4": "",
               "ogg": "",
               "webm": ""
             },
             "style": {
+              "bgColor": "#1e2532",
               "titleTextColor": "",
-              "summaryTextColor": "",
-              "aboutBgColor": "",
-              "aboutTextColor": "",
+              "summaryTextColor": "#f3e3cc",
+              "aboutBgColor": "#f3e3cc",
+              "aboutTextColor": "#000000",
               "bgAboutImage": "",
-              "titleImage": ""
+              "titleImage": "",
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_1.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_1_mobile.jpg"
+              }
             }
           }
         ]
@@ -38,20 +43,24 @@
         "blocks": [
           {
             "type": "brief",
-            "title": "Бриф",
-            "content": "",
+            "title": "БРИФ",
+            "summary": "<p>«Сосны» – 10-серийный остросюжетный триллер. Действие</br> сериала разворачивается в городе Уэйуорд Пайнз, одно из</br> главных правил которого – всегда отвечать на мистические звонки.</p>",
+            "content": "<h4>Цели кампании:</h4><ul><li>Продвижение сериала «Сосны»</li><li>Увеличение аудитории телеканала FOX</li><li>Увеличение дистрибуции телеканала</li><li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li></ul>",
             "style": {
-              "bgColor": ""
+              "bgColor": "#1e2532",
+              "textColor": "#f3e3cc"              
             }
           },
           {
             "type": "idea",
             "title": "Идея",
-            "content": "",
+            "content": "погрузить пользователей</br>в атмосферу сериала, дав</br>возможность почувствовать</br>себя на месте жителей</br>мистического города,</br>и с замиранием сердца</br>ожидать таинственного</br>звонка на свой телефон.",
             "style": {
+              "textColor": "#000000",
+              "bgColor": "#f3e3cc",
               "bgImage": {
-                "desktop": "",
-                "mobile": ""
+                "desktop": "/local/templates/articulmedia/img/case/case_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_2_mobile.jpg"
               }
             }
           }
@@ -63,75 +72,72 @@
           {
             "type": "solution-carousel",
             "title": "Решение",
-            "content": "",
+            "content": "<p>Реализована PR-кампания по поддержке и продвижению сериала, основанная на его концепции и содержании, как в онлайне, так и в оффлайне. </p><p>Создан промо-сайт с активацией-звонком из города Уэйуорд Пайнс, где разворачиваются события фильма.</p>",
             "images": [
               {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_1.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_1.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_1.jpg"
               },
               {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_2.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_2.jpg"
               },
               {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
-              },
-              {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_3.jpg"
               }
             ],
             "style": {
-              "bgColor": ""
+              "bgColor": "#f3e3cc"
             }
           }
         ]
       },
       {
         "type": "solution-gallery",
+        "style": {
+          "bgColor": "#c7b8a3"
+        },
         "blocks": [
           {
             "type": "solution-gallery-single",
-            "title": "",
-            "content": "",
+            "title": "Медиаподдержка:",
+            "content": "<ul><li>Брендирование сайта «Кинопоиск»</li><li>Баннерная реклама на сайте Soloway</li><li>ВКонтакте: ТГБ</li><li>Facebook: рекомендованная страница и бустинг постов</li></ul>",
             "image": {
-              "alt": "",
-              "original": "",
-              "desktop": "",
-              "mobile": ""
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_smm_1.jpg"
             }
           },
           {
             "type": "solution-gallery-multi",
-            "title": "",
-            "content": "",
+            "title": "SMM:",
+            "content": "Основной контент размещался в официальных сообществах телеканала FOX в Facebook и ВК: новости, интересные факты по содержанию серий, еженедельные конкурсы с призами, тизеры и другие активности.",
             "images": [
               {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_2.jpg"
               },
               {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_3.jpg"
               },
               {
-                "alt": "",
-                "original": "",
-                "desktop": "",
-                "mobile": ""
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_4.jpg"
               }
             ]
           }
@@ -142,11 +148,17 @@
         "blocks": [
           {
             "type": "total",
-            "title": "итоги",
-            "content": "",
+            "title": "Итоги",
+            "content": "<p>С момента продвижения сериала официальная группа FOX увеличилась на 6000 подписчиков</p><p>Сайт посетили 70000уникальных пользователей</p><p>За время продвиженияпаблик в ВК вырос на 16%.</p>`,`<p>7000 пользователейавторизовались на сайте</p><p>1500 человек подписалисьна ежедневные звонки от FOX</p><p>Более 2000 пользователейсоциальных сетей ВК и Facebook получили от своих друзей приглашение вступить в игру</p>",
             "slogans": [
-              "более <b>11000<\/b> раз<br>прозвучал звонок<br>из уэуорд пайнз"
-            ]
+              "более <b>11000</b> раз прозвучал Звонок из Уэйуорд Пайнз",
+              "более <b>15000</b> раз прозвучал Звонок из Уэйуорд Пайнз",
+              "более <b>20000</b> раз прозвучал Звонок из Уэйуорд Пайнз"
+            ],
+            "style": {
+              "textColor": "#f3e3cc",
+              "bgColor": "#435741"
+            }
           }
         ]
       },
@@ -155,7 +167,11 @@
         "blocks": [
           {
             "type": "video",
-            "video": ""
+            "video": "https://youtu.be/zw94SiaUg-w",
+            "style": {
+              "textColor": "#f3e3cc",
+              "bgColor": "#1e2532"
+            }
           }
         ]
       },
@@ -163,55 +179,92 @@
         "type": "single",
         "blocks": [
           {
-            "type": "another",
+            "type": "crosses",
+            "title": "другие проекты ДЛЯ <b>FOX International channels russia</b>",
             "style": {
-              "textColor": ""
+              "bgColor": "#f3e3cc"
             },
             "items": [
               {
                 "type": "client",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               },
               {
                 "type": "case",
                 "code": "fox",
-                "image": ""
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
               }
             ]
           }
