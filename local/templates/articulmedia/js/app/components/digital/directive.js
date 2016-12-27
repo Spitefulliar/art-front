@@ -20,7 +20,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
 			        img.css('-o-transform', 'rotate('+degree+'deg)');
 			        img.css('-ms-transform', 'rotate('+degree+'deg)');
 			    }
-			    $('.inner-page').mousemove(bgTransform);
+			    $('body').mousemove(bgTransform);
 			}
 
 			// $scope.$on(
