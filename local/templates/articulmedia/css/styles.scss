@@ -1561,47 +1561,7 @@ art-carousel-waterwheel-dir {
 /*
  * slick
  */
-.slick-slider {
 
-  &__item {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    height: 100vh;
-  }
-
-  &__text {
-    font-size: 40px;
-    color: $black;
-    font-weight: 100;
-    line-height: 35px;
-  }
-
-  &__wrap {
-    padding-top: 150px;
-  }
-}
-
-<<<<<<< HEAD
-.slick-dots {
-  bottom: 100px;
-
-  li {
-    background: #c2c2c2;
-    background: rgba(174,174,174,.6);
-    border-radius: 50%;
-
-    &.slick-active {
-      background: $white;
-    }
-
-    button {
-      display: none;
-    }
-  } 
-}
-=======
->>>>>>> 70585e17cbd8f892ea881bc3f86d8502fb7ebb31
 
 /*
  * eof slick
