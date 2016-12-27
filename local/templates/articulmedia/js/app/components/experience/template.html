@@ -2,12 +2,8 @@
 <div class="inner-page">
 	<div class="inner-page__container" layout="row" layout-sm="column" layout-wrap>
 		<div class="page-block-text" flex="100" flex-lg="45" flex-xl="45" flex-md="45">
-			<h2 class="page-block-text__title">
-				умнее<br>выше<br>быстрее
-			</h2>
-			<p class="page-block-text__info">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.
-			</p>
+			<h2 class="page-block-text__title" ng-bind-html="trustAsHtml(currentData.title)"></h2>
+			<p class="page-block-text__info" ng-bind="currentData.slogan"></p>
 		</div>
 		<div class="page-block-list" flex="100" flex-lg="55" flex-xl="55" flex-md="55" layout="row" layout-align="center start" layout-wrap layout="row" >
 			<md-grid-list class="page-block-list__grid"
@@ -18,78 +14,22 @@
         md-row-height="1:1"
         >
         <md-grid-tile 
+        	ng-repeat="block in currentData.blocks"
           md-rowspan="1" md-colspan="1" 
           >
-          <div class="page-block-list__item page-block-list__item--text" style="background: rgba(255,255,255,.2);">
-						<div class="page-block-list__image" style="background-image: url(../local/templates/articulmedia/img/desktop/text-bg.jpg);"></div>
-						<h3 class="page-block-list__title">медиа директор <br>articul media <br>марьяна шейнина <br>в медиа-жюри <br>фестиваля <br>«каннские львы»</h3>
-						<span class="page-block-list__cross svg-icon">
-		          <svg>
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-		          </svg>
-		        </span>
-					</div>
-        </md-grid-tile>
-        <md-grid-tile 
-          md-rowspan="1" md-colspan="1" 
+          <div class="page-block-list__item" 
+          	ng-class="{'page-block-list__item--{{block.type}}': block.type}" 
+						ng-style="{
+							'background-color': block.bgColor
+						}"
           >
-          <div class="page-block-list__item page-block-list__item--image" style="background: rgba(255,255,255,.6);">
-						<div class="page-block-list__image" style="background-image: url(../local/templates/articulmedia/img/desktop/block-bg.jpg);"></div>
-						<h3 class="page-block-list__title">делимся опытом<br> на РИФ+КИБ</h3>
+						<div class="page-block-list__image" 
+						ng-style="{
+							'background-image': block.bgImage
+						}"></div>
+						<h3 class="page-block-list__title" ng-bind-html="trustAsHtml(block.title)"></h3>
 						<span class="page-block-list__cross svg-icon">
-		          <svg style="fill:#fff">
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-		          </svg>
-		        </span>
-					</div>
-        </md-grid-tile>
-        <md-grid-tile 
-          md-rowspan="1" md-colspan="1" 
-          >
-          <div class="page-block-list__item page-block-list__item--text" style="background: rgba(255,255,255,.2);">
-						<div class="page-block-list__image" style="background-image: url(../local/templates/articulmedia/img/desktop/text-bg.jpg);"></div>
-						<h3 class="page-block-list__title">медиа директор <br>articul media <br>марьяна шейнина <br>в медиа-жюри <br>фестиваля <br>«каннские львы»</h3>
-						<span class="page-block-list__cross svg-icon">
-		          <svg>
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-		          </svg>
-		        </span>
-					</div>
-        </md-grid-tile>
-        <md-grid-tile 
-          md-rowspan="1" md-colspan="1" 
-          >
-          <div class="page-block-list__item page-block-list__item--image" style="background: rgba(255,255,255,.6);">
-						<div class="page-block-list__image" style="background-image: url(../local/templates/articulmedia/img/desktop/block-bg.jpg);"></div>
-						<h3 class="page-block-list__title">делимся опытом<br> на РИФ+КИБ</h3>
-						<span class="page-block-list__cross svg-icon">
-		          <svg style="fill:#fff">
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-		          </svg>
-		        </span>
-					</div>
-        </md-grid-tile>
-        <md-grid-tile 
-          md-rowspan="1" md-colspan="1" 
-          >
-          <div class="page-block-list__item page-block-list__item--text" style="background: rgba(255,255,255,.2);">
-						<div class="page-block-list__image" style="background-image: url(../local/templates/articulmedia/img/desktop/text-bg.jpg);"></div>
-						<h3 class="page-block-list__title">медиа директор <br>articul media <br>марьяна шейнина <br>в медиа-жюри <br>фестиваля <br>«каннские львы»</h3>
-						<span class="page-block-list__cross svg-icon">
-		          <svg>
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-		          </svg>
-		        </span>
-					</div>
-        </md-grid-tile>
-        <md-grid-tile 
-          md-rowspan="1" md-colspan="1" 
-          >
-          <div class="page-block-list__item page-block-list__item--text" style="background: rgba(255,255,255,.2);">
-						<div class="page-block-list__image" style="background-image: url(../local/templates/articulmedia/img/desktop/text-bg.jpg);"></div>
-						<h3 class="page-block-list__title">медиа директор <br>articul media <br>марьяна шейнина <br>в медиа-жюри <br>фестиваля <br>«каннские львы»</h3>
-						<span class="page-block-list__cross svg-icon">
-		          <svg>
+		          <svg ng-style="{'fill': block.fill}">
 		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
 		          </svg>
 		        </span>
