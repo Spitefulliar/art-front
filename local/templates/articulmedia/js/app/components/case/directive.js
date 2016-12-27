@@ -9,32 +9,38 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
         $scope.case = currentCase;
         $log.debug('case',$scope.case);
 
-          // $.scrollify({
-          //   section : ".case-block",
-          //   // sectionName : "case-block",
-          //   updateHash: false,
-          //   interstitialSection : "",
-          //   easing: "easeOutExpo",
-          //   scrollSpeed: 1100,
-          //   offset : 0,
-          //   scrollbars: false,
-          //   standardScrollElements: "",
-          //   setHeights: true,
-          //   touchScroll: true,
-          //   overflowScroll: false,
-          //   before:function() {},
-          //   after:function() {},
-          //   afterResize:function() {},
-          //   afterRender:function() {}
-          // });
+          $timeout(function(){
+            
+            $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
+              if (mquery) {
+                // $.scrollify.enable();
+                $.scrollify({
+                  section : ".case-section",
+                  sectionName : "",
+                  updateHash: false,
+                  interstitialSection : "",
+                  easing: "easeOutExpo",
+                  scrollSpeed: 600,
+                  offset : 0,
+                  scrollbars: false,
+                  standardScrollElements: "",
+                  updateHash: false,
+                  setHeights: true,
+                  touchScroll: true,
+                  overflowScroll: true,
+                  before:function() {},
+                  after:function() {},
+                  afterResize:function() {},
+                  afterRender:function() {}
+                });
 
-          // $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
-          //   if (mquery) {
-          //     $.scrollify.enable();
-          //   } else {
-          //     $.scrollify.disable();
-          //   }
-          // });
+              } else {
+                $.scrollify.destroy();
+                $('body').css('overflow', '');
+              }
+            });
+            
+          });
       });
     };
   return {
