@@ -11,29 +11,47 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   $scope.bgMode = 'experience';
 
-  var img = $('.inner-page__bg');
-	if(img.length > 0){
-	    var offset = img.offset();
-	    function bgTransform(evt){
-	        var center_x = (offset.left) + (img.width()/4);
-	        var center_y = (offset.top) + (img.height()/4);
-	        var mouse_x = evt.pageX; var mouse_y = evt.pageY;
-	        var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
-	        var degree = (radians * (360 / Math.PI) * -1) + 90; 
-	        img.css('-moz-transform', 'rotate('+degree+'deg)');
-	        img.css('-webkit-transform', 'rotate('+degree+'deg)');
-	        img.css('-o-transform', 'rotate('+degree+'deg)');
-	        img.css('-ms-transform', 'rotate('+degree+'deg)');
-	    }
-	    $('.inner-page').mousemove(bgTransform);
-	}
+  $scope.currentData = { 
+  	'title': 'умнее<br>выше<br>быстрее',
+  	'slogan': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.',
+  	'blocks': [
+  		{
+  			'type': 'image',
+  			'title': 'делимся опытом<br> на РИФ+КИБ',
+  			'bgImage': 'url(../local/templates/articulmedia/img/desktop/block-bg.jpg)',
+  			'fill': '#fff'
+  		},
+  		{
+  			'type': 'text',
+  			'title': 'Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»',
+  			'fill': '#000',
+  			'bgColor': 'rgba(255,255,255,.5)',
+  			'bgImage': 'url(../local/templates/articulmedia/img/desktop/text-bg.jpg)',
+  		},
+  		{
+  			'type': 'text',
+  			'title': 'делимся опытом<br> на РИФ+КИБ',
+  			'fill': '#fff',
+  			'bgColor': 'rgba(255,255,255,.4)',
+  			'bgImage': 'url(../local/templates/articulmedia/img/desktop/text-bg.jpg)',
+  		},
+  		{
+  			'type': 'text',
+  			'title': 'Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»',
+  			'fill': '#000',
+  			'bgColor': 'rgba(255,255,255,.3)',
+  			'bgImage': 'url(../local/templates/articulmedia/img/desktop/text-bg.jpg)',
+  		},
+  		{
+  			'type': 'text',
+  			'title': 'Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»',
+  			'fill': '#000',
+  			'bgColor': 'rgba(255,255,255,.2)',
+  			'bgImage': 'url(../local/templates/articulmedia/img/desktop/text-bg.jpg)',
+  		},
+  	]
+  };
 
-	$scope.$on(
-		"$destroy",
-		function( event ) {
-			$('.inner-page').off("mousemove", bgTransform);
-		}
-	);
-
+  
 
 }];
