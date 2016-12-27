@@ -666,7 +666,11 @@ md-sidenav {
     transition: background-position 1s ease;
 
     &--experience {
-      // background-position: 70% 100%;
+      background-position: 70% 100%;
+    }
+
+    &--digital {
+      background-position: 70% 100%;
     }
 
     @media (max-width: $screen-md) {
