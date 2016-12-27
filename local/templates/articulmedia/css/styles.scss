@@ -454,7 +454,7 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
 
 				&:hover {
 					.submenu__link {
-						background: $crusta;
+						background: $white;
 					}
 				}
 			}
@@ -488,6 +488,24 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
 
 .slickMainPage {
   margin: 0 !important;
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  &__text {
+    font-size: 40px;
+    color: $black;
+    font-weight: 100;
+    line-height: 35px;
+  }
+
+  &__wrap {
+    padding-top: 150px;
+  }
 
   .slick-dots {
     bottom: 100px;
@@ -673,11 +691,11 @@ md-sidenav {
     }
 
     &--experience {
-      background-position: center bottom;
+      background-position: center 100%;
     }
 
     &--industry {
-      background-position: center top;
+      background-position: center 0%;
     }
 
     @media (max-width: $screen-md) {
