@@ -1,58 +1,67 @@
-<section 
-  ng-repeat-start="block in case.blocks"
-  ng-if="block.type == 'announce'" 
-  ng-class="{'case-{{block.type}}': block.type}" 
+<section class="case-section" 
+  ng-repeat="block in case.blocks"
+  ng-class="{'case-section_{{block.type}}': block.type}" 
+  layout="row"
+  layout-align="center"
+  layout-wrap
   ng-style="{
     'color': block.style.color, 
     'background-color': block.style.bgColor, 
     'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')'
   }">
-  <div class="case-block__container">
-    <h2 ng-if="!block.titleImg" class="case-announce__title" ng-bind-html="trustAsHtml(block.title)"></h2>
-    <div ng-if="block.titleImg" class="case-announce__title case-announce__title_img">
-      <img ng-src="{{(isDesktop && block.titleImg.desktop || block.titleImg.mobile)}}" alt="{{block.title}}">
-    </div>
-    <h3 class="case-announce__summery" ng-bind-html="trustAsHtml(block.summery)"></h3>
-    <div class="case-announce__about-block about-block" 
-      ng-style="{'color': block.style.aboutColor}">
-      <div class="about-block__item about-block__item--client" 
-        ng-style="{ 
-          'background-image': 'url(' + (isDesktop && block.style.aboutBg.desktop || block.style.aboutBg.mobile) + ')',
-          'background-color': block.style.aboutBgColors[0],
-        }">
-        <span class="about-block__title">клиент</span>
+  <!-- announce -->
+  <div class="case-block"
+    ng-repeat-start="block in block.blocks"
+    ng-if="block.type == 'announce'"  
+    ng-class="{'case-block_{{block.type}}': block.type}" 
+    ng-style="{
+      'color': block.style.color, 
+      'background-color': block.style.bgColor, 
+      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')'
+    }"
+    flex="100" 
+    >
+    <div class="case-block__container">
+      <h2 ng-if="!block.titleImg" class="case-block_announce__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+      <div ng-if="block.titleImg" class="case-block_announce__title case-block_announce__title_img">
+        <img ng-src="{{(isDesktop && block.titleImg.desktop || block.titleImg.mobile)}}" alt="{{block.title}}">
       </div>
-      <div class="about-block__item about-block__item--date"
-        ng-style="{ 
-          'background-color': block.style.aboutBgColors[1]
-        }">
-        <span class="about-block__title">релиз</span>
-        <span class="about-block__date" ng-bind="case.date"></span>
-      </div>
-      <div class="about-block__item about-block__item--project" ng-style="{ 
-          'background-color': block.style.aboutBgColors[2]
-        }">
-        <span class="about-block__title">о проекте</span>
-        <span class="about-block__cross svg-icon">
-          <svg>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-          </svg>
-        </span>
+      <h3 class="case-block_announce__summery" ng-bind-html="trustAsHtml(block.summery)"></h3>
+      <div class="case-block_announce__about-block about-block" 
+        ng-style="{'color': block.style.aboutColor}">
+        <div class="about-block__item about-block__item--client" 
+          ng-style="{ 
+            'background-image': 'url(' + (isDesktop && block.style.aboutBg.desktop || block.style.aboutBg.mobile) + ')',
+            'background-color': block.style.aboutBgColors[0],
+          }">
+          <span class="about-block__title">клиент</span>
+        </div>
+        <div class="about-block__item about-block__item--date"
+          ng-style="{ 
+            'background-color': block.style.aboutBgColors[1]
+          }">
+          <span class="about-block__title">релиз</span>
+          <span class="about-block__date" ng-bind="case.date"></span>
+        </div>
+        <div class="about-block__item about-block__item--project" ng-style="{ 
+            'background-color': block.style.aboutBgColors[2]
+          }">
+          <span class="about-block__title">о проекте</span>
+          <span class="about-block__cross svg-icon">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+            </svg>
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</section>
+  <!-- eof announce -->
 
-<section ng-if="block.type == 'briefidea'" 
-  ng-class="{'case-{{block.type}}': block.type}" 
-  layout="row"
-  layout-align="center"
-  layout-wrap
-   >
   <!-- brief -->
-  <div  class="case-brief case-block"
-    ng-repeat-start="block in block.blocks" 
+  <div  class="case-block"
     ng-if="block.type == 'brief'" 
+    ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="45" 
     ng-style="{
       'color': block.style.color, 
@@ -60,81 +69,75 @@
       'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
     }">
     <div class="case-block__container">
-      <h2 class="case-brief__title" ng-bind-html="trustAsHtml(block.title)"></h2>
-      <div class="case-brief__summery case-block__content" ng-bind-html="trustAsHtml(block.summery)"></div>
-      <div class="case-brief__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+      <h2 class="case-block_brief__title case-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+      <div class="case-block_brief__summery case-block__content" ng-bind-html="trustAsHtml(block.summery)"></div>
+      <div class="case-block_brief__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
     </div>
   </div>
   <!-- eof brief -->
+
   <!-- idea -->
-  <div class="case-idea case-block"
+  <div class="case-block"
     ng-if="block.type == 'idea'"
+    ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="55" 
-    ng-repeat-end 
     ng-style="{
       'color': block.style.color, 
       'background-color': block.style.bgColor, 
       'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
     }">
     <div class="case-block__container">
-      <h2 class="case-idea__title" ng-bind-html="trustAsHtml(block.title)"></h2>
-      <div class="case-idea__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+      <h2 class="case-block_idea__title case-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+      <div class="case-block_idea__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
     </div>
   </div>
   <!-- eof idea -->
-</section>
 
-<!-- solution-carousel -->
-<section ng-if="block.type == 'solution-carousel'" ng-class="{'case-{{block.type}}': block.type}"
-  ng-style="{
+  <!-- solution-carousel -->
+  <div class="case-block"
+    ng-if="block.type == 'solution-carousel'"
+    ng-class="{'case-block_{{block.type}}': block.type}" 
+    ng-style="{
       'color': block.style.color, 
       'background-color': block.style.bgColor, 
       'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
-    }">
-  <div  class="case-block">
-    <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
-      <div class="case-block__col" flex="100" flex-gt-sm="50">
-        <h2 class="case-solution-carousel__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
+    }"
+  >
+    <div class="case-block__container">
+      <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
+        <div class="case-block__col" flex="100" flex-gt-sm="50">
+          <h2 class="case-block_solution-carousel__title case-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
+        </div>
+        <div class="case-block__col" flex="100" flex-gt-sm="50">
+          <div class="case-block_solution-carousel__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+        </div>
       </div>
-      <div class="case-block__col" flex="100" flex-gt-sm="50">
-        <div class="case-solution-carousel__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      </div>
-    </div>
-    <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
-      <div class="case-block__col" flex="100">
-        <art-carousel-waterwheel-dir class="case-solution-carousel__carousel" slides="block.slides"></art-carousel-waterwheel-dir>
+      <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
+        <div class="case-block__col" flex="100">
+          <art-carousel-waterwheel-dir class="case-solution-carousel__carousel" slides="block.slides"></art-carousel-waterwheel-dir>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<!-- eof solution-carousel -->
+  <!-- eof solution-carousel -->
 
-<!-- solution-media -->
-<section ng-if="block.type == 'solution-media'" ng-class="{'case-{{block.type}}': block.type}"
-  layout="row"
-  layout-align="center"
-  layout-wrap
-  ng-style="{
-      'color': block.style.color, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
-    }">
-  <!-- media-support -->
-  <div  class="case-media-support case-block"
-    ng-repeat-start="block in block.blocks" 
-    ng-if="block.type == 'media-support'" 
+<!-- solution-gallery -->
+  <!-- solution-gallery-single -->
+  <div  class="case-block"
+    ng-if="block.type == 'solution-gallery-single'" 
+    ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="55" 
     ng-style="{
       'color': block.style.color, 
       'background-color': block.style.bgColor, 
       'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
     }">
-    <div class="case-block__container">
-      <h4 class="case-media-support__title" ng-bind-html="trustAsHtml(block.title)"></h4>
-      <div class="case-media-support__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      <div class="case-media-support__images case-block__col">
-        <div class="case-media-support__img">
-          <div class="case-media-support__img-bg"  
+    <div class="case-block__container case-block__container_pr-gt-sm-0">
+      <h4 class="case-block_solution-gallery-single__title" ng-bind-html="trustAsHtml(block.title)"></h4>
+      <div class="case-block_solution-gallery-single__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+      <div class="case-block_solution-gallery-single__images case-block__col case-block__col_pr-gt-sm-0">
+        <div class="case-block_solution-gallery-single__img">
+          <div class="case-block_solution-gallery-single__img-bg"  
             ng-style="{
               'background-image': 'url(' + (isDesktop && block.img.desktop || block.img.mobile || false) + ')'
             }"
@@ -145,22 +148,23 @@
       </div>
     </div>
   </div>
-  <!-- eof media-support -->
-  <!-- smm -->
-  <div class="case-smm case-block"
-    ng-if="block.type == 'smm'"
+  <!-- eof solution-gallery-single -->
+
+  <!-- solution-gallery-multi -->
+  <div class="case-block"
+    ng-if="block.type == 'solution-gallery-multi'"
+    ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="45" 
-    ng-repeat-end 
     ng-style="{
       'color': block.style.color, 
       'background-color': block.style.bgColor, 
       'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
     }">
     <div class="case-block__container">
-      <h4 class="case-smm__title" ng-bind-html="trustAsHtml(block.title)"></h4>
-      <div class="case-smm__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      <div class="case-smm__images case-block__col">
-        <md-grid-list class="case-smm__images-grid"
+      <h4 class="case-block_solution-gallery-multi__title" ng-bind-html="trustAsHtml(block.title)"></h4>
+      <div class="case-block_solution-gallery-multi__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+      <div class="case-block_solution-gallery-multi__images case-block__col">
+        <md-grid-list class="case-block_solution-gallery-multi__images-grid"
           md-cols="2"
           md-row-height="1:1"
           md-gutter="18px" md-gutter-gt-sm="18px" >
@@ -169,10 +173,10 @@
             md-rowspan="1" md-colspan="1" 
             ng-repeat="img in block.images"  
             >
-            <div class="case-smm__img plus-item" 
-            ng-class="{'case-smm__img_even': $odd}"
+            <div class="case-block_solution-gallery-multi__img plus-item" 
+            ng-class="{'case-block_solution-gallery-multi__img_even': $odd}"
             >
-              <div class="case-smm__img-bg"  
+              <div class="case-block_solution-gallery-multi__img-bg"  
                 ng-style="{
                   'background-image': 'url(' + (isDesktop && img.desktop || img.mobile || false) + ')'
                 }"
@@ -186,113 +190,134 @@
               </span>
             </div>
           </md-grid-tile>
-
         </md-grid-list>
       </div>
     </div>
   </div>
-  <!-- eof smm -->
-</section>
-<!-- eof solution-media -->
+  <!-- eof solution-gallery-multi -->
+<!-- eof solution-gallery-multi -->
 
-<!-- case-total -->
-<section ng-if="block.type == 'case-total'" 
-  ng-class="{'case-{{block.type}}': block.type}"
-  layout="row"
-  layout-align="center"
-  layout-wrap
-  ng-style="{
-      'color': block.style.color, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
-    }">
-  <!-- media-support -->
-  <div  class="case-media-support case-block"
-    ng-repeat-start="block in block.blocks" 
-    ng-if="block.type == 'media-support'" 
-    flex="100" flex-gt-sm="55" 
+  <!-- total -->
+  <div  class="case-block"
+    ng-class="{'case-block_{{block.type}}': block.type}" 
+    ng-if="block.type == 'total'" 
+    flex="100" 
     ng-style="{
       'color': block.style.color, 
       'background-color': block.style.bgColor, 
       'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
     }">
     <div class="case-block__container">
-      <h4 class="case-media-support__title" ng-bind-html="trustAsHtml(block.title)"></h4>
-      <div class="case-media-support__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      <div class="case-media-support__images case-block__col">
-        <div class="case-media-support__img">
-          <div class="case-media-support__img-bg"  
-            ng-style="{
-              'background-image': 'url(' + (isDesktop && block.img.desktop || block.img.mobile || false) + ')'
-            }"
-            alt="{{block.img.alt}}" 
-            art-popup-img-dir 
-            ng-click="popupImgCtrl.showImgPopup(block.img.original)"></div>
+      <h2 class="case-block_total__title case-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
+      <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
+        <div class="case-block__col case-block__col_pr-gt-sm-0" flex="100" flex-gt-sm="55">
+          <div class="case-block_total__content" layout="row" layout-align="start">
+            <div class="case-block_total__content-col case-block__content"
+              ng-repeat="item in block.content track by $index" 
+              ng-bind-html="trustAsHtml(item)" 
+              flex="50"
+              ></div>
+          </div>
+          
+        </div>
+        <div class="case-block__col" flex="100" flex-gt-sm="45">
+          <slick class="case-block_total__slogan-carousel" settings="slickConfigSlogan">
+            <div class="case-block_total__slogan" 
+              ng-repeat="item in block.slogans track by $index"
+              ng-bind-html="trustAsHtml(item)" 
+              ></div>
+          </slick>
         </div>
       </div>
     </div>
-  </div>
-  <!-- eof media-support -->
-  <!-- smm -->
-  <div class="case-smm case-block"
-    ng-if="block.type == 'smm'"
-    flex="100" flex-gt-sm="45" 
-    ng-repeat-end 
-    ng-style="{
-      'color': block.style.color, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
-    }">
-    <div class="case-block__container">
-      <h4 class="case-smm__title" ng-bind-html="trustAsHtml(block.title)"></h4>
-      <div class="case-smm__content case-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
-      <div class="case-smm__images case-block__col">
-        <md-grid-list class="case-smm__images-grid"
-          md-cols="2"
-          md-row-height="1:1"
-          md-gutter="18px" md-gutter-gt-sm="18px" >
-
-          <md-grid-tile 
-            md-rowspan="1" md-colspan="1" 
-            ng-repeat="img in block.images"  
-            >
-            <div class="case-smm__img plus-item" 
-            ng-class="{'case-smm__img_even': $odd}"
-            >
-              <div class="case-smm__img-bg"  
-                ng-style="{
-                  'background-image': 'url(' + (isDesktop && img.desktop || img.mobile || false) + ')'
-                }"
-                alt="{{img.alt}}" 
-                art-popup-img-dir 
-                ng-click="popupImgCtrl.showImgPopup(img.original)"></div>
-              <span class="plus-item__icon">
-                <svg>
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-                </svg>
-              </span>
-            </div>
-          </md-grid-tile>
-
-        </md-grid-list>
-      </div>
-    </div>
-  </div>
-  <!-- eof smm -->
-</section>
-<!-- eof case-total -->
+    <div class="case-block_total__img" 
+      ng-style="{
+        'color': block.style.color, 
+        'background-color': block.style.bgColor, 
+        'background-image': block.img && 'url(' + (isDesktop && block.img.desktop || block.img.mobile) + ')' || false
+      }"
+      ></div>
+  </div>  
+  <!-- eof total -->
 
 <!-- video -->
-<section ng-if="block.type == 'video'" ng-class="{'case-{{block.type}}': block.type}" ng-repeat-end 
-  ng-style="{
-      'color': video.style.color, 
-      'background-color': video.style.bgColor, 
-      'background-image': video.style.bgImg && 'url(' + (isDesktop && video.style.bgImg.desktop || video.style.bgImg.mobile) + ')' || false
-    }">
-  <div  class="case-block">
+  <div  class="case-block"
+    ng-if="block.type == 'video'"
+    ng-class="{'case-block_{{block.type}}': block.type}" 
+    flex="100" 
+    ng-style="{
+      'color': block.style.color, 
+      'background-color': block.style.bgColor, 
+      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+    }"
+    >
     <div class="case-block__container">
-      <h2 class="case-brief__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+      <div class="case-block_video__video embed-responsive embed-responsive-16by9 ">
+        <youtube-video video-url="block.video"></youtube-video>
+      </div>
     </div>
   </div>
-</section>
 <!-- eof video -->
+
+<!-- crosses -->
+  <div  class="case-block"
+    ng-repeat-end 
+    ng-if="block.type == 'crosses'"
+    ng-class="{'case-block_{{block.type}}': block.type}" 
+    flex="100" 
+    ng-style="{
+      'color': block.style.color, 
+      'background-color': block.style.bgColor, 
+      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+    }"
+    >
+    <div class="case-block__container">
+      <h3 class="case-block__title" ng-bind-html="trustAsHtml(block.title)"></h3>
+      <div class="case-list">
+        <md-grid-list class="cases-list__grid"
+          md-cols-gt-sm="5"
+          md-cols="2"
+          md-row-height="1:1"
+          md-gutter="0" md-gutter-gt-sm="0" >
+          <md-grid-tile 
+            md-rowspan="1" md-colspan="1" 
+            ng-repeat="item in block.items"  
+            >
+            <a class="case-list__grid-item plus-item" 
+              ng-attr-href="{{item.href}}"
+              title="{{item.title}}"
+              >
+              <div class="case-list__grid-item-bg"  
+                ng-style="{
+                  'background-image': 'url(' + (isDesktop && item.image.desktop || item.image.mobile || false) + ')'
+                }"
+                title="{{item.alt}}" 
+                ></div>
+              <span class="plus-item__icon">
+                <svg>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+                </svg>
+              </span>
+            </a>
+          </md-grid-tile>
+          <md-grid-tile 
+            md-rowspan="1" md-colspan="1" 
+            >
+            <div class="case-list__grid-item plus-item" 
+              ng-click="loadMoreCroses()"
+              title="{{item.title}}"
+              >
+              <span class="plus-item__icon">
+                <svg>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+                </svg>
+              </span>
+            </div>
+          </md-grid-tile>
+        </md-grid-list>
+      </div>
+    </div>
+  </div>
+<!-- eof crosses -->
+
+</section>

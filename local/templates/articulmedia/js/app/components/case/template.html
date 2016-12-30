@@ -1,13 +1,13 @@
 <section class="case-section" 
-  ng-repeat="block in case.blocks"
+  ng-repeat="block in case.sections"
   ng-class="{'case-section_{{block.type}}': block.type}" 
   layout="row"
   layout-align="center"
   layout-wrap
   ng-style="{
-    'color': block.style.color, 
+    'color': block.style.textColor, 
     'background-color': block.style.bgColor, 
-    'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')'
+    'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')'
   }">
   <!-- announce -->
   <div class="case-block"
@@ -15,14 +15,16 @@
     ng-if="block.type == 'announce'"  
     ng-class="{'case-block_{{block.type}}': block.type}" 
     ng-style="{
-      'color': block.style.color, 
+      'color': sblock.style.summaryTextColor || block.style.textColor,
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')'
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')'
     }"
     flex="100" 
     >
     <div class="case-block__container">
-      <h2 ng-if="!block.titleImg" class="case-block_announce__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+      <h2 ng-if="!block.titleImg" class="case-block_announce__title" ng-bind-html="trustAsHtml(block.title)"
+      ng-style="{
+      'color': block.style.titleTextColor}"></h2>
       <div ng-if="block.titleImg" class="case-block_announce__title case-block_announce__title_img">
         <img ng-src="{{(isDesktop && block.titleImg.desktop || block.titleImg.mobile)}}" alt="{{block.title}}">
       </div>
@@ -31,7 +33,7 @@
         ng-style="{'color': block.style.aboutColor}">
         <div class="about-block__item about-block__item--client" 
           ng-style="{ 
-            'background-image': 'url(' + (isDesktop && block.style.aboutBg.desktop || block.style.aboutBg.mobile) + ')',
+            'background-image': 'url(' + (isDesktop && block.style.bgAboutImage.desktop || block.style.bgAboutImage.mobile) + ')',
             'background-color': block.style.aboutBgColors[0],
           }">
           <span class="about-block__title">клиент</span>
@@ -64,9 +66,9 @@
     ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="45" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }">
     <div class="case-block__container">
       <h2 class="case-block_brief__title case-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
@@ -82,9 +84,9 @@
     ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="55" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }">
     <div class="case-block__container">
       <h2 class="case-block_idea__title case-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
@@ -98,9 +100,9 @@
     ng-if="block.type == 'solution-carousel'"
     ng-class="{'case-block_{{block.type}}': block.type}" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }"
   >
     <div class="case-block__container">
@@ -114,7 +116,7 @@
       </div>
       <div class="case-block__row" layout="row" layout-align="start" layout-wrap>
         <div class="case-block__col" flex="100">
-          <art-carousel-waterwheel-dir class="case-solution-carousel__carousel" slides="block.slides"></art-carousel-waterwheel-dir>
+          <art-carousel-waterwheel-dir class="case-solution-carousel__carousel" slides="block.images"></art-carousel-waterwheel-dir>
         </div>
       </div>
     </div>
@@ -128,9 +130,9 @@
     ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="55" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }">
     <div class="case-block__container case-block__container_pr-gt-sm-0">
       <h4 class="case-block_solution-gallery-single__title" ng-bind-html="trustAsHtml(block.title)"></h4>
@@ -139,11 +141,11 @@
         <div class="case-block_solution-gallery-single__img">
           <div class="case-block_solution-gallery-single__img-bg"  
             ng-style="{
-              'background-image': 'url(' + (isDesktop && block.img.desktop || block.img.mobile || false) + ')'
+              'background-image': 'url(' + (isDesktop && block.image.desktop || block.image.mobile || false) + ')'
             }"
-            alt="{{block.img.alt}}" 
+            alt="{{block.image.alt}}" 
             art-popup-img-dir 
-            ng-click="popupImgCtrl.showImgPopup(block.img.original)"></div>
+            ng-click="popupImgCtrl.showImgPopup(block.image.original)"></div>
         </div>
       </div>
     </div>
@@ -156,9 +158,9 @@
     ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="45" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }">
     <div class="case-block__container">
       <h4 class="case-block_solution-gallery-multi__title" ng-bind-html="trustAsHtml(block.title)"></h4>
@@ -203,9 +205,9 @@
     ng-if="block.type == 'total'" 
     flex="100" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }">
     <div class="case-block__container">
       <h2 class="case-block_total__title case-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
@@ -232,9 +234,9 @@
     </div>
     <div class="case-block_total__img" 
       ng-style="{
-        'color': block.style.color, 
+        'color': block.style.textColor, 
         'background-color': block.style.bgColor, 
-        'background-image': block.img && 'url(' + (isDesktop && block.img.desktop || block.img.mobile) + ')' || false
+        'background-image': block.image && 'url(' + (isDesktop && block.image.desktop || block.image.mobile) + ')' || false
       }"
       ></div>
   </div>  
@@ -246,9 +248,9 @@
     ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }"
     >
     <div class="case-block__container">
@@ -266,9 +268,9 @@
     ng-class="{'case-block_{{block.type}}': block.type}" 
     flex="100" 
     ng-style="{
-      'color': block.style.color, 
+      'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImg && 'url(' + (isDesktop && block.style.bgImg.desktop || block.style.bgImg.mobile) + ')' || false
+      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
     }"
     >
     <div class="case-block__container">

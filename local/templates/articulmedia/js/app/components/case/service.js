@@ -1,6 +1,6 @@
 //SERVICE
-export default [
-  function() {
+export default ['$http', 
+  function($http) {
     let service = {};
 
     let currentCase = {
@@ -147,7 +147,7 @@ export default [
                 'bgColor': '#f3e3cc',
                 'bgImg': false,
               },
-              'slides': [
+              'images': [
                 {
                   'original': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
                   'desktop': '../local/templates/articulmedia/img/case/case_slide_1.jpg',
@@ -183,7 +183,7 @@ export default [
                   <li>ВКонтакте: ТГБ</li>
                   <li>Facebook: рекомендованная страница и бустинг постов</li>
                 </ul>`,
-              img: {
+              image: {
                 'alt': 'Сосны',
                 'original': '../local/templates/articulmedia/img/case/case_smm_1.jpg',
                 'desktop': '../local/templates/articulmedia/img/case/case_smm_1.jpg',
@@ -379,14 +379,20 @@ export default [
     };
 
     service.getCase = function(succesCallback) {
-      return Promise.resolve(currentCase).then(service.tranformCase(currentCase), function(response) {
-          console.warning("can't get case");
-        });
+      // return Promise.resolve(currentCase).then(service.tranformCase(currentCase), function(response) {
+      //     console.warning("can't get case");
+      //   });
+      return $http({
+        method: 'GET',
+        url: '/local/docs/api/json/case.json'
+      }).then(service.tranformCase, function(response) {
+        console.warning("can't get case");
+      });
     };
 
-    service.tranformCase = function(caseObj){
-      let tmpCase = caseObj;
-      let annonce = tmpCase.blocks.filter(function(el){
+    service.tranformCase = function(responce){
+      let tmpCase = responce.data.case;
+      let annonce = tmpCase.sections[0].blocks.filter(function(el){
         return el.type == "announce";
       })[0];
       if (annonce) {
