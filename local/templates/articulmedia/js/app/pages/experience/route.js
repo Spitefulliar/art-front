@@ -16,7 +16,10 @@ function($stateProvider, $urlRouterProvider) {
       url: PAGE_URL,
       template: template,
       controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
-      controllerAs: 'pageCtrl'
+      controllerAs: 'pageCtrl',
+      data: {
+        pageBgType: 'experience'
+      }
     });
 }];
 

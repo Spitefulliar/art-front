@@ -1,9 +1,8 @@
-<div class="inner-page__bg" ng-class="{'inner-page__bg--{{bgMode}}': bgMode}"></div>
+<div class="inner-page__bg" ng-class="{'inner-page__bg--{{pageData.pageBgType}}': pageData.pageBgType}"></div>
 <div class="inner-page">
 	<div class="inner-page__container" layout="row" layout-sm="column" layout-wrap>
 		<div class="page-block-text" flex="100" flex-lg="45" flex-xl="45" flex-md="45">
 			<h2 class="page-block-text__title" ng-bind-html="trustAsHtml(currentData.title)"></h2>
-			{{pageCtrl.bgMode}}
 			<p class="page-block-text__info" ng-bind="currentData.slogan"></p>
 		</div>
 		<div class="page-block-list" flex="100" flex-lg="55" flex-xl="55" flex-md="55" layout="row" layout-align="center start" layout-wrap layout="row" >

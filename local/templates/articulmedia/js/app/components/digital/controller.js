@@ -9,8 +9,6 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
-  $scope.bgMode = 'digital';
-
   $scope.currentData = { 
   	'title': 'умнее<br>выше<br>быстрее',
   	'slogan': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.',
