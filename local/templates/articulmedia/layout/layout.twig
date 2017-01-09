@@ -201,6 +201,7 @@
 
 {% block main %}
   <main class="main">
+    <div ng-if="pageData.pageBgType" class="inner-page__bg inner-page__bg--{{pageData.pageBgType}}"></div>
     <ui-view></ui-view>
   </main>
 {% endblock %}

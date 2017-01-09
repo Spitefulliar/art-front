@@ -7,9 +7,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   function($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
   // $mdSidenav, $mdMedia, 
 
-  $rootScope.bgMode = 'experience';
-
-  $rootScope.currentData = { 
+  $scope.currentData = { 
   	'title': 'в этих вопросах<br>наша экспертиза<br>уникальна',
   	'slogan': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.',
   	'blocks': [

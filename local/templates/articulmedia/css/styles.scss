@@ -681,7 +681,12 @@ md-sidenav {
     background: url('../img/desktop/color-bg.png') center no-repeat;
     background-position: 50% 50%;
     // background-size: cover;
-    transition: transform 1s ease;
+    // transition: transform 1s ease;
+    -webkit-transition: background 900ms ease-out;
+       -moz-transition: background 900ms ease-out;
+        -ms-transition: background 900ms ease-out;
+         -o-transition: background 900ms ease-out;
+            transition: background 900ms ease-out;
 
     &--digital {
       width: 150vw;
@@ -689,6 +694,11 @@ md-sidenav {
       left: -30vw;
       background-size: cover;
       top: -50vw;
+      -webkit-transition: transform 2s ease, background 900ms ease-out;
+         -moz-transition: transform 2s ease, background 900ms ease-out;
+          -ms-transition: transform 2s ease, background 900ms ease-out;
+           -o-transition: transform 2s ease, background 900ms ease-out;
+              transition: transform 2s ease, background 900ms ease-out;
     }
 
     &--experience {

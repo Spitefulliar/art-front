@@ -1,7 +1,6 @@
 'use strict';
 
 const template = require('./template.html');
-// import controller from './controller';
 
 import moduleConfig from './config';
 const PAGE_NAME = moduleConfig.name;
@@ -16,7 +15,6 @@ function($stateProvider, $urlRouterProvider) {
       url: PAGE_URL,
       template: template,
       controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
-      controllerAs: 'pageCtrl',
       data: {
         pageBgType: 'experience'
       }

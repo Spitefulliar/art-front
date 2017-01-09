@@ -6,5 +6,5 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   function($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http) {
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
-
+  
 }];
