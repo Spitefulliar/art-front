@@ -25,7 +25,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
                   scrollbars: false,
                   standardScrollElements: "",
                   updateHash: false,
-                  setHeights: true,
+                  setHeights: false,
                   touchScroll: true,
                   overflowScroll: true,
                   before:function() {},

@@ -86,6 +86,11 @@
     title [string] заголовок блока
     content [string[]] контент блока (массив столбцов)
     slogans [string[]] список слоганов
+    image [] картинка под блоком
+        alt [string] alt текст изображения
+        original [string] оригинальный размер изображения
+        desktop [string] изображение для desktop
+        mobile [string] изображение для mobile
 
 ### Видео | video
 
