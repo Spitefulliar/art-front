@@ -201,6 +201,7 @@
 
 {% block main %}
   <main class="main">
+    <div ng-if="pageData.pageBgType" class="inner-page__bg inner-page__bg--{{pageData.pageBgType}}"></div>
     <ui-view></ui-view>
   </main>
 {% endblock %}
@@ -210,7 +211,7 @@
 
 {% block footer %}
 <!-- footer -->
-<footer class="footer" ng-class="{'footer--fixed': !footerIsStatic}">
+<footer class="footer" ng-class="{'footer--fixed': !pageData.footerIsStatic}">
   <div class="container">
     <p class="footer__copy">
       ©1998-2016. Articul Media

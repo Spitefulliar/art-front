@@ -7,40 +7,53 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       $scope.getCase().then(function(currentCase){
         $scope.case = currentCase;
-        $log.debug('case',$scope.case);
+        // $log.debug('case',$scope.case);
 
-          $timeout(function(){
-            
-            $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
-              if (mquery) {
-                // $.scrollify.enable();
-                $.scrollify({
-                  section : ".case-section",
-                  sectionName : "",
-                  updateHash: false,
-                  interstitialSection : "",
-                  easing: "easeOutExpo",
-                  scrollSpeed: 600,
-                  offset : 0,
-                  scrollbars: false,
-                  standardScrollElements: "",
-                  updateHash: false,
-                  setHeights: false,
-                  touchScroll: true,
-                  overflowScroll: true,
-                  before:function() {},
-                  after:function() {},
-                  afterResize:function() {},
-                  afterRender:function() {}
-                });
+        function scrollifyDestroy() {
+          $.scrollify.destroy();
+          $('body').css('overflow', '');
+        };
 
-              } else {
-                $.scrollify.destroy();
-                $('body').css('overflow', '');
-              }
-            });
-            
+        let caseTimeout = $timeout(function(){
+          
+          $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
+            if (mquery) {
+              // $.scrollify.enable();
+              $.scrollify({
+                section : ".case-section",
+                sectionName : "",
+                updateHash: false,
+                interstitialSection : "",
+                easing: "easeOutExpo",
+                scrollSpeed: 600,
+                offset : 0,
+                scrollbars: false,
+                standardScrollElements: "",
+                updateHash: false,
+                setHeights: false,
+                touchScroll: true,
+                overflowScroll: true,
+                before:function() {},
+                after:function() {},
+                afterResize:function() {},
+                afterRender:function() {}
+              });
+
+            } else {
+              scrollifyDestroy();
+            }
           });
+          
+        });
+
+        $scope.$on(
+        "$destroy",
+          function( event ) {
+            $timeout.cancel( caseTimeout );
+            scrollifyDestroy();
+          }
+        );
+
       });
     };
   return {

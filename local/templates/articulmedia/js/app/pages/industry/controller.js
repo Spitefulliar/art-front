@@ -3,13 +3,9 @@
 // const MODULE_NAME = moduleConfig.name;
 
 export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$window', '$state', '$http',
-  // '$mdSidenav','$mdMedia', 
   function($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
-  // $mdSidenav, $mdMedia, 
 
-  $rootScope.bgMode = 'industry';
-
-  $rootScope.currentData = { 
+  $scope.currentData = { 
   	'title': 'умнее<br>выше<br>быстрее',
   	'slogan': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.',
   	'blocks': [
