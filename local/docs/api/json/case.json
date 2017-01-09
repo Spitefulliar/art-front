@@ -161,6 +161,12 @@
             "style": {
               "textColor": "#f3e3cc",
               "bgColor": "#435741"
+            },
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_3.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_3.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_3_mobile.jpg"
             }
           }
         ]
