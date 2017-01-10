@@ -130,7 +130,9 @@ ul {
   cursor: pointer;
   &__icon {
     @include svg-icon();
-    font-size: vw(22px);
+    max-height: 10%;
+    max-width: 10%;
+    font-size: vh(22px);
     position: absolute;
     -webkit-transform: rotate(45deg);
        -moz-transform: rotate(45deg);
@@ -1022,7 +1024,7 @@ md-sidenav {
  */
 
 //block itself
-.case-block {
+.page-block {
   background-position: 50% 50%;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -1046,7 +1048,7 @@ md-sidenav {
     margin-left: - vw(82px);
     margin-right: - vw(82px);
     & ~ & {
-      .case-block__col {
+      .page-block__col {
         padding-top: 0;
       }
     } 
@@ -1065,8 +1067,8 @@ md-sidenav {
     }
   }
   @media screen and (min-width: $screen-md - 1) {
-    .case-block__container,
-    .case-block__col {
+    .page-block__container,
+    .page-block__col {
       &_pr-gt-sm-0 {
         padding-right: 0;
       }
@@ -1088,7 +1090,7 @@ md-sidenav {
       margin-left: - vw(25px,'md');
       margin-right: - vw(25px,'md');
       & ~ & {
-        .case-block__col {
+        .page-block__col {
           padding-top: 0;
         }
       } 
@@ -1097,7 +1099,7 @@ md-sidenav {
 }
 
 //blocks by types
-.case-block {
+.page-block {
   &_announce {
     position: relative;
     height: 100vh;
@@ -1119,7 +1121,7 @@ md-sidenav {
         max-width: 85%;
       }
     }
-    &__summery {
+    &__summary {
       font-style: normal;
       font-weight: 100;
       margin: 0 0 vh(80px) 0;
@@ -1131,13 +1133,13 @@ md-sidenav {
       z-index: 0;
       padding-bottom: vh(150px);
     }
-    .case-block__container {
+    .page-block__container {
       height: 100%;
       min-height: initial;
       padding-top: vh(80px);
     }
     @media screen and (max-width: $screen-md) {
-      .case-block {
+      .page-block {
         &__container {
           height: 100%;
           min-height: initial;
@@ -1156,7 +1158,7 @@ md-sidenav {
   }
 
   &_brief {
-    &__summery {
+    &__summary {
       font-weight: 100;
       font-style: normal;
       @include text-content();
@@ -1212,12 +1214,12 @@ md-sidenav {
           height: vh(400px,'md');
         }
       }
-      .case-block__row {
+      .page-block__row {
         // height: vh(375px,'md');
         height: auto;
-        & ~ .case-block__row {
+        & ~ .page-block__row {
           height: auto;
-          & .case-block__col {
+          & .page-block__col {
             padding-left: 0;
             padding-right: 0;
           }
@@ -1265,7 +1267,7 @@ md-sidenav {
            -o-transition: transform 400ms ease-out;
               transition: transform 400ms ease-out;
     }
-    .case-block__container {
+    .page-block__container {
       position: relative;
       padding-bottom: vh(560px);
     }
@@ -1285,7 +1287,7 @@ md-sidenav {
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
       }
-      .case-block__container {
+      .page-block__container {
         padding-top: vh(50px,'md');
         padding-bottom: 0;
         min-height: initial;
@@ -1348,7 +1350,7 @@ md-sidenav {
            -o-transition: transform 400ms ease-out;
               transition: transform 400ms ease-out;
     }
-    .case-block__container {
+    .page-block__container {
       position: relative;
       padding-bottom: vh(560px);
     }
@@ -1369,7 +1371,7 @@ md-sidenav {
         max-width: 100%;
         height: auto;
       }
-      .case-block__container {
+      .page-block__container {
         max-height: initial;
         padding-top: vh(50px,'md');
         padding-bottom: 0;
@@ -1424,7 +1426,7 @@ md-sidenav {
       }
     }
 
-    .case-block {
+    .page-block {
       &__container {
         padding-bottom: vh(300px);
         position: static;
@@ -1447,7 +1449,7 @@ md-sidenav {
       &__img {
         height: vh(225px,'md');
       }
-      .case-block {
+      .page-block {
         &__container {
           padding-bottom: vh(225px,'md');
         }
@@ -1459,14 +1461,14 @@ md-sidenav {
     &__video {
       width: 100%;
     }
-    .case-block {
+    .page-block {
       &__container {
         padding-top: vh(125px);
         padding-bottom: vh(35px);
       }
     }
     @media screen and (max-width: $screen-md) {
-      .case-block {
+      .page-block {
         &__container {
           padding-top: vh(30px,'md');
           padding-bottom: vh(30px,'md');
@@ -1476,7 +1478,7 @@ md-sidenav {
   }
 
   &_crosses {
-    .case-block {
+    .page-block {
       &__title {
         margin-bottom: vh(60px);
         font-size: vh(30px);
@@ -1485,9 +1487,12 @@ md-sidenav {
       &__container {
         padding-bottom: vh(100px);
       }
+      .cases-list {
+        max-width: 1200px;
+      }
     }
     @media screen and (max-width: $screen-md) {
-      .case-block {
+      .page-block {
         &__title {
           margin-bottom: vh(45px);
           font-size: vh(30px,'md');
@@ -1504,7 +1509,7 @@ md-sidenav {
 }
 
 //sections by type
-.case-section {
+.page-section {
   background-position: 50% 50%;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -1518,10 +1523,11 @@ md-sidenav {
   }
 }
 
-//case-list 
-.case-list {
+//cases-list 
+.cases-list {
   &__grid {
     width: 100%;
+    max-width: 180vh;
   }
   &__grid-item {
     display: block;
@@ -1530,6 +1536,7 @@ md-sidenav {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    color: inherit;
     -webkit-box-sizing: content-box;
        -moz-box-sizing: content-box;
             box-sizing: content-box;
@@ -1555,6 +1562,11 @@ md-sidenav {
         -ms-transition: transform 400ms ease-out;
          -o-transition: transform 400ms ease-out;
             transition: transform 400ms ease-out;
+  }
+  @media screen and (max-width: $screen-md) {
+    &__grid {
+      max-width: 100%;
+    }
   }
 }
 

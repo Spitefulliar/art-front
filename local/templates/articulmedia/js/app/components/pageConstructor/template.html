@@ -31,7 +31,7 @@
       <div ng-if="block.titleImg" class="page-block_announce__title page-block_announce__title_img">
         <img ng-src="{{(isDesktop && block.titleImg.desktop || block.titleImg.mobile)}}" alt="{{block.title}}">
       </div>
-      <h3 class="page-block_announce__summary" ng-bind-html="trustAsHtml(block.summary)"></h3>
+      <h3 class="page-block_announce__summery" ng-bind-html="trustAsHtml(block.summery)"></h3>
       <div class="page-block_announce__about-block about-block" 
         ng-style="{'color': block.style.aboutColor}">
         <div class="about-block__item about-block__item--client" 
@@ -77,7 +77,7 @@
     }">
     <div class="page-block__container">
       <h2 class="page-block_brief__title page-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
-      <div class="page-block_brief__summary page-block__content" ng-bind-html="trustAsHtml(block.summary)"></div>
+      <div class="page-block_brief__summery page-block__content" ng-bind-html="trustAsHtml(block.summery)"></div>
       <div class="page-block_brief__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
     </div>
   </div>
