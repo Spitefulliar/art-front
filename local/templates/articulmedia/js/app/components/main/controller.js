@@ -7,6 +7,53 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
+  $scope.navData = {
+    'menuItems': [
+      {
+        'name': 'Компания',
+        'link': '/#/',
+      },
+      {
+        'name': 'Экспертиза',
+        'link': '/#/digital/',
+        'subMenu': [
+          {
+            'name': '360 digital',
+            'link': '/#/digital/',
+          },
+          {
+            'name': 'Уникальный опыт',
+            'link': '/#/experience/',
+          },
+          {
+            'name': 'Развивам digital-индустрию',
+            'link': '/#/industry/',
+          }
+        ]
+      },
+      {
+        'name': 'Работы',
+        'link': '/#/',
+      },
+      {
+        'name': 'Достижения',
+        'link': '/#/',
+      },
+      {
+        'name': 'Новости',
+        'link': '/#/',
+      },
+      {
+        'name': 'Карьера',
+        'link': '/#/',
+      },
+      {
+        'name': 'Контакты',
+        'link': '/#/',
+      },
+    ]
+  };
+
   //media
   $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
     $scope.isDesktop = mquery;
