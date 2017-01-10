@@ -3,15 +3,15 @@ import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
 export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http',
-  // '$mdSidenav','$mdMedia', 
   function($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http) {
-  // $mdSidenav, $mdMedia, 
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
-  $scope.currentData = { 
-  	'title': 'умнее<br>выше<br>быстрее',
-  	'slogan': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt fuga mollitia facilis dicta expedita hic, in totam, tempora quidem temporibus. Eaque totam id dolore, ea repellendus eveniet aliquid eius.',
+  $scope.digital = { 
+  	'items': 'умнее<br>выше<br>быстрее',
+  	'slogan': `У нас есть<br/>
+              все для 360&deg;<br/>
+              сервиса в digital`,
   	'blocks': [
   		{
   			'type': 'image',
