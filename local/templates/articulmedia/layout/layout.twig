@@ -39,9 +39,9 @@
       <li class="nav__item" ng-repeat="item in navData.menuItems">
         <a href="" class="nav__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
         <ul class="submenu" ng-if="item.subMenu">
-          <li class="submenu__item"><a href="/#/digital/" class="submenu__link">360 digital</a></li>
-          <li class="submenu__item"><a href="/#/experience/" class="submenu__link">Уникальный опыт</a></li>
-          <li class="submenu__item"><a href="/#/industry/" class="submenu__link">Развивам digital-индустрию</a></li>
+          <li class="submenu__item" ng-repeat="subItem in item.subMenu">
+            <a href="" class="submenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
+          </li>
         </ul>
       </li>
     </ul>
@@ -80,54 +80,13 @@
       </span>
     </md-button>
     <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
-      <div class="mobileMenu__slide">
+      <div class="mobileMenu__slide" ng-repeat="item in navData.menuItems">
         <h5 class="mobileMenu__title">
-          <a href="" class="mobileMenu__link">КОМПАНИЯ</a>
+          <a href="" class="mobileMenu__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
         </h5>
-        <ul class="mobileMenu__list">
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Мы – Articul</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Клиенты</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Команда</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Articul Group</a>
-          </li>
-        </ul>
-      </div>
-      <div class="mobileMenu__slide">
-        <h5 class="mobileMenu__title">
-          <a href="/#/case/" class="mobileMenu__link">Работы</a>
-        </h5>
-        <ul class="mobileMenu__list">
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Все подряд</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Выбрать по виду</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="" class="mobileMenu__link">Выбрать по бренду</a>
-          </li>
-        </ul>
-      </div>
-      <div class="mobileMenu__slide">
-        <h5 class="mobileMenu__title">
-          <a href="" class="mobileMenu__link">Экспертиза</a>
-        </h5>
-        <ul class="mobileMenu__list">
-          <li class="mobileMenu__item">
-            <a href="/#/digital/" class="mobileMenu__link">360 digital</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="/#/experience/" class="mobileMenu__link">Уникальный опыт</a>
-          </li>
-          <li class="mobileMenu__item">
-            <a href="/#/industry/" class="mobileMenu__link">Развиваем digital-индустрию</a>
+        <ul class="mobileMenu__list" ng-if="item.subMenu">
+          <li class="mobileMenu__item" ng-repeat="subItem in item.subMenu">
+            <a href="" class="mobileMenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
           </li>
         </ul>
       </div>

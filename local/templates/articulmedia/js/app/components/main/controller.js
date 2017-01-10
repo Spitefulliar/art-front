@@ -12,6 +12,24 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       {
         'name': 'Компания',
         'link': '/#/',
+        'subMenu': [
+          {
+            'name': 'Мы – Articul',
+            'link': '/#/'
+          },
+          {
+            'name': 'Клиенты',
+            'link': '/#/'
+          },
+          {
+            'name': 'Команда',
+            'link': '/#/'
+          },
+          {
+            'name': 'Articul Group',
+            'link': '/#/'
+          }
+        ]
       },
       {
         'name': 'Экспертиза',
@@ -19,38 +37,52 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
         'subMenu': [
           {
             'name': '360 digital',
-            'link': '/#/digital/',
+            'link': '/#/digital/'
           },
           {
             'name': 'Уникальный опыт',
-            'link': '/#/experience/',
+            'link': '/#/experience/'
           },
           {
             'name': 'Развивам digital-индустрию',
-            'link': '/#/industry/',
+            'link': '/#/industry/'
           }
         ]
       },
       {
         'name': 'Работы',
         'link': '/#/',
+        'subMenu': [
+          {
+            'name': 'Все подряд',
+            'link': '/#/'
+          },
+          {
+            'name': 'Выбрать по виду',
+            'link': '/#/'
+          },
+          {
+            'name': 'Выбрать по бренду',
+            'link': '/#/'
+          }
+        ]
       },
       {
         'name': 'Достижения',
-        'link': '/#/',
+        'link': '/#/'
       },
       {
         'name': 'Новости',
-        'link': '/#/',
+        'link': '/#/'
       },
       {
         'name': 'Карьера',
-        'link': '/#/',
+        'link': '/#/'
       },
       {
         'name': 'Контакты',
-        'link': '/#/',
-      },
+        'link': '/#/'
+      }
     ]
   };
 
