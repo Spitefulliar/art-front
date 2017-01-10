@@ -27,44 +27,22 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="../local/templates/articulmedia/assets/bundle.js"></script>
     <!-- eof js -->
-
 </head>
 
 <body>
 <!-- header -->
 {% block header %}
 <header class="header container">
-
-  <a href="#" class="header__logo">
-    
-  </a>
+  <a href="#" class="header__logo"></a>
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__item">
-        <a href="" class="nav__link">КОМПАНИЯ</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Экспертиза</a>
-        <ul class="submenu">
+      <li class="nav__item" ng-repeat="item in navData.menuItems">
+        <a href="" class="nav__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
+        <ul class="submenu" ng-if="item.subMenu">
           <li class="submenu__item"><a href="/#/digital/" class="submenu__link">360 digital</a></li>
           <li class="submenu__item"><a href="/#/experience/" class="submenu__link">Уникальный опыт</a></li>
           <li class="submenu__item"><a href="/#/industry/" class="submenu__link">Развивам digital-индустрию</a></li>
         </ul>
-      </li>
-      <li class="nav__item">
-        <a href="/#/case/" class="nav__link">Работы</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Достижения</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Новости</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Карьера</a>
-      </li>
-      <li class="nav__item">
-        <a href="" class="nav__link">Контакты</a>
       </li>
     </ul>
   </nav>
