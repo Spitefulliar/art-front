@@ -370,50 +370,19 @@ export default ['$http',
     //   ]
     // };
 
-    service.getCase = function(succesCallback) {
-      // return Promise.resolve(currentCase).then(service.tranformCase(currentCase), function(response) {
-      //     console.warning("can't get case");
-      //   });
-      return $http({
-        method: 'GET',
-        url: '/local/docs/api/json/case.json'
-      }).then(service.tranformCase, function(response) {
-        console.warning("can't get case");
-      });
-    };
+    // service.getCase = function(succesCallback) {
+    //   // return Promise.resolve(currentCase).then(service.tranformCase(currentCase), function(response) {
+    //   //     console.warning("can't get case");
+    //   //   });
+    //   return $http({
+    //     method: 'GET',
+    //     url: '/local/docs/api/json/case.json'
+    //   }).then(service.tranformCase, function(response) {
+    //     console.warning("can't get case");
+    //   });
+    // };
 
-    service.tranformCase = function(responce){
-      let tmpCase = responce.data.case;
-      let annonce = tmpCase.sections[0].blocks.filter(function(el){
-        return el.type == "announce";
-      })[0];
-      if (annonce) {
-        annonce.style.aboutBgColors = convertHexToRgba(annonce.style.aboutBgColor,[100,80,40]);
-      }
-      service.case = tmpCase;
-      return tmpCase;
-    };
-
-    function convertHexToRgba(hexColor, opacities) {
-      hexColor = hexColor.replace('#','');
-      let r = parseInt(hexColor.substring(0,2), 16);
-      let g = parseInt(hexColor.substring(2,4), 16);
-      let b = parseInt(hexColor.substring(4,6), 16);
-      let result;
-      if (opacities) {
-        if (angular.isArray(opacities)) {
-          result = [];
-          opacities.forEach(function(opacity) {
-            result.push(`rgba(${r},${g},${b},${opacity/100})`);
-          });
-        } else {
-          result = `rgba(${r},${g},${b},${opacity/100})`;
-        }
-      } else {
-        result= `rgb(${r},${g},${b})`;
-      }
-      return result;
-    }
+    
 
     return service;
 }];

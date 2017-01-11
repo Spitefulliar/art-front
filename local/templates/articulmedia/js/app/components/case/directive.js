@@ -5,55 +5,42 @@ const MODULE_NAME = moduleConfig.name;
 export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '$mdMedia', 
   function ($rootScope, $http, $timeout, $window, $state, $log, $mdMedia) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
-      $scope.getCase().then(function(currentCase){
-        $scope.case = currentCase;
-        // $log.debug('case',$scope.case);
 
-        function scrollifyDestroy() {
-          $.scrollify.destroy();
-          $('body').css('overflow', '');
-        };
-
-        let caseTimeout = $timeout(function(){
-          
-          $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
-            if (mquery) {
-              $.scrollify({
-                section : ".page-section",
-                sectionName : "",
-                updateHash: false,
-                interstitialSection : "",
-                easing: "easeOutExpo",
-                scrollSpeed: 600,
-                offset : 0,
-                scrollbars: false,
-                standardScrollElements: "",
-                updateHash: false,
-                setHeights: false,
-                touchScroll: true,
-                overflowScroll: true,
-                before:function() {},
-                after:function() {},
-                afterResize:function() {},
-                afterRender:function() {}
-              });
-
-            } else {
-              scrollifyDestroy();
-            }
-          });
-          
-        });
-
-        $scope.$on(
-        "$destroy",
-          function( event ) {
-            $timeout.cancel( caseTimeout );
-            scrollifyDestroy();
-          }
-        );
-
+      $rootScope.$on('pageDataLoaded', function () {
+        $scope.case = tranformCase($scope.page);
       });
+
+      function tranformCase(caseObj){
+        let tmpCase = caseObj;
+        let annonce = tmpCase.sections[0].blocks.filter(function(el){
+          return el.type == "announce";
+        })[0];
+        if (annonce) {
+          annonce.style.aboutBgColors = convertHexToRgba(annonce.style.aboutBgColor,[100,80,40]);
+        }
+        return tmpCase;
+      };
+
+      function convertHexToRgba(hexColor, opacities) {
+        hexColor = hexColor.replace('#','');
+        let r = parseInt(hexColor.substring(0,2), 16);
+        let g = parseInt(hexColor.substring(2,4), 16);
+        let b = parseInt(hexColor.substring(4,6), 16);
+        let result;
+        if (opacities) {
+          if (angular.isArray(opacities)) {
+            result = [];
+            opacities.forEach(function(opacity) {
+              result.push(`rgba(${r},${g},${b},${opacity/100})`);
+            });
+          } else {
+            result = `rgba(${r},${g},${b},${opacity/100})`;
+          }
+        } else {
+          result= `rgb(${r},${g},${b})`;
+        }
+        return result;
+      }
     };
   return {
     restrict: "AE",

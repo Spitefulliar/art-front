@@ -3,25 +3,15 @@
   ng-class="{'page-section_{{section.type}}': section.type}" 
   layout="row"
   layout-align="center"
-  layout-wrap
-  ng-style="{
-    'color': section.style.textColor, 
-    'background-color': section.style.bgColor, 
-    'background-image': section.style.bgImage && 'url(' + (isDesktop && section.style.bgImage.desktop || section.style.bgImage.mobile) + ')',
-    'background': section.style.bgGradient && '-moz-linear-gradient({{(section.style.bgGradient.top)? 'top' : 'bottom'}}, {{section.style.bgGradient.col1}} 0%, {{section.style.bgGradient.col2}} 100%',
-    'background': section.style.bgGradient && '-webkit-linear-gradient({{(section.style.bgGradient.top)? 'top' : 'bottom'}}, {{section.style.bgGradient.col1}} 0%, {{section.style.bgGradient.col2}} 100%',
-    'background': section.style.bgGradient && 'linear-gradient({{(section.style.bgGradient.top)? 'to bottom' : 'to top'}}, {{section.style.bgGradient.col1}} 0%, {{section.style.bgGradient.col2}} 100%'
-  }">
+  layout-wrap 
+  ng-style="section.commonStyle" 
+  >
   <!-- announce -->
   <div class="page-block"
     ng-repeat-start="block in section.blocks"
     ng-if="block.type == 'announce'"  
     ng-class="{'page-block_{{block.type}}': block.type}" 
-    ng-style="{
-      'color': block.style.textColor,
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')'
-    }"
+    ng-style="block.commonStyle"
     flex="100" 
     >
     <div class="page-block__container">
@@ -70,11 +60,7 @@
     ng-if="block.type == 'brief'" 
     ng-class="{'page-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="45" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }">
+    ng-style="block.commonStyle">
     <div class="page-block__container">
       <h2 class="page-block_brief__title page-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
       <div class="page-block_brief__summary page-block__content" ng-bind-html="trustAsHtml(block.summary)"></div>
@@ -88,11 +74,7 @@
     ng-if="block.type == 'idea'"
     ng-class="{'page-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="55" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }">
+    ng-style="block.commonStyle">
     <div class="page-block__container">
       <h2 class="page-block_idea__title page-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
       <div class="page-block_idea__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
@@ -104,11 +86,7 @@
   <div class="page-block"
     ng-if="block.type == 'solution-carousel'"
     ng-class="{'page-block_{{block.type}}': block.type}" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }"
+    ng-style="block.commonStyle"
     flex="100"
   >
     <div class="page-block__container">
@@ -135,11 +113,7 @@
     ng-if="block.type == 'solution-gallery-single'" 
     ng-class="{'page-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="55" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }">
+    ng-style="block.commonStyle">
     <div class="page-block__container page-block__container_pr-gt-sm-0">
       <h4 class="page-block_solution-gallery-single__title" ng-bind-html="trustAsHtml(block.title)"></h4>
       <div class="page-block_solution-gallery-single__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
@@ -163,11 +137,7 @@
     ng-if="block.type == 'solution-gallery-multi'"
     ng-class="{'page-block_{{block.type}}': block.type}" 
     flex="100" flex-gt-sm="45" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }">
+    ng-style="block.commonStyle">
     <div class="page-block__container">
       <h4 class="page-block_solution-gallery-multi__title" ng-bind-html="trustAsHtml(block.title)"></h4>
       <div class="page-block_solution-gallery-multi__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
@@ -210,11 +180,7 @@
     ng-class="{'page-block_{{block.type}}': block.type}" 
     ng-if="block.type == 'total'" 
     flex="100" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }">
+    ng-style="block.commonStyle">
     <div class="page-block__container">
       <h2 class="page-block_total__title page-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
       <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
@@ -253,15 +219,13 @@
     ng-if="block.type == 'video'"
     ng-class="{'page-block_{{block.type}}': block.type}" 
     flex="100" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }"
+    ng-style="block.commonStyle"
     >
     <div class="page-block__container">
-      <div class="page-block_video__video embed-responsive embed-responsive-16by9 ">
-        <youtube-video video-url="block.video"></youtube-video>
+      <div class="page-block_video__container">
+        <div class="page-block_video__video embed-responsive embed-responsive-16by9 ">
+          <youtube-video video-url="block.video"></youtube-video>
+        </div>
       </div>
     </div>
   </div>
@@ -273,11 +237,7 @@
     ng-if="block.type == 'crosses'"
     ng-class="{'page-block_{{block.type}}': block.type}" 
     flex="100" 
-    ng-style="{
-      'color': block.style.textColor, 
-      'background-color': block.style.bgColor, 
-      'background-image': block.style.bgImage && 'url(' + (isDesktop && block.style.bgImage.desktop || block.style.bgImage.mobile) + ')' || false
-    }"
+    ng-style="block.commonStyle"
     >
     <div class="page-block__container">
       <h3 class="page-block__title" ng-bind-html="trustAsHtml(block.title)"></h3>

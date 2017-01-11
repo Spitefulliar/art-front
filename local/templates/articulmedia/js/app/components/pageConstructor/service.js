@@ -1,48 +1,66 @@
 //SERVICE
-export default ['$http', 
-  function($http) {
+export default ['$http', '$rootScope', 
+  function($http, $rootScope) {
     let service = {};
 
-    service.getPage = function(apiurl, succesCallback) {
+    service.getPage = function(apiurl, code) {
+      let qData = {
+        code: code
+      };
       return $http({
         method: 'GET',
-        url: apiurl
+        url: apiurl + '?' + $.param(qData),
       }).then(function(response) {
-          service.sectionsCommonTranform(response.data);
+          response.data.page.sections = service.sectionsCommonTranform(response.data.page.sections);
+          return response.data;
         }, function(response) {
           console.warning("can't get page data");
       });
     };
 
-    service.sectionsCommonTranform = function(data){
-      let tmpPage = data.page;
 
-      //TODO: transform sections and blocks
-
-      service.page = tmpPage;
-      return tmpPage;
-    };
-
-    function convertHexToRgba(hexColor, opacities) {
-      hexColor = hexColor.replace('#','');
-      let r = parseInt(hexColor.substring(0,2), 16);
-      let g = parseInt(hexColor.substring(2,4), 16);
-      let b = parseInt(hexColor.substring(4,6), 16);
-      let result;
-      if (opacities) {
-        if (angular.isArray(opacities)) {
-          result = [];
-          opacities.forEach(function(opacity) {
-            result.push(`rgba(${r},${g},${b},${opacity/100})`);
-          });
-        } else {
-          result = `rgba(${r},${g},${b},${opacity/100})`;
-        }
-      } else {
-        result= `rgb(${r},${g},${b})`;
-      }
-      return result;
+    let makeVerticalGradient = function (top,col1,col2,single) {
+      let gradientTpl = [];
+      gradientTpl[0] = `-moz-linear-gradient(${(top)? 'top':'bottom'}, ${col1}, ${col2})`;
+      gradientTpl[1] = `-webkit-linear-gradient(${(top)? 'top':'bottom'}, ${col1}, ${col2})`;
+      gradientTpl[2] = `linear-gradient(${(top)? 'to bottom':'to top'}, ${col1}, ${col2})`;
+      //single for real background declaration
+      if(single) {
+        return gradientTpl[2];
+      } else { 
+        return gradientTpl;
+      };
     }
+
+    service.defaultStyleTranform = function(rawStyle){
+      if (!rawStyle) return false;
+      let styleObj = {
+        'color': rawStyle.textColor,
+        'background-color': rawStyle.bgColor, 
+        'background-image': (rawStyle.bgImage)? ('url(' + ($rootScope.isDesktop && rawStyle.bgImage.desktop || rawStyle.bgImage.mobile) + ')') : false,
+        'background': (rawStyle.bgGradient)? makeVerticalGradient(rawStyle.bgGradient.top,rawStyle.bgGradient.col1, rawStyle.bgGradient.col2, true) : false,
+      }
+      if (rawStyle.bgGradient) rawStyle.bgGradientRule = makeVerticalGradient(rawStyle.bgGradient.top,rawStyle.bgGradient.col1, rawStyle.bgGradient.col2);
+      return [rawStyle,styleObj];
+    }
+
+    service.sectionsCommonTranform = function(sections){
+      let tmpSections = sections;
+      let tmpStyle;
+      for (var i = tmpSections.length - 1; i >= 0; i--) {
+        let section = tmpSections[i];
+        tmpStyle = service.defaultStyleTranform(section.style);
+        section.style = tmpStyle[0];
+        section.commonStyle = tmpStyle[1];
+        for (var j = section.blocks.length - 1; j >= 0; j--) {
+          let block = section.blocks[j];
+          tmpStyle = service.defaultStyleTranform(block.style);
+          block.style = tmpStyle[0];
+          block.commonStyle = tmpStyle[1];
+        }
+      }
+      return tmpSections;
+    };
 
     return service;
 }];

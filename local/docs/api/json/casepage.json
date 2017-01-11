@@ -1,15 +1,13 @@
 {
   "success": "true",
-  "case": {
+  "page": {
     "id": 1,
     "code": "always-answer",
     "title": "Всегда отвечай на звонок",
     "client": {
       "id": 2,
       "code": "fox"
-    }
-  },
-  "page": {
+    },
     "sections": [
       {
         "type": "single",

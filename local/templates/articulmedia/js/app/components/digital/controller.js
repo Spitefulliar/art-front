@@ -8,11 +8,10 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
   $scope.digital = { 
-  	'items': 'умнее<br>выше<br>быстрее',
   	'slogan': `У нас есть<br/>
               все для 360&deg;<br/>
               сервиса в digital`,
-  	'blocks': [
+  	'items': [
   		{
   			'type': 'image',
   			'title': 'делимся опытом<br> на РИФ+КИБ',
