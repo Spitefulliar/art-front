@@ -18,6 +18,10 @@
         bgImage [] изображение фона
             desktop [string] относительная ссылка на изображение для desktop
             mobile [string] относительная ссылка на изображение для mobile
+        bgGradient [] градиент для фона
+            col1 [string] цвет 1
+            col2 [string] цвет 2
+            top [boolean] флаг направления (true - сверху вниз, false - снизу вверх)
     
 ### Анонс | announce
     
@@ -30,7 +34,7 @@
         webm [string]
     style []
         titleTextColor [string] цвет заголовка блока
-        summaryTextColor [string] цвет подзаголовка блока
+        textColor [string] цвет блока
         aboutBgColor [string] цвет фона квадратов
         aboutTextColor [string] цвет текста квадратов
         bgAboutImage изображение для первого квадрата (логотип клиента)
