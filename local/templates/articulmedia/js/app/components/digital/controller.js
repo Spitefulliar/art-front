@@ -50,6 +50,27 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   	]
   };
 
+  $scope.slickConfigMobile = {
+    enabled: true,
+    autoplay: false,
+    draggable: true,
+    adaptiveHeight: true,
+    infinite: true,
+    method: {},
+    cssEase: false,
+    useCSS: false,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    swipe: true,
+    easing: 'linear',
+    swipeToSlide: true,
+    slidesToScroll: 1,
+    variableWidth: false,
+    centerMode: true,
+    centerPadding: '20px',
+  };
+
   
 
 }];
