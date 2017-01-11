@@ -290,7 +290,9 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
   z-index: 59;
   position: absolute;
   left: 50%;
+  // max-width: 1400px;
   transform: translateX(-50%);
+  white-space: nowrap;
 
   @media (max-width: $screen-md) {
     width: 100%;
@@ -673,6 +675,9 @@ md-sidenav {
   padding-top: 90px;
   padding-bottom: 60px;
   position: relative;
+  @media (max-width: $screen-xs) {
+    padding-top: 50px;
+  }
 
   &__bg {
     position: fixed;
@@ -886,6 +891,92 @@ md-sidenav {
     }
   }
 
+}
+
+art-digital-dir {
+  display: block;
+  max-width: 100%;
+}
+
+.digital {
+
+  &__title {
+    font-weight: 100;
+    color: $white;
+    font-size: vh(220px);
+    position: relative;
+    margin: 0;
+    line-height: 100%;
+
+    &__deg {
+      color: $white;
+      font-size: vh(100px);
+      font-weight: 100;
+      vertical-align: top;
+      line-height: 100%;
+    }
+  }
+
+  &__slogan {
+    position: relative;
+    font-weight: bold;
+    font-size: vh(30px);
+    color: $white;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 100%;
+  }
+
+  .mobileList {
+    max-width: 100%;
+
+    &__item {
+      width: 300px;
+      display: block;
+      border-radius: 50%;
+      background: $white;
+      width: vh(300px);
+      height: vh(300px);
+      text-align: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '+';
+        bottom: 10px;
+        left: 0;
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        color: $black;
+        left: 50%;
+        margin-left: -20px;
+        font-weight: 100;
+        line-height: 100%;
+      }
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: vh(30px);
+      text-transform: uppercase;
+      line-height: 100%;
+      margin: 0;
+    }
+  
+    .slick-dots li.slick-active button:before {
+      opacity: 1;
+      color: $black;
+    }
+    .slick-dots li button:before {
+      color: $white;
+      font-size: 20px;
+      opacity: 1;
+    }
+  }
 }
 
 .footer {
