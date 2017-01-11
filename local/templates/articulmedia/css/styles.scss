@@ -918,6 +918,28 @@ md-sidenav {
     text-transform: uppercase;
     line-height: 100%;
   }
+
+  .mobileList {
+
+    &__item {
+      border-radius: 50%;
+      background: $white;
+      width: vh(300px);
+      height: vh(300px);
+      text-align: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: vh(30px);
+      text-transform: uppercase;
+      line-height: 100%;
+      margin: 0;
+    }
+  }
 }
 
 .footer {
