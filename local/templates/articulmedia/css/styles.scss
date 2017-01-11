@@ -1054,8 +1054,7 @@ art-digital-dir {
     width: vh(120px);
     position: relative;
     height: vh(120px);
-    background: #e8e9ed;
-    background: rgba(232, 233, 237, .8);
+    background-color: rgba(255, 255, 255, .8);
 
     &--client {
       background-size: cover;
@@ -1549,16 +1548,25 @@ art-digital-dir {
   }
 
   &_video {
+    &__container {
+      width: 100%;
+      max-width: 145vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
     &__video {
       width: 100%;
     }
     .page-block {
       &__container {
         padding-top: vh(125px);
-        padding-bottom: vh(35px);
+        padding-bottom: vh(15px);
       }
     }
     @media screen and (max-width: $screen-md) {
+      &__container {
+        max-width: 100%;
+      }
       .page-block {
         &__container {
           padding-top: vh(30px,'md');

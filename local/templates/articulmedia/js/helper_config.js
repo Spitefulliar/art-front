@@ -6,4 +6,5 @@ export const APP  = {
   SERVICE_POSTFIX: 'Service',
   PAGE_POSTFIX: 'Page',
   VIEWS_DIR: '../',
+  API_DIR: '/local/docs/api/json/',
 };

@@ -1,0 +1,9 @@
+<section class="page-section" 
+  ng-class="{'page-section_{{section.type}}': section.type}" 
+  layout="row"
+  layout-align="center"
+  layout-wrap 
+  ng-style="section.commonStyle" 
+  >
+  <art-page-block-dir ng-repeat="block in section.blocks" block="block"></art-page-block-dir>
+</section>

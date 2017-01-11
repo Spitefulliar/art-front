@@ -2,53 +2,50 @@
 import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
-export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '$mdMedia', 
-  function ($rootScope, $http, $timeout, $window, $state, $log, $mdMedia) {
+export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '$mdMedia', '$stateParams', 
+  function ($rootScope, $http, $timeout, $window, $state, $log, $mdMedia, $stateParams) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
-      $scope.getCase().then(function(currentCase){
-        $scope.case = currentCase;
-        // $log.debug('case',$scope.case);
+      $scope.getPage(CONFIG.APP.API_DIR + $scope.pageData.apiParam, $stateParams.pageCode).then(function(response){
+        $scope.page = response.page;
+        console.log(response.page);
+        $scope.pageData.title = $scope.page.title || $scope.pageData.title;
+        $rootScope.$broadcast('pageDataLoaded');
+        //enabling scrollify for page sections
+        let pgSectionsQ = ".page-section";
 
         function scrollifyDestroy() {
           $.scrollify.destroy();
-          $('body').css('overflow', '');
         };
 
-        let caseTimeout = $timeout(function(){
-          
+        let scrollifyTimeout = $timeout(function(){
           $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
             if (mquery) {
               $.scrollify({
-                section : ".page-section",
+                section : pgSectionsQ,
                 sectionName : "",
                 updateHash: false,
                 interstitialSection : "",
                 easing: "easeOutExpo",
                 scrollSpeed: 600,
                 offset : 0,
-                scrollbars: false,
+                scrollbars: true,
                 standardScrollElements: "",
                 updateHash: false,
                 setHeights: false,
                 touchScroll: true,
                 overflowScroll: true,
-                before:function() {},
-                after:function() {},
-                afterResize:function() {},
-                afterRender:function() {}
               });
 
             } else {
               scrollifyDestroy();
             }
           });
-          
         });
 
         $scope.$on(
         "$destroy",
           function( event ) {
-            $timeout.cancel( caseTimeout );
+            $timeout.cancel( scrollifyTimeout );
             scrollifyDestroy();
           }
         );
@@ -59,7 +56,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
     restrict: "AE",
     link: linkFunction,
     controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
-    template: require('./template.html'),
+    // template: require('./template.html'),
     // scope: {}
   };
 }];

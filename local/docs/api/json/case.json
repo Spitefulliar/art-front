@@ -1,12 +1,17 @@
 {
   "success": "true",
-  "case": {
+  "page": {
     "id": 1,
     "code": "always-answer",
     "title": "Всегда отвечай на звонок",
-    "client": {
-      "id": 2,
-      "code": "fox"
+    "case": {
+      "id": 1,
+      "code": "always-answer",
+      "title": "Всегда отвечай на звонок",
+      "client": {
+        "id": 2,
+        "code": "fox"
+      }
     },
     "sections": [
       {
