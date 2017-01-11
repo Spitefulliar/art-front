@@ -675,6 +675,9 @@ md-sidenav {
   padding-top: 90px;
   padding-bottom: 60px;
   position: relative;
+  @media (max-width: $screen-xs) {
+    padding-top: 50px;
+  }
 
   &__bg {
     position: fixed;
@@ -890,6 +893,11 @@ md-sidenav {
 
 }
 
+art-digital-dir {
+  display: block;
+  max-width: 100%;
+}
+
 .digital {
 
   &__title {
@@ -920,8 +928,11 @@ md-sidenav {
   }
 
   .mobileList {
+    max-width: 100%;
 
     &__item {
+      width: 300px;
+      display: block;
       border-radius: 50%;
       background: $white;
       width: vh(300px);
@@ -930,6 +941,22 @@ md-sidenav {
       margin: 0 auto;
       display: flex;
       align-items: center;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '+';
+        bottom: 10px;
+        left: 0;
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        color: $black;
+        left: 50%;
+        margin-left: -20px;
+        font-weight: 100;
+        line-height: 100%;
+      }
     }
 
     &__title {
@@ -938,6 +965,16 @@ md-sidenav {
       text-transform: uppercase;
       line-height: 100%;
       margin: 0;
+    }
+  
+    .slick-dots li.slick-active button:before {
+      opacity: 1;
+      color: $black;
+    }
+    .slick-dots li button:before {
+      color: $white;
+      font-size: 20px;
+      opacity: 1;
     }
   }
 }
