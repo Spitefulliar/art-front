@@ -290,7 +290,9 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
   z-index: 59;
   position: absolute;
   left: 50%;
+  // max-width: 1400px;
   transform: translateX(-50%);
+  white-space: nowrap;
 
   @media (max-width: $screen-md) {
     width: 100%;
@@ -886,6 +888,36 @@ md-sidenav {
     }
   }
 
+}
+
+.digital {
+
+  &__title {
+    font-weight: 100;
+    color: $white;
+    font-size: vh(220px);
+    position: relative;
+    margin: 0;
+    line-height: 100%;
+
+    &__deg {
+      color: $white;
+      font-size: vh(100px);
+      font-weight: 100;
+      vertical-align: top;
+      line-height: 100%;
+    }
+  }
+
+  &__slogan {
+    position: relative;
+    font-weight: bold;
+    font-size: vh(30px);
+    color: $white;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 100%;
+  }
 }
 
 .footer {
