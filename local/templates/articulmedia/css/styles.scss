@@ -1115,13 +1115,17 @@ art-digital-dir {
 
 //block itself
 .page-block {
+  min-height: 100vh;
   background-position: 50% 50%;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
            -o-background-size: cover;
               background-size: cover;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   &__container {
-    min-height: 100vh;
+    min-height: 100%;
     padding: vh(100px) vw(82px) 0;
     display: block;
     -webkit-box-sizing: border-box;
@@ -1165,6 +1169,7 @@ art-digital-dir {
     }
   }
   @media screen and (max-width: $screen-md) {
+    min-height: initial;
     &__container {
       min-height: initial;
       padding: vh(100px,'md') vw(25px,'md') 0;
