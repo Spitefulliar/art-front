@@ -1,0 +1,20 @@
+<div class="page-block"
+    ng-class="{'page-block_{{block.type}}': block.type}" 
+    flex="100" flex-gt-sm="55" 
+    ng-style="block.commonStyle">
+  <div class="page-block__container page-block__container_pr-gt-sm-0">
+    <h4 class="page-block_solution-gallery-single__title" ng-bind-html="trustAsHtml(block.title)"></h4>
+    <div class="page-block_solution-gallery-single__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+    <div class="page-block_solution-gallery-single__images page-block__col page-block__col_pr-gt-sm-0">
+      <div class="page-block_solution-gallery-single__img">
+        <div class="page-block_solution-gallery-single__img-bg"  
+          ng-style="{
+            'background-image': 'url(' + (isDesktop && block.image.desktop || block.image.mobile || false) + ')'
+          }"
+          alt="{{block.image.alt}}" 
+          art-popup-img-dir 
+          ng-click="popupImgCtrl.showImgPopup(block.image.original)"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -56,7 +56,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
     restrict: "AE",
     link: linkFunction,
     controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
-    // template: require('./template.html'),
-    // scope: {}
+    template: require('./template.html'),
+    replace: true,
+    scope: false
   };
 }];

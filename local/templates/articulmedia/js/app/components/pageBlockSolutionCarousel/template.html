@@ -1,0 +1,21 @@
+<div class="page-block"
+    ng-class="{'page-block_{{block.type}}': block.type}" 
+    ng-style="block.commonStyle"
+    flex="100"
+  >
+  <div class="page-block__container">
+    <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="page-block__col" flex="100" flex-gt-sm="50">
+        <h2 class="page-block_solution-carousel__title page-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
+      </div>
+      <div class="page-block__col" flex="100" flex-gt-sm="50">
+        <div class="page-block_solution-carousel__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+      </div>
+    </div>
+    <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="page-block__col" flex="100">
+        <art-carousel-waterwheel-dir class="page-solution-carousel__carousel" slides="block.images"></art-carousel-waterwheel-dir>
+      </div>
+    </div>
+  </div>
+</div>

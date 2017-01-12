@@ -1,0 +1,13 @@
+<div  class="page-block"
+  ng-class="{'page-block_{{block.type}}': block.type}" 
+  flex="100" 
+  ng-style="block.commonStyle"
+  >
+  <div class="page-block__container">
+    <div class="page-block_video__container">
+      <div class="page-block_video__video embed-responsive embed-responsive-16by9 ">
+        <youtube-video video-url="block.video"></youtube-video>
+      </div>
+    </div>
+  </div>
+</div> 

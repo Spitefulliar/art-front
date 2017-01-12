@@ -1624,9 +1624,9 @@ art-digital-dir {
 
 //cases-list 
 .cases-list {
+  max-width: 180vh;
   &__grid {
     width: 100%;
-    max-width: 180vh;
   }
   &__grid-item {
     display: block;
@@ -1663,8 +1663,8 @@ art-digital-dir {
             transition: transform 400ms ease-out;
   }
   @media screen and (max-width: $screen-md) {
+    max-width: 100%;
     &__grid {
-      max-width: 100%;
     }
   }
 }
