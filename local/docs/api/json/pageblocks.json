@@ -66,8 +66,8 @@
           {
             "type": "brief",
             "title": "БРИФ",
-            "summary": "<p>«Сосны» – 10-серийный остросюжетный триллер. Действие</br> сериала разворачивается в городе Уэйуорд Пайнз, одно из</br> главных правил которого – всегда отвечать на мистические звонки.</p>",
-            "content": "<h4>Цели кампании:</h4><ul><li>Продвижение сериала «Сосны»</li><li>Увеличение аудитории телеканала FOX</li><li>Увеличение дистрибуции телеканала</li><li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li></ul>",
+            "content": "<p>«Сосны» – 10-серийный остросюжетный триллер. Действие</br> сериала разворачивается в городе Уэйуорд Пайнз, одно из</br> главных правил которого – всегда отвечать на мистические звонки.</p>",
+            "targets": "<ul><li>Продвижение сериала «Сосны»</li><li>Увеличение аудитории телеканала FOX</li><li>Увеличение дистрибуции телеканала</li><li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li></ul>",
             "style": {
               "bgColor": "#1e2532",
               "textColor": "#f3e3cc"              
@@ -77,6 +77,39 @@
             "type": "idea",
             "title": "Идея",
             "content": "погрузить пользователей</br>в атмосферу сериала, дав</br>возможность почувствовать</br>себя на месте жителей</br>мистического города,</br>и с замиранием сердца</br>ожидать таинственного</br>звонка на свой телефон.",
+            "style": {
+              "textColor": "#000000",
+              "bgColor": "#f3e3cc",
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_2_mobile.jpg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "brief",
+            "title": "БРИФ",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet.</p><p>Suspendisse vestibulum, elit vel porttitor ullamcorper, quam nibh suscipit sem, quis viverra felis lectus ac turpis. Pellentesque vel ante at diam hendrerit dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ac magna vel arcu viverra convallis. Morbi in euismod ante. Curabitur efficitur ante vel neque congue, non elementum leo dapibus.</p><p>Vivamus blandit porta lorem eget hendrerit. Vivamus rhoncus varius efficitur. Fusce tincidunt ex at dapibus ornare. Etiam nec sollicitudin tortor, nec consectetur lectus. In vehicula, quam vitae congue commodo, libero risus sollicitudin justo, fringilla condimentum leo nulla vitae enim. Integer aliquam tellus vel sapien tincidunt bibendum. Ut semper porta varius.</p>",
+            "targets": "<ul><li>Продвижение сериала «Сосны»</li><li>Увеличение аудитории телеканала FOX</li><li>Увеличение дистрибуции телеканала</li><li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li></ul>",
+            "style": {
+              "bgColor": "#1e2532",
+              "textColor": "#f3e3cc"              
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "idea",
+            "title": "Идея",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum.</p><p>Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet.</p>",
             "style": {
               "textColor": "#000000",
               "bgColor": "#f3e3cc",

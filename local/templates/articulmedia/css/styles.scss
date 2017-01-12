@@ -1271,13 +1271,17 @@ art-digital-dir {
   }
 
   &_brief {
-    &__summary {
+    &__title {
+      padding-top: vh(70px);
+    }
+
+    &__content {
       font-weight: 100;
       font-style: normal;
       @include text-content();
     }
 
-    &__content {
+    &__targets {
       margin-top: vh(60px);
       padding-bottom: vh(50px);
     }
@@ -1292,8 +1296,18 @@ art-digital-dir {
       margin: vh(25px) 0;
     }
   }
+  &_brief--single &_brief{
+    @media screen and (max-width: $screen-md) {
+      &__title {
+        padding-top: 0;
+      }
+    }
+  }
 
   &_idea {
+    &__title {
+      padding-top: vh(70px);
+    }
     &__content {
       padding-bottom: vh(50px);
       font-size: vh($fsh4);
@@ -1302,6 +1316,9 @@ art-digital-dir {
     }
     @media screen and (max-width: $screen-md) {
       min-height: vh(724px);
+      &__title {
+        padding-top: 0;
+      }
     }
   }
 

@@ -43,8 +43,8 @@
 ### Бриф | brief
     
     title [string] заголовок блока
-    summary [string] подпись
     content [string] текст
+    targets [string] текст/список
     
 ### Идея | idea
 
