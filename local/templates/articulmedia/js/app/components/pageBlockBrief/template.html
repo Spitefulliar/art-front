@@ -1,0 +1,10 @@
+<div class="page-block"
+  ng-class="{'page-block_{{block.type}}': block.type}" 
+  flex="100" flex-gt-sm="45" 
+  ng-style="block.commonStyle">
+  <div class="page-block__container">
+    <h2 class="page-block_brief__title page-block__title" ng-bind-html="trustAsHtml(block.title)"></h2>
+    <div class="page-block_brief__summary page-block__content" ng-bind-html="trustAsHtml(block.summary)"></div>
+    <div class="page-block_brief__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div  class="page-block"
+  ng-class="{'page-block_{{block.type}}': block.type}" 
+  flex="100" 
+  ng-style="block.commonStyle"
+  >
+  <div class="page-block__container">
+    <h3 class="page-block__title" ng-bind-html="trustAsHtml(block.title)"></h3>
+    <div class="cases-list">
+      <md-grid-list class="cases-list__grid"
+        md-cols-gt-sm="5"
+        md-cols="2"
+        md-row-height="1:1"
+        md-gutter="0" md-gutter-gt-sm="0" >
+        <md-grid-tile 
+          md-rowspan="1" md-colspan="1" 
+          ng-repeat="item in block.items"  
+          >
+          <a class="cases-list__grid-item" 
+            ng-class="{'plus-item': (item.type != 'client') }"
+            ng-attr-href="{{item.link}}"
+            title="{{item.title}}"
+            >
+            <div class="cases-list__grid-item-bg"  
+              ng-style="{
+                'background-image': 'url(' + (isDesktop && item.image.desktop || item.image.mobile || false) + ')'
+              }"
+              title="{{item.alt}}" 
+              ></div>
+            <span ng-if="item.type != 'client'" class="plus-item__icon">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+              </svg>
+            </span>
+          </a>
+        </md-grid-tile>
+        <md-grid-tile 
+          md-rowspan="1" md-colspan="1" 
+          >
+          <div class="page-list__grid-item plus-item" 
+            ng-click="loadMoreCroses()"
+            title="{{item.title}}"
+            >
+            <span class="plus-item__icon">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+              </svg>
+            </span>
+          </div>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+  </div>
+</div> 

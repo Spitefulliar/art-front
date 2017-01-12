@@ -4,6 +4,10 @@
   layout-align="center"
   layout-wrap 
   ng-style="section.commonStyle" 
+  section="section"
   >
-  <art-page-block-dir ng-repeat="block in section.blocks" block="block"></art-page-block-dir>
+  <art-page-block-dir
+  ng-repeat="block in section.blocks" 
+  block="block" 
+  block-type="{{block.type}}"></art-page-block-dir>
 </section>

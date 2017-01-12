@@ -1,3 +1,43 @@
-<h1>
-    {{$scope.block.type}}
-</h1>
+<div class="page-block"
+  ng-class="{'page-block_{{block.type}}': block.type}" 
+  ng-style="block.commonStyle"
+  flex="100" 
+  >
+  <div class="page-block__container">
+    <h2 ng-if="!block.titleImg" class="page-block_announce__title" ng-bind-html="trustAsHtml(block.title)"
+      ng-style="{'color': block.style.titleTextColor}"></h2>
+    <div ng-if="block.titleImg" class="page-block_announce__title page-block_announce__title_img">
+      <img ng-src="{{(isDesktop && block.titleImg.desktop || block.titleImg.mobile)}}" alt="{{block.title}}">
+    </div>
+    <h3 class="page-block_announce__summary" ng-bind-html="trustAsHtml(block.summary)"></h3>
+    <div class="page-block_announce__about-block about-block" 
+      ng-style="{'color': block.style.aboutColor}">
+      <div class="about-block__item about-block__item--client" 
+        ng-style="{ 
+          'background-image': 'url(' + (isDesktop && block.style.bgAboutImage.desktop || block.style.bgAboutImage.mobile) + ')',
+          'background-color': block.style.aboutBgColors[0],
+        }">
+        <span class="about-block__title">клиент</span>
+      </div>
+      <div class="about-block__item about-block__item--date"
+        ng-style="{ 
+          'background-color': block.style.aboutBgColors[1]
+        }">
+        <span class="about-block__title">релиз</span>
+        <span class="about-block__date" ng-bind="case.date"></span>
+      </div>
+      <div class="about-block__item about-block__item--project" 
+      ng-if="block.type == 'announce-slide'" 
+      ng-style="{ 
+          'background-color': block.style.aboutBgColors[2]
+        }">
+        <span class="about-block__title">о проекте</span>
+        <span class="about-block__cross svg-icon">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
