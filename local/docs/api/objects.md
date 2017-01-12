@@ -155,7 +155,6 @@
     code [string] символьный код кейса
     title [string] заголовок кейса
     client [client] клиент кейса
-    sections [section[]] список сeкций кейса
 
 ## Страница конструктора | page
 
