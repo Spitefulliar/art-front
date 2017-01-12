@@ -12,6 +12,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       {
         'name': 'Компания',
         'link': '/#/',
+        'hoverColor': 'orange',
         'subMenu': [
           {
             'name': 'Мы – Articul',
@@ -51,19 +52,19 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       },
       {
         'name': 'Работы',
-        'link': '/#/',
+        'link': '/#/case/',
         'subMenu': [
           {
             'name': 'Все подряд',
-            'link': '/#/'
+            'link': '/#/case/'
           },
           {
             'name': 'Выбрать по виду',
-            'link': '/#/'
+            'link': '/#/case/'
           },
           {
             'name': 'Выбрать по бренду',
-            'link': '/#/'
+            'link': '/#/case/'
           }
         ]
       },

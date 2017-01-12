@@ -65,7 +65,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     easing: 'linear',
     swipeToSlide: true,
     slidesToScroll: 1,
-    variableWidth: false,
+    variableWidth: true,
     centerMode: true,
     centerPadding: '20px',
   };

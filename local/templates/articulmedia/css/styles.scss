@@ -453,6 +453,15 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
 			background: $alto;
 			background: rgba(223,220,220,.6);
 
+      &--orange {
+
+        .submenu__item:hover {
+          .submenu__link {
+            background: $crusta;
+          }
+        }
+      }
+
 			&__item {
 				display: inline-block;
 
@@ -928,7 +937,9 @@ art-digital-dir {
   }
 
   .mobileList {
-    max-width: 100%;
+    // max-width: 100%;
+    margin-left: vw(-82px);
+    margin-right: vw(-82px);
 
     &__item {
       width: 300px;
@@ -938,10 +949,15 @@ art-digital-dir {
       width: vh(300px);
       height: vh(300px);
       text-align: center;
-      margin: 0 auto;
+      margin: 0 15px;
       display: flex;
       align-items: center;
       position: relative;
+      opacity: .6;
+
+      &.slick-active {
+        opacity: 1;
+      }
 
       &:before {
         position: absolute;

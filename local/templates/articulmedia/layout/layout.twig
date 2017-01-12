@@ -38,7 +38,7 @@
     <ul class="nav__list">
       <li class="nav__item" ng-repeat="item in navData.menuItems">
         <a href="" class="nav__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
-        <ul class="submenu" ng-if="item.subMenu">
+        <ul class="submenu" ng-if="item.subMenu" ng-class="{'submenu--{{item.hoverColor}}': item.hoverColor}">
           <li class="submenu__item" ng-repeat="subItem in item.subMenu">
             <a href="" class="submenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
           </li>
