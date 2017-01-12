@@ -6,40 +6,15 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
   function ($rootScope, $http, $timeout, $window, $state, $log, $mdMedia) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       $rootScope.$on('pageDataLoaded', function () {
-        $scope.case = tranformCase($scope.page);
+        $scope.page = tranformCase($scope.page);
       });
 
       function tranformCase(caseObj){
         let tmpCase = caseObj;
-        let annonce = tmpCase.sections[0].blocks.filter(function(el){
-          return el.type == "announce";
-        })[0];
-        if (annonce) {
-          annonce.style.aboutBgColors = convertHexToRgba(annonce.style.aboutBgColor,[100,80,40]);
-        }
+
         return tmpCase;
       };
 
-      function convertHexToRgba(hexColor, opacities) {
-        hexColor = hexColor.replace('#','');
-        let r = parseInt(hexColor.substring(0,2), 16);
-        let g = parseInt(hexColor.substring(2,4), 16);
-        let b = parseInt(hexColor.substring(4,6), 16);
-        let result;
-        if (opacities) {
-          if (angular.isArray(opacities)) {
-            result = [];
-            opacities.forEach(function(opacity) {
-              result.push(`rgba(${r},${g},${b},${opacity/100})`);
-            });
-          } else {
-            result = `rgba(${r},${g},${b},${opacity/100})`;
-          }
-        } else {
-          result= `rgb(${r},${g},${b})`;
-        }
-        return result;
-      }
     };
   return {
     restrict: "AE",
@@ -48,6 +23,5 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
     template: require('./template.html'),
     replace: false,
     scope: true,
-    // scope: {}
   };
 }];

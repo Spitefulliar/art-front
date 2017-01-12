@@ -1,0 +1,311 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "always-answer",
+    "title": "Всегда отвечай на звонок",
+    "case": {
+      "id": 1,
+      "code": "always-answer",
+      "title": "Всегда отвечай на звонок",
+      "client": {
+        "id": 2,
+        "code": "fox"
+      }
+    },
+    "sections": [
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "default",
+            "title": "Дефолтный блок",
+            "content": "Контент",
+            "style": {
+              "textColor": "#ffffff",
+              "bgColor": "#da7726"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "announce",
+            "title": "всегда<br>отвечай<br>на звонок",
+            "summary": "кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX",
+            "release": "2014/02",
+            "video": {
+              "mp4": false,
+              "ogg": false,
+              "webm": false
+            },
+            "style": {
+              "bgColor": "#1e2532",
+              "titleTextColor": false,
+              "textColor": "#f3e3cc",
+              "aboutBgColor": "#f3e3cc",
+              "aboutTextColor": "#000000",
+              "bgAboutImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+              },
+              "titleImage": false,
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_1.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_1_mobile.jpg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "brief-idea",
+        "blocks": [
+          {
+            "type": "brief",
+            "title": "БРИФ",
+            "summary": "<p>«Сосны» – 10-серийный остросюжетный триллер. Действие</br> сериала разворачивается в городе Уэйуорд Пайнз, одно из</br> главных правил которого – всегда отвечать на мистические звонки.</p>",
+            "content": "<h4>Цели кампании:</h4><ul><li>Продвижение сериала «Сосны»</li><li>Увеличение аудитории телеканала FOX</li><li>Увеличение дистрибуции телеканала</li><li>Увеличение подписчиков официальных <br/>групп FOX в социальных сетях</li></ul>",
+            "style": {
+              "bgColor": "#1e2532",
+              "textColor": "#f3e3cc"              
+            }
+          },
+          {
+            "type": "idea",
+            "title": "Идея",
+            "content": "погрузить пользователей</br>в атмосферу сериала, дав</br>возможность почувствовать</br>себя на месте жителей</br>мистического города,</br>и с замиранием сердца</br>ожидать таинственного</br>звонка на свой телефон.",
+            "style": {
+              "textColor": "#000000",
+              "bgColor": "#f3e3cc",
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_2_mobile.jpg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "solution-carousel",
+            "title": "Решение",
+            "content": "<p>Реализована PR-кампания по поддержке и продвижению сериала, основанная на его концепции и содержании, как в онлайне, так и в оффлайне. </p><p>Создан промо-сайт с активацией-звонком из города Уэйуорд Пайнс, где разворачиваются события фильма.</p>",
+            "images": [
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_1.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_1.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_1.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_2.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_2.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_3.jpg"
+              }
+            ],
+            "style": {
+              "bgColor": "#f3e3cc"
+            }
+          }
+        ]
+      },
+      {
+        "type": "solution-gallery",
+        "style": {
+          "bgColor": "#c7b8a3",
+          "bgGradient": {
+            "col1": "#f3e3cc",
+            "col2": "#435741",
+            "top": true
+          }
+        },
+        "blocks": [
+          {
+            "type": "solution-gallery-single",
+            "title": "Медиаподдержка:",
+            "content": "<ul><li>Брендирование сайта «Кинопоиск»</li><li>Баннерная реклама на сайте Soloway</li><li>ВКонтакте: ТГБ</li><li>Facebook: рекомендованная страница и бустинг постов</li></ul>",
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_smm_1.jpg"
+            }
+          },
+          {
+            "type": "solution-gallery-multi",
+            "title": "SMM:",
+            "content": "Основной контент размещался в официальных сообществах телеканала FOX в Facebook и ВК: новости, интересные факты по содержанию серий, еженедельные конкурсы с призами, тизеры и другие активности.",
+            "images": [
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_2.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_3.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_4.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "total",
+            "title": "Итоги",
+            "content": [
+                "<p>С момента продвижения сериала официальная группа FOX увеличилась на 6000 подписчиков</p> <p>Сайт посетили 70000 уникальных пользователей</p> <p>За время продвижения паблик в ВК вырос на 16%.</p>", 
+                "<p>7000 пользователей авторизовались на сайте</p> <p>1500 человек подписались на ежедневные звонки от FOX</p> <p>Более 2000 пользователей социальных сетей ВК и Facebook  получили от своих друзей приглашение вступить в игру</p>"
+              ],
+            "slogans": [
+              "более <b>11000</b> раз прозвучал Звонок из Уэйуорд Пайнз",
+              "более <b>15000</b> раз прозвучал Звонок из Уэйуорд Пайнз",
+              "более <b>20000</b> раз прозвучал Звонок из Уэйуорд Пайнз"
+            ],
+            "style": {
+              "textColor": "#f3e3cc",
+              "bgColor": "#435741"
+            },
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_3.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_3.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_3_mobile.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "video",
+            "video": "https://youtu.be/zw94SiaUg-w",
+            "style": {
+              "textColor": "#f3e3cc",
+              "bgColor": "#1e2532"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "crosses",
+            "title": "другие проекты ДЛЯ <b>FOX International channels russia</b>",
+            "style": {
+              "bgColor": "#f3e3cc"
+            },
+            "items": [
+              {
+                "type": "client",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

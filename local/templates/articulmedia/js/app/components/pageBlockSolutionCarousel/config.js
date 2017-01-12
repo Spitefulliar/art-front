@@ -1,3 +1,5 @@
+let blockName = 'SolutionCarousel'
+
 export default  {  
-  name: 'PageBlockSolutionCarousel',
+  name: 'PageBlock' + blockName,
 };

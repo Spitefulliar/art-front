@@ -1,3 +1,5 @@
+let blockName = 'Brief'
+
 export default  {  
-  name: 'PageBlockBrief',
+  name: 'PageBlock' + blockName,
 };

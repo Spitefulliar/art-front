@@ -1247,6 +1247,24 @@ art-digital-dir {
     }
   }
 
+  &_default {
+
+    &__content {
+      padding-bottom: vh(50px);
+      @include text-content();
+    }
+
+    h4 {
+      margin: vh(60px) 0 vh(25px);
+    }
+
+    ul {
+      font-size: vh($fsh4);
+      padding: 0 0 0 1em;
+      margin: vh(25px) 0;
+    }
+  }
+
   &_brief {
     &__summary {
       font-weight: 100;
@@ -1614,6 +1632,11 @@ art-digital-dir {
       -webkit-background-size: cover;
            -o-background-size: cover;
               background-size: cover;
+  &:first-of-type {
+    .page-block {
+      padding-top: 90px;
+    }
+  }
   &_briefidea {
     overflow: hidden;
     max-width: 100%;
