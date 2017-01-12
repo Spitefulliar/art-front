@@ -7,8 +7,6 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
-  $scope.getCase = $moduleService.getCase;
-
   $scope.slickConfigSlogan = {
     enabled: true,
     autoplay: true,

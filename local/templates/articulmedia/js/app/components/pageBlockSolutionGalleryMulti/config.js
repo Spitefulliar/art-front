@@ -1,3 +1,5 @@
+let blockName = 'SolutionGalleryMulti'
+
 export default  {  
-  name: 'PageBlockSolutionGalleryMulti',
+  name: 'PageBlock' + blockName,
 };

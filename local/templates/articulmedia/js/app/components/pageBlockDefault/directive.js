@@ -5,14 +5,6 @@ const MODULE_NAME = moduleConfig.name;
 export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
   function ($rootScope, $http, $timeout, $window, $state, $log) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
-      //transforming block styles
-      function tranformBlock(blockObj){
-        let tmpBlock = blockObj;
-        tmpBlock.style.aboutBgColors = $rootScope.convertHexToRgba(tmpBlock.style.aboutBgColor,[100,80,40]);
-        return tmpBlock;
-      };
-
-      $scope.block = tranformBlock($scope.block);
     };
   return {
     restrict: "AE",
@@ -21,8 +13,5 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
     template: require('./template.html'),
     scope: false,
     replace: true,
-    // scope: {
-    //   'block': '='
-    // }
   };
 }];
