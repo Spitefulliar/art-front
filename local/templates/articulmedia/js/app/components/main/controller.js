@@ -12,6 +12,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       {
         'name': 'Компания',
         'link': '/#/',
+        'hoverColor': 'orange',
         'subMenu': [
           {
             'name': 'Мы – Articul',
