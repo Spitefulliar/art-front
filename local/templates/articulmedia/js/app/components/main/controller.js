@@ -16,7 +16,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
         'subMenu': [
           {
             'name': 'Мы – Articul',
-            'link': '/#/'
+            'link': '/#/about/'
           },
           {
             'name': 'Клиенты',

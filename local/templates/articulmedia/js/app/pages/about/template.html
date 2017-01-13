@@ -1,0 +1,11 @@
+<div class="about-page">
+    <div class="about-page__container" layout="row" layout-sm="column" layout-wrap>
+     	<div class="about-item" flex-gt-sm="33" ng-repeat="item in aboutData.aboutItem">
+     		<div class="about-item__img">
+     			<img src="" ng-src="{{item.aboutImg}}">
+     		</div>
+     		<p class="about-item__text" ng-bind="item.aboutText"></p>
+     		<a href="" class="about-item__link" ng-href="item.aboutLink">Кейсы</a>
+     	</div>
+    </div>
+</div>

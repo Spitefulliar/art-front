@@ -2699,6 +2699,60 @@ md-sidenav {
 
 }
 
+.about-page {
+  padding-top: 90px;
+  position: relative;
+  background: $white;
+  min-height: 100vh;
+
+  @media (max-width: $screen-xs) {
+    padding-top: 50px;
+  }
+
+  &__container {
+    padding: vh(100px) vw(82px) 0;
+  }
+
+  .about-item {
+    padding: 0 30px;
+
+    @media (max-width: $screen-sm) {
+      padding: 0;
+    }
+
+    &__img {
+      min-height: 250px;
+      // max-height: 250px;
+      
+      @media (max-width: $screen-sm) {
+        min-height: auto;
+      }
+      img {
+        display: block;
+        max-width: 100%
+      }
+    }
+
+    &__text {
+      font-size: vh(18px);
+      margin: 15px 0;
+
+      @media (max-width: $screen-sm) {
+        font-size: vh(24px);
+      }
+    }
+
+    &__link {
+      font-size: vh(18px);
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $black;
+      text-decoration: none;
+      position: relative;
+    }
+  }
+}
+
 art-digital-dir {
   display: block;
   max-width: 100%;
