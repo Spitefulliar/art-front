@@ -3114,6 +3114,16 @@ art-digital-dir {
       }
     }
   }
+  &_brief--single &_brief {
+    &__targets {
+      padding-top: vh(45px);
+    }
+    @media screen and (max-width: $screen-md) {
+      &__targets {
+        padding-top: 0px;
+      }
+    }
+  }
 
   &_idea {
     &__title {
