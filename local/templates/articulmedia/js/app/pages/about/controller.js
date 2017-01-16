@@ -9,7 +9,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   		aboutItem: [
   			{
   				'aboutImg' : '/local/templates/articulmedia/img/desktop/articul-logo.png',
-  				'aboutText' : 'full service digital-агентство (Топ-10 интерактивных агентств АКАР, Топ-5 по версии Тэглайн), победитель  многочисленных конкурсов (http://articulmedia.ru/projects/awards/), одно из лучших агентств по уровню клиентского сервиса по мнению клиентов. (Adindex)',
+  				'aboutText' : 'full service digital-агентство (Топ-10 интерактивных агентств АКАР, Топ-5 по версии Тэглайн), победитель многочисленных конкурсов (http://articulmedia.ru/projects/awards/), одно из лучших агентств по уровню клиентского сервиса по мнению клиентов. (Adindex)',
   				'aboutLink' : '/#/'
   			},
   			{
