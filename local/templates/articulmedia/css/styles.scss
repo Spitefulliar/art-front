@@ -2715,8 +2715,9 @@ md-sidenav {
 
   .about-item {
     padding: 0 30px;
+    position: relative;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       padding: 0;
     }
 
@@ -2724,12 +2725,14 @@ md-sidenav {
       min-height: 250px;
       // max-height: 250px;
       
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         min-height: auto;
+        height: 80px;
       }
       img {
         display: block;
-        max-width: 100%
+        max-width: 100%;
+        max-height: 100%;
       }
     }
 
@@ -2737,7 +2740,7 @@ md-sidenav {
       font-size: vh(18px);
       margin: 15px 0;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         font-size: vh(24px);
       }
     }
@@ -2749,6 +2752,34 @@ md-sidenav {
       color: $black;
       text-decoration: none;
       position: relative;
+      display: block;
+
+      @media (max-width: $screen-md) {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        font-size: vh(24px);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: vh(10px) vh(10px) 0 vh(10px);
+        border-color: $black transparent transparent transparent;
+
+        @media (max-width: $screen-md) {
+          bottom: auto;
+          left: auto;
+          right: -10px;
+          border-width: vh(10px) 0 vh(10px) vh(10px);
+          border-color: transparent transparent transparent $black;
+        }
+      }
     }
   }
 }
