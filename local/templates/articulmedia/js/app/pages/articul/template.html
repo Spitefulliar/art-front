@@ -1,8 +1,9 @@
 <div class="articul-page">
-    <div class="articul-page__container" layout="row" layout-wrap>
-     	<div class="articul-item" ng-repeat="item in timeLineData.timeLineItem" flex-gt-xs="25" flex="50">
-     		<h4 class="articul-item__number" ng-bind="item.number"></h4>
-     		<h5 class="articul-item__title" ng-bind-html="trustAsHtml(item.title)"></h5>
-     	</div>
-    </div>
+  <div class="articul-page__container" layout="row" layout-wrap>
+   	<div class="articul-item" ng-repeat="item in timeLineData.timeLineItem" flex-gt-xs="25" flex="50">
+   		<h4 class="articul-item__number" ng-bind="item.number"></h4>
+   		<h5 class="articul-item__title" ng-bind-html="trustAsHtml(item.title)"></h5>
+   	</div>
+  </div>
+  <div class="time-line"></div>
 </div>

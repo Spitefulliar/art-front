@@ -26,4 +26,6 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 		]
 	};
 
+	$('.time-line').backgroundDraggable({ axis: 'x' });
+
 }];

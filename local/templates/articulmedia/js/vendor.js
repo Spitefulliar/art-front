@@ -5,6 +5,7 @@ import 'slick-carousel';
 import 'jquery-scrollify';
 import 'hamsterjs';
 import '../libs/jQuery-Waterwheel-Carousel/js/jquery.waterwheelCarousel.min.js';
+import '../libs/jQuery-Draggable-Background/draggable_background.js';
 
 
 // vendor-styles

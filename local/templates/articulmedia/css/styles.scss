@@ -2887,6 +2887,15 @@ art-digital-dir {
     padding: vh(100px) vw(82px) 0;
   }
 
+  .time-line {
+    margin-top: 50px;
+    background: transparent url('../img/desktop/TimeLine.png') 0 0 no-repeat;
+    width: 100%;
+    height: vh(400px);
+    max-width: 100%;
+    background-size: cover;
+  }
+
   .articul-item {
     position: relative;
     padding-left: 60px;
