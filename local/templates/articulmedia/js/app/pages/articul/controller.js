@@ -26,6 +26,19 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 		]
 	};
 
-	$('.time-line').backgroundDraggable({ axis: 'x' });
+	// $('.time-line').backgroundDraggable({ axis: 'x' });
+
+	// $('.time-line').animate({
+	// 	'background-position-x': '100%',
+	// }, 4000);
+
+	$('.time-line').backgroundDraggable({
+		axis: 'x',
+	  done: function() {
+	    var backgroundPosition = $('.time-line').css('background-position');
+	    console.log(backgroundPosition);
+	    $('.time-line').removeClass('time-line--forwards');
+	  }
+	});
 
 }];
