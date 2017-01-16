@@ -2889,11 +2889,27 @@ art-digital-dir {
 
   .time-line {
     margin-top: 50px;
-    background: transparent url('../img/desktop/TimeLine.png') 0 0 no-repeat;
+    background: transparent url('../img/desktop/TimeLine.png') no-repeat;
+    // background-position: 0 0;
     width: 100%;
     height: vh(400px);
     max-width: 100%;
     background-size: cover;
+    cursor: ew-resize;
+    animation: bgMove 5s;
+    animation-delay: .5s;
+    // animation-fill-mode: forwards;
+    // -webkit-animation-fill-mode: forwards;
+
+    &--forwards {
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes bgMove {
+    from {background-position: 0 0;}
+    to {background-position: 100% 0;}
   }
 
   .articul-item {
