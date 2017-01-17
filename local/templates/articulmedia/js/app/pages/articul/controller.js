@@ -32,13 +32,39 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 	// 	'background-position-x': '100%',
 	// }, 4000);
 
-	$('.time-line').backgroundDraggable({
-		axis: 'x',
-	  done: function() {
-	    var backgroundPosition = $('.time-line').css('background-position');
-	    console.log(backgroundPosition);
-	    $('.time-line').removeClass('time-line--forwards');
-	  }
-	});
+	// $('.time-line').animate({'background-position-x': '100%'}, 4000);
+
+	// $('.time-line').animate({
+	// 	'background-position-x': '100%',
+	// 	4000, function() {
+	// 	/* stuff to do after animation is complete */
+	// });
+
+
+	// $('.time-line').backgroundDraggable({
+	// 	axis: 'x',
+	//   done: function() {
+	//     var backgroundPosition = $('.time-line').css('background-position');
+	//     console.log(backgroundPosition);
+	//     $('.time-line').removeClass('time-line--forwards');
+	//   }
+	// });
+
+	var $timeLine = $('.time-line');
+
+	$timeLine.animate({
+    'background-position-x': '100%'
+  }, {
+    duration: 4000,
+    complete: function() {
+    	$timeLine.css('transition', 'all .5s ease');
+      $timeLine.backgroundDraggable({
+				axis: 'x',
+				done: function() {
+			    $timeLine.css('transition', 'none');
+			  }
+			});
+    }
+  });
 
 }];
