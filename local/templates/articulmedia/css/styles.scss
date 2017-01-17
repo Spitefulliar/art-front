@@ -2896,21 +2896,23 @@ art-digital-dir {
     max-width: 100%;
     background-size: cover;
     cursor: ew-resize;
-    animation: bgMove 5s;
-    animation-delay: .5s;
+    
+    // animation: bgMove 5s;
+    // animation-delay: .5s;
+    -webkit-overflow-scrolling: touch;
     // animation-fill-mode: forwards;
     // -webkit-animation-fill-mode: forwards;
 
-    &--forwards {
-      animation-fill-mode: forwards;
-      -webkit-animation-fill-mode: forwards;
-    }
+    // &--forwards {
+    //   animation-fill-mode: forwards;
+    //   -webkit-animation-fill-mode: forwards;
+    // }
   }
 
-  @keyframes bgMove {
-    from {background-position: 0 0;}
-    to {background-position: 100% 0;}
-  }
+  // @keyframes bgMove {
+  //   from {background-position: 0 0;}
+  //   to {background-position: 100% 0;}
+  // }
 
   .articul-item {
     position: relative;
