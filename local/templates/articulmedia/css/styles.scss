@@ -3854,17 +3854,44 @@ art-carousel-waterwheel-dir {
   background: $zest;
   min-height: 100vh;
 
+  
+
   &__container {
     padding: vh(100px) vw(82px) 0;
+    justify-content: space-between;
   }
 
   .command-item {
+    transition: all .5s ease;
     -webkit-box-flex: 1;
-    -webkit-flex: 1 1 16.66%;
-            flex: 1 1 16.66%;
-    max-width: 16.66%;
+    -webkit-flex: 1 1 16%;
+            flex: 1 1 16%;
+    max-width: 16%;
     max-height: 100%;
     box-sizing: border-box;
+    cursor: pointer;
+
+    &--active {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 20%;
+              flex: 1 1 20%;
+      max-width: 20%;
+      max-height: 100%;
+      box-sizing: border-box;
+
+      .command-item__img {
+        height: vw(220px);
+        width: vw(220px);
+      }
+
+      .command-item__title {
+        font-size: vh(40px);
+      }
+
+      .command-item__sub-title {
+        font-size: vh(30px);
+      }
+    }
 
     @media (max-width: 600px) {
       -webkit-box-flex: 1;
@@ -3884,6 +3911,8 @@ art-carousel-waterwheel-dir {
       background-position: center;
       border-radius: 50%;
       margin: 0 auto;
+      margin-bottom: 15px;
+      transition: all .5s ease;
 
       &:before {
         position: absolute;
@@ -3904,6 +3933,29 @@ art-carousel-waterwheel-dir {
     &__title {
       font-size: vh(18px);
       font-weight: normal;
+      transition: all .5s ease;
+      margin: 0;
+    }
+
+    &__sub-title {
+      font-size: vh(18px);
+      font-weight: normal;
+      margin: 0;
+      transition: all .5s ease;
+    }
+  }
+
+  &--select {
+
+    .command-item {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 14%;
+              flex: 1 1 14%;
+      max-width: 14%;
+      max-height: 100%;
+      box-sizing: border-box;
+
+      
     }
   }
 
