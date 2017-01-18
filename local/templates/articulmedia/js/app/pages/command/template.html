@@ -1,0 +1,8 @@
+<div class="command-page">
+  <div class="command-page__container" layout="row" layout-wrap>
+   	<div class="command-item" ng-repeat="item in commandData.commandItem">
+   		<div class="command-item__img" ng-style="{'background-image': item.image}"></div>
+   		<h6 class="command-item__title" ng-bind-html="trustAsHtml(item.title)"></h6>
+   	</div>
+  </div>
+</div>
