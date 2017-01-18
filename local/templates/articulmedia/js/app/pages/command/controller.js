@@ -9,27 +9,33 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 		commandItem: [
 			{
 				'image' : 'url(../local/templates/articulmedia/img/desktop/command-item.png)',
-				'title' : 'Ольга Куликова<br>управляющий директор'
+				'title' : 'Ольга Куликова',
+				'subTitle': 'управляющий директор'
 			},
 			{
 				'image' : 'url(../local/templates/articulmedia/img/desktop/command-item.png)',
-				'title' : 'Егор Аристакесян<br>креативный директор'
+				'title' : 'Егор Аристакесян',
+				'subTitle' : 'креативный директор'
 			},
 			{
 				'image' : 'url(../local/templates/articulmedia/img/desktop/command-item.png)',
-				'title' : 'Александр Чижиков<br>директор по стратегическому планированию'
+				'title' : 'Александр Чижиков',
+				'subTitle' : 'директор по стратегическому планированию'
 			},
 			{
 				'image' : 'url(../local/templates/articulmedia/img/desktop/command-item.png)',
-				'title' : 'Марьяна Шейнина<br>медиа-директор'
+				'title' : 'Марьяна Шейнина',
+				'subTitle' : 'медиа-директор'
 			},
 			{
 				'image' : 'url(../local/templates/articulmedia/img/desktop/command-item.png)',
-				'title' : 'Ирина Сотник<br>бизнес-директор'
+				'title' : 'Ирина Сотник',
+				'subTitle' : 'бизнес-директор'
 			},
 			{
 				'image' : 'url(../local/templates/articulmedia/img/desktop/command-item.png)',
-				'title' : 'Александр Чижиков<br>директор по стратегическому планированию'
+				'title' : 'Александр Чижиков',
+				'subTitle' : 'директор по стратегическому планированию'
 			},
 		]
 	};
