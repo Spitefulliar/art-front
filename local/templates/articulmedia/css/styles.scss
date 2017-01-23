@@ -3846,19 +3846,40 @@ art-carousel-waterwheel-dir {
  * eof popups
  */
 
-// Command page
+// td page
 
 .command-page {
   padding-top: 90px;
   position: relative;
   background: $zest;
   min-height: 100vh;
-
   
+  &:before {
+    position: absolute;
+    content: 'СЛУШАЙТЕ УМНЫХ';
+    bottom: 0;
+    left: 0;
+    font-size: vh(240px);
+    font-weight: 900;
+    color: #f78429;
+    width: 100%;
+    padding: 0 vw(82px);
+
+    @media screen and (max-width: $screen-md) {
+      font-size: vh(70px);
+      bottom: auto;
+      top: vh(150px);
+    }
+  }  
 
   &__container {
     padding: vh(100px) vw(82px) 0;
     justify-content: space-between;
+    position: relative;
+
+    @media screen and (max-width: $screen-md) {
+      padding-top: vh(200px);
+    }
   }
 
   .command-item {
@@ -3882,14 +3903,27 @@ art-carousel-waterwheel-dir {
       .command-item__img {
         height: vw(220px);
         width: vw(220px);
+
+        @media screen and (max-width: $screen-md) {
+          height: vw(400px);
+          width: vw(400px);
+        }
       }
 
       .command-item__title {
         font-size: vh(40px);
+
+        @media screen and (max-width: $screen-md) {
+          font-size: vh(18px);
+        }
       }
 
       .command-item__sub-title {
         font-size: vh(30px);
+
+        @media screen and (max-width: $screen-md) {
+          font-size: vh(18px);
+        }
       }
     }
 
@@ -3922,6 +3956,11 @@ art-carousel-waterwheel-dir {
         left: 0;
         font-size: vh(40px);
         color: $black;
+
+        @media screen and (max-width: $screen-md) {
+          bottom: -10px;
+          left: -10px;
+        }
       }
 
       @media (max-width: 600px) {
