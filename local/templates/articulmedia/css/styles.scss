@@ -4130,19 +4130,23 @@ art-carousel-waterwheel-dir {
       text-transform: uppercase;
       margin: 0;
       color: $white;
-      font-size: vh(15px);
+      font-size: vh(18px);
       line-height: 1.5;
-      padding: 20px 20px 0 20px;
+      padding: vh(20px) vh(20px) 0 vh(20px);
       box-sizing: border-box;
       transition: all .8s ease;
       transform: scale(1);
 
-      &--big {
-        font-size: vh(30px);
-      }
-
       @media (max-width: $screen-md) {
         font-size: vh(15px);
+      }
+
+      &--big {
+        font-size: vh(30px);
+
+        @media (max-width: $screen-md) {
+          font-size: vh(20px);
+        }
       }
     }
   }
