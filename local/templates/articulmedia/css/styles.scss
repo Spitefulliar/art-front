@@ -4000,6 +4000,17 @@ art-carousel-waterwheel-dir {
 
 }
 
+.news-page {
+  padding-top: 90px;
+  min-height: 100vh;
+  background: $chromeWhite;
+
+  &__container {
+    padding: vh(100px) vw(82px) 0;
+  }
+
+}
+
 
 
 

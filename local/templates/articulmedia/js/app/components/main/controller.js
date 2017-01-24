@@ -74,7 +74,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       },
       {
         'name': 'Новости',
-        'link': '/#/'
+        'link': '/#/news/'
       },
       {
         'name': 'Карьера',
