@@ -65,6 +65,10 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
           {
             'name': 'Выбрать по бренду',
             'link': '/#/case/'
+          },
+          {
+            'name': 'Текстовая',
+            'link': '/#/text/'
           }
         ]
       },

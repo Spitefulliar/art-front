@@ -4018,6 +4018,9 @@ art-carousel-waterwheel-dir {
       width: 100%;
       max-width: 100vw;
       height: vh(240px);
+      @media (max-width: $screen-md) {
+        margin-bottom: 60px;
+      }
     }
 
     &__item {
@@ -4026,8 +4029,6 @@ art-carousel-waterwheel-dir {
       width: 100%;
       height: 100%;
       position: relative;
-      // max-width: 240px;
-      // max-height: 240px;
       overflow: hidden;
       cursor: pointer;
       z-index: 2;
@@ -4035,14 +4036,10 @@ art-carousel-waterwheel-dir {
       @media (max-width: $screen-md) {
         min-width: 120px;
         min-height: 120px;
-        // height: 15em;
-        // width: 15em;
       }
 
       @media (max-width: $screen-xs) {
         min-width: 50%;
-        // height: 10em;
-        // width: 10em;
       }
 
       &:hover {
@@ -4153,6 +4150,44 @@ art-carousel-waterwheel-dir {
 
 }
 
+.text-page {
+  padding-top: 90px;
+  min-height: 100vh;
+
+  &__container {
+    padding: vh(100px) vw(82px) 0;
+  }
+
+  &__bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__title {
+    font-size: vh(80px);
+    font-weight: 900;
+    line-height: vh(65px);
+    color: $black;
+    margin: 0 0 60px 0;
+  }
+
+  &__slogan {
+    font-size: vh(48px);
+    font-weight: 100;
+    color: $black;
+    margin: 0;
+  }
+
+}
 
 
 
