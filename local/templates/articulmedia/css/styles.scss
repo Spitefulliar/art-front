@@ -4189,6 +4189,50 @@ art-carousel-waterwheel-dir {
 
 }
 
+.image-page {
+
+  &__container {
+    padding: vh(100px) vw(82px) 0;
+  }
+
+  &__bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__quote {
+    margin: vh(90px) 0;
+    display: block;
+    position: relative;
+    font-weight: 100;
+    font-size: vh(48px);
+    text-transform: uppercase;
+    color: $black;
+
+    &:after,
+    &:before {
+      font-weight: 100;
+    }
+  }
+
+  &__name,
+  &__position {
+    font-size: vh(18px);
+    color: $black;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
 
 
 
