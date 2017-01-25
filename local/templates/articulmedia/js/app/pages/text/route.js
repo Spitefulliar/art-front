@@ -15,7 +15,10 @@ function($stateProvider, $urlRouterProvider) {
     .state(PAGE_STATE, {
       url: PAGE_URL,
       template: template,
-      controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX
+      controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
+      data: {
+        footerIsStatic : true
+      }
     });
 }];
 
