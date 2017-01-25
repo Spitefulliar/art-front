@@ -47,6 +47,10 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
           {
             'name': 'Развивам digital-индустрию',
             'link': '/#/industry/'
+          },
+          {
+            'name': 'Страница с фото',
+            'link': '/#/image/'
           }
         ]
       },
