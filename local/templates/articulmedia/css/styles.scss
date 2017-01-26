@@ -2908,16 +2908,21 @@ art-digital-dir {
     // }
 
     &:before {
-      display: none;
+      // display: none;
       position: absolute;
       content: '';
-      bottom: 78px;
-      left: 0;
+      bottom: 80px;
+      left: 30%;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 13px 8px 0 8px;
       border-color: $black transparent transparent transparent;
+
+      @media (max-width: $screen-md) {
+        bottom: 66px;
+        left: 20%;
+      }
     }
 
     &__title {
@@ -3903,6 +3908,11 @@ art-carousel-waterwheel-dir {
         height: vw(220px);
         width: vw(220px);
 
+        &:after {
+          visibility: visible;
+          opacity: 1;
+        }
+
         @media screen and (max-width: $screen-md) {
           height: vw(400px);
           width: vw(400px);
@@ -3926,7 +3936,7 @@ art-carousel-waterwheel-dir {
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: $screen-md) {
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 50%;
               flex: 1 1 50%;
@@ -3947,6 +3957,24 @@ art-carousel-waterwheel-dir {
       margin-bottom: 15px;
       transition: all .5s ease;
 
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -23px;
+        height: 45px;
+        width: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url('../img/desktop/sound.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $white;
+        border-radius: 50%;
+        transition: all .5s ease;
+        visibility: hidden;
+        opacity: 0;
+      }
+
       &:before {
         position: absolute;
         content: '+';
@@ -3962,7 +3990,7 @@ art-carousel-waterwheel-dir {
         }
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: $screen-md) {
         height: vw(400px);
         width: vw(400px);
       }
@@ -3972,7 +4000,7 @@ art-carousel-waterwheel-dir {
       font-size: vh(18px);
       font-weight: normal;
       transition: all .5s ease;
-      margin: 0;
+      margin: 20px 0 0 0;
     }
 
     &__sub-title {
