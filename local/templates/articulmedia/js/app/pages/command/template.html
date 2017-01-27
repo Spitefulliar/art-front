@@ -1,9 +1,21 @@
 <div class="command-page">
   <div class="command-page__container" layout="row" layout-wrap>
    	<div class="command-item" ng-repeat="item in commandData.commandItem" ng-class="{'command-item--active': active}" ng-click="active = !active">
-   		<div class="command-item__img" ng-style="{'background-image': item.image}">   		</div>
+   		<div class="command-item__img" ng-style="{'background-image': item.image}"></div>
    		<h5 class="command-item__title" ng-bind-html="trustAsHtml(item.title)"></h5>
    		<h6 class="command-item__sub-title" ng-bind-html="trustAsHtml(item.subTitle)"></h6>
+   	</div>
+   	<div class="command-description" layout="row" layout-wrap>
+   		<div flex-gt-sm="50" class="command-description__text" flex="100">
+   			В сфере интересов 360 планирование в digital эру – от стратегии бренда до интегрированных коммуникаций, с особым фокусом на роль digital каналов и инструментов
+				Проекты для более чем 50 российских и международных брендов, включая Fox Broadcasting Company, Nike, L'Oreal, ВТБ, Зимние Олимпийские Игры 2014 в Сочи
+				В маркетинге и рекламе 11 лет, в том числе в крупнейших международных агентствах Ogilvy и Young&Rubicam
+				Преподаватель Академии коммуникаций Wordshop и ирландской бизнес-школы Digital Marketing Institute
+				Спикер на ключевых российских и международных мероприятиях в области рекламы и коммуникаций, в том чилсле GoldenDrum 2014 (Порторож) и Eurobest 2014 (Хельсинки).
+   		</div>
+   		<div flex-gt-sm="50" class="command-description__text" flex="100">
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, expedita quasi ipsa eligendi eius illo maiores repellendus sit consequatur. Facilis ut nesciunt sunt beatae architecto, in commodi quos rem cumque?
+   		</div>
    	</div>
   </div>
 </div>

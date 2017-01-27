@@ -4011,6 +4011,19 @@ art-carousel-waterwheel-dir {
     }
   }
 
+  .command-description {
+    border: 3px dashed $white;
+    padding: vh(60px) vh(30px);
+    width: 100%;
+    margin: 40px 0;
+
+    &__text {
+      font-size: vh(18px);
+      color: $black;
+      padding: 0 vh(30px);
+    }
+  }
+
   &--select {
 
     .command-item {
@@ -4020,8 +4033,6 @@ art-carousel-waterwheel-dir {
       max-width: 14%;
       max-height: 100%;
       box-sizing: border-box;
-
-      
     }
   }
 
