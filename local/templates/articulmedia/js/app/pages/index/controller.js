@@ -32,5 +32,9 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 
 	};
 
+  $rootScope.$on('pageDataLoaded', function () {
+    $scope.page = $scope.page;
+  });
+
 
 }];

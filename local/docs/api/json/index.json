@@ -1,0 +1,115 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "",
+    "title": "Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения",
+    "scrollify": false,
+    "case": {
+      "id": 1,
+      "code": "always-answer",
+      "title": "Всегда отвечай на звонок",
+      "client": {
+        "id": 2,
+        "code": "fox"
+      }
+    },
+    "sections": [
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "type": "announce",
+            "title": "всегда<br>отвечай<br>на звонок",
+            "summary": "рекламная кампания <br> в социальных сетях <br> и landing-page <br> мероприятия",
+            "release": "2014/02",
+            "link": "/#/case/always-answer",
+            "video": {
+              "mp4": false,
+              "ogg": false,
+              "webm": false
+            },
+            "style": {
+              "bgColor": "#1e2532",
+              "titleTextColor": false,
+              "textColor": "#f3e3cc",
+              "aboutBgColor": "#f3e3cc",
+              "aboutTextColor": "#000000",
+              "bgAboutImage": {
+                "desktop": "/local/templates/articulmedia/img/desktop/bg.jpg",
+                "mobile": "/local/templates/articulmedia/img/desktop/bg.jpg"
+              },
+              "titleImage": false,
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/desktop/bg.jpg",
+                "mobile": "/local/templates/articulmedia/img/desktop/bg.jpg"
+              }
+            }
+          }
+        ]
+      },{
+        "type": "single",
+        "blocks": [
+          {
+            "type": "announce",
+            "title": "натуральная <br>энергия <br>мармелада",
+            "summary": "создание нового бренда: стратегия,  креатив, дизайн и полное сопровождение продукта",
+            "release": "2014/02",
+            "video": {
+              "mp4": false,
+              "ogg": false,
+              "webm": false
+            },
+            "style": {
+              "bgColor": "#1e2532",
+              "titleTextColor": false,
+              "textColor": "#f3e3cc",
+              "aboutBgColor": "#f3e3cc",
+              "aboutTextColor": "#000000",
+              "bgAboutImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+              },
+              "titleImage": false,
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/desktop/bg2.jpg",
+                "mobile": "/local/templates/articulmedia/img/desktop/bg2.jpg"
+              }
+            }
+          }
+        ]
+      },{
+        "type": "single",
+        "blocks": [
+          {
+            "type": "announce",
+            "title": "всегда<br>отвечай<br>на звонок",
+            "summary": "кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX",
+            "release": "2014/02",
+            "video": {
+              "mp4": false,
+              "ogg": false,
+              "webm": false
+            },
+            "style": {
+              "bgColor": "#1e2532",
+              "titleTextColor": false,
+              "textColor": "#f3e3cc",
+              "aboutBgColor": "#f3e3cc",
+              "aboutTextColor": "#000000",
+              "bgAboutImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+              },
+              "titleImage": false,
+              "bgImage": {
+                "desktop": "/local/templates/articulmedia/img/case/case_1.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_1_mobile.jpg"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

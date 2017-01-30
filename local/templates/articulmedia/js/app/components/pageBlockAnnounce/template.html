@@ -26,8 +26,9 @@
         <span class="about-block__title">релиз</span>
         <span class="about-block__date" ng-bind="block.release"></span>
       </div>
-      <div class="about-block__item about-block__item--project" 
-      ng-if="block.type == 'announce-slide'" 
+      <a class="about-block__item about-block__item--project" 
+      href="{{block.link}}"
+      ng-if="block.link" 
       ng-style="{ 
           'background-color': block.style.aboutBgColors[2]
         }">
@@ -37,7 +38,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
           </svg>
         </span>
-      </div>
+      </a>
     </div>
   </div>
 </div>
