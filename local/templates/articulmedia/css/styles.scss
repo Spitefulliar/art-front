@@ -50,6 +50,24 @@
     color: inherit;
   }
 }
+
+@mixin conpad() {
+  padding-left: vw(82px);
+  padding-right: vw(82px);
+  @media (max-width: $screen-md) {
+    padding-left: vw(30px);
+    padding-right: vw(30px);
+  }
+}
+
+@mixin conrow() {
+  margin-left: vw(-82px);
+  margin-right: vw(-82px);
+  @media (max-width: $screen-md) {
+    margin-left: vw(-30px);
+    margin-right: vw(-30px);
+  }
+}
 /*
  * eof mixins
  */
@@ -304,13 +322,24 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
 .header {
   margin-top: 50px;
   height: 40px;
-  display: flex;
   z-index: 59;
   position: absolute;
-  left: 50%;
-  // max-width: 1400px;
-  transform: translateX(-50%);
+  width: 100%;
   white-space: nowrap;
+  &__container {
+    @include conpad();
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: vw(48px);
+    padding-right: vw(48px);
+    & > * {
+      -webkit-flex-shrink: 0;
+              flex-shrink: 0;
+    }
+    
+  }
 
   @media (max-width: $screen-md) {
     margin-top: 30px;
@@ -325,10 +354,6 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
     width: 230px;
     height: 40px;
     background: transparent url('../img/sprite/articul-logo.svg') left top no-repeat;
-
-    @media (max-width: $screen-md) {
-      margin-left: 15px;
-    }
   }
 
   &__link {
@@ -367,7 +392,7 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
     box-shadow: none !important;
 
     @media (max-width: $screen-md) {
-      right: 15px;
+      position: static;
     }
 
     &__line {
@@ -410,9 +435,6 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
     background: $silver;
     background: rgba(204,204,204,.2);
 
-    @media (max-width: $screen-md) {
-      display: none;
-    }
 
     &__list {
       margin: 0;
@@ -424,11 +446,6 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
     &__item {
       position: relative;
       display: inline-block;
-
-      @media (max-width: $screen-sm) {
-        display: block;
-      }
-
       &:hover {
         .submenu {
           visibility: visible;
@@ -439,6 +456,9 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
           color: $white;
           background: $black;
         }
+      }
+      @media (max-width: $screen-sm) {
+        display: block;
       }
     }
 
@@ -452,9 +472,8 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
       padding: 0 15px;
       color: $black;
       transition: color .3s ease, background-color .5s ease;
-
       @media (max-width: $screen-lg) {
-        font-size: 13px;
+        font-size: 11px;
         padding: 0 10px;
       }
     }
@@ -473,7 +492,6 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
       background: rgba(223,220,220,.6);
 
       &--orange {
-
         .submenu__item:hover {
           .submenu__link {
             background: $crusta;
@@ -686,12 +704,9 @@ md-sidenav {
 }
 
 .inner-page {
-  padding-top: 90px;
+  @include top-block();
   padding-bottom: 60px;
   position: relative;
-  @media (max-width: $screen-xs) {
-    padding-top: 50px;
-  }
 
   &__bg {
     position: fixed;
@@ -743,7 +758,11 @@ md-sidenav {
   }
 
   &__container {
-    padding: vh(100px) vw(82px) 0;
+    @include conpad();
+    padding-top: vh(85px);
+    @media (max-width: $screen-md) {
+      padding-top: vh(40px,'md');
+    }
   }
 
   .page-block-text {
@@ -1054,6 +1073,8 @@ md-sidenav {
   .about-item {
     padding: 0 30px;
     position: relative;
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
 
     @media (max-width: $screen-md) {
       padding: 0;

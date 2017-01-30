@@ -33,33 +33,35 @@
 <!-- header -->
 {% block header %}
 <header class="header">
-  <a href="#" class="header__logo"></a>
-  <nav class="nav">
-    <ul class="nav__list">
-      <li class="nav__item" ng-repeat="item in navData.menuItems">
-        <a href="" class="nav__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
-        <ul class="submenu" ng-if="item.subMenu" ng-class="{'submenu--{{item.hoverColor}}': item.hoverColor}">
-          <li class="submenu__item" ng-repeat="subItem in item.subMenu">
-            <a href="" class="submenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <a href="" class="header__link">
-    <img src="../local/templates/articulmedia/img/icon/icon-с.png" alt="">
-  </a>
-  <a href="" class="header__link">
-    <img src="../local/templates/articulmedia/img/icon/icon-p.png" alt="">
-  </a>
-  <md-button class="header__mobile-toggle md-raised md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
-    <span class="sidenav__nav-item__icon svg-icon">
-      <svg>
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-burger" />
-      </svg>
-    </span>
-  </md-button>
-
+  <div class="header__container" flex="" layout="row" layout-align="space-between start" layout-align-gt-md="center center">
+    <a href="#" class="header__logo"></a>
+    <nav class="nav" hide-sm hide-xs>
+      <ul class="nav__list">
+        <li class="nav__item" ng-repeat="item in navData.menuItems">
+          <a href="" class="nav__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
+          <ul class="submenu" ng-if="item.subMenu" ng-class="{'submenu--{{item.hoverColor}}': item.hoverColor}">
+            <li class="submenu__item" ng-repeat="subItem in item.subMenu">
+              <a href="" class="submenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex"></div>
+    <a href="" class="header__link">
+      <img src="../local/templates/articulmedia/img/icon/icon-с.png" alt="">
+    </a>
+    <a href="" class="header__link">
+      <img src="../local/templates/articulmedia/img/icon/icon-p.png" alt="">
+    </a>
+    <md-button class="header__mobile-toggle md-raised md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
+      <span class="sidenav__nav-item__icon svg-icon">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-burger" />
+        </svg>
+      </span>
+    </md-button>
+  </div>
 </header>
 <!-- eof header -->
 {% endblock %}
