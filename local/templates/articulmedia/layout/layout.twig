@@ -29,7 +29,10 @@
     <!-- eof js -->
 </head>
 
-<body>
+<body ng-class="{
+    'videoplays': videoPlays,
+    'videostoppped': videoStoppped,
+  }">
 <!-- header -->
 {% block header %}
 <header class="header">

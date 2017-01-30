@@ -55,8 +55,8 @@
   padding-left: vw(82px);
   padding-right: vw(82px);
   @media (max-width: $screen-md) {
-    padding-left: vw(30px);
-    padding-right: vw(30px);
+    padding-left: vw(25px,'md');
+    padding-right: vw(25px,'md');
   }
 }
 
@@ -106,6 +106,152 @@
 
 /*
  * eof functions
+ */
+
+/* ==========================================================================
+   animations
+   ========================================================================== */
+   
+.animated {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated-long {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+/*
+ * eof animations
  */
 
 //elements
@@ -230,7 +376,29 @@ body {
   background: #a8a5a4;
   -ms-overflow-x: hidden !important;
       overflow-x: hidden !important;
-
+  &.videoplays {
+    .header {
+      @extend .animated;
+      @extend .fadeOutUp;
+    }
+    .footer {
+      @extend .animated;
+      @extend .fadeOutDown;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+  &.videostoppped {
+    .header {
+      @extend .animated;
+      @extend .fadeInDown;
+    }
+    .footer {
+      @extend .animated;
+      @extend .fadeInUp;
+    }
+  }
 }
 
 
@@ -993,13 +1161,13 @@ md-sidenav {
 }
 
 .about-block {
-  @include link-text();
   display: flex;  
   color: $black;
   &__item {
+    @include link-text();
+    position: relative;
     vertical-align: middle;
     width: vh(120px);
-    position: relative;
     height: vh(120px);
     background-color: rgba(255, 255, 255, .8);
 
@@ -1483,6 +1651,35 @@ art-digital-dir {
   }
 }
 
+.play-btn {
+  $size: vh(130px);
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: $size;
+  height: $size;
+  line-height: $size;
+  font-size: $size;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  text-align: center;
+  cursor: pointer;
+  &__icon {
+    position: relative;
+    left: 0.1em;
+    font-size: 0.46em;
+  }
+  @media screen and (max-width: $screen-md) {
+    top: 55%;   
+  }
+}
+
 //blocks by types
 .page-block {
   &_announce {
@@ -1495,6 +1692,34 @@ art-digital-dir {
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    &--videoplays {
+      .play-btn {
+        display: none;
+      }
+    }
+    &--videoplays &__video-wrap {
+      z-index: 1;
+    }
+    &__video-wrap {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &__video {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
     &__title {
       font-style: normal;
       margin: 0 0 vh(40px) 0;

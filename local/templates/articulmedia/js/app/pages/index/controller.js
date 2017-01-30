@@ -6,12 +6,10 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   // '$mdSidenav','$mdMedia', 
   function($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
   // $mdSidenav, $mdMedia, 
-
-  var myAppModule = angular.module('MyApp', ['slickCarousel'])
   
-  $scope.slickConfig = {
+  $scope.slickConfigMain = {
 	  enabled: true,
-    autoplay: false,
+    autoplay: true,
     draggable: true,
     adaptiveHeight: true,
     autoplaySpeed: 6000,
@@ -33,7 +31,10 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 	};
 
   $rootScope.$on('pageDataLoaded', function () {
-    $scope.page = $scope.page;
+    // $scope.page = $scope.page;
+    $timeout(function(){
+      $('.main-page-slider').slick('setPosition');
+    },0);
   });
 
 

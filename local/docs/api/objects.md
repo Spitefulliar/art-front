@@ -26,13 +26,11 @@
 ### Анонс | announce
     
     title [string] заголовок блока
+    titleImg [] изображение заголовка
     summary [string] подзаголовок блока
     release [string] дата релиза
     link [string] линк на страницу кейса (для страницы отличной от страницы самого кейса)
-    video [] видео файлы для анонса на главной странице
-        mp4 [string] 
-        ogg [string]
-        webm [string]
+    video [] ссылка на ютуб (только для главной)
     style []
         titleTextColor [string] цвет заголовка блока
         textColor [string] цвет блока

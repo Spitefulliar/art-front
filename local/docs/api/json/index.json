@@ -24,20 +24,20 @@
             "summary": "рекламная кампания <br> в социальных сетях <br> и landing-page <br> мероприятия",
             "release": "2014/02",
             "link": "/#/case/always-answer",
-            "video": {
-              "mp4": false,
-              "ogg": false,
-              "webm": false
+            "video": false,
+            "titleImg": {
+              "desktop": "/local/templates/articulmedia/img/case/loreal_title.png",
+              "mobile": "/local/templates/articulmedia/img/case/loreal_title.png"
             },
             "style": {
               "bgColor": "#1e2532",
               "titleTextColor": false,
-              "textColor": "#f3e3cc",
-              "aboutBgColor": "#f3e3cc",
+              "textColor": "#000000",
+              "aboutBgColor": "#ffffff",
               "aboutTextColor": "#000000",
               "bgAboutImage": {
-                "desktop": "/local/templates/articulmedia/img/desktop/bg.jpg",
-                "mobile": "/local/templates/articulmedia/img/desktop/bg.jpg"
+                "desktop": "/local/templates/articulmedia/img/case/loreal_logo.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/loreal_logo.jpg"
               },
               "titleImage": false,
               "bgImage": {
@@ -53,22 +53,19 @@
           {
             "type": "announce",
             "title": "натуральная <br>энергия <br>мармелада",
-            "summary": "создание нового бренда: стратегия,  креатив, дизайн и полное сопровождение продукта",
+            "link": "/#/case/megaday",
+            "summary": "создание нового бренда: <br>стратегия,  креатив, дизайн <br>и полное сопровождение <br>продукта",
             "release": "2014/02",
-            "video": {
-              "mp4": false,
-              "ogg": false,
-              "webm": false
-            },
+            "video": false,
             "style": {
-              "bgColor": "#1e2532",
+              "bgColor": "#c50007",
               "titleTextColor": false,
-              "textColor": "#f3e3cc",
-              "aboutBgColor": "#f3e3cc",
+              "textColor": "#ffffff",
+              "aboutBgColor": "#e8e9ed",
               "aboutTextColor": "#000000",
               "bgAboutImage": {
-                "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
-                "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                "desktop": "/local/templates/articulmedia/img/case/megaday_logo.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/megaday_logo.jpg"
               },
               "titleImage": false,
               "bgImage": {
@@ -84,13 +81,10 @@
           {
             "type": "announce",
             "title": "всегда<br>отвечай<br>на звонок",
+            "link": "/#/case/always-answer",
             "summary": "кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX",
             "release": "2014/02",
-            "video": {
-              "mp4": false,
-              "ogg": false,
-              "webm": false
-            },
+            "video": "https://youtu.be/zw94SiaUg-w",
             "style": {
               "bgColor": "#1e2532",
               "titleTextColor": false,
