@@ -6,5 +6,12 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   function($scope, $rootScope, $location, $log, $timeout, $window, $state, $sce, $http) {
 
   $scope.$rootScope = $rootScope;
+
+  $scope.playerVars = {
+    controls: 0,
+    modestbranding: 1,
+    showinfo: 0,
+    rel: 0
+  };
   
 }];
