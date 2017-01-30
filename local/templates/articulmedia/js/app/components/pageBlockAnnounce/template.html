@@ -1,8 +1,30 @@
 <div class="page-block"
-  ng-class="{'page-block_{{block.type}}': block.type}" 
+  ng-class="{
+    'page-block_{{block.type}}': block.type,
+    'page-block_announce--videoplays' : block.videoPlays,
+  }" 
   ng-style="block.commonStyle"
   flex="100" 
   >
+  <div ng-if="block.videoEnabled" class="page-block_announce__video-wrap">
+    <div class="page-block_announce__video">
+     <!-- embed-responsive embed-responsive-16by9 -->
+      <youtube-video video-url="block.video" player="block.player" player-vars="playerVars || {}"></youtube-video>
+    </div>
+  </div>
+  <div class="play-btn" 
+    ng-if="block.video && !block.videoPlays" 
+    ng-style="{ 
+        'background-color': block.style.aboutBgColors[2],
+      }" 
+    ng-click="playVideo($event, block)"
+      >
+    <span class="play-btn__icon svg-icon">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-play" />
+      </svg>
+    </span>
+  </div>
   <div class="page-block__container">
     <h2 ng-if="!block.titleImg" class="page-block_announce__title" ng-bind-html="trustAsHtml(block.title)"
       ng-style="{'color': block.style.titleTextColor}"></h2>
@@ -26,8 +48,9 @@
         <span class="about-block__title">релиз</span>
         <span class="about-block__date" ng-bind="block.release"></span>
       </div>
-      <div class="about-block__item about-block__item--project" 
-      ng-if="block.type == 'announce-slide'" 
+      <a class="about-block__item about-block__item--project" 
+      href="{{block.link}}"
+      ng-if="block.link" 
       ng-style="{ 
           'background-color': block.style.aboutBgColors[2]
         }">
@@ -37,7 +60,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
           </svg>
         </span>
-      </div>
+      </a>
     </div>
   </div>
 </div>

@@ -4,6 +4,7 @@
     "id": 1,
     "code": "always-answer",
     "title": "Всегда отвечай на звонок",
+    "scrollify": true,
     "case": {
       "id": 1,
       "code": "always-answer",
@@ -36,11 +37,7 @@
             "title": "всегда<br>отвечай<br>на звонок",
             "summary": "кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX",
             "release": "2014/02",
-            "video": {
-              "mp4": false,
-              "ogg": false,
-              "webm": false
-            },
+            "video": false,
             "style": {
               "bgColor": "#1e2532",
               "titleTextColor": false,

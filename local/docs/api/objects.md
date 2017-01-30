@@ -26,12 +26,11 @@
 ### Анонс | announce
     
     title [string] заголовок блока
+    titleImg [] изображение заголовка
     summary [string] подзаголовок блока
     release [string] дата релиза
-    video [] видео файлы для анонса на главной странице
-        mp4 [string] 
-        ogg [string]
-        webm [string]
+    link [string] линк на страницу кейса (для страницы отличной от страницы самого кейса)
+    video [] ссылка на ютуб (только для главной)
     style []
         titleTextColor [string] цвет заголовка блока
         textColor [string] цвет блока
@@ -163,6 +162,7 @@
     id [int] id страницы
     code [string] символьный код страницы
     title [string] заголовок страницы
+    scrollify [bool] флаг включения доводчика пролистывания по секциям
     sections [slide[]] список сeкций страницы
     
    

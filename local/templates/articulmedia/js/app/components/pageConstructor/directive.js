@@ -13,42 +13,44 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
         //enabling scrollify for page sections
         let pgSectionsQ = ".page-section";
 
-        function scrollifyDestroy() {
-          $.scrollify.destroy();
-        };
+        if ($scope.page.scrollify) {
+          function scrollifyDestroy() {
+            $.scrollify.destroy();
+          };
 
-        let scrollifyTimeout = $timeout(function(){
-          $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
-            if (mquery) {
-              $.scrollify({
-                section : pgSectionsQ,
-                sectionName : "",
-                updateHash: false,
-                interstitialSection : "",
-                easing: "easeOutExpo",
-                scrollSpeed: 600,
-                offset : 0,
-                scrollbars: true,
-                standardScrollElements: "",
-                updateHash: false,
-                setHeights: false,
-                touchScroll: true,
-                overflowScroll: true,
-              });
+          let scrollifyTimeout = $timeout(function(){
+            $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
+              if (mquery) {
+                $.scrollify({
+                  section : pgSectionsQ,
+                  sectionName : "",
+                  updateHash: false,
+                  interstitialSection : "",
+                  easing: "easeOutExpo",
+                  scrollSpeed: 600,
+                  offset : 0,
+                  scrollbars: true,
+                  standardScrollElements: "",
+                  updateHash: false,
+                  setHeights: false,
+                  touchScroll: true,
+                  overflowScroll: true,
+                });
 
-            } else {
+              } else {
+                scrollifyDestroy();
+              }
+            });
+          });
+
+          $scope.$on(
+          "$destroy",
+            function( event ) {
+              $timeout.cancel( scrollifyTimeout );
               scrollifyDestroy();
             }
-          });
-        });
-
-        $scope.$on(
-        "$destroy",
-          function( event ) {
-            $timeout.cancel( scrollifyTimeout );
-            scrollifyDestroy();
-          }
-        );
+          );
+        }
 
       });
     };
