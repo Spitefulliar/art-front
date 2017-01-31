@@ -14,7 +14,8 @@
     </div>
     <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
       <div class="page-block__col" flex="100">
-        <art-carousel-waterwheel-dir class="page-solution-carousel__carousel" slides="block.images"></art-carousel-waterwheel-dir>
+        <!-- <art-carousel-waterwheel-dir class="page-solution-carousel__carousel" slides="block.images"></art-carousel-waterwheel-dir> -->
+        <art-carousel3d-dir ng-if="block.images.length" class="page-solution-carousel__carousel" slides="block.images"></art-carousel3d-dir>
       </div>
     </div>
   </div>

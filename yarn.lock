@@ -46,6 +46,10 @@ angular-baron-scrollbar@^1.0.1:
     qwery "^4.0.0"
     xtend "^4.0.0"
 
+"angular-carousel-3d@https://github.com/Wlada/angular-carousel-3d.git":
+  version "0.1.1"
+  resolved "https://github.com/Wlada/angular-carousel-3d.git#17fc46fe90cd3287bde436e3a213521b620e37b8"
+
 angular-carousel@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/angular-carousel/-/angular-carousel-1.0.2.tgz#999ced4a7a7b1dade986173debf0299315295afa"
@@ -80,6 +84,10 @@ angular-slick-carousel@^3.1.7:
 angular-svg-base-fix@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/angular-svg-base-fix/-/angular-svg-base-fix-2.0.0.tgz#f3d5f85b87a10d21310f47da8455038b90cfb000"
+
+angular-swipe@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/angular-swipe/-/angular-swipe-0.4.0.tgz#c30a7214b12128833322ee4409b33b3a3c740067"
 
 angular-touch@^1.5.2:
   version "1.6.0"
