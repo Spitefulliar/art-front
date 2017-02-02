@@ -1899,18 +1899,11 @@ art-digital-dir {
       height: 100%;
       overflow: hidden;
     }
-    &__img:hover &__img-bg {
-      -webkit-transform: scale(1.1);
-         -moz-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-           -o-transform: scale(1.1);
-              transform: scale(1.1);
-    }
     &__img-bg {
       height: 100%;
       width: 100%;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top center;
       -webkit-background-size: cover;
            -o-background-size: cover;
               background-size: cover;
@@ -2034,7 +2027,8 @@ art-digital-dir {
 
   &_total {
     position: relative;
-    &__img {
+    &__img-viewport {
+      display: block;
       position: absolute;
       z-index: 0;
       bottom: 0;
@@ -2042,11 +2036,25 @@ art-digital-dir {
       width: 100%;
       height: vh(300px);
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: 50% 0%;
+      -webkit-background-size: 150% auto;
+           -o-background-size: 150% auto;
+              background-size: 150% auto;
+      overflow: hidden;
+    }
+    &__img {
+      position: relative;
+      z-index: 1;
+      top: -40%;
+      left: 0;
+      width: 100%;
+      height: 140%;
+      background-repeat: no-repeat;
+      background-position: top center;
       -webkit-background-size: cover;
            -o-background-size: cover;
               background-size: cover;
-      
+      overflow: hidden;
     }
     &__content {
       margin-bottom: vh(30px);
@@ -2099,7 +2107,7 @@ art-digital-dir {
         margin-right: - vw(12.5px,'md');
         margin-bottom: vh(50px,'md');
       }
-      &__img {
+      &__img-viewport {
         height: vh(225px,'md');
       }
       .page-block {
@@ -2258,6 +2266,7 @@ art-carousel-waterwheel-dir {
   position: relative;
   clear: both;
   overflow: hidden;
+  padding-bottom: 5%;
   &__container {
     display: block;
     width: auto;
@@ -2266,10 +2275,23 @@ art-carousel-waterwheel-dir {
     margin-right: -20% * 0.7;
   }
   &__slide {
-    visibility: hidden;
+    // visibility: hidden;
+    float: left;
     cursor: pointer;
     max-height: 100%;
     max-width: 95%;
+    &.reflected {
+      display: block !important;
+      margin-bottom: 0;
+      overflow: visible !important;
+    }
+    figure {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  canvas {
+    position: relative;
   }
   @media screen and (max-width: $screen-md) {
     height: vh(375px,'md');
@@ -2281,6 +2303,87 @@ art-carousel-waterwheel-dir {
 }
 /*
  * eof carousel-waterwheel
+ */
+
+ /*
+ * carousel-3d
+ */
+art-carousel3d-dir {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.carousel-3d {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+  // clear: both;
+  // overflow: hidden;
+  &__container {
+    display: block;
+    position: relative;
+    width: auto !important;
+    height: vh(540px) !important;
+    padding-bottom: 5%;
+    left: -20% * 0.68;
+    margin-right: -20% * 0.68;
+    &>div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slide {
+    // visibility: hidden;
+    // float: left;
+    // display: block;
+    // opacity: 1;
+    overflow: visible !important;
+    cursor: pointer;
+    // max-height: 100%;
+    // max-width: 95%;
+    // padding-bottom: 5%;
+    opacity: 0.8 !important;
+    &.current {
+      opacity: 1 !important;
+    }
+    &>div {
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: visible !important;
+      // width: 100% !important;
+      // height: 100% !important;
+    }
+    figure {
+      width: 100%;
+      height: 120%;
+      position: relative;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+    canvas {
+      display: block;
+      width: 100% !important;
+    }
+  }
+  @media screen and (max-width: $screen-md) {
+    &__container {
+      height: vh(375px,'md') !important;
+      left: 0;
+      margin-right: 0;
+    }
+  }
+}
+/*
+ * eof carousel-3d
  */
 
  /*

@@ -96,6 +96,24 @@
                 "original": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
                 "desktop": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
                 "mobile": "/local/templates/articulmedia/img/case/case_slide_3.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_1.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_1.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_1.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_2.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_2.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_slide_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_slide_3.jpg"
               }
             ],
             "style": {

@@ -1,0 +1,14 @@
+<div carousel3d class="carousel-3d__container" 
+  ng-model="slides" 
+  options="slideOptions" 
+  on-slide-change="slideChanged(index)"
+  >
+  <div carousel3d-slide ng-repeat="slide in slides track by $index" class="carousel-3d__slide">
+    <img ng-src="{{ ($rootScope.isDesktop)? slide.desktop : slide.mobile }}" 
+      art-popup-img-dir 
+      ng-click="popupImgCtrl.showImgPopup(slide.original, activeSlideIndex != $index)"
+      alt="{{slide.title}}" 
+      data-slideindex="{{$index}}"
+    />
+  </div>
+</div>

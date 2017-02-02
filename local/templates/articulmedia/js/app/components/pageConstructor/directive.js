@@ -7,7 +7,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       $scope.getPage(CONFIG.APP.API_DIR + $scope.pageData.apiParam, $stateParams.pageCode).then(function(response){
         $scope.page = response.page;
-        console.log(response.page);
+        // console.log(response.page);
         $scope.pageData.title = $scope.page.title || $scope.pageData.title;
         $rootScope.$broadcast('pageDataLoaded');
         //enabling scrollify for page sections

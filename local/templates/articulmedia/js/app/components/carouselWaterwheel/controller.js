@@ -18,6 +18,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
       keyboardNav: true,
       movedToCenter: function ($item) {
         $scope.activeSlideIndex = $item.data('slideindex');
+        $scope.updateCanvasPos();
       },
       // movingToCenter: function ($item) {
       // },

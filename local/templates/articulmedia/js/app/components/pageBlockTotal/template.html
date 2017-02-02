@@ -25,11 +25,18 @@
       </div>
     </div>
   </div>
-  <div class="page-block_total__img" 
+    <!-- data-speed="300" -->
+  <div class="page-block_total__img-viewport"
+    data-type="parallax-viewport" 
     ng-style="{
       'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
-      'background-image': block.image && 'url(' + (isDesktop && block.image.desktop || block.image.mobile) + ')' || false
     }"
-    ></div>
+    >
+      <div class="page-block_total__img" 
+        data-type="parallax-bg" 
+        ng-style="{
+          'background-image': block.image && 'url(' + (isDesktop && block.image.desktop || block.image.mobile) + ')' || false
+        }"></div>
+    </div>
 </div>  
