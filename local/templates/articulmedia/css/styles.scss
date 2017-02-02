@@ -1315,6 +1315,7 @@ md-sidenav {
 art-digital-dir {
   display: block;
   max-width: 100%;
+  width: 100%;
 }
 
 .digital {
@@ -1402,6 +1403,16 @@ art-digital-dir {
       font-size: 20px;
       opacity: 1;
     }
+  }
+}
+
+.digital360 {
+  width: 100%;
+  height: 600px;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 

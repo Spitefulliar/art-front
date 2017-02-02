@@ -100,6 +100,10 @@ var config = {
               test: require.resolve("jquery"), 
               loader: "expose-loader?$!expose-loader?jQuery" 
             },
+            { 
+              test: require.resolve("snapsvg"), 
+              loader: 'imports-loader?this=>window,fix=>module.exports=0'
+            },
         ]
     },
     resolve: {
@@ -142,15 +146,7 @@ var config = {
           'TweenMax': 'TweenMax',
           'TimeLineMax': 'TimeLineMax',
           'ScrollMagic': 'scrollmagic',
-          // "TweenMax": '/node_modules/gsap/src/uncompressed/TweenMax.js',
-          // "TimelineMax": '/node_modules/gsap/src/uncompressed/TimelineMax.js',
-          // "ScrollMagic": '/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
-          // "animation.gsap": '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
-          // "animation.velocity": '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js',
-          // "animation.gsap": 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
-          // "animation.velocity": 'scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js'
-          // 'async': "async",
-          // 'moment': 'moment',
+          'Snap': 'snapsvg',
         }),
         new ExtractTextPlugin('[name].css'),
         // new CopyPlugin([
