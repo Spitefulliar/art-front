@@ -10,11 +10,6 @@ import  'TimelineMax';
 import  'scrollmagic';
 import  'animation.gsap';
 import  'animation.velocity';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity';
-// import  '../libs/scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js';
-// import  '../libs/scrollmagic/scrollmagic/uncompressed/plugins/ScrollMagic.js';
-// import '../libs/jQuery-Waterwheel-Carousel/js/jquery.waterwheelCarousel.min.js';
 import '../libs/jQuery-Draggable-Background/draggable_background.js';
 import '../libs/reflection-jquery/reflection.js';
 
