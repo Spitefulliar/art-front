@@ -1684,6 +1684,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+gsap@^1.19.1:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-1.19.1.tgz#480d320c662337c2663f836baf45e91ea024b553"
+
 hamsterjs@^1.0.2, hamsterjs@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/hamsterjs/-/hamsterjs-1.1.2.tgz#b11eeafa6c2afab86ae891bceac82b1201787d2d"
@@ -3867,6 +3871,10 @@ varstream@^0.3.2:
   resolved "https://registry.yarnpkg.com/varstream/-/varstream-0.3.2.tgz#18ac6494765f3ff1a35ad9a4be053bec188a5de1"
   dependencies:
     readable-stream "^1.0.33"
+
+velocity-animate@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/velocity-animate/-/velocity-animate-1.4.2.tgz#035fa1e4348f2ddcf751f2dda4833196237b5b37"
 
 vendors@^1.0.0:
   version "1.0.1"

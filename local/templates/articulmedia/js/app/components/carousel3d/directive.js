@@ -15,13 +15,17 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
         $scope.activeSlideIndex = index;
       };
 
+      function getSLidesQuantity() { 
+        return ($rootScope.isDesktop)? 5 : 3;
+      };
+
       function getImgSource() { 
         return ($rootScope.isDesktop)? 'desktop' : 'mobile';
       };
 
       function getSlideWidth() { 
         let elW = carouselElContainer.width();
-        let width = ($rootScope.isDesktop)? Math.round(0.6 * elW): Math.round(0.8 * elW);
+        let width = ($rootScope.isDesktop)? Math.round(0.65 * elW): Math.round(0.7 * elW);
         return width;
       }
 
@@ -30,7 +34,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
       }
       function getSlideSpacing() {
         let elW = carouselElContainer.width();
-        let separation = ($rootScope.isDesktop)? Math.round(0.4 * elW): Math.round(0.3 * elW);//Math.round(200 * (elW/1245));
+        let separation = ($rootScope.isDesktop)? Math.round(0.23 * elW): Math.round(0.3 * elW);//Math.round(200 * (elW/1245));
         // return carouselElContainer.width() * 0.4;
         return separation;
       }
@@ -38,7 +42,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
       function makeReflections() {
         let reflectOptions = {
           height: 0.1,
-          opacity: 0.4
+          opacity: 0.2
         };
         let slideItems = element.find("img");
         if (!slideItems.length) {
@@ -46,14 +50,17 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
             makeReflections();
           },200);
         } else {
-          slideItems.reflect(reflectOptions);
+          $timeout(function(){
+            slideItems.reflect(reflectOptions);
+          },200);
         };
       };
 
       $scope.slideOptions = {
         sourceProp: getImgSource(),
-        visible: 3,
-        perspective: 5,
+        visible: getSLidesQuantity(),
+        perspective: 1,
+        inverseScaling: 80,
         startSlide: 0,
         border: 0,
         dir: 'ltr',
@@ -66,9 +73,11 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
       };
 
       function carouselOptionsUpdate() {
+        $scope.slideOptions.visible = getSLidesQuantity();
         $scope.slideOptions.sourceProp = getImgSource();
         $scope.slideOptions.width = getSlideWidth();
         $scope.slideOptions.height = getSlideHeight();
+        // $scope.slideOptions.inverseScaling = getSlideHeight(),
         $scope.slideOptions.space = getSlideSpacing();
         $scope.activeSlideIndex = 0;
       };

@@ -102,6 +102,18 @@ var config = {
             },
         ]
     },
+    resolve: {
+      alias: {
+        "TweenLite": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TweenLite.js'),
+        "TweenMax": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TweenMax.js'),
+        "TimelineLite": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TimelineLite.js'),
+        "TimelineMax": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TimelineMax.js'),
+        "ScrollMagic": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+        "animation.gsap": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+        "animation.velocity": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js'),
+        "velocity": path.join(__dirname,'/node_modules/velocity-animate/velocity.min.js')
+      }
+    },
     plugins: [
         new webpack.optimize.DedupePlugin(), //remove dublicated modules
         new webpack.DefinePlugin({
@@ -127,9 +139,18 @@ var config = {
           'window.jQuery': 'jquery',
           'Slick': 'slick-carousel',
           'Hamster': 'hamsterjs',
+          'TweenMax': 'TweenMax',
+          'TimeLineMax': 'TimeLineMax',
+          'ScrollMagic': 'scrollmagic',
+          // "TweenMax": '/node_modules/gsap/src/uncompressed/TweenMax.js',
+          // "TimelineMax": '/node_modules/gsap/src/uncompressed/TimelineMax.js',
+          // "ScrollMagic": '/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+          // "animation.gsap": '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+          // "animation.velocity": '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js',
+          // "animation.gsap": 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+          // "animation.velocity": 'scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js'
           // 'async': "async",
           // 'moment': 'moment',
-          // ScrollMagic: 'scrollmagic',
         }),
         new ExtractTextPlugin('[name].css'),
         // new CopyPlugin([
