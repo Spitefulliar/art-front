@@ -1,6 +1,6 @@
 //SERVICE
 export default ['$http', '$rootScope', 
-  function($http, $rootScope) {
+  function($http, $rootScope,) {
     let service = {};
 
     service.getPage = function(apiurl, code) {
@@ -11,10 +11,14 @@ export default ['$http', '$rootScope',
         method: 'GET',
         url: apiurl + '?' + $.param(qData),
       }).then(function(response) {
-          response.data.page.sections = service.sectionsCommonTranform(response.data.page.sections);
+          //if there are typycal page sections, transform  them
+          if (response.data.page && response.data.page.sections) {
+            response.data.page.sections = service.sectionsCommonTranform(response.data.page.sections);
+          }
+
           return response.data;
         }, function(response) {
-          console.warning("can't get page data");
+          console.warn("can't get page data");
       });
     };
 

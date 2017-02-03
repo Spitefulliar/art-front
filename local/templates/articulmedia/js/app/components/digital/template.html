@@ -1,42 +1,54 @@
-<div class="digital" hide-gt-xs>
-	<div class="digital__container">
-		<h5 class="digital__slogan">
-			У нас есть<br>все для 360о<br>сервиса в digital
-		</h5>
-		<h2 class="digital__title">
+<div class="digital" art-page-constructor-dir>
+	<div class="digital__container" hide-gt-sm >
+		<h5 class="digital__slogan" ng-bind-html="trustAsHtml(digital.slogan)"></h5>
+		<h2 class="digital__title" ng-bind-html="trustAsHtml(digital.title)">
 			360<span class="digital__title__deg">o</span>
 		</h2>
-		<slick class="mobileList" settings="slickConfigMobile">
-			<div class="mobileList__item">
-				<h6 class="mobileList__title">
-					Стратегическое планирование
-				</h6>
-			</div>
-			<div class="mobileList__item">
-				<h6 class="mobileList__title">
-					Стратегическое планирование
-				</h6>
-			</div>
-			<div class="mobileList__item">
-				<h6 class="mobileList__title">
-					Стратегическое планирование
-				</h6>
-			</div>
-			<div class="mobileList__item">
-				<h6 class="mobileList__title">
-					Стратегическое планирование
+		<slick class="digital-slider" settings="slickConfigMobile">
+			<div class="digital-slider__item" ng-repeat="item in digital.items">
+				<h6 class="digital-slider__title" ng-bind-html="trustAsHtml(item.title)">
 				</h6>
 			</div>
 		</slick>
 	</div>
-</div>
-<div class="digital360" hide-sm hide-xs>
-	<!-- <svg id="ellips360"></svg> -->
-	<svg id="ellips360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="1545.969px" height="540.012px" viewBox="0 0 1545.969 540.012" enable-background="new 0 0 1545.969 540.012"
-		 xml:space="preserve">
-		<path id="ellips" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="2px" d="M772.984,62.086c426.907,95.129,772.984,265.336,772.984,380.167
-		c0,114.83-346.077,130.802-772.984,35.673C346.077,382.797,0,212.591,0,97.76C0-17.071,346.077-33.042,772.984,62.086z"/>
-	</svg>
+	<div class="digital360" hide-sm hide-xs>
+		<!-- <svg id="ellips360"></svg> -->
+		<!-- <svg id="ellips360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="1545.969px" height="540.012px" viewBox="0 0 1545.969 540.012" enable-background="new 0 0 1545.969 540.012"
+			 xml:space="preserve">
+			<path id="ellips" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="2px" d="M772.984,62.086c426.907,95.129,772.984,265.336,772.984,380.167
+			c0,114.83-346.077,130.802-772.984,35.673C346.077,382.797,0,212.591,0,97.76C0-17.071,346.077-33.042,772.984,62.086z"/>
+		</svg> -->
+		<svg version="1.1" id="ellips360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="1548.969px" height="550px" viewBox="0 0 1548.969 550" enable-background="new 0 0 1548.969 550" xml:space="preserve">
+			<path class="ellips" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" d="
+				M774.484,67.085c426.907,95.129,772.984,265.336,772.984,380.167c0,114.83-346.077,130.802-772.984,35.673
+				C347.577,387.796,1.5,217.589,1.5,102.758C1.5-12.072,347.577-28.044,774.484,67.085z"/>
+			<g class="circles">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M237.984,0c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S234.395,0,237.984,0z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M461.984,7.5c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S458.395,7.5,461.984,7.5z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M647.984,34c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S644.395,34,647.984,34z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M875.984,84c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S872.395,84,875.984,84z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M1105.984,153c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S1102.395,153,1105.984,153z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M1313.484,238.445c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S1309.895,238.445,1313.484,238.445z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M1234.984,537c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S1231.395,537,1234.984,537z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M966.984,512c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S963.395,512,966.984,512z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M677.984,452c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S674.395,452,677.984,452z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M473.984,392c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S470.395,392,473.984,392z"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M237.984,297c3.59,0,6.5,2.91,6.5,6.5s-2.91,6.5-6.5,6.5s-6.5-2.91-6.5-6.5
+					S234.395,297,237.984,297z"/>
+			</g>
+		</svg>
 
+	</div>
 </div>
