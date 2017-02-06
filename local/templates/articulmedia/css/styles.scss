@@ -2825,7 +2825,7 @@ art-carousel3d-dir {
       font-weight: 100;
       color: $black;
       font-size: vh(48px);
-      margin: 0;
+      margin: 0 0 vh(50px) 0;
       line-height: 100%;
     }
 
@@ -2835,7 +2835,7 @@ art-carousel3d-dir {
       line-height: vh(65px);
       color: $black;
       text-transform: uppercase;
-      margin: vh(50px) 0;
+      margin: 0 0 vh(50px) 0;
     }
 
     &__subtitle {
@@ -2851,6 +2851,19 @@ art-carousel3d-dir {
       color: $black;
       font-weight: 500;
       margin: vh(50px) 0;
+    }
+
+    &__image {
+      width: vh(400px);
+      background-size: cover;
+      height: vh(400px);
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      display: block;
+
+      @media (max-width: $screen-sm) {
+        width: 100%;
+      }
     }
   }
 
