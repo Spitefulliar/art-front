@@ -5,4 +5,5 @@ export default  {
   // url: '/digital/',
   // apiParam: 'digital.json',
   pageBgType: 'digital',
+  pageClass: 'digital-page',
 };

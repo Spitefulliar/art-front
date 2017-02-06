@@ -14,11 +14,12 @@ var routing = ['$stateProvider', '$urlRouterProvider',
 function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state(PAGE_STATE, {
-      url: PAGE_URL,
+      url: PAGE_URL + ':pageCode',
       template: template,
       controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
       data: {
         pageBgType: moduleConfig.pageBgType || false,
+        pageClass: moduleConfig.pageClass || false,
         apiParam: PAGE_API_PARAM,
       }
     });

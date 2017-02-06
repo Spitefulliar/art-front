@@ -2,8 +2,8 @@
 import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
-export default ['$rootScope','$http', '$timeout', '$window', '$state', 
-  function ($rootScope, $http, $timeout, $window, $state) {
+export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile', '$mdPanel', 
+  function ($rootScope, $http, $timeout, $window, $state, $compile, $mdPanel) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       
       // initializing background move
@@ -57,8 +57,12 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
 
       function digitalEllipsInit() {
 
+        let dig360 = $($element).find('#digital360');
+        let ellips360 = $($element).find('#ellips360');
+
         //snap svg
         let paper = Snap('#ellips360');
+        let paperBBox = paper.getBBox();
 
         let ellips = paper.select("path.ellips");
 
@@ -71,7 +75,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
         //making captions
           //step 1: makin white big circles
         let circlesBbigG = paper.g();
-        let circlesBbigGProp;
+        let circlesBbigGProp, tooltipEl;
         circlesBbigG.insertBefore(ellips);
         circlesBbigG.attr({'class': 'circles-big'});
 
@@ -79,7 +83,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
           let circleBBox = Snap.path.getBBox(circle);
           let circleGroup = paper.g().addClass('circle-group');
           circleGroup.attr({'data-index': index});
-          //making big circle
+
+          // making big circle
           let circleBig = paper.circle(circleBBox.cx, circleBBox.cy, circleBBox.r1 * 3.076923);
           circleBig.attr({'data-index': index});
           circleBig.addClass('circle-group__circle');
@@ -110,70 +115,149 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
           });
 
           // making text field
-          let trW = circleBigBBox.w * 5.27906976744186;
-          let trH = circleBigBBox.w * 1.5217391304347827;
+          // let trW = circleBigBBox.w * 5.27906976744186;
+          // let trH = circleBigBBox.w * 1.5217391304347827;
 
-          let textRect = paper.rect
-            (circleBigBBox.cx - trW/2,
-             rectBigBBox.y2 - rectBigBBox.h/3,
-             trW,
-             trH,
-             trH/2,
-             trH/2);
-          textRect.addClass('circle-group__text-wrap');
+          // let textRect = paper.rect
+          //   (circleBigBBox.cx - trW/2,
+          //    rectBigBBox.y2 - rectBigBBox.h/3,
+          //    trW,
+          //    trH,
+          //    trH/2,
+          //    trH/2);
+          // textRect.addClass('circle-group__text-wrap');
 
-          //making text node
-          let textRectBBox = textRect.getBBox();
-          let text = paper.text(textRectBBox.x + textRectBBox.w/2, rectBigBBox.y  + textRectBBox.h/2, digItem.title).addClass('circle-group__text');
-          let textBBox = text.getBBox();
-          text.attr({
-            'x' : text.attr('x') - textBBox.w/2,
-            'width': trW *0.9,
-            'height': trH * 0.9
-          });
+          // //making text node
+          // let textRectBBox = textRect.getBBox();
+          // let digItemTextArr = (angular.isString(digItem.title))? digItem.title.split('<br/>'): digItem.title;
+
+          // let text = paper.text(textRectBBox.x + textRectBBox.w/2, rectBigBBox.y  + textRectBBox.h/2, digItemTextArr).addClass('circle-group__text');
+          // let textBBox = text.getBBox();
+          // text.attr({
+          //   'x' : text.attr('x') - textBBox.w/2,
+          //   'width': trW *0.9,
+          //   'height': trH * 0.9
+          // });
 
           //adding elements to group
-          circleGroup.add(circleBig,rect,textRect,text);
+          // circleGroup.add(circleBig,rect,textRect,text);
+
+          //making tooltips
+          // md-direction="digital.items[${index}].position" 
+                // md-direction="${digItem.position}" 
+          tooltipEl = $compile(
+            `<div class="digital360__tooltip-wrap digital360__tooltip-wrap_${digItem.position}" data-index="${index}" 
+                md-delay="200" 
+                md-direction="${digItem.position}" 
+                md-visible="" 
+                ng-style="{
+                left: '${circleBigBBox.x/parseFloat(ellips360.attr("width") )* 100}%',
+                top: '${circleBigBBox.y/parseFloat(ellips360.attr("height")) * 100}%',
+                width: '${circleBigBBox.w/parseFloat(ellips360.attr("width") )* 100}%',
+                height: '${circleBigBBox.h/parseFloat(ellips360.attr("height")) * 100}%'
+              }">
+                <div class="digital360__tooltip-text">${digItem.title}</div>
+              </div>`
+            )($scope);
+                // <md-tooltip>${digItem.title}</md-tooltip>
+
+          dig360.append(tooltipEl);
+
+          // circleGroup.add(circleBig,rect,textRect);
+          if (digItem.position == "top") {
+            circleGroup.attr({'transform': `rotate(180,${circleBigBBox.cx}, ${circleBigBBox.cy})`});
+          }
+          circleGroup.add(circleBig,rect);
 
           //adding to circles
           circlesBbigG.add(circleGroup);
         };
 
+
+        //making circles and tooltips
         for (var i = 0; i < $scope.digital.items.length; i++) {
           makeBigCircles(circlesSm.items[i], $scope.digital.items[i], i);
         };
 
-        //step 2: makin white big circles hoverable even when hovering black dots
-        circlesSm.forEach(function(el, index){
-          el.attr({'data-index': index});
-          el.hover(function (e) {
-              circlesBbigG[this.attr('data-index')].addClass('hovered');
-            },function (e) {
-              circlesBbigG[this.attr('data-index')].removeClass('hovered');
-            });
+        //adding tooltip logic
+        let tooltips = dig360.find('.digital360__tooltip-wrap');
+        tooltips.hover(function (e) {
+          circlesBbigG[$(this).attr('data-index')].addClass('hovered');
+        },function (e) {
+          circlesBbigG[$(this).attr('data-index')].removeClass('hovered');
         });
 
-        
-        // step 2: circles props for hovering 
-        // circlesBbigGProp = circlesBbigG.clone(circlesBbigG);
-        // circlesBbigGProp.attr({'class': 'circles-big-prop'});
-
-
-        // Snap.load("/local/templates/articulmedia/img/ellips360.svg", function (f) {
-        //   // Note that we traversre and change attr before SVG
-        //   // is even added to the page.
-        //   let ellips = f.selectAll("path");
-          // ellips.attr({stroke: "#666666"});  
-        //   ellips.attr({stroke: "#000000", width: paper.width, height: paper.height});
-        //   // Making croc draggable. Go ahead drag it around!
-        //   paper.append(ellips);
-        //   // ellips.drag();
-        //   // Obviously drag could take event handlers too
-        //   // That’s better! selectAll for the rescue.
-        // });
+        tooltips.click(function(event) {
+          $scope.showPopup(false);
+        });
 
         //eof snap svg
-      }
+      };
+
+      //poups logic
+      $scope._mdPanel = $mdPanel;
+      $scope.showPopup = function(isDisabled) {
+        var panelRef, position, backdrop, animName, zindex, animation, attachment;
+        if (isDisabled) { 
+          return false;      
+        } else {
+          // $scope.imgsrc = imgsrc;
+
+          position = $scope._mdPanel.newPanelPosition()
+            .absolute()
+            .center();
+          attachment = angular.element(document.body);
+          backdrop = false;
+          zindex = 9999999;
+          animation = $scope._mdPanel.newPanelAnimation().openFrom({
+            left: "50%",
+            bottom: 0
+          })
+          .withAnimation($scope._mdPanel.animation.SCALE);
+        }
+        var config = {
+          attachTo: attachment,
+          controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+          // controllerAs: 'popupImgCtrl',
+          template: require('./popupTemplate.html'),
+          panelClass: 'popup-digital',
+          position: position,
+          animation: animation,
+          groupName: 'popupImg',
+          maxOpen: 1,
+          hasBackdrop: backdrop,
+          scope: $scope,
+          clickOutsideToClose: true,
+          escapeToClose: true,
+          focusOnOpen: true,
+          zIndex: zindex,
+          disableParentScroll: true,
+          onDomAdded: function() {
+            $scope.popupRendered = true;
+          },
+          onDomRemoved: function() {
+            $scope.popupRendered = false;
+          }
+        };
+
+        panelRef = $scope._mdPanel.create(config);
+        panelRef.open();
+
+          $(window).resize(function(){
+            panelRef.close();
+          });
+
+        var closeThisPanel = $scope.closePanel = function() {
+          panelRef.close();
+        };
+
+        $rootScope.$on('$stateChangeStart', 
+        function(event, toState, toParams, fromState, fromParams){ 
+          closeThisPanel();
+        });
+
+        return true;
+      };
 
     };
   return {
