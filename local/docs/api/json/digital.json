@@ -1,0 +1,49 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "",
+    "title": "Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения",
+    "scrollify": false,
+    "digital": {
+      "title": "360<span class='digital__title__deg'>o</span>",
+      "slogan": "У нас есть<br/> все для 360&deg;<br/> сервиса в digital",
+      "items": [
+        {
+          "id": "strategy",
+          "title": "Стратегическое планирование"
+        },{
+          "id": "creativ",
+          "title": "Креатив"
+        },{
+          "id": "development",
+          "title": "разработка"
+        },{
+          "id": "managment",
+          "title": "менеджмент"
+        },{
+          "id": "resandtest",
+          "title": "исследования и тестирование"
+        },{
+          "id": "promo",
+          "title": "продвижение"
+        },{
+          "id": "smm",
+          "title": "контент и SMM"
+        },{
+          "id": "ecommerce",
+          "title": "ecommerce"
+        },{
+          "id": "mobile",
+          "title": "mobile"
+        },{
+          "id": "crm",
+          "title": "crm и лояльность"
+        },{
+          "id": "analytics",
+          "title": "аналитика"
+        }
+      ]
+    }
+  }
+}

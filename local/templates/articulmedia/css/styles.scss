@@ -1315,6 +1315,7 @@ md-sidenav {
 art-digital-dir {
   display: block;
   max-width: 100%;
+  width: 100%;
 }
 
 .digital {
@@ -1346,7 +1347,7 @@ art-digital-dir {
     line-height: 100%;
   }
 
-  .mobileList {
+  .digital-slider {
     // max-width: 100%;
     margin-left: vw(-82px);
     margin-right: vw(-82px);
@@ -1364,6 +1365,7 @@ art-digital-dir {
       align-items: center;
       position: relative;
       opacity: .6;
+      margin-bottom: vh(30px);
 
       &.slick-active {
         opacity: 1;
@@ -1386,21 +1388,84 @@ art-digital-dir {
     }
 
     &__title {
+      margin: 0;
       font-weight: bold;
-      font-size: vh(30px);
+      font-size: vh(30px,'md');
       text-transform: uppercase;
       line-height: 100%;
-      margin: 0;
+      text-align: center;
+      -ms-word-wrap: break-word;
+          word-wrap: break-word;
+      width: 100%;
     }
   
     .slick-dots li.slick-active button:before {
       opacity: 1;
       color: $black;
     }
-    .slick-dots li button:before {
-      color: $white;
-      font-size: 20px;
+    .slick-dots li {
+      width: vh(20px);
+      height: vh(20px);
+      margin: 0 vh(5px);
+      button {
+        width: 100%;
+        height: 100%;
+        &:before {
+          color: $white;
+          font-size: vh(20px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.digital360 {
+  width: 100%;
+  height: 600px;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .circles {
+    path {
+      cursor: pointer;
+    }
+  }
+  .circle-group {
+    cursor: pointer;
+    // opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+       -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+         -o-transition: opacity 400ms ease;
+            transition: opacity 400ms ease;
+    // &:hover,
+    &.hovered {
       opacity: 1;
+    }
+    &__circle {
+      fill: $white;
+    }
+    &__rectangle {
+      fill: $white;
+    }
+    &__text-wrap {
+      fill: $white;
+    }
+    &__text {
+      display: block;
+      max-width: 200px;
+      font-family: $ffreg;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $black;
+      -webkit-transform: translateX(-50%);
+         -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+           -o-transform: translateX(-50%);
+              transform: translateX(-50%);
     }
   }
 }
@@ -1570,6 +1635,10 @@ art-digital-dir {
 /*
  * case
  */
+
+art-page-constructor-dir {
+  width: 100%;
+}
 
 //block itself
 .page-block {

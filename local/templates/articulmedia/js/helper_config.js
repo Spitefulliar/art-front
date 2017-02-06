@@ -7,4 +7,5 @@ export const APP  = {
   PAGE_POSTFIX: 'Page',
   VIEWS_DIR: '../',
   API_DIR: '/local/docs/api/json/',
+  API_POSTFIX: '.json',
 };
