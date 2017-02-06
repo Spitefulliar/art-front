@@ -892,7 +892,7 @@ md-sidenav {
 
     &--digital {
       $w: 220vw;
-      $h: 220vh;
+      $h: 300vh;
       $sh: -($w - 100vw)/2;
       $shv: -($h - 100vh)/2;
       width: $w;
