@@ -29,9 +29,9 @@
     <!-- eof js -->
 </head>
 
-<body ng-class="{
+<body class="{{pageData.pageClass}}" ng-class="{
     'videoplays': videoPlays,
-    'videostoppped': videoStoppped,
+    'videostoppped': videoStoppped
   }">
 <!-- header -->
 {% block header %}

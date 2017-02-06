@@ -7,41 +7,52 @@
     "scrollify": false,
     "digital": {
       "title": "360<span class='digital__title__deg'>o</span>",
-      "slogan": "У нас есть<br/> все для 360&deg;<br/> сервиса в digital",
+      "slogan": "У нас есть <br/>все для 360&deg; <br/>сервиса в digital",
       "items": [
         {
           "id": "strategy",
-          "title": "Стратегическое планирование"
+          "title": "Стратегическое <br>планирование",
+          "position": "bottom"
         },{
           "id": "creativ",
-          "title": "Креатив"
+          "title": "Креатив",
+          "position": "bottom"
         },{
           "id": "development",
-          "title": "разработка"
+          "title": "разработка",
+          "position": "bottom"
         },{
           "id": "managment",
-          "title": "менеджмент"
+          "title": "менеджмент",
+          "position": "top"
         },{
           "id": "resandtest",
-          "title": "исследования и тестирование"
+          "title": "исследования<br> и&nbsp;тестирование",
+          "position": "top"
         },{
           "id": "promo",
-          "title": "продвижение"
+          "title": "продвижение",
+          "position": "top"
         },{
           "id": "smm",
-          "title": "контент и SMM"
+          "title": "контент <br>и&nbsp;SMM",
+          "position": "top"
         },{
           "id": "ecommerce",
-          "title": "ecommerce"
+          "title": "ecommerce",
+          "position": "top"
         },{
           "id": "mobile",
-          "title": "mobile"
+          "title": "mobile",
+          "position": "bottom"
         },{
           "id": "crm",
-          "title": "crm и лояльность"
+          "title": "crm&nbsp;и <br>лояльность",
+          "position": "bottom"
         },{
           "id": "analytics",
-          "title": "аналитика"
+          "title": "аналитика",
+          "position": "bottom"
         }
       ]
     }
