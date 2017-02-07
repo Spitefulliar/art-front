@@ -12,7 +12,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   });
  
   $scope.$on(
-    "$viewContentLoaded",
+    "$stateChangeSuccess",
     function( event ) {
       showElements($('.page-block-list__grid'));
       console.log('load');
