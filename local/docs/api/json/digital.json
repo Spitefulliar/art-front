@@ -12,7 +12,106 @@
         {
           "id": "strategy",
           "title": "Стратегическое <br>планирование",
-          "position": "bottom"
+          "position": "bottom",
+          "popup": {
+            "title": "стратегическое <br/>планирование",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "creativ",
           "title": "Креатив",

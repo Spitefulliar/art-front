@@ -147,9 +147,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
                 // md-direction="${digItem.position}" 
           tooltipEl = $compile(
             `<div class="digital360__tooltip-wrap digital360__tooltip-wrap_${digItem.position}" data-index="${index}" 
-                md-delay="200" 
-                md-direction="${digItem.position}" 
-                md-visible="" 
                 ng-style="{
                 left: '${circleBigBBox.x/parseFloat(ellips360.attr("width") )* 100}%',
                 top: '${circleBigBBox.y/parseFloat(ellips360.attr("height")) * 100}%',
@@ -159,7 +156,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
                 <div class="digital360__tooltip-text">${digItem.title}</div>
               </div>`
             )($scope);
-                // <md-tooltip>${digItem.title}</md-tooltip>
 
           dig360.append(tooltipEl);
 
@@ -188,7 +184,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         });
 
         tooltips.click(function(event) {
-          $scope.showPopup(false);
+          $scope.showPopup($(event.target).closest('[data-index]').attr('data-index'));
         });
 
         //eof snap svg
@@ -196,12 +192,13 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
 
       //poups logic
       $scope._mdPanel = $mdPanel;
-      $scope.showPopup = function(isDisabled) {
+      $scope.showPopup = function(digItemIndex,isDisabled) {
         var panelRef, position, backdrop, animName, zindex, animation, attachment;
         if (isDisabled) { 
           return false;      
         } else {
-          // $scope.imgsrc = imgsrc;
+          console.log(digItemIndex,$scope.digital.items[digItemIndex]);
+          $scope.digitalPopup = $scope.digital.items[digItemIndex].popup;
 
           position = $scope._mdPanel.newPanelPosition()
             .absolute()
@@ -223,7 +220,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           panelClass: 'popup-digital',
           position: position,
           animation: animation,
-          groupName: 'popupImg',
+          groupName: 'popupDigital',
           maxOpen: 1,
           hasBackdrop: backdrop,
           scope: $scope,
@@ -231,7 +228,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           escapeToClose: true,
           focusOnOpen: true,
           zIndex: zindex,
-          disableParentScroll: true,
+          disableParentScroll: false,
           onDomAdded: function() {
             $scope.popupRendered = true;
           },
@@ -243,9 +240,9 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         panelRef = $scope._mdPanel.create(config);
         panelRef.open();
 
-          $(window).resize(function(){
-            panelRef.close();
-          });
+        // $(window).resize(function(){
+        //   panelRef.close();
+        // });
 
         var closeThisPanel = $scope.closePanel = function() {
           panelRef.close();
