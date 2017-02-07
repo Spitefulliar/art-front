@@ -1,77 +1,91 @@
 <div class="inner-page">
   <div class="inner-page__container">
-    <div class="popup-digital__inner" layout="row" layout-wrap layout-fill layout-align="start start">
+    <div class="popup-digital__inner">
       <span class="popup-digital__close svg-icon" ng-click="closePanel();">
         <svg>
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross"></use>
         </svg>
       </span>
-      <div class="popup-digital__aside" flex-gt-sm="25" flex="100" flex="nogrow">
-        <h2 class="popup-digital__title" ng-bind-html="trustAsHtml(digitalPopup.title)"></h2>
-        <div class="popup-digital__summary"  ng-bind-html="trustAsHtml(digitalPopup.summary)"></div>
-      </div>
-      <div class="popup-digital__slider-wrap" flex-gt-sm="70" flex="100" flex="nogrow" flex-offset="5">
-        <slick class="popup-digital__slider" settings="slickConfigPopup">
-          <div class="popup-digital__slide popup-digital__content" 
-            layout="row" layout-wrap 
+      <baron-scrollbar class="scroller__wrapper" direction="y" update="true">
+        <div class="popup-digital__wrap" layout="row" layout-wrap layout-align="start start">
+          <h2 class="popup-digital__360 digital__title" ng-bind-html="trustAsHtml(digital.title)">
+            360<span class="digital__title__deg">o</span>
+          </h2>
+          <div class="popup-digital__aside" flex-gt-sm="20" flex="none" flex="nogrow">
+            <h2 class="popup-digital__title" ng-bind-html="trustAsHtml(digitalPopup.title)"></h2>
+            <div class="popup-digital__summary"  ng-bind-html="trustAsHtml(digitalPopup.summary)"></div>
+          </div>
+          <div class="popup-digital__slider-wrap" flex-gt-sm="80" flex="none" flex="nogrow" 
+            msd-wheel="popupSliderScroll($deltaY)"
             >
-            <div class="popup-digital__content-col" 
-              ng-repeat="item in digitalPopup.contentBlocks track by $index"
-              flex-gt-sm="30" flex="100" 
-              >
-              <h3 class="popup-digital__content-title" ng-bind-html="trustAsHtml(item.title)"></h3>
-              <div class="popup-digital__content" ng-bind-html="trustAsHtml(item.content)"></div>
-            </div>
-          </div>
-          <div class="popup-digital__slide popup-digital__crosses">
-            <div class="cases-list">
-              <md-grid-list class="cases-list__grid"
-                md-cols-gt-sm="5"
-                md-cols="2"
-                md-row-height="1:1"
-                md-gutter="0" md-gutter-gt-sm="0" >
-                <md-grid-tile 
-                  md-rowspan="1" md-colspan="1" 
-                  ng-repeat="item in digitalPopup.crosses"  
+            <slick class="popup-digital__slider" settings="slickConfigPopup">
+              <div class="popup-digital__slide">
+                <div class="popup-digital__content" 
+                  layout="row" layout-wrap 
                   >
-                  <a class="cases-list__grid-item" 
-                    ng-class="{'plus-item': (item.type != 'client') }"
-                    ng-attr-href="{{item.link}}"
-                    title="{{item.title}}"
-                    >
-                    <div class="cases-list__grid-item-bg"  
-                      ng-style="{
-                        'background-image': 'url(' + (isDesktop && item.image.desktop || item.image.mobile || false) + ')'
-                      }"
-                      title="{{item.alt}}" 
-                      ></div>
-                    <span ng-if="item.type != 'client'" class="plus-item__icon">
-                      <svg>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-                      </svg>
-                    </span>
-                  </a>
-                </md-grid-tile>
-                <md-grid-tile 
-                  md-rowspan="1" md-colspan="1" 
+                  <div class="popup-digital__content-col" 
+                  ng-repeat="item in digitalPopup.contentBlocks track by $index"
+                  flex-gt-sm="33" flex="100" 
                   >
-                  <div class="page-list__grid-item plus-item" 
-                    ng-click="loadMoreCroses()"
-                    title="{{item.title}}"
-                    >
-                    <span class="plus-item__icon">
-                      <svg>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-                      </svg>
-                    </span>
+                    <h3 class="popup-digital__content-heading" ng-bind-html="trustAsHtml(item.heading)"></h3>
+                    <div class="popup-digital__content-text" ng-bind-html="trustAsHtml(item.content)"></div>
                   </div>
-                </md-grid-tile>
-              </md-grid-list>
-            </div>
+                  <div class="popup-digital__nav-item popup-digital__nav-item_bottom" ng-click="popupSliderNext()">реализованные <br>проекты</div>
+                </div>
+              </div>
+              <div class="popup-digital__slide" ng-if="digitalPopup.crosses.length">
+                <div class="popup-digital__crosses">
+                  <div class="popup-digital__nav-item popup-digital__nav-item_top" ng-click="popupSliderPrev()">подробнее <br>об экспертизе</div>
+                  <div class="cases-list">
+                    <md-grid-list class="cases-list__grid"
+                      md-cols-gt-xs="3"
+                      md-cols="2"
+                      md-row-height="1:1"
+                      md-gutter="0" md-gutter-gt-sm="0" >
+                      <md-grid-tile 
+                        md-rowspan="1" md-colspan="1" 
+                        ng-repeat="item in digitalPopup.crosses"  
+                        >
+                        <a class="cases-list__grid-item" 
+                          ng-class="{'plus-item': (item.type != 'client') }"
+                          ng-attr-href="{{item.link}}"
+                          title="{{item.title}}"
+                          >
+                          <div class="cases-list__grid-item-bg"  
+                            ng-style="{
+                              'background-image': 'url(' + (isDesktop && item.image.desktop || item.image.mobile || false) + ')'
+                            }"
+                            title="{{item.alt}}" 
+                            ></div>
+                          <span ng-if="item.type != 'client'" class="plus-item__icon">
+                            <svg>
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+                            </svg>
+                          </span>
+                        </a>
+                      </md-grid-tile>
+                      <md-grid-tile 
+                        md-rowspan="1" md-colspan="1" 
+                        >
+                        <div class="page-list__grid-item plus-item" 
+                          ng-click="loadMoreCroses()"
+                          title="{{item.title}}"
+                          >
+                          <span class="plus-item__icon">
+                            <svg>
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+                            </svg>
+                          </span>
+                        </div>
+                      </md-grid-tile>
+                    </md-grid-list>
+                  </div>
+                </div>
+              </div>
+            </slick>
           </div>
-        </slick>
-      </div>
-
+        </div>
+      </baron-scrollbar>
     </div>
   </div>
 </div>
