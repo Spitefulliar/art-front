@@ -986,6 +986,8 @@ md-sidenav {
       overflow: hidden;
       cursor: pointer;
       z-index: 2;
+      opacity: 0;
+      transition: opacity 1s ease;
 
       @media (max-width: $screen-md) {
         min-width: 120px;
@@ -1112,6 +1114,10 @@ md-sidenav {
 
   &--fixed {
     position: fixed;
+
+    @media (max-width: $screen-xs) {
+      position: relative;
+    }
   }	
 
   @media (max-width: 1100px) {
