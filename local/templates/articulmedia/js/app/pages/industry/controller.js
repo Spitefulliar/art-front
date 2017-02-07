@@ -46,14 +46,36 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   	]
   };
 
-  $(document).ready(function(){ 
-    var $target = $('.page-block-list__item');
-    var hold = 500;
+  // $(document).ready(function(){ 
+  //   var $target = $('.page-block-list__item');
+  //   var hold = 500;
 
-    $.each($target,function(i,t){
-      var $this = $(t);
-      setTimeout(function(){ $this.css('opacity', '1');; },i*hold);
-    });
-  });
+  //   $.each($target,function(i,t){
+  //     var $this = $(t);
+  //     setTimeout(function(){ $this.css('opacity', '1');; },i*hold);
+  //   });
+  // });
+
+  // $(document).ready(function(){ 
+  //   $scope.$on(
+  //     "$stateChangeStart",
+  //     function( event ) {
+  //       loadBlock();
+  //       console.log('load');
+  //     }
+  //   );
+  // });
+
+  // function loadBlock(){
+  //   var $target = $('.page-block-list__item');
+  //   var hold = 500;
+
+  //   $.each($target, function(i, t) {
+  //     var $this = $(t);
+  //     setTimeout(function(){ $this.css('opacity', '1'); },i*hold);
+  //   });
+  // };
+
+  
 
 }];
