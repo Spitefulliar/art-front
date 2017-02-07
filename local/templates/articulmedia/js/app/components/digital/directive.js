@@ -205,7 +205,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
             .center();
           attachment = angular.element(document.body);
           backdrop = false;
-          zindex = 9999999;
+          zindex = 100;
           animation = $scope._mdPanel.newPanelAnimation().openFrom({
             left: "50%",
             bottom: 0
@@ -231,9 +231,12 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           disableParentScroll: false,
           onDomAdded: function() {
             $scope.popupRendered = true;
+            //popup slider init
+            popupSliderInit();
           },
           onDomRemoved: function() {
             $scope.popupRendered = false;
+            $scope.popupSlider = false;
           }
         };
 
@@ -254,6 +257,83 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         });
 
         return true;
+      };
+
+      //popup carousel config
+      $scope.slickConfigPopup = {
+        enabled: true,
+        autoplay: false,
+        draggable: true,
+        infinite: false,
+        method: {},
+        cssEase: false,
+        useCSS: false,
+        dots: true,
+        arrows: false,
+        mobileFirst: true,
+        respondTo: 'window',
+        swipe: true,
+        easing: 'linear',
+        swipeToSlide: true,
+        variableWidth: false,
+        centerMode: true,
+        centerPadding: '0px',
+        vertical: true,
+        verticalSwiping: true,
+        adaptiveHeight: true,
+        slidesToScroll: 2,
+        slidesToShow: 2,
+        slidesPerRow: 2,
+        responsive: [
+          {
+            breakpoint: 959,
+            settings: {
+              slidesToScroll: 1,
+              slidesToShow: 1,
+              slidesPerRow: 1,
+              adaptiveHeight: true,
+            }
+          },
+          // {
+          //   breakpoint: 1,
+          //   settings: {
+          //     slidesToScroll: 2,
+          //     slidesToShow: 2,
+          //     slidesPerRow: 2
+          //   }
+          // },
+          // {
+          //   breakpoint: 0,
+          //   settings: "unslick"
+          // }
+        ]
+      }
+
+      function popupSliderInit() {
+        $scope.popupSlider = $('.popup-digital__slider');
+
+        $scope.popupSliderNext = function() {
+          $scope.popupSlider.slick('slickNext');
+        };
+        $scope.popupSliderPrev = function() {
+          $scope.popupSlider.slick('slickPrev');
+        };
+
+        $scope.popupSliderScroll = function($deltaY) {
+          if ($deltaY > 0) {
+            $scope.popupSliderPrev();
+          } else {
+            $scope.popupSliderNext();
+          }
+        };
+
+        // $scope.popupSlider.on('breakpoint',function(e,slick,bp){
+        //   console.log(e,slick,bp);
+        // });
+
+        $timeout(function(){
+          $scope.popupSlider.slick('setPosition');
+        },0);
       };
 
     };

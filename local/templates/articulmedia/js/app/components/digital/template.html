@@ -5,7 +5,9 @@
 			360<span class="digital__title__deg">o</span>
 		</h2>
 		<slick class="digital-slider" settings="slickConfigMobile">
-			<div class="digital-slider__item" ng-repeat="item in digital.items track by $index">
+			<div class="digital-slider__item" 
+				ng-repeat="item in digital.items track by $index" 
+				>
 				<h6 class="digital-slider__title" ng-bind-html="trustAsHtml(item.title)" ng-click="showPopup($index,false)">
 				</h6>
 			</div>
