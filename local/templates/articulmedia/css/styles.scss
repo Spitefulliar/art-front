@@ -3007,7 +3007,7 @@ art-carousel3d-dir {
     }
   }
 
-  .news-text {
+  .news-image {
 
     &__date {
       font-weight: 100;
@@ -3052,6 +3052,41 @@ art-carousel3d-dir {
       @media (max-width: $screen-sm) {
         width: 100%;
       }
+    }
+  }
+
+  .news-text {
+
+    &__date {
+      font-weight: 100;
+      color: $black;
+      font-size: vh(48px);
+      margin: 0 0 vh(50px) 0;
+      line-height: 100%;
+    }
+
+    &__title {
+      font-size: vh(80px);
+      font-weight: 900;
+      line-height: vh(65px);
+      color: $black;
+      text-transform: uppercase;
+      margin: 0 0 vh(50px) 0;
+    }
+
+    &__subtitle {
+      font-weight: 100;
+      color: $black;
+      font-size: vh(48px);
+      margin: 0;
+    }
+
+    &__info {
+      font-size: vh(18px);
+      line-height: 100%;
+      color: $black;
+      font-weight: 500;
+      margin: vh(50px) 0;
     }
   }
 
