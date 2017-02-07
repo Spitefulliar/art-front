@@ -7,8 +7,8 @@
 		<slick class="digital-slider" settings="slickConfigMobile">
 			<div class="digital-slider__item" 
 				ng-repeat="item in digital.items track by $index" 
-				ng-click="showPopup($index,false)">
-				<h6 class="digital-slider__title" ng-bind-html="trustAsHtml(item.title)">
+				>
+				<h6 class="digital-slider__title" ng-bind-html="trustAsHtml(item.title)" ng-click="showPopup($index,false)">
 				</h6>
 			</div>
 		</slick>

@@ -231,24 +231,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           disableParentScroll: false,
           onDomAdded: function() {
             $scope.popupRendered = true;
-
-            $scope.popupSlider = $('.popup-digital__slider');
-
-            $scope.popupSliderNext = function() {
-              $scope.popupSlider.slick('slickNext');
-            };
-            $scope.popupSliderPrev = function() {
-              $scope.popupSlider.slick('slickPrev');
-            };
-
-            $scope.popupSliderScroll = function($deltaY) {
-              if ($deltaY > 0) {
-                $scope.popupSliderPrev();
-              } else {
-                $scope.popupSliderNext();
-              }
-            };
-
+            //popup slider init
+            popupSliderInit();
           },
           onDomRemoved: function() {
             $scope.popupRendered = false;
@@ -302,7 +286,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         slidesPerRow: 2,
         responsive: [
           {
-            breakpoint: 960,
+            breakpoint: 959,
             settings: {
               slidesToScroll: 1,
               slidesToShow: 1,
@@ -324,6 +308,33 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           // }
         ]
       }
+
+      function popupSliderInit() {
+        $scope.popupSlider = $('.popup-digital__slider');
+
+        $scope.popupSliderNext = function() {
+          $scope.popupSlider.slick('slickNext');
+        };
+        $scope.popupSliderPrev = function() {
+          $scope.popupSlider.slick('slickPrev');
+        };
+
+        $scope.popupSliderScroll = function($deltaY) {
+          if ($deltaY > 0) {
+            $scope.popupSliderPrev();
+          } else {
+            $scope.popupSliderNext();
+          }
+        };
+
+        // $scope.popupSlider.on('breakpoint',function(e,slick,bp){
+        //   console.log(e,slick,bp);
+        // });
+
+        $timeout(function(){
+          $scope.popupSlider.slick('setPosition');
+        },0);
+      };
 
     };
   return {
