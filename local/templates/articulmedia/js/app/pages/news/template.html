@@ -2,7 +2,6 @@
   <div class="news-page__container" layout="row" layout-wrap>
    	<div class="news-list" flex="100" layout="row" layout-align="center start" layout-wrap layout="row">
 			<md-grid-list class="news-list__grid"
-				ng-if="!news.items"
         md-cols="5"
         md-cols-sm="2"
         md-cols-xs="2"
@@ -56,16 +55,24 @@
 					</div>
         </md-grid-tile>
       </md-grid-list>
-      <div class="news-text" layout="row" layout-align="center start" ng-repeat="item in news.items" layout-wrap layout="row">
-      	<h5 class="news-text__date" flex="100" ng-bind="item.date"></h5>
-      	<div class="news-text__left" flex-gt-xs="50" flex="100">
-      		<h5 class="news-text__title" ng-bind="item.title"></h5>
-      		<p class="news-text__subtitle" ng-bind="item.subtitle"></p>
+      <div class="news-image" layout="row" layout-align="center start" ng-repeat="item in news.items" ng-if="item.image" layout-wrap layout="row">
+      	<h5 class="news-image__date" flex="100" ng-bind="item.date"></h5>
+      	<div class="news-image__left" flex-gt-xs="50" flex="100">
+      		<h5 class="news-image__title" ng-bind="item.title"></h5>
+      		<p class="news-image__subtitle" ng-bind="item.subtitle"></p>
       	</div>
-      	<div class="news-text__right" flex-gt-xs="50" flex="100" ng-if="item.image">
-      		<div class="news-text__image" ng-style="{'background-image': item.image}"></div>
+      	<div class="news-image__right" flex-gt-xs="50" flex="100" ng-if="item.image">
+      		<div class="news-image__image" ng-style="{'background-image': item.image}"></div>
       	</div>
-      	<p class="news-text__info" flex="100" ng-bind="item.text"></p>
+      	<p class="news-image__info" flex="100" ng-bind="item.text"></p>
+      </div>
+      <div class="news-text" layout="row" layout-align="start" ng-repeat="item in news.items"  layout-wrap layout="row">
+        <h5 class="news-text__date" flex="100" ng-bind="item.date"></h5>
+        <div class="news-text__left" flex-gt-xs="70" flex="100">
+          <h5 class="news-text__title" ng-bind="item.title"></h5>
+          <p class="news-text__subtitle" ng-bind="item.subtitle"></p>
+          <p class="news-text__info" ng-bind="item.text"></p>
+        </div>
       </div>
 		</div>
   </div>
