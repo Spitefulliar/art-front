@@ -1,5 +1,6 @@
 <div class="digital" art-page-constructor-dir>
-	<div class="digital__container" hide-gt-sm >
+	<!-- <div class="digital__container" hide-gt-sm > -->
+	<div class="digital__container" ng-if="!isDesktop" ng-init="digSliderOnSlieInit()">
 		<h5 class="digital__slogan" ng-bind-html="trustAsHtml(digital.slogan)"></h5>
 		<h2 class="digital__title" ng-bind-html="trustAsHtml(digital.title)">
 			360<span class="digital__title__deg">o</span>

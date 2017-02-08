@@ -88,43 +88,763 @@
         },{
           "id": "creativ",
           "title": "Креатив",
-          "position": "bottom"
+          "position": "bottom",
+          "popup": {
+            "title": "Креатив",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "development",
           "title": "разработка",
-          "position": "bottom"
+          "position": "bottom",
+          "popup": {
+            "title": "разработка",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "managment",
           "title": "менеджмент",
-          "position": "top"
+          "position": "top",
+          "popup": {
+            "title": "менеджмент",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "resandtest",
           "title": "исследования<br> и&nbsp;тестирование",
-          "position": "top"
+          "position": "top",
+          "popup": {
+            "title": "исследования<br> и&nbsp;тестирование",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "promo",
           "title": "продвижение",
-          "position": "top"
+          "position": "top",
+          "popup": {
+            "title": "продвижение",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "smm",
           "title": "контент <br>и&nbsp;SMM",
-          "position": "top"
+          "position": "top",
+          "popup": {
+            "title": "контент <br>и&nbsp;SMM",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "ecommerce",
           "title": "ecommerce",
-          "position": "top"
+          "position": "top",
+          "popup": {
+            "title": "ecommerce",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "mobile",
           "title": "mobile",
-          "position": "bottom"
+          "position": "bottom",
+          "popup": {
+            "title": "mobile",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "crm",
           "title": "crm&nbsp;и <br>лояльность",
-          "position": "bottom"
+          "position": "bottom",
+          "popup": {
+            "title": "crm&nbsp;и <br>лояльность",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         },{
           "id": "analytics",
           "title": "аналитика",
-          "position": "bottom"
+          "position": "bottom",
+          "popup": {
+            "title": "аналитика",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex",
+            "contentBlocks": [
+              {
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem. Duis sit amet mi congue, condimentum turpis ac, mattis risus. Curabitur porta dui sit amet</p>"
+              },{
+                "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "content": "<p>Praesent mollis nisl augue, at porttitor sapien ultricies pretium. Mauris eget libero non ex convallis elementum ac tincidunt ex. Praesent eget pulvinar ante.</p><p>Proin eget sem vitae lorem condimentum posuere ac id sem. Nullam eget mauris fringilla, congue massa non, vestibulum lorem.</p>"
+              }
+            ],
+            "crosses": [
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
         }
       ]
     }
