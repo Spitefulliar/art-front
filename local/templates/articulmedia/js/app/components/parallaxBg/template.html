@@ -1,0 +1,6 @@
+<div class="parallax-viewport">
+  <div class="parallax-bg" 
+    ng-style="{
+      'background-image': image && 'url(' + ($rootScope.isDesktop && image.desktop || image.mobile) + ')' || false
+    }"></div>
+</div>
