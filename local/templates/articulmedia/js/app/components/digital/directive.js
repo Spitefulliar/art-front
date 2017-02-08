@@ -7,45 +7,69 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       
       // initializing background move
+      var bgEl;
+
+      function bgTransform(evt){
+        if (!$rootScope.isDesktop) return false;
+        var offset = bgEl.offset();
+        var center_x = (offset.left) + (bgEl.width()/4);
+        var center_y = (offset.top) + (bgEl.height()/4);
+        var mouse_x = evt.pageX; var mouse_y = evt.pageY;
+        var axeleration = 1/1.2;
+        var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+        var degree = ((radians * (360 / Math.PI) * -1) + 90)*axeleration; 
+        let tween = TweenMax.to(bgEl, 0.4, 
+          { 
+            ease:Linear.easeNone,
+            css:{rotation: degree}
+          });
+      };
+
+      function bgTransformCancel(){
+        $('body').off("mousemove", bgTransform);
+        let degree = 0;
+        bgEl.css('-moz-transform', 'rotate('+degree+'deg)');
+        bgEl.css('-webkit-transform', 'rotate('+degree+'deg)');
+        bgEl.css('-o-transform', 'rotate('+degree+'deg)');
+        bgEl.css('-ms-transform', 'rotate('+degree+'deg)');
+      };
+
+      function bgTranformOnSlide(clockwise, shiftDeg) {
+        let shiftBase = (shiftDeg)? shiftDeg : 30;
+        let degree = (clockwise > 0)? `+=${shiftBase}` : `-=${shiftBase}`;
+        let tween = TweenMax.to(bgEl, 0.8, 
+          { 
+            ease:Linear.easeOut,
+            css:{rotation: degree}
+          });
+      };
+
+      $scope.digSliderOnSlieInit = function() {
+        let digSlider = $('.digital-slider');
+        digSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+          bgTranformOnSlide(nextSlide - currentSlide, 30);
+        });
+      };
+
+
       $timeout(function(){
-        var bgEl = $('.inner-page__bg');
-
-        function bgTransform(evt){
-          var offset = bgEl.offset();
-          var center_x = (offset.left) + (bgEl.width()/4);
-          var center_y = (offset.top) + (bgEl.height()/4);
-          var mouse_x = evt.pageX; var mouse_y = evt.pageY;
-          var axeleration = 1/1.2;
-          var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
-          var degree = ((radians * (360 / Math.PI) * -1) + 90)*axeleration; 
-          bgEl.css('-moz-transform', 'rotate('+degree+'deg)');
-          bgEl.css('-webkit-transform', 'rotate('+degree+'deg)');
-          bgEl.css('-o-transform', 'rotate('+degree+'deg)');
-          bgEl.css('-ms-transform', 'rotate('+degree+'deg)');
-        };
-
-        function bgTransformCancel(){
-          $('body').off("mousemove", bgTransform);
-          let degree = 0;
-          bgEl.css('-moz-transform', 'rotate('+degree+'deg)');
-          bgEl.css('-webkit-transform', 'rotate('+degree+'deg)');
-          bgEl.css('-o-transform', 'rotate('+degree+'deg)');
-          bgEl.css('-ms-transform', 'rotate('+degree+'deg)');
-        };
-
+        bgEl = $('.inner-page__bg');
         if(bgEl.length > 0){
           $('body').mousemove(bgTransform);
         }
-
-        $scope.$on(
-          "$stateChangeStart",
-          function( event ) {
-            bgTransformCancel();
-          }
-        );
-
       },0);
 
+      $scope.$on(
+        "$stateChangeStart",
+        function( event ) {
+          bgTransformCancel();
+        }
+      );
+
+      //eof bg init
+
+
+      //assigning data and initing ellips and popups
       $scope.$on(
         "pageDataLoaded",
         function() {
@@ -197,7 +221,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         if (isDisabled) { 
           return false;      
         } else {
-          console.log(digItemIndex,$scope.digital.items[digItemIndex]);
           $scope.digitalPopup = $scope.digital.items[digItemIndex].popup;
 
           position = $scope._mdPanel.newPanelPosition()
@@ -215,7 +238,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         var config = {
           attachTo: attachment,
           controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
-          // controllerAs: 'popupImgCtrl',
           template: require('./popupTemplate.html'),
           panelClass: 'popup-digital',
           position: position,
@@ -234,9 +256,13 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
             //popup slider init
             popupSliderInit();
           },
+          onRemoving: function() {
+            $scope.digitalPopup = false;
+            $scope.popupSlider = false;
+            $scope.smPopupCtrl.destroy(true);
+          },
           onDomRemoved: function() {
             $scope.popupRendered = false;
-            $scope.popupSlider = false;
           }
         };
 
@@ -259,54 +285,22 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         return true;
       };
 
-      //popup carousel config
-      $scope.slickConfigPopup = {
-        enabled: true,
-        autoplay: false,
-        draggable: true,
-        infinite: false,
-        method: {},
-        cssEase: false,
-        useCSS: false,
-        dots: true,
-        arrows: false,
-        mobileFirst: true,
-        respondTo: 'window',
-        swipe: true,
-        easing: 'linear',
-        swipeToSlide: true,
-        variableWidth: false,
-        centerMode: true,
-        centerPadding: '0px',
-        vertical: true,
-        verticalSwiping: true,
-        adaptiveHeight: true,
-        slidesToScroll: 2,
-        slidesToShow: 2,
-        slidesPerRow: 2,
-        responsive: [
-          {
-            breakpoint: 959,
-            settings: {
-              slidesToScroll: 1,
-              slidesToShow: 1,
-              slidesPerRow: 1,
-              adaptiveHeight: true,
-            }
-          },
-          // {
-          //   breakpoint: 1,
-          //   settings: {
-          //     slidesToScroll: 2,
-          //     slidesToShow: 2,
-          //     slidesPerRow: 2
-          //   }
-          // },
-          // {
-          //   breakpoint: 0,
-          //   settings: "unslick"
-          // }
-        ]
+      function popupSMInit() {
+        let smCont =  ".popup-digital .scroller";
+        let smPin =  ".popup-digital .pin";
+        let smPinStop =  ".popup-digital .pinstop";
+        $scope.smPopupCtrl = new ScrollMagic.Controller({container: smCont, loglevel: 1});
+
+        var smPoupScene = new ScrollMagic.Scene({
+            triggerElement: smPinStop, 
+            triggerHook: "onEnter", 
+          })
+          .setClassToggle(smPin, "unpinned")
+          .addTo($scope.smPopupCtrl);
+
+        $scope.smScrollToCrosses = function() {
+          $scope.smPopupCtrl.scrollTo(smPinStop);
+        }
       }
 
       function popupSliderInit() {
@@ -327,14 +321,16 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           }
         };
 
-        // $scope.popupSlider.on('breakpoint',function(e,slick,bp){
-        //   console.log(e,slick,bp);
-        // });
+        $scope.popupSlider.on('breakpoint',function(e,slick,bp){
+          // console.log(e,slick,bp);
+        });
 
         $timeout(function(){
           $scope.popupSlider.slick('setPosition');
-        },0);
+          popupSMInit();
+        },100);
       };
+
 
     };
   return {

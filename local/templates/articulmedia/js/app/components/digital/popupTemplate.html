@@ -30,7 +30,7 @@
                     <h3 class="popup-digital__content-heading" ng-bind-html="trustAsHtml(item.heading)"></h3>
                     <div class="popup-digital__content-text" ng-bind-html="trustAsHtml(item.content)"></div>
                   </div>
-                  <div class="popup-digital__nav-item popup-digital__nav-item_bottom" ng-click="popupSliderNext()">реализованные <br>проекты</div>
+                  <div class="popup-digital__nav-item popup-digital__nav-item pinstop popup-digital__nav-item_bottom" ng-click="popupSliderNext()">реализованные <br>проекты</div>
                 </div>
               </div>
               <div class="popup-digital__slide" ng-if="digitalPopup.crosses.length">
@@ -86,6 +86,9 @@
           </div>
         </div>
       </baron-scrollbar>
+      <div class="pin" hide-gt-sm ng-click="smScrollToCrosses()">
+        <div class="popup-digital__nav-item popup-digital__nav-item_bottom">реализованные <br>проекты</div>
+      </div>
     </div>
   </div>
 </div>

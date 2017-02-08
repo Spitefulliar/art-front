@@ -1,5 +1,5 @@
-<div class="digital" art-page-constructor-dir>
-	<div class="digital__container" hide-gt-sm >
+<div class="digital" art-page-constructor-dir ng-class="{'hide': !digital}">
+	<div class="digital__container" ng-if="!isDesktop" ng-init="digSliderOnSlieInit()">
 		<h5 class="digital__slogan" ng-bind-html="trustAsHtml(digital.slogan)"></h5>
 		<h2 class="digital__title" ng-bind-html="trustAsHtml(digital.title)">
 			360<span class="digital__title__deg">o</span>
@@ -14,7 +14,6 @@
 		</slick>
 	</div>
 	<div class="digital360" hide-sm hide-xs>
-
 		<div class="digital360__wrap" id="digital360">
 			<svg version="1.1" id="ellips360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="1548.969px" height="550px" viewBox="0 0 1548.969 550" enable-background="new 0 0 1548.969 550" xml:space="preserve">
