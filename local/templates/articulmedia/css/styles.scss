@@ -404,36 +404,6 @@ ul {
       display: none;
   }
 }
-
-art-parallax-bg-dir {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.parallax {
-  &-viewport {
-    display: block;
-    position: static;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
-  &-bg {
-    position: relative;
-    z-index: 1;
-    left: 0;
-    width: 100%;
-    height: 140%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    -webkit-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
-    overflow: hidden;
-  }
-}
 //eof elements
 
 *:focus,
@@ -2718,6 +2688,20 @@ art-page-constructor-dir {
               background-size: 150% auto;
       overflow: hidden;
     }
+    &__img {
+      position: relative;
+      z-index: 1;
+      top: -40%;
+      left: 0;
+      width: 100%;
+      height: 140%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      -webkit-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover;
+      overflow: hidden;
+    }
     &__content {
       margin-bottom: vh(30px);
       font-size: vh(18px);
@@ -2837,6 +2821,36 @@ art-page-constructor-dir {
         }
       }
     }
+  }
+}
+
+art-parallax-bg-dir {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.parallax {
+  &-viewport {
+    display: block;
+    position: static;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  &-bg {
+    position: relative;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    overflow: hidden;
   }
 }
 
