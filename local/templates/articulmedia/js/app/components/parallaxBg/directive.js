@@ -15,8 +15,9 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
       let parappaxBg = $(`.${elClass} .parallax-bg`);
       parappaxBg.css('height',`${bgScale * 100}%`);
 
+      let SMcontroller = new ScrollMagic.Controller();
+
       function parallaxInit(shift,duration) {
-        let SMcontroller = new ScrollMagic.Controller();
 
         var bgTimeline = new TimelineMax({
           paused: false
@@ -44,6 +45,13 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
         parallaxInit(shift,duration);
       },100);
       
+
+      $scope.$on(
+        "$destroy",
+        function( event ) {
+          SMcontroller.destroy();
+        }
+      );
     };
   return {
     restrict: "AE",

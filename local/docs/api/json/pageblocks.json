@@ -201,6 +201,34 @@
         ]
       },
       {
+        "type": "solution-full-gallery",
+        "style": {
+          "bgColor": "#c7b8a3",
+          "bgGradient": {
+            "col1": "#f3e3cc",
+            "col2": "#435741",
+            "top": true
+          }
+        },
+        "blocks": [
+          {
+            "type": "solution-full-gallery-single",
+            "title": "Медиаподдержка:",
+            "content": [ 
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet."
+            ],
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_smm_1.jpg"
+            }
+          }
+        ]
+      },
+      {
         "type": "single",
         "blocks": [
           {
