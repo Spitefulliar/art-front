@@ -3611,6 +3611,162 @@ art-carousel3d-dir {
   }
 }
 
+.jobs-page {
+  padding-top: 90px;
+  min-height: 100vh;
+  background-color: $white;
+  color: $black;
+
+  &__container {
+    padding: vh(100px) vw(150px) 0;
+
+    @media (max-width: $screen-md) {
+      padding: 0 vw(82px) 0;
+    }
+  }
+
+  .jobs-content {
+    padding-right: 5%;
+    position: relative;
+    order: 1;
+
+    @media (max-width: $screen-sm) {
+      order: 2;
+      padding: 0;
+      background-color: $white;
+    }
+
+    &__title {
+      font-size: vh(48px);
+      font-weight: 100;
+      line-height: 100%;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    &__link-mobile {
+      display: none;
+
+      @media (max-width: $screen-sm) {
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: vh(24px);
+        line-height: vh(20px);
+        padding-right: 20px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          right: 0;
+          top: 5px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0.9em 0.5em 0.9em 0.5em;
+          border-color: #000000 transparent transparent transparent;
+          border-bottom-width: 0;
+        }
+      }
+
+      &--hidden {
+        display: none;
+      }
+    }
+    
+    .jobs-section {
+      
+      &__title {
+        font-size: vh(80px);
+        font-weight: 900;
+        line-height: 100%;
+        margin: vh(60px) 0;
+        text-transform: uppercase;
+        
+        @media (max-width: $screen-sm) {
+          font-size: vh(60px);
+        }
+
+      }
+
+      &__announcement {
+        font-size: vh(48px);
+        font-weight: 100;
+        line-height: 100%;
+        margin: 0 0 vh(50px) 0;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        font-size: vh(18px);
+        font-weight: 500;
+        line-height: 100%;
+        @media (max-width: $screen-sm) {
+          font-size: vh(24px);
+        }
+      }
+    }
+  }
+
+  .jobs-nav {
+    position: relative;
+
+    order: 2;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+      order: 1;
+      background-color: #e7e7e7;
+
+      &--open {
+        display: block;
+      }
+    }
+
+    &__item {
+      margin-bottom: vh(40px);
+    }
+
+    &__link-mobile:before {
+      display: none;
+      position: absolute;
+      content: '';
+      font-size: vh(24px);
+      line-height: vh(20px);
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.9em 0.5em 0.9em 0.5em;
+      border-color: transparent transparent #000000 transparent;
+      border-top-width: 0;
+
+      @media (max-width: $screen-sm) {
+        display: inline-block;
+      }
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: vh(18px);
+      line-height: vh(18px);
+      margin: 0;
+    }
+
+    &__text {
+      font-size: vh(18px);
+      font-weight: 500;
+      line-height: 100%;
+      margin: vh(15px) 0;
+      @media (max-width: $screen-sm) {
+        font-size: vh(24px);
+      }
+    }
+  }
+}
 
 
 

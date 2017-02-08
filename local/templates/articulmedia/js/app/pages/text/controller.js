@@ -8,7 +8,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   	$scope.$on(
 	    "pageDataLoaded",
 	    function() {
-	      $scope.items = $scope.page.text;
+	      $scope.items = $scope.page.text.items;
 	      console.log($scope.items);
 	    }
 	  );
