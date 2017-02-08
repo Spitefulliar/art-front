@@ -1,0 +1,17 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "",
+    "title": "Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения",
+    "scrollify": false,
+    "text": {
+      "items": [
+        {
+          "title": "Спортивный<br>маркетинг<br>в digital",
+          "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellen",
+          "image": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)"
+        }
+      ]
+  }
+}
