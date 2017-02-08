@@ -67,7 +67,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
         width: getSlideWidth(),
         height: getSlideHeight(),
         space: getSlideSpacing(),
-        autoRotationSpeed: 8000,
+        autoRotationSpeed: 9000,
         loop: true,
         clicking: true,
       };
