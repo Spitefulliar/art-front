@@ -9,10 +9,8 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
     "pageDataLoaded",
     function() {
       $scope.news = $scope.page.news;
-      console.log($scope.news);
+      // console.log($scope.news);
     }
-
-
   );
 
 	// $scope.currentData = { 

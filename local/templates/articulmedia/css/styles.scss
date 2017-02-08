@@ -3486,9 +3486,18 @@ art-carousel3d-dir {
 .text-page {
   padding-top: 90px;
   min-height: 100vh;
+  @media (max-width: $screen-sm) {
+    padding-top: 0;
+  }
+
 
   &__container {
     padding: vh(100px) vw(82px) 0;
+
+    @media (max-width: $screen-sm) {
+      background-color: #ececf5;
+      position: relative;
+    }
   }
 
   &__bg {
@@ -3499,6 +3508,12 @@ art-carousel3d-dir {
     width: 100%;
     position: fixed;
     top: 0;
+
+    @media (max-width: $screen-sm) {
+      position: relative;
+      left: 0;
+      height: vh(450px);
+    }
   }
 
   &__wrap {
