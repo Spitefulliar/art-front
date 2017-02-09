@@ -2,8 +2,8 @@
   <div class="jobs-page__container" layout="row" layout-wrap>
     <aside class="jobs-nav" flex-gt-sm="30" flex="100" ng-class="{'jobs-nav--open' : toggle}">
       <div class="jobs-nav__link-mobile" ng-click="toggle = !toggle"></div>
-      <section class="jobs-nav__item" ng-repeat="item in jobs" ng-click="">
-        <h5 class="jobs-nav__title" ng-bind-html="trustAsHtml(item.group)"></h5>
+      <section class="jobs-nav__item" ng-repeat="item in jobs">
+        <h5 class="jobs-nav__title" ng-bind-html="trustAsHtml(item.group)" ng-if="item.position"></h5>
         <ul class="jobs-list">
           <li class="jobs-list__item" ng-repeat="position in item.position">
             <a href="" class="jobs-list__link" ng-bind-html="trustAsHtml(position.announcement)"></a>
