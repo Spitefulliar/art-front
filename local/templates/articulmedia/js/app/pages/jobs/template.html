@@ -3,17 +3,21 @@
     <aside class="jobs-nav" flex-gt-sm="30" flex="100" ng-class="{'jobs-nav--open' : toggle}">
       <div class="jobs-nav__link-mobile" ng-click="toggle = !toggle"></div>
       <section class="jobs-nav__item" ng-repeat="item in jobs" ng-click="">
-        <h5 class="jobs-nav__title" ng-bind-html="trustAsHtml(item.title)"></h5>
-        <div class="jobs-nav__text" ng-bind-html="trustAsHtml(item.text) | limitTo: 10"></div>
+        <h5 class="jobs-nav__title" ng-bind-html="trustAsHtml(item.group)"></h5>
+        <ul class="jobs-list">
+          <li class="jobs-list__item" ng-repeat="position in item.position">
+            <a href="" class="jobs-list__link" ng-bind-html="trustAsHtml(position.announcement)"></a>
+          </li>
+        </ul>
       </section>
     </aside>
     <article class="jobs-content" flex-gt-sm="70" flex="100" ng-class="{'jobs-content--open' : toggle}">
       <h2 class="jobs-content__title">вакансия</h2>
       <div class="jobs-content__link-mobile" ng-click="toggle = !toggle" ng-class="{'jobs-content__link-mobile--hidden' : toggle}">другие<br>вакансии</div>
       <section class="jobs-section">
-        <h3 class="jobs-section__title" ng-bind="jobs[0].title"></h3>
-        <h4 class="jobs-section__announcement" ng-bind="jobs[0].announcement"></h4>
-        <p class="jobs-section__text" ng-bind="jobs[0].text"></p>
+        <h3 class="jobs-section__title" ng-bind="jobs[0].position[0].title"></h3>
+        <h4 class="jobs-section__announcement" ng-bind="jobs[0].position[0].announcement"></h4>
+        <p class="jobs-section__text" ng-bind="jobs[0].position[0].text"></p>
       </section>
     </article>
   </div>
