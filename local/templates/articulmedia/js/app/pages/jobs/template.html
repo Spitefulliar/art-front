@@ -1,4 +1,4 @@
-<div class="jobs-page" art-page-constructor-dir>
+<div class="jobs-page" art-page-constructor-dir ng-class="{'jobs-page--open' : toggle}">
   <div class="jobs-page__container" layout="row" layout-wrap>
     <aside class="jobs-nav" flex-gt-sm="30" flex="100" ng-class="{'jobs-nav--open' : toggle}">
       <div class="jobs-nav__link-mobile" ng-click="toggle = !toggle"></div>
@@ -7,7 +7,7 @@
         <div class="jobs-nav__text" ng-bind-html="trustAsHtml(item.text) | limitTo: 10"></div>
       </section>
     </aside>
-    <article class="jobs-content" flex-gt-sm="70" flex="100">
+    <article class="jobs-content" flex-gt-sm="70" flex="100" ng-class="{'jobs-content--open' : toggle}">
       <h2 class="jobs-content__title">вакансия</h2>
       <div class="jobs-content__link-mobile" ng-click="toggle = !toggle" ng-class="{'jobs-content__link-mobile--hidden' : toggle}">другие<br>вакансии</div>
       <section class="jobs-section">
