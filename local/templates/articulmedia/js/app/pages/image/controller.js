@@ -9,7 +9,6 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 	    "pageDataLoaded",
 	    function() {
 	      $scope.images = $scope.page.image.items;
-	      console.log($scope.images);
 	    }
 	  );
 
