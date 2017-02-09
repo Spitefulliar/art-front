@@ -581,10 +581,10 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
 }
 
 .header {
+  position: fixed;
   margin-top: 50px;
   height: 40px;
   z-index: 500;
-  position: absolute;
   width: 100%;
   white-space: nowrap;
   &__container {
