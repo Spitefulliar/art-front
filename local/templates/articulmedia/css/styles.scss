@@ -2574,18 +2574,52 @@ art-page-constructor-dir {
            -o-background-size: auto 100%;
               background-size: auto 100%;
     }
-    // .page-block {
-    //   &__container {
-    //     position: relative;
-    //     padding-bottom: vh(530px);
-    //   }
-    // }
     @media screen and (max-width: $screen-md) {
       min-height: initial;
       &__img {
         height: vh(420px,'md');
         position: static;
         margin-right: - vw(25px,'md');
+      }
+      .page-block {
+        &__container {
+          padding-bottom: 0;
+        }
+      }
+      .page-block__row {
+        height: auto;
+        & ~ .page-block__row {
+          height: auto;
+          & .page-block__col {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &_solution-pic-v {
+    &__col {
+      height: auto;
+      min-height: initial;
+    }
+    &__content {
+      padding-bottom: vh(25px);
+    }
+    &__img {
+      width: 100%;
+      min-width: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media screen and (max-width: $screen-md) {
+      min-height: initial;
+      &__img {
+        position: static;
       }
       .page-block {
         &__container {

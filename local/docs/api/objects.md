@@ -71,6 +71,16 @@
         original [string] оригинальный размер изображения
         desktop [string] изображение для desktop
         mobile [string] изображение для mobile
+
+### Решение-картинка-вертикальная | solution-pic-v
+
+    title [string] заголовок блока
+    content [string] текст блока
+    image []
+        alt [string] alt текст изображения
+        original [string] оригинальный размер изображения
+        desktop [string] изображение для desktop
+        mobile [string] изображение для mobile
         
 ### Контент-одна-картинка-маленький (половинный) | content-pic-sm
 

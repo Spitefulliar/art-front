@@ -1,0 +1,22 @@
+<div class="page-block"
+    ng-class="{'page-block_{{block.type}}': block.type}" 
+    ng-style="block.commonStyle"
+    flex="100"
+  >
+  <div class="page-block__container">
+    <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="page-block__col" flex="100" flex-gt-sm="40">
+        <div class="page-block_{{block.type}}__pinit pinit">
+          <h2 class="page-block_{{block.type}}__title page-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
+          <div class="page-block_{{block.type}}__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+        </div>
+      </div>
+      <div class="page-block__col page-block__col_pl-gt-sm-0" flex="100" flex-gt-sm="60">
+        <div class="page-block_{{block.type}}__img pinit-trigger">
+          <img alt="{{block.image.alt}}"
+            ng-src="{{(isDesktop && block.image.desktop || block.image.mobile || false)}}" >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

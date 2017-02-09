@@ -122,6 +122,25 @@
         "type": "single",
         "blocks": [
           {
+            "type": "solution-pic-v",
+            "title": "Решение",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet.</p> <p>Suspendisse vestibulum, elit vel porttitor ullamcorper, quam nibh suscipit sem, quis viverra felis lectus ac turpis. Pellentesque vel ante at diam hendrerit dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ac magna vel arcu viverra convallis. Morbi in euismod ante. Curabitur efficitur ante vel neque congue, non elementum leo dapibus. Vivamus blandit porta lorem eget hendrerit. Vivamus rhoncus varius efficitur. Fusce tincidunt ex at dapibus </p>",
+            "image": {
+              "alt": "Hair fashion night",
+              "original": "/local/templates/articulmedia/img/case/solution-portrait.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/solution-portrait.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/solution-portrait.jpg"
+            },
+            "style": {
+              "bgColor": "#ea0190"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
             "type": "solution-pic-h",
             "title": "Решение",
             "content": "<p>Реализована PR-кампания по поддержке и продвижению сериала, основанная на его концепции и содержании, как в онлайне, так и в оффлайне. </p><p>Создан промо-сайт с активацией-звонком из города Уэйуорд Пайнс, где разворачиваются события фильма.</p>",
