@@ -3703,6 +3703,14 @@ art-carousel3d-dir {
 
   &__container {
     padding: vh(100px) vw(82px) 0;
+
+    @media (max-width: $screen-md) {
+      position: absolute;
+      top: 70vh;
+      background: rgba(255,255,255,.8);
+      padding-top: 0;
+      padding-top: vh(60px);
+    }
   }
 
   &__bg {
@@ -3713,10 +3721,36 @@ art-carousel3d-dir {
     width: 100%;
     position: fixed;
     top: 0;
+
+    @media (max-width: $screen-md) {
+      position: relative;
+      
+      &:after {
+        position: absolute;
+        width: 100%;
+        height: 70vh;
+        bottom: 0;
+        right: 0;
+        content: '';
+        background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.93) 93%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.93) 93%,rgba(255,255,255,1) 100%);
+        background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.93) 93%,rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+      }
+    } 
   }
 
   &__wrap {
     position: relative;
+
+    @media (max-width: $screen-md) {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;  
+      flex-direction: column;
+    }
   }
 
   &__quote {
@@ -3732,6 +3766,11 @@ art-carousel3d-dir {
     &:before {
       font-weight: 100;
     }
+
+    @media (max-width: $screen-md) {
+      margin: vh(60px) 0;
+      order: 2;
+    }
   }
 
   &__name,
@@ -3740,6 +3779,11 @@ art-carousel3d-dir {
     color: $black;
     font-weight: 500;
     margin: 0;
+
+    @media (max-width: $screen-md) {
+      order: 1;
+      font-size: vh(24px);
+    }
   }
 }
 
@@ -3748,6 +3792,14 @@ art-carousel3d-dir {
   min-height: 100vh;
   background-color: $white;
   color: $black;
+
+  &--open {
+    background-color: #e7e7e7;
+
+    .jobs-page__container {
+      padding: 0;
+    }
+  }
 
   &__container {
     padding: vh(100px) vw(150px) 0;
@@ -3761,11 +3813,17 @@ art-carousel3d-dir {
     padding-right: 5%;
     position: relative;
     order: 1;
+    overflow: hidden;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       order: 2;
       padding: 0;
       background-color: $white;
+      padding-bottom: vh(80px);
+    }
+
+    &--open {
+      padding: vh(80px) vw(82px) vh(80) vw(82px);
     }
 
     &__title {
@@ -3779,7 +3837,7 @@ art-carousel3d-dir {
     &__link-mobile {
       display: none;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         display: inline-block;
         text-align: right;
         position: absolute;
@@ -3817,7 +3875,7 @@ art-carousel3d-dir {
         margin: vh(60px) 0;
         text-transform: uppercase;
         
-        @media (max-width: $screen-sm) {
+        @media (max-width: $screen-md) {
           font-size: vh(60px);
         }
 
@@ -3835,7 +3893,7 @@ art-carousel3d-dir {
         font-size: vh(18px);
         font-weight: 500;
         line-height: 100%;
-        @media (max-width: $screen-sm) {
+        @media (max-width: $screen-md) {
           font-size: vh(24px);
         }
       }
@@ -3847,13 +3905,14 @@ art-carousel3d-dir {
 
     order: 2;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       display: none;
       order: 1;
       background-color: #e7e7e7;
 
       &--open {
         display: block;
+        margin: 0 vw(82px) 0;
       }
     }
 
@@ -3876,7 +3935,7 @@ art-carousel3d-dir {
       border-color: transparent transparent #000000 transparent;
       border-top-width: 0;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         display: inline-block;
       }
     }
@@ -3886,15 +3945,31 @@ art-carousel3d-dir {
       font-size: vh(18px);
       line-height: vh(18px);
       margin: 0;
-    }
 
-    &__text {
-      font-size: vh(18px);
-      font-weight: 500;
-      line-height: 100%;
-      margin: vh(15px) 0;
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         font-size: vh(24px);
+        line-height: vh(24px);
+      }
+    }
+    
+    .jobs-list {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+
+      &__item {
+        margin: vh(15px) 0;
+      }
+
+      &__link {
+        font-size: vh(18px);
+        font-weight: 500;
+        line-height: 100%;
+        text-decoration: none;
+        color: $black;
+        @media (max-width: $screen-md) {
+          font-size: vh(24px);
+        }
       }
     }
   }
