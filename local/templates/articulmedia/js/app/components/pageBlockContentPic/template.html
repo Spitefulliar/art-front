@@ -6,16 +6,16 @@
   <div class="page-block__container">
     <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
       <div class="page-block__col" flex="100" flex-gt-sm="55">
-        <h4 class="page-block_content-pic__title" ng-bind-html="trustAsHtml(block.title)"></h4>
-        <div class="page-block_content-pic__content page-block__content">
+        <h4 class="page-block_{{block.type}}__title" ng-bind-html="trustAsHtml(block.title)"></h4>
+        <div class="page-block_{{block.type}}__content page-block__content">
           <p ng-repeat="item in block.content track by $index" 
             ng-bind-html="trustAsHtml(item)"
             ng-class="{'h4': $odd}"></p>
         </div>
       </div>
       <div class="page-block__col page-block__col_pl-gt-sm-0" flex="100" flex-gt-sm="45">
-        <div class="page-block_content-pic__img">
-          <div class="page-block_content-pic__img-bg"  
+        <div class="page-block_{{block.type}}__img">
+          <div class="page-block_{{block.type}}__img-bg"  
             ng-style="{
               'background-image': 'url(' + (isDesktop && block.image.desktop || block.image.mobile || false) + ')'
             }"

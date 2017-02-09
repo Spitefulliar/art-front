@@ -122,6 +122,25 @@
         "type": "single",
         "blocks": [
           {
+            "type": "solution-pic-h",
+            "title": "Решение",
+            "content": "<p>Реализована PR-кампания по поддержке и продвижению сериала, основанная на его концепции и содержании, как в онлайне, так и в оффлайне. </p><p>Создан промо-сайт с активацией-звонком из города Уэйуорд Пайнс, где разворачиваются события фильма.</p>",
+            "image": {
+              "alt": "House raid",
+              "original": "/local/templates/articulmedia/img/case/solution-landscape.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/solution-landscape.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/solution-landscape.jpg"
+            },
+            "style": {
+              "bgColor": "#cec0ab"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
             "type": "solution-carousel",
             "title": "Решение",
             "content": "<p>Реализована PR-кампания по поддержке и продвижению сериала, основанная на его концепции и содержании, как в онлайне, так и в оффлайне. </p><p>Создан промо-сайт с активацией-звонком из города Уэйуорд Пайнс, где разворачиваются события фильма.</p>",
