@@ -597,7 +597,6 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
       -webkit-flex-shrink: 0;
               flex-shrink: 0;
     }
-    
   }
 
   @media (max-width: $screen-md) {
@@ -2538,6 +2537,94 @@ art-page-constructor-dir {
       min-height: initial;
       &__carousel {
         padding-bottom: vh(20px,'md'); 
+      }
+      .page-block__row {
+        height: auto;
+        & ~ .page-block__row {
+          height: auto;
+          & .page-block__col {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &_solution-pic-h {
+    &__col {
+      height: auto;
+      min-height: initial;
+    }
+    &__content {
+      padding-bottom: vh(25px);
+    }
+    &__img {
+      width: auto;
+      min-width: 100%;
+      height: vh(530px);
+      margin-right: - vw(82px);
+    }
+    &__img-bg {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: top left;
+      -webkit-background-size: auto 100%;
+           -o-background-size: auto 100%;
+              background-size: auto 100%;
+    }
+    @media screen and (max-width: $screen-md) {
+      min-height: initial;
+      &__img {
+        height: vh(420px,'md');
+        position: static;
+        margin-right: - vw(25px,'md');
+      }
+      .page-block {
+        &__container {
+          padding-bottom: 0;
+        }
+      }
+      .page-block__row {
+        height: auto;
+        & ~ .page-block__row {
+          height: auto;
+          & .page-block__col {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &_solution-pic-v {
+    &__col {
+      height: auto;
+      min-height: initial;
+    }
+    &__content {
+      padding-bottom: vh(25px);
+    }
+    &__img {
+      width: 100%;
+      min-width: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media screen and (max-width: $screen-md) {
+      min-height: initial;
+      &__img {
+        position: static;
+      }
+      .page-block {
+        &__container {
+          padding-bottom: 0;
+        }
       }
       .page-block__row {
         height: auto;
