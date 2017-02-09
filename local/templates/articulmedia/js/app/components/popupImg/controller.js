@@ -42,6 +42,8 @@ let popupImgCtrl = function($scope, $rootScope, $timeout, $window, $log, $state,
       disableParentScroll: true,
       onDomAdded: function() {
         $scope.popupRendered = true;
+        
+        $('.popup-img').parents('.md-panel-outer-wrapper').append($('.popup-img .popup-img__close_outer'));
       },
       onDomRemoved: function() {
         $scope.popupRendered = false;
