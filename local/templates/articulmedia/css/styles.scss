@@ -3737,6 +3737,10 @@ art-carousel3d-dir {
         background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.93) 93%,rgba(255,255,255,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
       }
+
+      &--one:after {
+        display: none;
+      }
     } 
   }
 
