@@ -3775,14 +3775,25 @@ art-carousel3d-dir {
         line-height: vh(24px);
       }
     }
+    
+    .jobs-list {
+      margin: 0;
+      list-style: none;
+      padding: 0;
 
-    &__text {
-      font-size: vh(18px);
-      font-weight: 500;
-      line-height: 100%;
-      margin: vh(15px) 0;
-      @media (max-width: $screen-md) {
-        font-size: vh(24px);
+      &__item {
+        margin: vh(15px) 0;
+      }
+
+      &__link {
+        font-size: vh(18px);
+        font-weight: 500;
+        line-height: 100%;
+        text-decoration: none;
+        color: $black;
+        @media (max-width: $screen-md) {
+          font-size: vh(24px);
+        }
       }
     }
   }

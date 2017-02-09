@@ -9,7 +9,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
     "pageDataLoaded",
     function() {
       $scope.jobs = $scope.page.jobs.items;
-      // console.log($scope.jobs);
+      console.log($scope.jobs);
     }
   );
 
