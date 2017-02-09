@@ -1,0 +1,38 @@
+<div class="page-block"
+  ng-class="{'page-block_{{block.type}}': block.type}" 
+  flex="100" flex-gt-sm="45" 
+  ng-style="block.commonStyle">
+  <div class="page-block__container">
+    <h4 class="page-block_content-gallery-sm__title" ng-bind-html="trustAsHtml(block.title)"></h4>
+    <div class="page-block_content-gallery-sm__content page-block__content" ng-bind-html="trustAsHtml(block.content)"></div>
+    <div class="page-block_content-gallery-sm__images page-block__col">
+      <md-grid-list class="page-block_content-gallery-sm__images-grid"
+        md-cols="2"
+        md-row-height="1:1"
+        md-gutter="18px" md-gutter-gt-sm="18px" >
+
+        <md-grid-tile 
+          md-rowspan="1" md-colspan="1" 
+          ng-repeat="img in block.images"  
+          >
+          <div class="page-block_content-gallery-sm__img plus-item" 
+          ng-class="{'page-block_content-gallery-sm__img_even': $odd}"
+          >
+            <div class="page-block_content-gallery-sm__img-bg"  
+              ng-style="{
+                'background-image': 'url(' + (isDesktop && img.desktop || img.mobile || false) + ')'
+              }"
+              alt="{{img.alt}}" 
+              art-popup-img-dir 
+              ng-click="popupImgCtrl.showImgPopup(img.original)"></div>
+            <span class="plus-item__icon">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+              </svg>
+            </span>
+          </div>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+  </div>
+</div>

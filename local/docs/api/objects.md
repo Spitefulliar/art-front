@@ -54,7 +54,7 @@
 
     title [string] заголовок блока
     content [string] текст блока
-    images [] ссылки на изображения для карусели
+    images [array] ссылки на изображения для карусели (от 3х элементов)
         [
             alt [string] alt текст изображения
             original [string] оригинальный размер изображения
@@ -62,21 +62,51 @@
             mobile [string] изображение для mobile с зеркальным отражением
         ]
         
-### Решение-галерея-одна-картинка | solution-gallery-single
+### Контент-одна-картинка-маленький (половинный) | content-pic-sm
 
-    title [string] заголовок блока
-    content [string] контент блока
+    contentBlocks [array] контент блока
+        main []
+            title [string] заголовок блока
+            content [string] контент блока
+        list []
+            title [string] заголовок блока
+            content [string] контент блока
+        additional []
+            title [string] заголовок блока
+            content [string] контент блока
     image []
         alt [string] alt текст изображения
         original [string] оригинальный размер изображения
         desktop [string] изображение для desktop
         mobile [string] изображение для mobile
     
-### Решение-галерея-несколько-картинок | solution-gallery-multi
+### Контент-галерея-маленький (половинный) | content-gallery-sm
 
     title [string] заголовок блока
     content [string] контент блока
-    images [] изображения для галереи
+    images [array] изображения для галереи (до 4x)
+        [
+            alt [string] alt текст изображения
+            original [string] оригинальный размер изображения
+            desktop [string] изображение для desktop
+            mobile [string] изображение для mobile
+        ]
+
+### Контент-одна-картинка | content-pic
+
+    title [string] заголовок блока
+    content [array] контент блока (3 строки, вторая отображается жирно)
+    image []
+        alt [string] alt текст изображения
+        original [string] оригинальный размер изображения
+        desktop [string] изображение для desktop
+        mobile [string] изображение для mobile
+
+### Контент-галерея | content-gallery
+
+    title [string] заголовок блока
+    content [string] контент блока
+    images [array] изображения для галереи (до 5)
         [
             alt [string] alt текст изображения
             original [string] оригинальный размер изображения

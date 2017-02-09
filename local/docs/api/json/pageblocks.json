@@ -152,7 +152,7 @@
         ]
       },
       {
-        "type": "solution-gallery",
+        "type": "content-pic-gallery",
         "style": {
           "bgColor": "#c7b8a3",
           "bgGradient": {
@@ -163,7 +163,7 @@
         },
         "blocks": [
           {
-            "type": "solution-gallery-single",
+            "type": "content-pic-sm",
             "title": "Медиаподдержка:",
             "content": "<ul><li>Брендирование сайта «Кинопоиск»</li><li>Баннерная реклама на сайте Soloway</li><li>ВКонтакте: ТГБ</li><li>Facebook: рекомендованная страница и бустинг постов</li></ul>",
             "image": {
@@ -174,7 +174,7 @@
             }
           },
           {
-            "type": "solution-gallery-multi",
+            "type": "content-gallery-sm",
             "title": "SMM:",
             "content": "Основной контент размещался в официальных сообществах телеканала FOX в Facebook и ВК: новости, интересные факты по содержанию серий, еженедельные конкурсы с призами, тизеры и другие активности.",
             "images": [
@@ -183,6 +183,96 @@
                 "original": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
                 "desktop": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
                 "mobile": "/local/templates/articulmedia/img/case/case_smm_2.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_3.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_4.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#c7b8a3",
+          "bgGradient": {
+            "col1": "#f3e3cc",
+            "col2": "#435741",
+            "top": false
+          }
+        },
+        "blocks": [
+          {
+            "type": "content-pic",
+            "title": "Медиаподдержка:",
+            "content": [ 
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit pellentesque, tristique purus non, venenatis lectus. Morbi cursus risus sagittis magna porta imperdiet."
+            ],
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_smm_1.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#c7b8a3",
+          "bgGradient": {
+            "col1": "#f3e3cc",
+            "col2": "#435741",
+            "top": true
+          }
+        },
+        "blocks": [
+          {
+            "type": "content-gallery",
+            "contentBlocks": {
+              "main": {
+                "title": "Медиаподдержка",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. Nunc semper facilisis libero vitae facilisis.</p> <p>Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p>"
+              },
+              "list": {
+                "title": "Медиаподдержка",
+                "content": "<ul><li>Брендирование сайта «Кинопоиск»</li><li>Баннерная реклама на сайте Soloway</li><li>ВКонтакте: ТГБ</li><li>Facebook: рекомендованная страница и бустинг постов</li></ul>"
+              },
+              "additional": {
+                "title": "Медиаподдержка",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in fermentum lectus. Aliquam mollis iaculis ex ut posuere. Sed faucibus aliquam mi lacinia congue. Etiam fermentum placerat convallis. Nulla et condimentum ipsum. Nam sit amet velit "
+              }
+            },
+            "images": [
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_2.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_2.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_3.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_3.jpg"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "desktop": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
+                "mobile": "/local/templates/articulmedia/img/case/case_smm_4.jpg"
               },
               {
                 "alt": "Сосны",

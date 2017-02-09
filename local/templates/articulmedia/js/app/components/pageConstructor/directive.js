@@ -22,9 +22,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
         $attributes = $attributes;
 
         //enabling scrollify for page sections
-        if ($scope.page.page && $scope.page.sections) {
+        if ($scope.page && $scope.page.sections) {
           let pgSectionsQ = ".page-section";
-
           if ($scope.page.scrollify) {
             function scrollifyDestroy() {
               $.scrollify.destroy();
