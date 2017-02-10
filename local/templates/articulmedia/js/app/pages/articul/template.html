@@ -1,4 +1,4 @@
-<div class="articul-page">
+<div class="articul-page" art-page-constructor-dir>
   <div class="articul-page__container" layout="row" layout-wrap>
    	<div class="articul-item" ng-repeat="item in timeLineData.timeLineItem" flex-gt-sm="25" flex="50">
    		<h4 class="articul-item__number" ng-bind="item.number"></h4>
@@ -6,5 +6,18 @@
    	</div>
   </div>
   <div class="time-line"></div>
+
+  <div class="time-line__wrap">
+  	<div class="time-line__blocks" layout="row" layout-wrap  layout-align="space-around end">
+  		<div class="time-item" ng-repeat="item in items">
+  			<div class="time-item__happy" ng-style="{height: item.happy}"></div>
+  			<div class="time-item__honor" ng-style="{height: item.honor}"></div>
+  			<div class="time-item__release" ng-style="{height: item.release}"></div>
+  		</div>
+  	</div>
+  	<div class="time-line__years" layout="row" layout-wrap  layout-align="space-around end">
+  		<div class="time-year" ng-repeat="item in items" ng-bind="item.year">2000</div>
+  	</div>
+  </div>
   <h4 class="time-line__title" hide-gt-xs>articulmedia <br> навсегда</h4>
 </div>

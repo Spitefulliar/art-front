@@ -26,6 +26,14 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 		]
 	};
 
+	$scope.$on(
+    "pageDataLoaded",
+    function() {
+      $scope.items = $scope.page.timeline.items;
+      console.log($scope.items);
+    }
+  );
+
 	// $('.time-line').backgroundDraggable({ axis: 'x' });
 
 	// $('.time-line').animate({
