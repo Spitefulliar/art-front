@@ -9,8 +9,9 @@
       "items": [
         {
           "title": "Спортивный<br>маркетинг<br>в digital",
-          "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellen",
-          "image": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)"
+          "image": "url(../local/templates/articulmedia/img/desktop/news-bg.jpg)",
+          "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. feugiat. Pellen",
+          "imageBg": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)"
         }
       ]
     }
