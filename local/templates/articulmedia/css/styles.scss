@@ -3844,18 +3844,28 @@ art-carousel3d-dir {
 .text-page {
   padding-top: 90px;
   min-height: 100vh;
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-md) {
     padding-top: 0;
   }
 
+  &--no-bg {
+    background-color: #e0a15d;
+  }
 
   &__container {
     padding: vh(100px) vw(82px) 0;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       background-color: #ececf5;
       position: relative;
+      padding-bottom: vh(80px);
+      padding-top: vh(110px);
+
+      &--bg {
+        background-color: #ececf5;
+      }
     }
+
   }
 
   &__bg {
@@ -3867,10 +3877,8 @@ art-carousel3d-dir {
     position: fixed;
     top: 0;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-md) {
       position: relative;
-      left: 0;
-      height: vh(450px);
     }
   }
 
@@ -3883,7 +3891,13 @@ art-carousel3d-dir {
     font-weight: 900;
     line-height: vh(65px);
     color: $black;
-    margin: 0 0 60px 0;
+    margin: 0 0 vh(60px) 0;
+
+    @media (max-width: $screen-md) {
+      font-size: vh(50px);
+      line-height: vh(50px);
+      margin-bottom: vh(40px);
+    }
   }
 
   &__slogan {
@@ -3891,6 +3905,11 @@ art-carousel3d-dir {
     font-weight: 100;
     color: $black;
     margin: 0;
+
+    @media (max-width: $screen-md) {
+      font-size: vh(30px);
+      line-height: vh(30px);
+    }
   }
 
 }
