@@ -6,16 +6,14 @@
   <div class="page-block__container">
     <div class="page-block_{{block.type}}__content-row page-block__row layout-wrap" 
       layout="row" layout-wrap layout-align="start" >
-      <div class="page-block__col page-block__col_pr-gt-sm-0" flex="100" flex-gt-sm="55" >
-        <h4 class="page-block_{{block.type}}__title" ng-bind-html="trustAsHtml(block.contentBlocks.main.title)"></h4>
+      <div class="page-block__col" flex="100" flex-gt-sm="50" >
         <div class="page-block_{{block.type}}__content page-block__content" 
-          ng-bind-html="trustAsHtml(block.contentBlocks.main.content)">
+          ng-bind-html="trustAsHtml(block.content)">
         </div>
       </div>
-      <div class="page-block__col" flex="100" flex-gt-sm="45">
-        <h4 class="page-block_{{block.type}}__title" ng-bind-html="trustAsHtml(block.contentBlocks.list.title)"></h4>
-        <div class="page-block_{{block.type}}__content page-block__content" 
-          ng-bind-html="trustAsHtml(block.contentBlocks.list.content)">
+      <div class="page-block__col" flex="100" flex-gt-sm="50">
+        <div class="page-block_{{block.type}}__content page-block__content">
+          <div class="page-block_{{block.type}}__slogan" ng-bind-html="trustAsHtml(block.slogan)"></div>
         </div>
         <h4 class="page-block_{{block.type}}__title" ng-bind-html="trustAsHtml(block.contentBlocks.additional.title)"></h4>
         <div class="page-block_{{block.type}}__content page-block__content" 
@@ -25,8 +23,8 @@
     </div>
     <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
       <div class="page-block__col" flex="100" flex-gt-sm="100">
-        <div class="page-block_{{block.type}}__images">
-          <md-grid-list class="page-block_{{block.type}}__images-grid"
+        <div class="page-block_{{block.type}}__cases cases-list">
+          <!-- <md-grid-list class="page-block_{{block.type}}__images-grid"
             md-cols-gt-sm="5"
             md-cols="2"
             md-row-height="1:1"
@@ -53,6 +51,34 @@
                   </svg>
                 </span>
               </div>
+            </md-grid-tile>
+          </md-grid-list> -->
+          <md-grid-list class="cases-list__grid"
+            md-cols-gt-sm="5"
+            md-cols="2"
+            md-row-height="1:1"
+            md-gutter="0" md-gutter-gt-sm="0" >
+            <md-grid-tile 
+              md-rowspan="1" md-colspan="1" 
+              ng-repeat="item in block.items"  
+              >
+              <a class="cases-list__grid-item" 
+                ng-class="{'plus-item': (item.type != 'client') }"
+                ng-attr-href="{{item.link}}"
+                title="{{item.title}}"
+                >
+                <div class="cases-list__grid-item-bg"  
+                  ng-style="{
+                    'background-image': 'url(' + (isDesktop && item.image.desktop || item.image.mobile || false) + ')'
+                  }"
+                  title="{{item.alt}}" 
+                  ></div>
+                <span ng-if="item.type != 'client'" class="plus-item__icon">
+                  <svg>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
+                  </svg>
+                </span>
+              </a>
             </md-grid-tile>
           </md-grid-list>
         </div>

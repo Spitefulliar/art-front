@@ -3205,6 +3205,60 @@ art-page-constructor-dir {
       }
     }
   }
+
+  &_cases {
+    &__content-row {
+      margin-bottom: vh(40px);
+      height: vh(300px);
+    }
+    &__content {
+      margin-bottom: vh(25px);
+      font-weight: $fwmd;
+    }
+    &__slogan {
+      font-size: vh(48px);
+      font-weight: $fwthin;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .cases-list {
+      width: 100%;
+      max-width: 180vh;
+      &__grid {
+        width: 100%;
+      }
+    }
+    .page-block__container {
+      padding-bottom: vh(50px);
+    }
+
+    @media screen and (max-width: $screen-md) {
+      &__content-row {
+        height: auto;
+        margin-bottom: 0;
+      }
+      &__content {
+        margin-bottom: vh(25px,'md');
+      }
+      &__cases-list {
+        position: static;
+        padding: 0 0 18px;
+        height: auto;
+        max-width: initial;
+        max-height: initial;
+        &__grid {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .page-block__container {
+        max-height: initial;
+        padding-top: vh(50px,'md');
+        padding-bottom: vh(50px,'md');
+      }
+    }
+  }
 }
 
 

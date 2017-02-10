@@ -411,6 +411,66 @@
         "type": "single",
         "blocks": [
           {
+            "type": "cases",
+            "style": {
+              "bgColor": "#84bbd7"
+            },
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum.</p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p>",
+            "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellen",
+            "items": [
+              {
+                "type": "client",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              },
+              {
+                "type": "case",
+                "code": "fox",
+                "title":"fox",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/case/case_logo.jpg",
+                  "mobile": "/local/templates/articulmedia/img/case/case_logo.jpg"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
             "type": "crosses",
             "title": "другие проекты ДЛЯ <b>FOX International channels russia</b>",
             "style": {
