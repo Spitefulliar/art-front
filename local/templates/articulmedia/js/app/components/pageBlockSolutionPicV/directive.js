@@ -10,7 +10,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
       let elClass = 'pinit-' + Math.floor(Math.random()*50);
       element.addClass(elClass);
 
-      let SMcontroller = new ScrollMagic.Controller();
+      let SMcontroller = new ScrollMagic.Controller({loglevel: 0});
       let SMscene;
 
       function parallaxInit() {
@@ -22,8 +22,13 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
                 return (duration > 0)? duration : 0;
               }
             })
-            .setPin(`.${elClass} .pinit`)
+            .setPin(`.${elClass} .pinit`, {
+              pushFollowers : false
+            })
             .addTo(SMcontroller);
+        $timeout(function(){
+          $.scrollify.update();
+        },0);
       }
 
       $scope.$watch(function() {

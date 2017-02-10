@@ -442,6 +442,10 @@ art-parallax-bg-dir {
     overflow: hidden;
   }
 }
+
+.bold {
+  font-weight: $fwbold;
+}
 //eof elements
 
 *:focus,
@@ -2248,6 +2252,35 @@ art-digital-dir {
 
 }
 
+.play-btn {
+  $size: vh(130px);
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: $size;
+  height: $size;
+  line-height: $size;
+  font-size: $size;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  text-align: center;
+  cursor: pointer;
+  &__icon {
+    position: relative;
+    left: 0.1em;
+    font-size: 0.46em;
+  }
+  @media screen and (max-width: $screen-md) {
+    top: 55%;   
+  }
+}
+
 /*
  * case
  */
@@ -2303,6 +2336,12 @@ art-page-constructor-dir {
       margin: 1em 0;
     }
   }
+  h4 {
+    margin: 0 0 1em 0;
+    & ~ h4 {
+      margin-top: 1.5em;
+    }
+  }
   @media screen and (min-width: $screen-md - 1) {
     .page-block__container,
     .page-block__col {
@@ -2336,35 +2375,6 @@ art-page-constructor-dir {
         }
       } 
     }
-  }
-}
-
-.play-btn {
-  $size: vh(130px);
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  width: $size;
-  height: $size;
-  line-height: $size;
-  font-size: $size;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  -webkit-transform: translate(-50%,-50%);
-     -moz-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-       -o-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-  text-align: center;
-  cursor: pointer;
-  &__icon {
-    position: relative;
-    left: 0.1em;
-    font-size: 0.46em;
-  }
-  @media screen and (max-width: $screen-md) {
-    top: 55%;   
   }
 }
 
@@ -2573,6 +2583,10 @@ art-page-constructor-dir {
       -webkit-background-size: auto 100%;
            -o-background-size: auto 100%;
               background-size: auto 100%;
+    }
+    .pinit {
+      position: absolute;
+      z-index: 1;
     }
     @media screen and (max-width: $screen-md) {
       min-height: initial;
@@ -2784,7 +2798,6 @@ art-page-constructor-dir {
     }
     &__img {
       width: 100%;
-      height: 100%;
       overflow: hidden;
       height: vh(555px);
     }
@@ -2901,6 +2914,102 @@ art-page-constructor-dir {
             }
           }
         }
+      }
+    }
+  }
+
+  &_content-slider {
+    &__content {
+      margin-bottom: vh(25px);
+    }
+    &__slider-wrap {
+      width: 100%;
+    }
+    &__slider-item {
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: vh(445px);
+      }
+    }
+    &__slider {
+      color: inherit;
+      &.slick-dotted.slick-slider {
+        margin-bottom: vh(120px);
+      }
+      .slick-numbers {
+        font-size: vh(30px);
+        bottom: -3em;
+        color: inherit;
+        li {
+          height: 1.66em;
+          width: 1.66em;
+          line-height: 1.8em;
+          color: inherit;
+          margin-left: 6px;
+          margin-right: 6px;
+          -webkit-border-radius: 100%;
+                  border-radius: 100%;
+          border: 2px solid currentColor;
+          &.slick-active {
+            background: currentColor;
+            button {
+              color:  $black; 
+            }
+          }
+          button {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            font-size: inherit;
+            color: inherit;
+            text-indent: 0;
+            font-family: $ffreg;
+            font-weight: $fwbold;
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .page-block {
+      &__container {
+        padding-top: vh(160px);
+        padding-bottom: vh(75px);
+      }
+    }
+    
+    @media screen and (max-width: $screen-md) {
+      &__content {
+        margin-bottom: vh(25px,'md');
+      }
+      &__slider {
+        padding: 0;
+        height: auto;
+        &.slick-dotted.slick-slider {
+          margin-bottom: vh(150px,'md');
+        }
+        .slick-numbers {
+          font-size: vh(30px,'md');
+        }
+      }
+      &__slider-item {
+        img {
+          max-height: vh(460px,'md');
+        }
+      }
+      .page-block__container {
+        padding-top: vh(50px,'md');
+        padding-bottom: 0;
+        min-height: initial;
       }
     }
   }

@@ -1,0 +1,40 @@
+<div class="page-block"
+    ng-class="{'page-block_{{block.type}}': block.type}" 
+    flex="100" flex-gt-sm="100" 
+    ng-style="block.commonStyle">
+  
+  <div class="page-block__container">
+    <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="page-block__col" flex="100" flex-gt-sm="55">
+        <h4 class="page-block_{{block.type}}__title" ng-bind-html="trustAsHtml(block.title)"></h4>
+        <div class="page-block_{{block.type}}__content page-block__content">
+          <p ng-repeat="item in block.content track by $index" 
+            ng-bind-html="trustAsHtml(item)"
+            ng-class="{
+              'bold': $odd,
+              'hide-sm hide-xs': $last
+            }"></p>
+        </div>
+      </div>
+      <div class="page-block__col page-block__col_pl-gt-sm-0" flex="100" flex-gt-sm="45">
+        <div class="page-block_{{block.type}}__slider-wrap">
+          <slick class="page-block_{{block.type}}__slider" settings="slickConfigSlider" data-color="{{block.commonStyle['background-color']}}">
+              <!-- ng-style="{
+                'background-image': 'url(' + (isDesktop && item.desktop || item.mobile || false) + ')'
+              }"
+              alt="{{item.alt}}" --> 
+            <div class="page-block_{{block.type}}__slider-item" 
+              ng-repeat="item in block.images track by $index" 
+              >
+              <img src="{{(isDesktop && item.desktop || item.mobile || false)}}" alt="{{item.alt}}">
+            </div>
+          </slick>
+        </div>
+        <div class="page-block_{{block.type}}__content page-block__content hide-gt-sm">
+          <p ng-bind-html="trustAsHtml(block.content[2])"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

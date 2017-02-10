@@ -119,7 +119,7 @@
         ]
       },
       {
-        "type": "single",
+        "type": "long",
         "blocks": [
           {
             "type": "solution-pic-v",
@@ -233,6 +233,44 @@
                 "original": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
                 "desktop": "/local/templates/articulmedia/img/case/case_smm_4.jpg",
                 "mobile": "/local/templates/articulmedia/img/case/case_smm_4.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
+            "style": {
+              "bgColor": "#176683",
+              "textColor": "#fff200"
+            },
+            "type": "content-slider",
+            "title": "Lorem ipsum dolor",
+            "content": [ 
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. Nunc semper facilisis libero vitae facilisis.",
+              "Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.",
+              "Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec in turpis ipsum. Nulla pharetra neque nisi, imperdiet sodales leo tristique vitae. Quisque gravida magna velit, in rhoncus nibh malesuada vestibulum. Fusce et porta diam, sit amet ultrices nunc. Nam luctus interdum sapien ut eleifend. Morbi nec nulla pretium, vestibulum quam ac, fringilla leo. Maecenas eu turpis odio. Curabitur ut tincidunt augue. Etiam et ante sollicitudin, convallis est non, rhoncus tellus. Maecenas eu sapien vitae nunc consequat aliquet fermentum vitae nibh. Mauris bibendum ligula non est fermentum, ut scelerisque justo placerat. Morbi vitae nulla quis purus porta varius sed sed nunc. Vivamus rutrum ext."
+            ],
+            "images": [
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/content-slide.png",
+                "desktop": "/local/templates/articulmedia/img/case/content-slide.png",
+                "mobile": "/local/templates/articulmedia/img/case/content-slide.png"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/content-slide.png",
+                "desktop": "/local/templates/articulmedia/img/case/content-slide.png",
+                "mobile": "/local/templates/articulmedia/img/case/content-slide.png"
+              },
+              {
+                "alt": "Сосны",
+                "original": "/local/templates/articulmedia/img/case/content-slide.png",
+                "desktop": "/local/templates/articulmedia/img/case/content-slide.png",
+                "mobile": "/local/templates/articulmedia/img/case/content-slide.png"
               }
             ]
           }
