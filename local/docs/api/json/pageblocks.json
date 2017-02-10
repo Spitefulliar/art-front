@@ -31,6 +31,85 @@
       },
       {
         "type": "single",
+        "style": {
+          "bgColor": "#fbb86f"
+        },
+        "blocks": [
+          {
+            "type": "content-text",
+            "title": "Lorem ipsum dolor sit amet",
+            "contentBlocks": [
+              {
+                "type": "text",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec in turpis ipsum. Nulla pharetra neque nisi, imperdiet sodales leo tristique vitae. Quisque gravida magna velit, in rhoncus nibh malesuada </p>"
+              },{
+                "type": "slogan",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor</p>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#e0a15d"
+        },
+        "blocks": [
+          {
+            "type": "content-text",
+            "contentBlocks": [
+              {
+                "type": "text",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec in turpis ipsum. Nulla pharetra neque nisi, imperdiet sodales leo tristique vitae. Quisque gravida magna velit, in rhoncus nibh malesuada vestibulum. Fusce et porta diam, sit amet ultrices nunc. Nam luctus interdum sapien ut eleifend. Morbi nec nulla pretium, vestibulum quam ac, fringilla leo. Maecenas eu turpis odio. Curabitur ut tincidunt augue. Etiam et ante sollicitudin, convallis est non, rhoncus tellus. Maecenas eu sapien vitae nunc consequat aliquet fermentum vitae nibh. Mauris bibendum ligula non est fermentum, ut scelerisque justo placerat. Morbi vitae nulla quis purus porta varius sed sed nunc. Vivamus rutrum ex a velit molestie porta at non lorem. Curabitur eu nibh quis magna pretium iaculis. Aliquam neque urna, </p>"
+              },{
+                "type": "slogan",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem </p>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#fbb86f"
+        },
+        "blocks": [
+          {
+            "type": "content-text",
+            "contentBlocks": [
+              {
+                "type": "text",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec in turpis ipsum. Nulla pharetra neque nisi, imperdiet sodales leo tristique vitae. Quisque gravida magna velit, in rhoncus nibh malesuada vestibulum. Fusce et porta diam, sit amet ultrices nunc. Nam luctus interdum sapien ut eleifend. Morbi nec nulla pretium, vestibulum quam ac, fringilla leo. Maecenas eu turpis odio. Curabitur ut tincidunt augue. Etiam et ante sollicitudin, convallis est non, rhoncus tellus. Maecenas eu sapien vitae nunc consequat aliquet fermentum vitae nibh. Mauris bibendum ligula non est fermentum, ut scelerisque justo placerat. Morbi vitae nulla quis purus porta varius sed sed nunc. Vivamus rutrum ex a velit molestie porta at non lorem.</p>"
+              },{
+                "type": "text",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec in turpis ipsum. Nulla pharetra neque nisi, imperdiet sodales leo tristique vitae. Quisque gravida magna velit, in rhoncus nibh malesuada vestibulum. Fusce et porta diam, sit amet ultrices nunc. Nam luctus interdum sapien ut eleifend. Morbi nec nulla pretium, vestibulum quam ac, fringilla leo. Maecenas eu turpis odio. Curabitur ut tincidunt augue. Etiam et ante sollicitudin, convallis est non, rhoncus tellus. Maecenas eu sapien vitae nunc consequat aliquet fermentum vitae nibh. Mauris bibendum ligula non est fermentum, ut scelerisque justo placerat. Morbi vitae nulla quis purus porta varius sed sed nunc. Vivamus rutrum ex a velit molestie porta at non lorem.</p>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#e0a15d"
+        },
+        "blocks": [
+          {
+            "type": "content-pic",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec in turpis ipsum. Nulla pharetra neque nisi, imperdiet sodales leo tristique vitae. Quisque gravida magna velit, in rhoncus nibh malesuada vestibulum. Fusce et porta diam, sit amet ultrices nunc. Nam luctus interdum sapien ut eleifend. Morbi nec nulla pretium, vestibulum quam ac, fringilla leo. Maecenas eu turpis odio. Curabitur ut tincidunt augue. Etiam et ante sollicitudin, convallis est non, rhoncus tellus. Maecenas eu sapien vitae nunc consequat aliquet fermentum vitae nibh. Mauris bibendum ligula non est fermentum, ut scelerisque justo placerat. Morbi vitae nulla quis purus porta varius sed sed nunc. Vivamus rutrum ex a velit molestie porta at non lorem. Curabitur eu nibh quis magna pretium iaculis. Aliquam neque urna, </p>",
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_smm_1.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_smm_1.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
         "blocks": [
           {
             "type": "announce",

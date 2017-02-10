@@ -5,20 +5,28 @@
   
   <div class="page-block__container">
     <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
-      <div class="page-block__col" flex="100" flex-gt-sm="55">
-        <h4 class="page-block_{{block.type}}__title" ng-bind-html="trustAsHtml(block.title)"></h4>
-        <div class="page-block_{{block.type}}__content page-block__content">
+      <div class="page-block__col" flex="100" flex-gt-sm="50">
+        <h4 class="page-block_{{block.type}}__title" 
+          ng-if="block.title" 
+          ng-bind-html="trustAsHtml(block.title)"></h4>
+        <div class="page-block_{{block.type}}__content page-block__content" 
+          ng-if="block.contentType == 'array'">
           <p ng-repeat="item in block.content track by $index" 
             ng-bind-html="trustAsHtml(item)"
             ng-class="{'h4': $odd}"></p>
         </div>
+        <div class="page-block_{{block.type}}__content page-block__content medium" 
+          ng-bind-html="trustAsHtml(block.content)" 
+          ng-if="block.contentType == 'string'">
+        </div>
       </div>
-      <div class="page-block__col page-block__col_pl-gt-sm-0" flex="100" flex-gt-sm="45">
+      <div class="page-block__col page-block__col_pl-gt-sm-0" flex="100" flex-gt-sm="50" 
+        flex-order="{{(block.contentType == 'array')? 2 : -1}}" flex-order-gt-sm="2">
         <div class="page-block_{{block.type}}__img">
-          <div class="page-block_{{block.type}}__img-bg"  
+          <div class="page-block_{{block.type}}__img-bg" 
             ng-style="{
               'background-image': 'url(' + (isDesktop && block.image.desktop || block.image.mobile || false) + ')'
-            }"
+            }" 
             alt="{{block.image.alt}}" 
             ></div>
         </div>
