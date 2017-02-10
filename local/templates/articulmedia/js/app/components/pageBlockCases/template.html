@@ -24,35 +24,6 @@
     <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
       <div class="page-block__col" flex="100" flex-gt-sm="100">
         <div class="page-block_{{block.type}}__cases cases-list">
-          <!-- <md-grid-list class="page-block_{{block.type}}__images-grid"
-            md-cols-gt-sm="5"
-            md-cols="2"
-            md-row-height="1:1"
-            md-gutter="18px" 
-            md-gutter-gt-sm="18px" >
-
-            <md-grid-tile 
-              md-rowspan="1" md-colspan="1" 
-              ng-repeat="img in block.images"  
-              >
-              <div class="page-block_{{block.type}}__img plus-item" 
-              ng-class="{'page-block_{{block.type}}__img_even': $odd}"
-              >
-                <div class="page-block_{{block.type}}__img-bg"  
-                  ng-style="{
-                    'background-image': 'url(' + (isDesktop && img.desktop || img.mobile || false) + ')'
-                  }"
-                  alt="{{img.alt}}" 
-                  art-popup-img-dir 
-                  ng-click="popupImgCtrl.showImgPopup(img.original)"></div>
-                <span class="plus-item__icon">
-                  <svg>
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick" />
-                  </svg>
-                </span>
-              </div>
-            </md-grid-tile>
-          </md-grid-list> -->
           <md-grid-list class="cases-list__grid"
             md-cols-gt-sm="5"
             md-cols="2"

@@ -114,8 +114,8 @@
 
 ### Контент-одна-картинка | content-pic
 
-    title [string] заголовок блока
-    content [array] контент блока (3 строки, вторая отображается жирно)
+    title [string] заголовок блока (опционально)
+    content [string] контент блока (строка) или [array] контент блока (3 строки, вторая отображается жирно)
     image []
         alt [string] alt текст изображения
         original [string] оригинальный размер изображения
@@ -144,6 +144,15 @@
             original [string] оригинальный размер изображения
             desktop [string] изображение для desktop
             mobile [string] изображение для mobile
+        ]
+
+### Контент-текст | content-text
+
+    title [string] заголовок блока (опционально)
+    contentBlocks [array] контент блока (два текста, текст + слоган)
+        [
+            type [string] 'text' | 'slogan'
+            content [string] контент блока
         ]
         
 ### Итоги | total
