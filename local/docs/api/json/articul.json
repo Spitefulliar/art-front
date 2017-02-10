@@ -1,0 +1,43 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "",
+    "title": "Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения",
+    "scrollify": false,
+    "timeline": {
+      "items": [
+        {
+          "year": "2000",
+          "happy": "10%",
+          "honor": "50%",
+          "release": "40%"
+        },
+        {
+          "year": "2001",
+          "happy": "5%",
+          "honor": "80%",
+          "release": "15%"
+        },
+        {
+          "year": "2002",
+          "happy": "20%",
+          "honor": "20%",
+          "release": "60%"
+        },
+        {
+          "year": "2003",
+          "happy": "3%",
+          "honor": "37%",
+          "release": "60%"
+        },
+        {
+          "year": "2004",
+          "happy": "50%",
+          "honor": "40%",
+          "release": "10%"
+        }
+      ]
+    }
+  }
+}
