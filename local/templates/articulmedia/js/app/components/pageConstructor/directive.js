@@ -24,6 +24,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
         //enabling scrollify for page sections
         if ($scope.page && $scope.page.sections) {
           let pgSectionsQ = ".page-section";
+          let pgSectionsEx = ".page-section_long";
           if ($scope.page.scrollify) {
             function scrollifyDestroy() {
               $.scrollify.destroy();
@@ -34,9 +35,10 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
                 if (mquery) {
                   $.scrollify({
                     section : pgSectionsQ,
+                    interstitialSection: "",
                     sectionName : "",
                     updateHash: false,
-                    interstitialSection : "",
+                    interstitialSection : pgSectionsEx,
                     easing: "easeOutExpo",
                     scrollSpeed: 600,
                     offset : 0,

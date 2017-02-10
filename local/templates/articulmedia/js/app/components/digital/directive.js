@@ -289,7 +289,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
         let smCont =  ".popup-digital .scroller";
         let smPin =  ".popup-digital .pin";
         let smPinStop =  ".popup-digital .pinstop";
-        $scope.smPopupCtrl = new ScrollMagic.Controller({container: smCont, loglevel: 1});
+        $scope.smPopupCtrl = new ScrollMagic.Controller({container: smCont, loglevel: 0});
 
         var smPoupScene = new ScrollMagic.Scene({
             triggerElement: smPinStop, 
