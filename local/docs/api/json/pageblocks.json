@@ -77,6 +77,44 @@
         },
         "blocks": [
           {
+            "type": "content-pic-h",
+            "contentBlocks": [
+              {
+                "type": "text",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec</p>"
+              },{
+                "type": "text",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. </p><p>Nunc semper facilisis libero vitae facilisis. Curabitur vehicula ullamcorper mi eget rhoncus. Phasellus auctor porta diam quis pulvinar. Morbi nisi nulla, laoreet in nibh eu, imperdiet imperdiet velit. Donec efficitur lectus in neque elementum aliquet. In commodo dignissim dolor vel porttitor. Aenean elit nulla, blandit vitae neque cursus, fermentum dignissim magna.</p><p>Curabitur arcu quam, faucibus viverra nunc in, tincidunt tempus dolor. Phasellus scelerisque odio quam, nec tempor urna dapibus id. Donec</p>"
+              }
+            ],
+            "image": {
+              "alt": "Сосны",
+              "original": "/local/templates/articulmedia/img/case/case_3.jpg",
+              "desktop": "/local/templates/articulmedia/img/case/case_3.jpg",
+              "mobile": "/local/templates/articulmedia/img/case/case_3_mobile.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#e0a15d"
+        },
+        "blocks": [
+          {
+            "type": "content-slogan",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula.</p><p>Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. Nunc consequat erat id vehicula fermentum. Nunc semper facilisis libero vitae facilisis. Curabitur ve</p>"
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "style": {
+          "bgColor": "#fbb86f"
+        },
+        "blocks": [
+          {
             "type": "content-text",
             "contentBlocks": [
               {

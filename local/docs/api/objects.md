@@ -154,6 +154,23 @@
             type [string] 'text' | 'slogan'
             content [string] контент блока
         ]
+
+### Контент-картинка-горизонтальная | content-pic-h
+
+    contentBlocks [array] контент блока (два текста, текст + слоган)
+        [
+            type [string] 'text' | 'slogan'
+            content [string] контент блока
+        ]
+    image []
+        alt [string] alt текст изображения
+        original [string] оригинальный размер изображения
+        desktop [string] изображение для desktop
+        mobile [string] изображение для mobile
+
+### Контент-слоган | content-slogan
+
+    content [string] контент блока
         
 ### Итоги | total
 
