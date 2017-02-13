@@ -1,0 +1,35 @@
+  <div class="crew-page inner-page" ng-class="{'crew-page--selected': crewItemCurrent}" >
+    <div class="crew-page__container inner-page__container" layout="row" layout-wrap layout-align="center start">
+      <div class="crew-page__slogan" ng-bind-html="trustAsHtml(crewData.slogan)">СЛУШАЙТЕ<br/>УМНЫХ</div>
+      <div class="crew-page__list">
+        <div class="crew-list" layout="row" layout-wrap layout-align="center start">
+          <div class="crew-item" ng-repeat="item in crewData.items track by $index" ng-class="{'crew-item--active': item.active, 'hide-sm hide-xs': !item.active && crewItemCurrent}" ng-click="activateCrewItem($index)">
+            <span class="crew-item__close svg-icon" hide-gt-sm ng-if="crewItemCurrent" ng-click="popupImgCtrl.closePanel();">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross"></use>
+              </svg>
+            </span>
+            <div ng-if="item.active" audio options="{
+                playlist: [item.audio],
+                loop: true
+              }"></div>
+            <div class="crew-item__img" ng-style="{'background-image': 'url({{item.image}})'}">
+              <md-progress-circular class="progress_white" md-mode="determinate" value="80" ng-if="item.active" md-diameter="400"></md-progress-circular>
+            </div>
+            <div class="crew-item__content" >
+           		<h5 class="crew-item__title" ng-bind-html="trustAsHtml(item.title)"></h5>
+           		<h6 class="crew-item__sub-title" ng-bind-html="trustAsHtml(item.subTitle)"></h6>
+            </div>
+          </div>
+       	</div>
+      </div>
+     	<div class="crew-description" layout="row" layout-wrap ng-show="showCrewDesc && crewItemCurrent.content.length" ng-class="{'animated': showCrewDesc}">
+     		<div flex-gt-sm="50" class="crew-description__text" flex="100" 
+        ng-repeat="item in crewItemCurrent.content" 
+        ng-bind-html="trustAsHtml(item)">
+     			<p>В сфере интересов 360 планирование в digital эру – от стратегии бренда до интегрированных коммуникаций, с особым фокусом на роль digital каналов и инструментов</p>
+  				<p>Проекты для более чем 50 российских и международных брендов, включая Fox Broadcasting Company, Nike, L'Oreal, ВТБ, Зимние Олимпийские Игры 2014 в Сочи</p>
+     		</div>
+     	</div>
+    </div>
+  </div>

@@ -24,7 +24,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
           },
           {
             'name': 'Команда',
-            'link': '/#/command/'
+            'link': '/#/crew/'
           },
           {
             'name': 'Articul Group',
