@@ -1,0 +1,30 @@
+<div class="page-block"
+    ng-class="{'page-block_{{block.type}}': block.type}" 
+    flex="100" flex-gt-sm="100" 
+    ng-style="block.commonStyle">
+  
+  <div class="page-block__container">
+    <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
+      <div class="page-block__col" flex="100" flex-gt-sm="50" 
+        ng-repeat="item in block.contentBlocks track by $index" >
+        <div class="page-block_{{block.type}}__content page-block__content medium" 
+          ng-bind-html="trustAsHtml(item.content)" 
+          ng-if="item.type == 'text'">
+        </div>
+        <div class="page-block_{{block.type}}__content page-block__content page-block_{{block.type}}__slogan medium" 
+          ng-if="item.type == 'slogan'" 
+          ng-bind-html="trustAsHtml(item.content)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-block_{{block.type}}__img-viewport"
+    ng-style="{
+      'color': block.style.textColor, 
+      'background-color': block.style.bgColor, 
+    }"
+    >
+    <art-parallax-bg-dir image="block.image"></art-parallax-bg-dir>
+  </div>
+
+</div>

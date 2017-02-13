@@ -3,11 +3,11 @@
   flex="100" 
   ng-style="block.commonStyle">
   <div class="page-block__container">
-    <h2 class="page-block_total__title page-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
+    <h2 class="page-block_{{block.type}}__title page-block__title" ng-bind-html="trustAsHtml(block.title)"> </h2>
     <div class="page-block__row" layout="row" layout-align="start" layout-wrap>
       <div class="page-block__col page-block__col_pr-gt-sm-0" flex="100" flex-gt-sm="55">
-        <div class="page-block_total__content" layout="row" layout-align="start">
-          <div class="page-block_total__content-col page-block__content"
+        <div class="page-block_{{block.type}}__content" layout="row" layout-align="start">
+          <div class="page-block_{{block.type}}__content-col page-block__content"
             ng-repeat="item in block.content track by $index" 
             ng-bind-html="trustAsHtml(item)" 
             flex="50"
@@ -16,8 +16,8 @@
         
       </div>
       <div class="page-block__col" flex="100" flex-gt-sm="45">
-        <slick class="page-block_total__slogan-carousel" settings="slickConfigSlogan">
-          <div class="page-block_total__slogan" 
+        <slick class="page-block_{{block.type}}__slogan-carousel" settings="slickConfigSlogan">
+          <div class="page-block_{{block.type}}__slogan" 
             ng-repeat="item in block.slogans track by $index"
             ng-bind-html="trustAsHtml(item)" 
             ></div>
@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <div class="page-block_total__img-viewport"
+  <div class="page-block_{{block.type}}__img-viewport"
     ng-style="{
       'color': block.style.textColor, 
       'background-color': block.style.bgColor, 
