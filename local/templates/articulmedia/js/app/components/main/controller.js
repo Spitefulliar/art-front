@@ -143,9 +143,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
         centerPadding: '25%',
       }
     }
-  ]
-    // slidesToShow: 3,
-    
+  ];    
 
   };
 
