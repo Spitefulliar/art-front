@@ -4218,7 +4218,7 @@ art-carousel3d-dir {
 
 .text-page {
   padding-top: 90px;
-  min-height: 100vh;
+  // min-height: 100vh;
   @media (max-width: $screen-md) {
     padding-top: 0;
   }
@@ -4249,7 +4249,7 @@ art-carousel3d-dir {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    position: fixed;
+    // position: fixed;
     top: 0;
 
     @media (max-width: $screen-md) {
