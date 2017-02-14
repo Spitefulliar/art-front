@@ -2,27 +2,43 @@
 // import moduleConfig from "./config";
 // const MODULE_NAME = moduleConfig.name;
 
-export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$window", "$state", "$http",
-  function($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
+export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$window", "$state", "$http", "ngAudio",
+  function($scope, $rootScope, $location, $log, $timeout, $window, $state, $http, ngAudio) {
 
   let crewTO;
 
-  $scope.activateCrewItem = function(index) {
+  $scope.crewSounds = [];
+  $scope.currentCrewIndex = false;
 
-    if ($scope.crewItemCurrent && $scope.crewItemCurrent.sound) $scope.crewItemCurrent.sound.pause();
+  $scope.getSoundProgress = function(index) {
+    if (!$scope.crewSounds[index]) return 0;
+    return $scope.crewSounds[index].progress * 100 || 0;
+  };
+
+  $scope.activateCrewItem = function(index) {
 
     if (crewTO) $timeout.cancel(crewTO);
     let time = 400;
     let selItem = $scope.crewData.items[index];
     $scope.showCrewDesc = false;
 
+    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.crewSounds[$scope.currentCrewIndex].pause();
+    //if item already activeted
     if (selItem.active) {
       index = -1;
+      $scope.crewItemCurrent = false;
+      $scope.currentCrewIndex = false;
     } else {
-      // if (!selItem.sound) selItem.sound = ngAudio.load(selItem.audio);
-      crewTO = $timeout(function(selItem){
+      $scope.crewItemCurrent = selItem;
+      $scope.currentCrewIndex = index;
+
+      crewTO = $timeout(function(){
         $scope.showCrewDesc = true;
-        // selItem.sound.play();
+        if (!$scope.crewSounds[$scope.currentCrewIndex]) {
+          $scope.crewSounds[$scope.currentCrewIndex] = ngAudio.play($scope.crewItemCurrent.audio);
+        } else {
+          $scope.crewSounds[$scope.currentCrewIndex].play();
+        };
       },time);
     };
 
@@ -30,9 +46,7 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
       elem.active = (itemIndex == index);
       return elem;
     });
-    $scope.crewItemCurrent = (selItem.active)? selItem: false;
-
-  }
+  };
 
 	$scope.crewData = {
     "slogan": "СЛУШАЙТЕ<br/>УМНЫХ",

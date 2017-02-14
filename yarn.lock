@@ -38,6 +38,10 @@ angular-aria@^1.5.8:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.0.tgz#d4be04d286b380ed5f52120a7fde3d595c2b2f70"
 
+"angular-audio@https://github.com/danielstern/ngAudio.git":
+  version "1.7.3"
+  resolved "https://github.com/danielstern/ngAudio.git#d6b1c632606076b0840cfc8563827dc018b92df5"
+
 angular-baron-scrollbar@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/angular-baron-scrollbar/-/angular-baron-scrollbar-1.0.1.tgz#a453f12d6bb2f9955fc350791d89f05c9ee4ddaa"
