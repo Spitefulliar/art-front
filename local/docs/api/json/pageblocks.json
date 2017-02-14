@@ -544,6 +544,22 @@
         "type": "single",
         "blocks": [
           {
+            "type": "text",
+            "items": [
+              {
+                "title": "Спортивный<br>маркетинг<br>в digital",
+                "image": "url(../local/templates/articulmedia/img/desktop/news-bg.jpg)",
+                "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitellen",
+                "imageBg": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
             "type": "cases",
             "style": {
               "bgColor": "#84bbd7"
