@@ -29,18 +29,9 @@ import mdSteppers from 'md-steppers';
 import ngMousewheel from 'angular-mousewheel/mousewheel.js';
 import ngSwipe from 'angular-swipe/dist/angular-swipe.js';
 import ngCarousel3d from 'angular-carousel-3d/dist/carousel-3d.min.js';
-// import ngAudio from 'ng-audio/dist/ng-audio.min.js';
 import ngAudio from 'angular-audio';
 
 // require('angular-i18n/angular-locale_'+ 'ru-ru' +'.js');
-
-//hack for slickCarousel's work
-// angular.element.prototype.not = function( selector ) {
-//   return $(this).not(selector);
-// };
-// angular.element.prototype.slick = function( option ) {
-//   return $(this).slick(option);
-// };
 
 function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
