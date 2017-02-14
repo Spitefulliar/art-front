@@ -9,12 +9,8 @@
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross"></use>
               </svg>
             </span>
-            <div ng-if="item.active" audio options="{
-                playlist: [item.audio],
-                loop: true
-              }"></div>
-            <div class="crew-item__img" ng-style="{'background-image': 'url({{item.image}})'}">
-              <md-progress-circular class="progress_white" md-mode="determinate" value="80" ng-if="item.active" md-diameter="400"></md-progress-circular>
+            <div class="crew-item__img" ng-style="{'background-image': 'url({{item.image}})'}" >
+              <md-progress-circular class="progress_white" md-mode="determinate" value="{{getSoundProgress($index)}}" ng-if="item.active" md-diameter="400"></md-progress-circular>
             </div>
             <div class="crew-item__content" >
            		<h5 class="crew-item__title" ng-bind-html="trustAsHtml(item.title)"></h5>

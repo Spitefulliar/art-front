@@ -3654,14 +3654,13 @@ art-carousel3d-dir {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
   
   &__slogan {
     position: absolute;
-    // bottom: 0;
     top: 35vh;
     left: 0;
     width: 100%;
-    // font-size: vw(240px);
     font-size: vw(220px);
     font-weight: 900;
     color: #f78429;
@@ -3723,6 +3722,8 @@ art-carousel3d-dir {
         &__img {
           height: vw(280px);
           width: vw(280px);
+          max-width: vh(280px);
+          max-height: vh(280px);
           left: -3%;
           &:after {
             visibility: visible;
@@ -3760,6 +3761,11 @@ art-carousel3d-dir {
     md-progress-circular.progress_white {
       width: 100% !important;
       height: 100% !important;
+      -webkit-transform: rotate(180deg);
+         -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+           -o-transform: rotate(180deg);
+              transform: rotate(180deg);
       svg {
         width: 110% !important;
         height: 110% !important;
@@ -3777,6 +3783,8 @@ art-carousel3d-dir {
       position: relative;
       height: vw(180px);
       width: vw(180px);
+      max-width: vh(180px);
+      max-height: vh(180px);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -3818,7 +3826,7 @@ art-carousel3d-dir {
         bottom: 0;
         left: 0;
         font-family: 'Times New Roman', serif;
-        font-size: vw(40px);
+        font-size: vh(40px);
         line-height: 0.6;
         color: $black;
         -webkit-transition: transform 200ms ease-out;
