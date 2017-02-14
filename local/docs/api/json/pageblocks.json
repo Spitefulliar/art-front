@@ -528,6 +528,22 @@
         "type": "single",
         "blocks": [
           {
+            "type": "image",
+            "items": [
+              {
+                "name": "Имя Lorem ipsum dolor sit amet",
+                "position": "Позиция Nunc semper facilisis libero vitae facilisis",
+                "image": "url(../local/templates/articulmedia/img/desktop/image-page-bg.jpg)",
+                "quote": "Цитата Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesqu"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "blocks": [
+          {
             "type": "cases",
             "style": {
               "bgColor": "#84bbd7"

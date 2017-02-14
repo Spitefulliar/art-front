@@ -4295,11 +4295,9 @@ art-carousel3d-dir {
     padding: vh(100px) vw(82px) 0;
 
     @media (max-width: $screen-md) {
-      position: absolute;
-      top: 70vh;
+      position: relative;
+      padding-top: 50vh;
       background: rgba(255,255,255,.8);
-      padding-top: 0;
-      padding-top: vh(60px);
     }
   }
 

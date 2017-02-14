@@ -183,6 +183,13 @@
         desktop [string] изображение для desktop
         mobile [string] изображение для mobile
 
+### Блок картинка + цитата | image
+    
+    name [string] имя 
+    position [string] позиция в компании
+    image [] картинка под блок
+    quote [string] цитата
+
 ### Видео | video
 
     video [string] ссылка на youtube видео
