@@ -4218,9 +4218,9 @@ art-carousel3d-dir {
 
 .text-page {
   padding-top: 90px;
-  min-height: 100vh;
+  // min-height: 100vh;
   @media (max-width: $screen-md) {
-    padding-top: 0;
+    padding-top: 50vh;
   }
 
   &--no-bg {
@@ -4231,10 +4231,9 @@ art-carousel3d-dir {
     padding: vh(100px) vw(82px) 0;
 
     @media (max-width: $screen-md) {
-      background-color: #ececf5;
+      background-color: rgba(236,236,245,.5);
       position: relative;
-      padding-bottom: vh(80px);
-      padding-top: vh(110px);
+      padding-top: vh(50px);
 
       &--bg {
         background-color: #ececf5;
@@ -4249,7 +4248,7 @@ art-carousel3d-dir {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    position: fixed;
+    // position: fixed;
     top: 0;
 
     @media (max-width: $screen-md) {

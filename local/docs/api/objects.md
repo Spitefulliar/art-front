@@ -190,6 +190,14 @@
     image [] картинка под блок
     quote [string] цитата
 
+### Блок картинка + тектст | image
+    
+    title [string] заголовок 
+    position [string] слоган
+    image [] картинка под блок
+    imageBg [] картинка фон
+    quote [string] цитата
+
 ### Видео | video
 
     video [string] ссылка на youtube видео
