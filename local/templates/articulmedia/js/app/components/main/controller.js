@@ -20,7 +20,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
           },
           {
             'name': 'Клиенты',
-            'link': '/#/'
+            'link': '/#/clients/'
           },
           {
             'name': 'Команда',
@@ -131,20 +131,19 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     variableWidth: false,
     centerMode: true,
     responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        centerPadding: '30%',
+      {
+        breakpoint: 600,
+        settings: {
+          centerPadding: '30%',
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: '25%',
+        }
       }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        centerPadding: '25%',
-      }
-    }
-  ];    
-
+    ]  
   };
 
 

@@ -13,6 +13,7 @@ import  'animation.velocity';
 import '../libs/jQuery-Draggable-Background/draggable_background.js';
 import '../libs/reflection-jquery/reflection.js';
 import 'snapsvg/dist/snap.svg.js';
+import 'matter-js';
 
 // vendor-styles
 import 'normalize.css/normalize.css';

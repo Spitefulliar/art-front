@@ -17,7 +17,7 @@ var config = {
         './index.js', // файл для сборки cкриптов, если несколько - указываем hash (entry name => filename)
         './styles.js', // файл для сборки стилей
       ],
-      vendor: './vendor.js' // файл для сборки либ
+      vendor: './vendor.js', // файл для сборки либ
     },
     output: {
       path: assetsPath,
@@ -147,6 +147,7 @@ var config = {
           'TimeLineMax': 'TimeLineMax',
           'ScrollMagic': 'scrollmagic',
           'Snap': 'snapsvg',
+          'Matter': 'matter-js',
         }),
         new ExtractTextPlugin('[name].css'),
         // new CopyPlugin([
@@ -166,8 +167,8 @@ var config = {
     ],
     postcss: function () {
       return {
-        oldsup: [autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] }), csswring], //with minification
-        defaults:  [autoprefixer({ browsers: ['last 3 version'] })]
+        oldsup: [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] })], //with minification
+        defaults:  [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 3 version'] })]
       };
     },
     htmlLoader: {
