@@ -88,27 +88,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
 
           world.bodies = [];
 
-          //adding static walls
-          // let wallThikness = 1;
-          // let wallOptions = { 
-          //   isStatic: true,
-          //   render: {
-          //     visible: true,
-          //     // strokeStyle: '#ffffff'
-          //   }
-          // };
-          // let warldWalls = [
-          //     //hor top
-          //     Bodies.rectangle(world.bounds.min.x, world.bounds.min.y, render.options.width * 100, wallThikness, wallOptions),
-          //     //vert left
-          //     Bodies.rectangle(world.bounds.min.x, world.bounds.min.y, wallThikness, render.options.height * 100, wallOptions),
-          //     //hor bottom
-          //     Bodies.rectangle(world.bounds.min.x, world.bounds.max.y, render.options.height * 100, wallThikness, wallOptions),
-          //     // vert right
-          //     Bodies.rectangle(world.bounds.max.x, world.bounds.min.y, wallThikness, render.options.width * 100, wallOptions)
-          // ];
-          // World.add(world, warldWalls);
-
           //creating attracting center
           let attractingCenter = Bodies.circle(
                 1, 
@@ -155,16 +134,16 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
           let bubblesConstraints = [];
 
           //multiply bubbles
-          let bubblesArr = [];
-          for (var j = 5; j >= 0; j--) {
-            bubblesArr = Array.concat(bubblesArr,$scope.bubbles.items);
-          };
+          // let bubblesArr = [];
+          // for (var j = 5; j >= 0; j--) {
+          //   bubblesArr = Array.concat(bubblesArr,$scope.bubbles.items);
+          // };
 
-          // for (var i = $scope.bubbles.items.length - 1; i >= 0; i--) {
-          for (var i = bubblesArr.length - 1; i >= 0; i--) {
-            // let bubbleData = $scope.bubbles.items[i];
-            let bubbleData = bubblesArr[i];
-            let mass = Common.random(10, 50);
+          // for (var i = bubblesArr.length - 1; i >= 0; i--) {
+            // let bubbleData = bubblesArr[i];
+          for (var i = $scope.bubbles.items.length - 1; i >= 0; i--) {
+            let bubbleData = $scope.bubbles.items[i];
+            // let mass = Common.random(10, 50);
             // let gravity = 0.01;//mass / 100;
             let coordX = Common.random(world.bounds.min.x, world.bounds.max.x);
             let coordY = Common.random(world.bounds.min.y, world.bounds.max.y);
@@ -178,7 +157,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
                   frictionAir: 0.005,
                   restitution: 0.3,
                   friction: 0.02,
-                  mass: mass,
+                  // mass: mass,
                   // gravity: gravity,
                   wrap: {
                       min: { x: world.bounds.min.x, y: world.bounds.min.y },
