@@ -1,0 +1,9 @@
+//CONTROLLER
+import moduleConfig from './config';
+const MODULE_NAME = moduleConfig.name;
+
+export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$window', '$state',
+  function($scope, $rootScope, $location, $log, $timeout, $window, $state) {
+    $scope.$rootScope = $rootScope;
+
+}];

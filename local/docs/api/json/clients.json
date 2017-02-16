@@ -1,0 +1,74 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "",
+    "title": "Клиенты",
+    "scrollify": false,
+    "bubbles": {
+      "bgColor": "#dd721c",
+      "items": [
+        {
+          "title": "Sochi",
+          "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+          "size": 233,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "Luckoil",
+          "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+          "size": 188,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "Мегафон",
+          "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+          "size": 199,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "ТНТ",
+          "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+          "size": 171,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "Альфа Банк",
+          "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+          "size": 252,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "Loreal",
+          "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+          "size": 171,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "НТВ МЕДИА",
+          "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+          "size": 142,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "HISTORY CHANNEL",
+          "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+          "size": 142,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "EPSON",
+          "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+          "size": 142,
+          "link": "/#/cases/"
+        },
+        {
+          "title": "ВМП Корп",
+          "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+          "size": 188,
+          "link": "/#/cases/"
+        }
+      ]
+    }
+  }
+}
