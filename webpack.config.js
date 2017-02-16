@@ -115,7 +115,8 @@ var config = {
         "ScrollMagic": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
         "animation.gsap": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
         "animation.velocity": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js'),
-        "velocity": path.join(__dirname,'/node_modules/velocity-animate/velocity.min.js')
+        "velocity": path.join(__dirname,'/node_modules/velocity-animate/velocity.min.js'),
+        "Matter": 'matter-js',
       }
     },
     plugins: [
