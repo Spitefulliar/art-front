@@ -1,5 +1,52 @@
-<div class="inner-page" art-page-constructor-dir>
-    <div class="inner-page__container" layout="row" layout-sm="column" layout-wrap>
+<div class="clients inner-page" art-page-constructor-dir>
+  <div class="inner-page__container" 
+    >
+    <div class="clients__buttons-wrap">
+      <div class="clients__buttons">
+        <md-button class="md-fab md-custom  md-default md-fab_black" aria-label="Переключить вид страницы на фаворитов"  ng-click="pageModeToggle('bubbles')" ng-class="{'active': pageMode == 'bubbles'}">
+          <span class="svg-icon">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-star" />
+            </svg>
+          </span>
+        </md-button>
+        <md-button class="md-fab md-custom md-default md-fab_black" aria-label="Переключить вид страницы на текст"  ng-click="pageModeToggle('text')"
+        ng-class="{'active': pageMode == 'text'}" >
+          <span class="text">
+            Ая
+          </span>
+        </md-button>
+      </div>
     </div>
-    <art-bubbles-dir bubbles="bubbles" ng-if="bubbles"></art-bubbles-dir>
+    <div class="clients__list" layout="row"
+      layout="row" layout-sm="column" layout-wrap 
+      ng-if="!bubbles || pageMode == 'text'"
+    >
+      <div class="clients__slogan" ng-bind-html="clients.slogan | html"></div>
+      <div class="clients__items" flex="100" flex-gt-sm="50" hide-sm hide-xs>
+        <div class="clients-list" layout="column" layout-align="start end" layout-fill>
+          <div class="clients-list__item" 
+            ng-class="{'clients-list__item--ishovered': item.isHovered}" 
+            ng-repeat="item in clients.selectedGroup.items track by $index" 
+            ng-mouseenter="item.isHovered = true" 
+            ng-mouseleave="item.isHovered = false" 
+            >
+            <a ng-href="{{item.link}}"  class="link-text" ng-bind-html="item.title | html"></a>
+          </div>
+        </div>
+      </div>
+      <div class="clients__groups" flex="100" flex-gt-sm="50">
+        <div class="clients-groups-list" layout="column" layout-align="start start">
+          <div class="clients-groups-list__item" 
+            ng-class="{'clients-groups-list__item--selected': $index == selectedGroupIndex && isDesktop}" 
+            ng-repeat="item in clients.groups track by $index" 
+            ng-click="selectGruop($index); showPopup(isDesktop)" 
+            >
+            <div class="link-text" ng-bind-html="item.title | html"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <art-bubbles-dir bubbles="bubbles" ng-if="bubbles && pageMode == 'bubbles'"></art-bubbles-dir>
 </div>
