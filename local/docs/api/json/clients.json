@@ -5,6 +5,1631 @@
     "code": "",
     "title": "Клиенты",
     "scrollify": false,
+    "clients": {
+      "slogan": "наши <br/>все",
+      "groups": [
+        {
+          "title": "Luxury",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Авто-, мото- и спецтехника",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Алкогольные напитки и табачная продукция",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Банки. Финансы. Страхование",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Благотворительные фонды. Некоммерческие организации",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Интернет-компании, порталы, социальные сети",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Искусство и литература",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Медицина. Красота и здоровье",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Музыка. Шоу-бизнес.",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Персоны",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Политика",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Потребительские товары",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Продукты питания",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Промышленность",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Развлечения",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Реклама. PR. СМИ",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Ресторанный и гостиничный бизнес",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Спорт. Туризм. Отдых.",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Строительство. Недвижимость",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Сфера обслуживания",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Телекоммуникационные и IT-услуги",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Услуги для бизнеса",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Химия и фармацевтика",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        },
+        {
+          "title": "Электроника и электротехника",
+          "items": [
+            {
+              "title": "Sochi",
+              "image": "../local/templates/articulmedia/img/bubbles/item1.png",
+              "size": 233,
+              "link": "#/case/"
+            },
+            {
+              "title": "Luckoil",
+              "image": "../local/templates/articulmedia/img/bubbles/item2.png",
+              "size": 188,
+              "link": "#/case/"
+            },
+            {
+              "title": "Мегафон",
+              "image": "../local/templates/articulmedia/img/bubbles/item3.png",
+              "size": 199,
+              "link": "#/case/"
+            },
+            {
+              "title": "ТНТ",
+              "image": "../local/templates/articulmedia/img/bubbles/item4.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "Альфа Банк",
+              "image": "../local/templates/articulmedia/img/bubbles/item5.png",
+              "size": 252,
+              "link": "#/case/"
+            },
+            {
+              "title": "Loreal",
+              "image": "../local/templates/articulmedia/img/bubbles/item6.png",
+              "size": 171,
+              "link": "#/case/"
+            },
+            {
+              "title": "НТВ МЕДИА",
+              "image": "../local/templates/articulmedia/img/bubbles/item7.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "HISTORY CHANNEL",
+              "image": "../local/templates/articulmedia/img/bubbles/item8.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "EPSON",
+              "image": "../local/templates/articulmedia/img/bubbles/item9.png",
+              "size": 142,
+              "link": "#/case/"
+            },
+            {
+              "title": "ВМП Корп",
+              "image": "../local/templates/articulmedia/img/bubbles/item10.png",
+              "size": 188,
+              "link": "#/case/"
+            }
+          ]
+        }
+      ]
+    },
     "bubbles": {
       "bgColor": "#dd721c",
       "items": [
@@ -12,61 +1637,61 @@
           "title": "Sochi",
           "image": "../local/templates/articulmedia/img/bubbles/item1.png",
           "size": 233,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "Luckoil",
           "image": "../local/templates/articulmedia/img/bubbles/item2.png",
           "size": 188,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "Мегафон",
           "image": "../local/templates/articulmedia/img/bubbles/item3.png",
           "size": 199,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "ТНТ",
           "image": "../local/templates/articulmedia/img/bubbles/item4.png",
           "size": 171,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "Альфа Банк",
           "image": "../local/templates/articulmedia/img/bubbles/item5.png",
           "size": 252,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "Loreal",
           "image": "../local/templates/articulmedia/img/bubbles/item6.png",
           "size": 171,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "НТВ МЕДИА",
           "image": "../local/templates/articulmedia/img/bubbles/item7.png",
           "size": 142,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "HISTORY CHANNEL",
           "image": "../local/templates/articulmedia/img/bubbles/item8.png",
           "size": 142,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "EPSON",
           "image": "../local/templates/articulmedia/img/bubbles/item9.png",
           "size": 142,
-          "link": "/#/cases/"
+          "link": "#/case/"
         },
         {
           "title": "ВМП Корп",
           "image": "../local/templates/articulmedia/img/bubbles/item10.png",
           "size": 188,
-          "link": "/#/cases/"
+          "link": "#/case/"
         }
       ]
     }

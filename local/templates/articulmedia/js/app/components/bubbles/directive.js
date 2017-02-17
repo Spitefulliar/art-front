@@ -2,8 +2,8 @@
 import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
-export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
-  function ($rootScope, $http, $timeout, $window, $state, $log) {
+export default ['$rootScope','$http', '$timeout', '$window', '$state', '$location',
+  function ($rootScope, $http, $timeout, $window, $state, $location) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       let element = $scope.element =  $($element);
       
@@ -38,9 +38,9 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
           var engine = Engine.create(),
               world = engine.world;
 
-          let worldWidth = element.width();//Math.min(document.documentElement.clientWidth, 800);
-          let worldHeight = element.height();//Math.min(document.documentElement.clientHeight, 800);
-          let worldBoundsScale = 1.4;
+          let worldWidth = element.width();
+          let worldHeight = element.height();
+          let worldBoundsScale = 1.2;
 
           // create renderer
           var render = Render.create({
@@ -94,7 +94,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
                 1,
                 20, {
                   density: 1000,
-                  restitution: 1,
+                  restitution: 0,
                   friction: 1,
                   frictionAir: 1,
                   frictionStatic: 1,
@@ -153,10 +153,14 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
                 coordX, 
                 coordY,
                 radius, {
-                  density: 0.005,
+                  density: 0.008,
+                  restitution: 0,
+                  friction: 0.002,
                   frictionAir: 0.005,
-                  restitution: 0.3,
+                  frictionStatic: 0.002,
                   friction: 0.02,
+                  angle: 0,
+                  angularSpeed: 0,
                   // mass: mass,
                   // gravity: gravity,
                   wrap: {
@@ -187,36 +191,38 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
                   }
               });
 
+            bubbleData.bubbleId = body.id;
+
             bubbles.push(body);
           };
 
           World.add(world, bubbles);
 
-          Events.on(engine, 'afterUpdate', function(event) {
-              var time = engine.timing.timestamp;
+          // Events.on(engine, 'afterUpdate', function(event) {
+          //     var time = engine.timing.timestamp;
 
-              let timeScale = 0.02;
-              let sinScale = 0.08;
+          //     let timeScale = 0.02;
+          //     let sinScale = 0.08;
 
               
 
-              // Composite.translate(stack, {
-              //     x: Math.sin(time * timeScale) * sinScale,
-              //     y: Math.sin(time * timeScale) * sinScale
-              // });
+          //     // Composite.translate(stack, {
+          //     //     x: Math.sin(time * timeScale) * sinScale,
+          //     //     y: Math.sin(time * timeScale) * sinScale
+          //     // });
 
-              // Composite.rotate(stack, Math.sin(time * 0.001) * 0.01, {
-              //     x: 300,
-              //     y: 300
-              // });
+          //     // Composite.rotate(stack, Math.sin(time * 0.001) * 0.01, {
+          //     //     x: 300,
+          //     //     y: 300
+          //     // });
 
-              // var scale = 1 + (Math.sin(time * 0.001) * 0.01);
+          //     // var scale = 1 + (Math.sin(time * 0.001) * 0.01);
 
-              // Composite.scale(stack, scale, scale, {
-              //     x: 300,
-              //     y: 300
-              // });
-          });
+          //     // Composite.scale(stack, scale, scale, {
+          //     //     x: 300,
+          //     //     y: 300
+          //     // });
+          // });
 
           
              
@@ -235,6 +241,21 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
               });
 
           World.add(world, mouseConstraint);
+
+          //mouse interractions with bodies
+          Events.on(mouseConstraint, "enddrag", function(event){
+            // console.log(event);
+            let mdPos = event.mouse.mousedownPosition;
+            let muPos = event.mouse.mouseupPosition;
+            if ((Math.abs(mdPos.x - muPos.x) < 20) && (Math.abs(mdPos.y - muPos.y) < 20) && event.body) {
+              let bodyId = event.body.id;
+              angular.forEach($scope.bubbles.items, function(item, index) {
+                if (item.bubbleId == bodyId) {
+                  $window.location.href = item.link;
+                };
+              });
+            };
+          });
 
           // keep the mouse in sync with rendering
           render.mouse = mouse;
@@ -293,25 +314,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
 
                   Bounds.translate(render.bounds, translate);
 
-                  // //adjust walls
-                  // Body.setPosition(warldWalls[0], {
-                  //   x: world.bounds.min.x,
-                  //   y: world.bounds.min.y
-                  // });
-                  // Body.setPosition(warldWalls[1], {
-                  //   x: world.bounds.min.x,
-                  //   y: world.bounds.min.y
-                  // });
-                  // Body.setPosition(warldWalls[2], {
-                  //   x: world.bounds.min.x,
-                  //   y: world.bounds.max.y
-                  // });
-                  // Body.setPosition(warldWalls[3], {
-                  //   x: world.bounds.max.x,
-                  //   y: world.bounds.min.y
-                  // });
-
-
                   // update mouse
                   Mouse.setScale(mouse, boundsScale);
                   Mouse.setOffset(mouse, render.bounds.min);
@@ -359,19 +361,48 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
               runner: runner,
               render: render,
               canvas: render.canvas,
+              update: function() {
+                let w = $(render.canvas).width();
+                let h = $(render.canvas).height();
+                let ratio = h/w;
+                Matter.Render.setPixelRatio(render,ratio);
+                Matter.Render.world(render);
+              },
               stop: function() {
                   Matter.Render.stop(render);
                   Matter.Runner.stop(runner);
+              },
+              clear: function() {
+                Matter.Engine.clear(engine);
               }
           };
       };
 
+      let resizeMOTO = false;
+      function resizeMatterObj() {
+        if (!angular.isDefined($scope.matterObj)) return;
+        if (resizeMOTO) $timeout.cancel(resizeMOTO);
+        // $scope.matterObj.stop();
+        resizeMOTO = $timeout(function(){
+          // $scope.matterObj = MatterMethods.initBubbles();
+          $($scope.matterObj.canvas).width(element.width()).height(element.height());
+          $scope.matterObj.update();
+        },100);
+      };
+
+      //initing bubbles
       $scope.matterObj = MatterMethods.initBubbles();
+
+      //rerender matter canvas on resize
+      $(window).resize(function(event) {
+        resizeMatterObj();
+      });
 
       $scope.$on(
         "$destroy",
         function( event ) {
-          $scope.matterObj.stop();
+          if (resizeMOTO) $timeout.cancel(resizeMOTO);
+          if (angular.isDefined($scope.matterObj)) $scope.matterObj.clear();
         }
       );
 
