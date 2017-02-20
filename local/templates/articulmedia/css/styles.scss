@@ -4667,6 +4667,7 @@ art-bubbles-dir {
     z-index: 1;
     .md-fab {
       display: block;
+      margin: 0 0 20px;
     }
   }
   @media (max-width: $screen-md) {
@@ -4944,16 +4945,17 @@ art-bubbles-dir {
   } 
 }
 
-.md-fab {
-  &.md-custom.md-fab_black {
+.md-fab.md-button.md-custom {
+  &.md-fab_black {
     width: 40px;
     height: 40px;
-    font-size: 18px;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: $fwbold;
     background: transparent;
-    border: 3px solid $black;
+    border: 2px solid $black;
     text-transform: none;
     color: $black;
-    line-height: 34px;
     text-align: center;
     &.active {
       color: $white;
@@ -4963,9 +4965,11 @@ art-bubbles-dir {
       background: transparent;
     }
     .svg-icon {
-      margin-top: -0.1em;
-      line-height: 34px;
+      margin-top: -0.05em;
       font-size: 24px;
+    }
+    .span {
+      vertical-align: middle;
     }
   }
 }

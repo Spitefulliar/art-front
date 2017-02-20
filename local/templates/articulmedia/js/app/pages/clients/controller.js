@@ -93,10 +93,13 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
       $scope.bubbles = $scope.page.bubbles;
       $scope.clients = $scope.page.clients;
 
+      if (!$rootScope.isMobile) {
+        $scope.pageModeToggle("bubbles");
+      } else {
+        $scope.pageModeToggle("text");
+      }
 
-      // $scope.pageModeToggle("bubbles");
       $scope.selectGruop();
-      $scope.pageModeToggle("text");
 
 
       $(window).resize(function(event) {
