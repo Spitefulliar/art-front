@@ -1,0 +1,25 @@
+<div class="inner-page">
+  <div class="inner-page__container">
+    <div class="popup-clients__inner">
+      <span class="popup-clients__close svg-icon" ng-click="closePanel();">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross"></use>
+        </svg>
+      </span>
+      <div class="popup-clients__slogan" ng-bind-html="trustAsHtml(clients.slogan)">
+      </div>
+      <baron-scrollbar class="scroller__wrapper" direction="y" update="true">
+        <div class="popup-clients__wrap">
+          <h2 class="popup-clients__title" ng-bind-html="trustAsHtml(clients.selectedGroup.title)"></h2>
+          <div class="clients-list">
+            <div class="clients-list__item" 
+              ng-repeat="item in clients.selectedGroup.items track by $index" 
+              >
+              <a ng-href="{{item.link}}"  class="link-text" ng-bind-html="item.title | html"></a>
+            </div>
+          </div>
+        </div>
+      </baron-scrollbar>
+    </div>
+  </div>
+</div>
