@@ -145,9 +145,10 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$locatio
             let bubbleData = $scope.bubbles.items[i];
             // let mass = Common.random(10, 50);
             // let gravity = 0.01;//mass / 100;
+            let bodiesScale = ($rootScope.isMobile)? 0.4 : 1;
             let coordX = Common.random(world.bounds.min.x, world.bounds.max.x);
             let coordY = Common.random(world.bounds.min.y, world.bounds.max.y);
-            let radius = bubbleData.size/2;//Common.random(20, 300);
+            let radius = bubbleData.size/2 * bodiesScale;//Common.random(20, 300);
 
             let body = Bodies.circle(
                 coordX, 
@@ -175,8 +176,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$locatio
                     sprite: {
                       // texture: '/local/templates/articulmedia/img/icon/logo-loreal.png'
                       texture: bubbleData.image,
-                      xScale: 1,
-                      yScale: 1
+                      xScale: 1 * bodiesScale,
+                      yScale: 1 * bodiesScale
                     }
                   },
                   plugin: {
