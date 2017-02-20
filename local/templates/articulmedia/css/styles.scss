@@ -2184,23 +2184,57 @@ art-digital-dir {
     &__blocks {
       width: 100%;
       border-bottom: 6px solid $black;
+
+      .slick-list {
+        overflow: inherit;
+      }
       
       .time-item {
         width: vw(80px);
-        height: vh(200px);
+        display: inline-block;
+        vertical-align: bottom;
+        margin: 0 10px;
+        float: none;
+        position: relative;
+
+        @media (max-width: $screen-md) {
+          width: vw(350px);
+        }
+        
+        &.slick-center {
+          position: relative;
+
+          &:after {
+            position: absolute;
+            content: '';
+            bottom: -19px;
+            left: 40%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 8px 0 8px;
+            border-color: $black transparent transparent transparent;
+          }
+        }
+
+        &__year {
+          position: absolute;
+          bottom: -50px;
+          text-align: center;
+          width: 100%;
+          font-weight: 500;
+          font-size: vh(24px);
+        }
 
         &__happy {
           background-color: #cce7d4;
-          height: 2%;
         }
 
         &__honor {
           background-color: #f5821f;
-          height: 40%;
         }
 
         &__release {
-          height: 40%;
           background-color: #00aeef;
         }
       }

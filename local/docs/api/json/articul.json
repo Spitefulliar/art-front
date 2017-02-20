@@ -9,33 +9,99 @@
       "items": [
         {
           "year": "2000",
-          "happy": "10%",
-          "honor": "50%",
-          "release": "40%"
+          "happy": "10px",
+          "honor": "30px",
+          "release": "0px"
         },
         {
           "year": "2001",
-          "happy": "5%",
-          "honor": "80%",
-          "release": "15%"
+          "happy": "10px",
+          "honor": "30px",
+          "release": "55px"
         },
         {
           "year": "2002",
-          "happy": "20%",
-          "honor": "20%",
-          "release": "60%"
+          "happy": "20px",
+          "honor": "5px",
+          "release": "75px"
         },
         {
           "year": "2003",
-          "happy": "3%",
-          "honor": "37%",
-          "release": "60%"
+          "happy": "10px",
+          "honor": "20px",
+          "release": "80px"
         },
         {
           "year": "2004",
-          "happy": "50%",
-          "honor": "40%",
-          "release": "10%"
+          "happy": "40px",
+          "honor": "30px",
+          "release": "100px"
+        },
+        {
+          "year": "2005",
+          "happy": "10px",
+          "honor": "15px",
+          "release": "100px"
+        },
+        {
+          "year": "2006",
+          "happy": "20px",
+          "honor": "0px",
+          "release": "80px"
+        },
+        {
+          "year": "2007",
+          "happy": "20px",
+          "honor": "20px",
+          "release": "120px"
+        },
+        {
+          "year": "2008",
+          "happy": "30px",
+          "honor": "10px",
+          "release": "110px"
+        },
+        {
+          "year": "2009",
+          "happy": "30px",
+          "honor": "30px",
+          "release": "115px"
+        },
+        {
+          "year": "2010",
+          "happy": "35px",
+          "honor": "45px",
+          "release": "100px"
+        },
+        {
+          "year": "2011",
+          "happy": "35px",
+          "honor": "35px",
+          "release": "110px"
+        },
+        {
+          "year": "2012",
+          "happy": "50px",
+          "honor": "45px",
+          "release": "80px"
+        },
+        {
+          "year": "2013",
+          "happy": "55px",
+          "honor": "40px",
+          "release": "100px"
+        },
+        {
+          "year": "2014",
+          "happy": "40px",
+          "honor": "50px",
+          "release": "90px"
+        },
+        {
+          "year": "2015",
+          "happy": "35px",
+          "honor": "25px",
+          "release": "90px"
         }
       ]
     }
