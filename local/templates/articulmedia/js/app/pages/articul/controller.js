@@ -31,7 +31,6 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
             autoplay: false,
             draggable: true,
             adaptiveHeight: false,
-            autoplaySpeed: 6000,
             infinite: false,
             centerMode: true,
             centerPadding: '0px',
@@ -44,7 +43,6 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
             swipe: true,
             easing: 'linear',
             swipeToSlide: true,
-            slidesToShow: 1,
             variableWidth: true
         };
 

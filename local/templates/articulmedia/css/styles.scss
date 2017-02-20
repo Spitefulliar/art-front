@@ -2197,11 +2197,33 @@ art-digital-dir {
         float: none;
         position: relative;
 
+        @media (max-width: $screen-md) {
+          width: vw(350px);
+        }
+        
+        &.slick-center {
+          position: relative;
+
+          &:after {
+            position: absolute;
+            content: '';
+            bottom: -19px;
+            left: 40%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 8px 0 8px;
+            border-color: $black transparent transparent transparent;
+          }
+        }
+
         &__year {
           position: absolute;
           bottom: -50px;
           text-align: center;
           width: 100%;
+          font-weight: 500;
+          font-size: vh(24px);
         }
 
         &__happy {
