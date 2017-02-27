@@ -14,7 +14,7 @@
             "title": "всегда<br>отвечай<br>на звонок",
             "summary": "рекламная кампания <br> в социальных сетях <br> и landing-page <br> мероприятия",
             "release": "2014/02",
-            "link": "/#/case/always-answer",
+            "link": "/case/always-answer",
             "video": false,
             "titleImg": {
               "desktop": "/local/templates/articulmedia/img/case/loreal_title.png",
@@ -44,7 +44,7 @@
           {
             "type": "announce",
             "title": "натуральная <br>энергия <br>мармелада",
-            "link": "/#/case/megaday",
+            "link": "/case/megaday",
             "summary": "создание нового бренда: <br>стратегия,  креатив, дизайн <br>и полное сопровождение <br>продукта",
             "release": "2014/02",
             "video": false,
@@ -72,7 +72,7 @@
           {
             "type": "announce",
             "title": "всегда<br>отвечай<br>на звонок",
-            "link": "/#/case/always-answer",
+            "link": "/case/always-answer",
             "summary": "кампания по продвижению<br>телесериала «Сосны»<br>на канале FOX",
             "release": "2014/02",
             "video": "https://youtu.be/zw94SiaUg-w",

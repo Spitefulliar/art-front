@@ -11,86 +11,86 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     'menuItems': [
       {
         'name': 'Компания',
-        'link': '/#/',
+        'link': '/',
         'hoverColor': 'orange',
         'subMenu': [
           {
             'name': 'Мы – Articul',
-            'link': '/#/articul/'
+            'link': '/articul/'
           },
           {
             'name': 'Клиенты',
-            'link': '/#/clients/'
+            'link': '/clients/'
           },
           {
             'name': 'Команда',
-            'link': '/#/crew/'
+            'link': '/crew/'
           },
           {
             'name': 'Articul Group',
-            'link': '/#/about/'
+            'link': '/about/'
           }
         ]
       },
       {
         'name': 'Экспертиза',
-        'link': '/#/digital/',
+        'link': '/digital/',
         'subMenu': [
           {
             'name': '360 digital',
-            'link': '/#/digital/'
+            'link': '/digital/'
           },
           {
             'name': 'Уникальный опыт',
-            'link': '/#/experience/'
+            'link': '/experience/'
           },
           {
             'name': 'Развивам digital-индустрию',
-            'link': '/#/industry/'
+            'link': '/industry/'
           },
           {
             'name': 'Страница с фото',
-            'link': '/#/image/'
+            'link': '/image/'
           }
         ]
       },
       {
         'name': 'Работы',
-        'link': '/#/case/',
+        'link': '/case/',
         'subMenu': [
           {
             'name': 'Все подряд',
-            'link': '/#/case/'
+            'link': '/case/'
           },
           {
             'name': 'Выбрать по виду',
-            'link': '/#/case/'
+            'link': '/case/'
           },
           {
             'name': 'Выбрать по бренду',
-            'link': '/#/case/'
+            'link': '/case/'
           },
           {
             'name': 'Текстовая',
-            'link': '/#/text/'
+            'link': '/text/'
           }
         ]
       },
       {
         'name': 'Достижения',
-        'link': '/#/'
+        'link': '/'
       },
       {
         'name': 'Новости',
-        'link': '/#/news/'
+        'link': '/news/'
       },
       {
         'name': 'Карьера',
-        'link': '/#/jobs/'
+        'link': '/jobs/'
       },
       {
         'name': 'Контакты',
-        'link': '/#/'
+        'link': '/'
       }
     ]
   };
