@@ -1032,10 +1032,12 @@ md-sidenav {
 
     &--experience {
       background-position: center 100% !important;
+      transform: none!important;
     }
 
     &--industry {
       background-position: center 0% !important;
+      transform: none!important;
     }
 
     @media (max-width: $screen-md) {
