@@ -8,24 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <base href="/">
 
-    <link rel="apple-touch-icon" href="../local/templates/articulmedia/img/favicon/a-57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="../local/templates/articulmedia/img/favicon/a-72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="../local/templates/articulmedia/img/favicon/a-114.png" />
+    <link rel="apple-touch-icon" href="/local/templates/articulmedia/img/favicon/a-57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/local/templates/articulmedia/img/favicon/a-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/local/templates/articulmedia/img/favicon/a-114.png" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <link rel="icon" href="../local/templates/articulmedia/img/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/local/templates/articulmedia/img/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../local/templates/articulmedia/assets/vendor.css">
-    <link rel="stylesheet" type="text/css" href="../local/templates/articulmedia/assets/bundle.css">
+    <link rel="stylesheet" type="text/css" href="{{ '/local/templates/articulmedia/assets/vendor.css' | asset }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/local/templates/articulmedia/assets/bundle.css' | asset }}">
     <!-- eof CSS -->
 
     <!-- js -->
-    <script src="../local/templates/articulmedia/assets/vendor.js"></script>
+    <script src="{{ '/local/templates/articulmedia/assets/vendor.js' | asset }}"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="../local/templates/articulmedia/assets/bundle.js"></script>
+    <script src="{{ '/local/templates/articulmedia/assets/bundle.js' | asset }}"></script>
     <!-- eof js -->
 </head>
 
@@ -52,10 +52,10 @@
     </nav>
     <div class="flex"></div>
     <a href="" class="header__link">
-      <img src="../local/templates/articulmedia/img/icon/icon-с.png" alt="">
+      <img src="/local/templates/articulmedia/img/icon/icon-с.png" alt="">
     </a>
     <a href="" class="header__link">
-      <img src="../local/templates/articulmedia/img/icon/icon-p.png" alt="">
+      <img src="/local/templates/articulmedia/img/icon/icon-p.png" alt="">
     </a>
     <md-button class="header__mobile-toggle md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
       <span class="sidenav__nav-item__icon svg-icon">
@@ -159,13 +159,13 @@
       ©1998-2017. Articul Media
     </p>
     <div class="footer__icon">
-      <img src="../local/templates/articulmedia/img/icon/logo-raek.png" alt="РАЭК" class="footer__img">
+      <img src="/local/templates/articulmedia/img/icon/logo-raek.png" alt="РАЭК" class="footer__img">
     </div>
     <div class="footer__icon">
-      <img src="../local/templates/articulmedia/img/icon/logo-party.png" alt="Участник" class="footer__img">
+      <img src="/local/templates/articulmedia/img/icon/logo-party.png" alt="Участник" class="footer__img">
     </div>
     <div class="footer__icon">
-      <img src="../local/templates/articulmedia/img/icon/logo-microsoft.png" alt="" class="footer__img">
+      <img src="/local/templates/articulmedia/img/icon/logo-microsoft.png" alt="" class="footer__img">
     </div>
     <div class="footer__social">
 

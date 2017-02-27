@@ -1,22 +1,16 @@
 <?
 $arUrlRewrite = array(
 	array(
-		"CONDITION" => "#^/online/([\\.\\-0-9a-zA-Z]+)(/?)([^/]*)#",
-		"RULE" => "alias=\$1",
-		"ID" => "bitrix:im.router",
-		"PATH" => "/desktop_app/router.php",
+		"CONDITION" => "#^/api/(.*)?/.*#",
+		"RULE" => "",
+		"ID" => "api",
+		"PATH" => "/api/index.php",
 	),
 	array(
-		"CONDITION" => "#^/bitrix/services/ymarket/#",
+		"CONDITION" => "#^/(.*)?#",
 		"RULE" => "",
-		"ID" => "",
-		"PATH" => "/bitrix/services/ymarket/index.php",
-	),
-	array(
-		"CONDITION" => "#^/online/(/?)([^/]*)#",
-		"RULE" => "",
-		"ID" => "bitrix:im.router",
-		"PATH" => "/desktop_app/router.php",
+		"ID" => "angular",
+		"PATH" => "/index.php",
 	),
 );
 
