@@ -18,14 +18,14 @@
     <link rel="icon" href="/local/templates/articulmedia/img/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ '/local/templates/articulmedia/assets/vendor.css' | asset }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/local/templates/articulmedia/assets/bundle.css' | asset }}">
+    <link rel="stylesheet" type="text/css" href="[[ '/local/templates/articulmedia/assets/vendor.css' | asset ]]">
+    <link rel="stylesheet" type="text/css" href="[[ '/local/templates/articulmedia/assets/bundle.css' | asset ]]">
     <!-- eof CSS -->
 
     <!-- js -->
-    <script src="{{ '/local/templates/articulmedia/assets/vendor.js' | asset }}"></script>
+    <script src="[[ '/local/templates/articulmedia/assets/vendor.js' | asset ]]"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="{{ '/local/templates/articulmedia/assets/bundle.js' | asset }}"></script>
+    <script src="[[ '/local/templates/articulmedia/assets/bundle.js' | asset ]]"></script>
     <!-- eof js -->
 </head>
 
@@ -37,7 +37,7 @@
 {% block header %}
 <header class="header">
   <div class="header__container" flex="" layout="row" layout-align="space-between start" layout-align-gt-md="center center">
-    <a href="#" class="header__logo"></a>
+    <a href="/" class="header__logo"></a>
     <nav class="nav" hide-sm hide-xs>
       <ul class="nav__list">
         <li class="nav__item" ng-repeat="item in navData.menuItems">
