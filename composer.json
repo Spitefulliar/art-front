@@ -6,11 +6,16 @@
     "name": "articul/articulmedia",
     "minimum-stability": "dev",
     "require": {
-        "twig/twig": "^1.28"
+        "twig/twig": "^1.28",
+        "digitalwand/digitalwand.admin_helper": "^2.1",
+        "notamedia/console-jedi": "^1.1",
+        "robmorgan/phinx": "^0.7.1"
     },
     "autoload": {
       "psr-4": {
-          "Core\\": "local/src/Core"
+          "Core\\": "local/src/Core",
+          "Articulmedia\\": "local/src/Articulmedia",
+          "Articulmedia\\Base\\": "local/modules/articulmedia.base/src"
       }
     }
 }

@@ -1,0 +1,12 @@
+.adm-articulmedia .adm-main-menu-item-icon {
+    background: url('/local/templates/admin/img/main-menu.svg') no-repeat;
+    background-position: center 10px;
+    height: 46px;
+}
+
+.adm-articulmedia:hover .adm-main-menu-item-icon,
+.adm-articulmedia.adm-main-menu-item-active .adm-main-menu-item-icon {
+    background: url('/local/templates/admin/img/main-menu-hover.svg') no-repeat;
+    background-position: center 10px;
+    height: 46px;
+}
