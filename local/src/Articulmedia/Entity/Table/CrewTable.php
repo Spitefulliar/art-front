@@ -1,17 +1,16 @@
 <?php
-
 namespace Articulmedia\Entity\Table;
 
 
 use Bitrix\Main\Entity\Validator\Length;
 use Core\Bitrix\Entity\DataManager;
 
-class ClientsTable extends DataManager
+class CrewTable extends DataManager
 {
 
     public static function getTableName()
     {
-        return 'articul_clients';
+        return 'articul_crew';
     }
 
     public static function getMapping()
@@ -36,6 +35,28 @@ class ClientsTable extends DataManager
                 'data_type' => 'string',
                 'validation' => [__CLASS__, 'validateName'],
             ],
+            'POSITION' => [
+                'data_type' => 'string',
+                'validation' => [__CLASS__, 'validatePosition'],
+            ],
+            'CONTENT_1' => [
+                'data_type' => 'text',
+            ],
+            'CONTENT_2' => [
+                'data_type' => 'text',
+            ],
+            'CONTENT_1_TEXT_TYPE' => [
+                'data_type' => 'string',
+            ],
+            'CONTENT_2_TEXT_TYPE' => [
+                'data_type' => 'string',
+            ],
+            'IMAGE' => [
+                'data_type' => 'integer',
+            ],
+            'AUDIO' => [
+                'data_type' => 'integer',
+            ],
         ];
     }
 
@@ -53,5 +74,10 @@ class ClientsTable extends DataManager
         ];
     }
 
-
+    public static function validatePosition()
+    {
+        return [
+            new Length(null, 255),
+        ];
+    }
 }
