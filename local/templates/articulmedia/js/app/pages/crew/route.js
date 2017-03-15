@@ -9,6 +9,7 @@ const PAGE_STATE = moduleConfig.state || moduleConfig.name.toLowerCase();
 const PAGE_URL = moduleConfig.url || '/' + PAGE_STATE + '/';
 const PAGE_TITLE = moduleConfig.title || false;
 const PAGE_API_PARAM = moduleConfig.apiParam || PAGE_STATE;
+const PAGE_API_FULL_PATH = moduleConfig.apiFullPath;
 
 var routing = ['$stateProvider', '$urlRouterProvider', 
 function($stateProvider, $urlRouterProvider) {
@@ -21,6 +22,7 @@ function($stateProvider, $urlRouterProvider) {
         pageBgType: moduleConfig.pageBgType || false,
         pageClass: moduleConfig.pageClass || false,
         apiParam: PAGE_API_PARAM,
+        apiFullPath: PAGE_API_FULL_PATH,
         footerIsStatic: true
       }
     });

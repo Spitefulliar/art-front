@@ -49,6 +49,7 @@ abstract class AjaxComponent extends \CBitrixComponent
         $this->arResult['this'] = $this;
 
         $this->obResponse = new JsonResponse();
+        $this->obResponse->setEncodingOptions(JSON_UNESCAPED_UNICODE);
     }
 
     abstract protected function executeAjaxComponent();

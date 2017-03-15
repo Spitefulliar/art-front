@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "773f342aa7c979a8bfbeba05eb3f914c",
-    "content-hash": "12141c24cc31fd28ca87cd9eefce426e",
+    "hash": "61757993485a44fc5a410e8a556b253a",
+    "content-hash": "a66b3f6bd5a287253c2bdee6b542d13f",
     "packages": [
         {
             "name": "composer/installers",
@@ -124,7 +124,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalWand/digitalwand.admin_helper/zipball/cb0c6c9b332e7c7ceb4b1ecfcb2d2778aeb44217",
+                "url": "https://api.github.com/repos/DigitalWand/digitalwand.admin_helper/zipball/548e0bc98820065b927c0e430c634f249b6f4357",
                 "reference": "cb0c6c9b332e7c7ceb4b1ecfcb2d2778aeb44217",
                 "shasum": ""
             },
@@ -322,7 +322,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/1c6186c02ab7048a498d1ec7f5c7ca546bb6e6be",
+                "url": "https://api.github.com/repos/symfony/config/zipball/c7b22412a63602c443956344bec700707a74c494",
                 "reference": "1c6186c02ab7048a498d1ec7f5c7ca546bb6e6be",
                 "shasum": ""
             },
@@ -378,7 +378,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/42645e1a6d36fd4177751bea0e607d039c9a1b7d",
+                "url": "https://api.github.com/repos/symfony/console/zipball/81508e6fac4476771275a3f4f53c3fee9b956bfa",
                 "reference": "42645e1a6d36fd4177751bea0e607d039c9a1b7d",
                 "shasum": ""
             },
@@ -496,7 +496,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/e542d4765092d22552b1bf01ddccfb01d98ee325",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c1bdf0263279e15486c368c9c1ab88f3a9182f90",
                 "reference": "e542d4765092d22552b1bf01ddccfb01d98ee325",
                 "shasum": ""
             },
@@ -534,6 +534,59 @@
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
             "time": "2017-02-18 17:06:33"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "3706991cb3e0ad6ba3a51ec4fa610c42369acff1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3706991cb3e0ad6ba3a51ec4fa610c42369acff1",
+                "reference": "3706991cb3e0ad6ba3a51ec4fa610c42369acff1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.1"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.8|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-03-05 21:52:44"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -604,7 +657,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/372979f85d2831630f12e794413902f07bce7031",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/d1abb473764f82339862b114b45b3cd424b2d1a3",
                 "reference": "372979f85d2831630f12e794413902f07bce7031",
                 "shasum": ""
             },
@@ -659,7 +712,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/27d7ea9675aa312d48f382f3c71c10bebce768a9",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c5ba65ca44264a640d23e8d1644b668949394fe8",
                 "reference": "e4125e6ef97f07a7c60816a0ed1578a5e1d85bc1",
                 "shasum": ""
             },
