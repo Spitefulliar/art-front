@@ -3732,7 +3732,7 @@ art-carousel3d-dir {
 
   &__list {
     @include conrow();
-    width: 100%;
+    width: auto;
     padding-left: vw(25px);
     padding-right: vw(25px);
   }
