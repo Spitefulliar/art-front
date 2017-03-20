@@ -6,4 +6,5 @@ export default  {
   // apiParam: 'digital.json',
   pageBgType: 'digital',
   pageClass: 'digital-page',
+  apiFullPath: '/api/expertises/'
 };
