@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="28px" viewBox="0 0 26 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.4673948%" id="linearGradient-1">
+            <stop stop-color="#FAFBFB" offset="0%"></stop>
+            <stop stop-color="#D8E1E4" offset="100%"></stop>
+        </linearGradient>
+        <path d="M16.3627943,18.9925349 L10.779918,18.9925349 L10.779918,18.9863993 C8.67430072,18.9833316 7.69397724,18.5221418 7.69397724,16.8440657 C7.69397724,15.1680347 8.67430072,14.6986643 10.779918,14.6986643 L16.3627943,14.6986643 L16.3627943,18.9925349 Z M19.9890788,3.38468834 C18.0081563,1.82421047 15.2243215,1 11.940694,1 L3.3357449,1 L4.761117,6.19579823 L11.9508318,6.19579823 C14.9617529,6.19886601 16.3627943,7.29917676 16.3627943,9.65830026 L16.3627943,9.92110682 L8.73309986,9.92826498 C3.28505599,9.92826498 1,13.2404457 1,17.0588104 C1,21.3383647 3.78180729,24.1903783 8.73309986,24.1903783 L23,24.1903783 L23,9.65830026 C23,7.10488397 21.9588498,4.93391769 19.9890788,3.38468834 L19.9890788,3.38468834 Z" id="path-2"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.34 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fill-1-Copy-2">
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>
