@@ -15,7 +15,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
 
       let urlPostfix = (CONFIG.APP.API_POSTFIX && ($rootScope.pageData.apiParam.indexOf(CONFIG.APP.API_POSTFIX) == -1))? CONFIG.APP.API_POSTFIX : '';
 
-      $scope.getPage(CONFIG.APP.API_DIR + $rootScope.pageData.apiParam + urlPostfix, $stateParams.pageCode).then(function(response){
+      let pagePath = $rootScope.pageData.apiFullPath || CONFIG.APP.API_DIR + $rootScope.pageData.apiParam + urlPostfix;
+      $scope.getPage(pagePath, $stateParams.pageCode).then(function(response){
         $scope.page = response.page;
         $scope.pageData.title = $scope.page.title || $scope.pageData.title;
         $rootScope.$broadcast('pageDataLoaded');

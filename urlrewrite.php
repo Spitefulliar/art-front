@@ -2,7 +2,7 @@
 $arUrlRewrite = array(
 	array(
 		"CONDITION" => "#^/api/(.*)?/.*#",
-		"RULE" => "",
+		"RULE" => "component=$1",
 		"ID" => "api",
 		"PATH" => "/api/index.php",
 	),
