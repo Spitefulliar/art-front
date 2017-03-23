@@ -48,5 +48,5 @@
       </div>
     </div>
   </div>
-  <art-bubbles-dir bubbles="bubbles" ng-if="bubbles && pageMode == 'bubbles'"></art-bubbles-dir>
+  <art-bubbles-dir bubbles="bubbles" ng-if="bubbles && pageMode == 'bubbles' && !$rootScope.pageIsLoading"></art-bubbles-dir>
 </div>

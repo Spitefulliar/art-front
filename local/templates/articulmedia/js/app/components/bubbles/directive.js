@@ -40,7 +40,8 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$locatio
 
           let worldWidth = element.width();
           let worldHeight = element.height();
-          let worldBoundsScale = (!$rootScope.isMobile)? 1.2: 1;
+          // let worldBoundsScale = (!$rootScope.isMobile)? 1.2: 1;
+          let worldBoundsScale = 1;
 
           // create renderer
           var render = Render.create({

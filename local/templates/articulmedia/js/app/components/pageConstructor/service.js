@@ -1,9 +1,10 @@
 //SERVICE
 export default ['$http', '$rootScope', 
-  function($http, $rootScope,) {
+  function($http, $rootScope) {
     let service = {};
 
     service.getPage = function(apiurl, code) {
+      $rootScope.pageIsLoading = true;
       let qData = {
         code: code
       };

@@ -8,7 +8,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   // $mdSidenav, $mdMedia, 
   
   $scope.slickConfigMain = {
-	  enabled: true,
+	  enabled: false,
     autoplay: true,
     draggable: true,
     adaptiveHeight: true,
@@ -32,9 +32,10 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
 
   $rootScope.$on('pageDataLoaded', function () {
     // $scope.page = $scope.page;
+    $scope.slickConfigMain.enabled = true;
     $timeout(function(){
       $('.main-page-slider').slick('setPosition');
-    },0);
+    },50);
   });
 
 
