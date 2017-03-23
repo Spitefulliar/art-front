@@ -32,7 +32,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
             draggable: true,
             adaptiveHeight: false,
             infinite: false,
-            centerMode: true,
+            centerMode: false,
             centerPadding: '0px',
             cssEase: false,
             useCSS: false,
