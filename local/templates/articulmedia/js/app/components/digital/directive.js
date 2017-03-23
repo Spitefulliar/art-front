@@ -44,7 +44,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$compile
           });
       };
 
-      $scope.digSliderOnSlieInit = function() {
+      $scope.digSliderOnSlickInit = function() {
         let digSlider = $('.digital-slider');
         digSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
           bgTranformOnSlide(nextSlide - currentSlide, 30);

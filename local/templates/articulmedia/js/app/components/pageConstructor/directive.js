@@ -19,7 +19,10 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
       $scope.getPage(pagePath, $stateParams.pageCode).then(function(response){
         $scope.page = response.page;
         $scope.pageData.title = $scope.page.title || $scope.pageData.title;
+        
         $rootScope.$broadcast('pageDataLoaded');
+        $rootScope.pageIsLoading = false;
+
         $attributes = $attributes;
 
         //enabling scrollify for page sections

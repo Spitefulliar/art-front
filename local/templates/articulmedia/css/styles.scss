@@ -4641,16 +4641,20 @@ art-bubbles-dir {
   background: #e17620;
   @include fullscrh();
   &__slogan {
-    position: absolute;
+    position: fixed;
     z-index: -1;
-    top: vh(55px);
-    left: 0;
+    top: 20%;
+    left: vw(50px);
     font-size: vw(370px);
     line-height: 0.8;
     font-weight: $fwblack;
     color: $brand;
     text-transform: uppercase;
     letter-spacing: -0.05em;
+    br {
+      line-height: 0;
+      font-size: 0;
+    }
   }
   &__list {
     width: 100%;
@@ -4681,6 +4685,11 @@ art-bubbles-dir {
     &__slogan {
       top: vh(450px,'md');
       font-size: vw(155px,'md');
+      br {
+        line-height: 0;
+        font-size: 0;
+        display: none;
+      }
     }
     &__groups {
       padding-right: vh(50px,'md');
@@ -4690,7 +4699,7 @@ art-bubbles-dir {
   }
 }
 .clients-list {
-  $ifs: 14px;
+  $ifs: vw(14px);
   &__item {
     position: relative;
     z-index: 0;
@@ -4764,10 +4773,16 @@ art-bubbles-dir {
       }
     }
   }
+  @media (max-width: $screen-md) {
+    $ifs: vw(24px,'md');
+    &__item {
+      font-size: $ifs;
+    }
+  }
 }
 
 .clients-groups-list {
-  $ifs: 14px;
+  $ifs: vw(14px);
   &__item {
     position: relative;
     z-index: 0;
@@ -4842,9 +4857,9 @@ art-bubbles-dir {
     }
   }
   @media (max-width: $screen-md) {
-    $ifs: vh(24px);
+    $ifs: vw(24px,'md');
     &__item {
-      padding-left: vh(50px,'md');
+      padding-left: vw(50px,'md');
       margin: 0 0 1em;
       font-size: $ifs;
       line-height: 1;
@@ -4854,11 +4869,11 @@ art-bubbles-dir {
       &:before {
         display: inline-block;
         position: static;
-        margin:  0 vh(2px,'md') 0 vh(-20px,'md');
+        margin:  0 vw(2px,'md') 0 vw(-20px,'md');
         vertical-align: middle;
-        border-left: vh(12px,'md') solid $black;
-        border-top: vh(5px,'md') solid transparent;
-        border-bottom: vh(5px,'md') solid transparent;
+        border-left: vw(12px,'md') solid $black;
+        border-top: vw(5px,'md') solid transparent;
+        border-bottom: vw(5px,'md') solid transparent;
         -webkit-transform: none;
            -moz-transform: none;
             -ms-transform: none;
