@@ -22,7 +22,7 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
     let selItem = $scope.crewData.items[index];
     $scope.showCrewDesc = false;
 
-    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.crewSounds[$scope.currentCrewIndex].stop();
+    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.stopAudio(false, $scope.currentCrewIndex);
     //if item already activated
     if (selItem.active) {
       index = -1;
@@ -34,11 +34,6 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
 
       crewTO = $timeout(function(){
         $scope.showCrewDesc = true;
-        // if (!$scope.crewSounds[$scope.currentCrewIndex]) {
-        //   $scope.crewSounds[$scope.currentCrewIndex] = ngAudio.play($scope.crewItemCurrent.audio);
-        // } else {
-        //   $scope.crewSounds[$scope.currentCrewIndex].play();
-        // };
         $scope.playAudio(false, $scope.currentCrewIndex);
       },time);
     };
@@ -51,24 +46,25 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
 
   $scope.stopAudio = function(event, index) {
     if (event) event.stopPropagation();
-    $scope.crewData.items[index].mute = true;
-    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.crewSounds[$scope.currentCrewIndex].stop();
+    if ($scope.crewSounds[index]) $scope.crewSounds[index].stop();
+    $scope.crewData.items[index].mute = false;
   }
 
   $scope.pauseAudio = function(event, index) {
     if (event) event.stopPropagation();
     $scope.crewData.items[index].mute = true;
-    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.crewSounds[$scope.currentCrewIndex].pause();
+    if ($scope.crewSounds[index]) $scope.crewSounds[index].pause();
   }
 
   $scope.playAudio = function(event, index) {
     if (event) event.stopPropagation();
+
     if (!$scope.crewSounds[index]) {
       $scope.crewSounds[index] = ngAudio.play($scope.crewData.items[index].audio);
     } else {
       $scope.crewSounds[index].play();
     };
-    // if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.crewSounds[$scope.currentCrewIndex].play();
+    
     $scope.crewData.items[index].mute = false;
   }
 
