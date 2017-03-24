@@ -4281,7 +4281,9 @@ art-carousel3d-dir {
   padding-top: 90px;
   // min-height: 100vh;
   @media (max-width: $screen-md) {
-    padding-top: 50vh;
+    padding-top: 0;
+    background-image: none !important;
+    background-color: $whisper;
   }
 
   &--no-bg {
@@ -4311,9 +4313,12 @@ art-carousel3d-dir {
     width: 100%;
     // position: fixed;
     top: 0;
+    display: none;
 
     @media (max-width: $screen-md) {
       position: relative;
+      display: block;
+      max-height: vh(400px);
     }
   }
 
@@ -4344,6 +4349,7 @@ art-carousel3d-dir {
     @media (max-width: $screen-md) {
       font-size: vh(30px);
       line-height: vh(30px);
+      margin-bottom: vh(40px);
     }
   }
 
