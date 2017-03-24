@@ -1,13 +1,15 @@
 <div class="page-block image-page"
-  ng-class="{'page-block_{{block.type}}': block.type}"
-  flex="100" flex-gt-sm="100"
-  ng-class="{'image-page__bg--one' : !block.items[0].quote}"
-  ng-style="{'background-image': block.items[0].image}">
-  <div class="page-block__container image-page__container" layout="row" layout-wrap ng-if="block.items[0].quote">
-    <div class="image-page__wrap" flex-offset-gt-sm="50" flex-gt-sm="50" flex="100">
-	   	<q class="image-page__quote" ng-bind="block.items[0].quote"></q>
-	   	<p class="image-page__name" ng-bind="block.items[0].name"></p>
-	   	<p class="image-page__position" ng-bind="block.items[0].position"></p>
-   	</div>
-  </div>
+     ng-class="{'page-block_{{block.type}}': block.type}"
+     flex="100" flex-gt-sm="100"
+     ng-class="{'image-page__bg--one' : !block.items[0].quote}"
+     ng-style="{
+            'background-image': 'url(' + (isDesktop && block.items[0].image.desktop || block.items[0].image.mobile || false) + ')'
+          }">
+    <div class="page-block__container image-page__container" layout="row" layout-wrap ng-if="block.items[0].quote">
+        <div class="image-page__wrap" flex-offset-gt-sm="50" flex-gt-sm="50" flex="100">
+            <q class="image-page__quote" ng-bind="block.items[0].quote"></q>
+            <p class="image-page__name" ng-bind="block.items[0].name"></p>
+            <p class="image-page__position" ng-bind="block.items[0].position"></p>
+        </div>
+    </div>
 </div>

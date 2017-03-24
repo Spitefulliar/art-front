@@ -4362,8 +4362,9 @@ art-carousel3d-dir {
 
     @media (max-width: $screen-md) {
       position: relative;
-      padding-top: 50vh;
+      margin-top: 70vh ;
       background: rgba(255, 255, 255, .8);
+      padding-top: vh(20px);
     }
   }
 
@@ -4426,7 +4427,7 @@ art-carousel3d-dir {
     }
 
     @media (max-width: $screen-md) {
-      margin: vh(60px) 0;
+      margin: vh(20px) 0;
       order: 2;
     }
   }
