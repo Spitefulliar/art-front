@@ -4356,6 +4356,7 @@ art-carousel3d-dir {
 }
 
 .image-page {
+  min-height: 100vh;
 
   &__container {
     padding: vh(100px) vw(82px) 0;

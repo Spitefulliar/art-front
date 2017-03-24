@@ -15,7 +15,6 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     "$stateChangeSuccess",
     function( event ) {
       showElements($('.page-block-list__grid'));
-      console.log('load');
     }
   );
 
