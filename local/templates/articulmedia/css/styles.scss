@@ -4425,6 +4425,16 @@ art-carousel3d-dir {
     &:after,
     &:before {
       font-weight: 100;
+      position: absolute;
+    }
+
+    &:after {
+      right: -10px;
+      position: relative;
+    }
+
+    &:before {
+      left: -20px;
     }
 
     @media (max-width: $screen-md) {
