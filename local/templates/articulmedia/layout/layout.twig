@@ -61,7 +61,7 @@
     <a href="" ng-href="{{item.link}}" class="header__link" ng-repeat="item in navData.headerLinks">
       <img ng-src="{{item.img}}" alt="{{item.name}}">
     </a>
-    <md-button class="header__mobile-toggle md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true" md-ripple-size="auto" >
+    <md-button class="header__mobile-toggle md-default" ng-click="sidenavShow()" aria-label="menu" md-no-ink="true" md-ripple-size="auto" >
       <span class="sidenav__nav-item__icon svg-icon">
         <svg>
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-burger" />
@@ -81,14 +81,17 @@
   md-is-open="sidenavIsOpen"
   >
   <div class="sidenav__wrap"  ng-controller="artMenuCtrl">
-    <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavToggle()" aria-label="menu" md-ripple-size="auto" md-no-ink="true">
+    <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavHide()" aria-label="menu" md-ripple-size="auto" md-no-ink="true">
       <span class="sidenav__nav-item__icon svg-icon">
         <svg>
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-close" />
         </svg>
       </span>
     </md-button>
-    <slick settings="slickConfigMenu" class="mobile-menu" ng-if="sidenavIsOpen">
+
+    <slick settings="slickConfigMenu" class="mobile-menu" 
+    ng-if="sidenavIsOpen && navData.menuItems"
+    >
       <div class="mobile-menu__slide" ng-repeat="item in navData.menuItems" ng-if="item.subMenu">
         <h5 class="mobile-menu__title">
           <a class="mobile-menu__link" 

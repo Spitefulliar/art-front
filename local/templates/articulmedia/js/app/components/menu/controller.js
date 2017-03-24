@@ -10,6 +10,30 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
   //getting nav date fo menu
   $scope.navData = $moduleService.getNavData();
 
+  //sidenav
+  $scope.sidenavToggle = function(){
+    $mdSidenav('sidenav-right').toggle();
+  }
+
+  $scope.sidenavShow = function(){
+    $mdSidenav('sidenav-right').open();
+    // $scope.activateCurrentMobMenuslide();
+  }
+
+  $scope.sidenavHide = function() {
+    $mdSidenav('sidenav-right').close();
+  }
+
+  $scope.sidenavHideMedia = function() {
+    if ($mdMedia('gt-sm')) {
+      $scope.sidenavHide();
+    }
+    return $mdMedia('gt-sm');
+  }
+
+  $scope.$watch($scope.sidenavHideMedia);
+  //eof sidenav
+
   //slider config for mobile menu
   $scope.slickConfigMenu = {
     enabled: true,
@@ -26,7 +50,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     dots: true,
     arrows: false,
     mobileFirst: true,
-    respondTo: 'slider',
+    respondTo: 'window',
     swipe: true,
     easing: 'linear',
     swipeToSlide: true,
@@ -46,27 +70,31 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
           centerPadding: '25%',
         }
       }
-    ]  
+    ],
+    method: {},
+    event: {
+      init: function(event, slick) {
+        $scope.activateCurrentMobMenuslide(event, slick);
+      }
+    }
   };
 
-  //sidenav
-  $scope.sidenavToggle = function(){
-    $mdSidenav('sidenav-right').toggle();
-  }
+  $scope.activateCurrentMobMenuslide = (e,slick) => {
+    let mobMenuSlider = $(slick.$slider);
+    let newActiveLink = mobMenuSlider.find('.mobile-menu__link--active');
 
-  $scope.sidenavHide = function() {
-    $mdSidenav('sidenav-right').close();
-  }
+    if (!newActiveLink.length) {
+      $timeout(function(){ 
+        $scope.activateCurrentMobMenuslide(e,slick);
+      },100);
+      return;
+    };
 
-  $scope.sidenavHideMedia = function() {
-    if ($mdMedia('gt-sm')) {
-      $scope.sidenavHide();
-    }
-    return $mdMedia('gt-sm');
-  }
-
-  $scope.$watch($scope.sidenavHideMedia);
-  //eof sidenav
+    let newActiveSlide = mobMenuSlider.find('.mobile-menu__link--active').parents('.slick-slide');
+    let newActiveSlideIndex = newActiveSlide.data('slick-index');//mobMenuSlides.indexOf(newActiveSlide);
+    
+    slick.slickGoTo(newActiveSlideIndex, true);
+  };
 
   $rootScope.$on('$stateChangeStart', 
     function(event, toState, toParams, fromState, fromParams){ 
