@@ -22,8 +22,8 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
     let selItem = $scope.crewData.items[index];
     $scope.showCrewDesc = false;
 
-    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.crewSounds[$scope.currentCrewIndex].pause();
-    //if item already activeted
+    if ($scope.crewSounds[$scope.currentCrewIndex]) $scope.stopAudio(false, $scope.currentCrewIndex);
+    //if item already activated
     if (selItem.active) {
       index = -1;
       $scope.crewItemCurrent = false;
@@ -34,11 +34,7 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
 
       crewTO = $timeout(function(){
         $scope.showCrewDesc = true;
-        if (!$scope.crewSounds[$scope.currentCrewIndex]) {
-          $scope.crewSounds[$scope.currentCrewIndex] = ngAudio.play($scope.crewItemCurrent.audio);
-        } else {
-          $scope.crewSounds[$scope.currentCrewIndex].play();
-        };
+        $scope.playAudio(false, $scope.currentCrewIndex);
       },time);
     };
 
@@ -48,7 +44,47 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
     });
   };
 
+  $scope.stopAudio = function(event, index) {
+    if (event) event.stopPropagation();
+    if ($scope.crewSounds[index]) $scope.crewSounds[index].stop();
+    $scope.crewData.items[index].mute = false;
+  }
+
+  $scope.pauseAudio = function(event, index) {
+    if (event) event.stopPropagation();
+    $scope.crewData.items[index].mute = true;
+    if ($scope.crewSounds[index]) $scope.crewSounds[index].pause();
+  }
+
+  $scope.playAudio = function(event, index) {
+    if (event) event.stopPropagation();
+
+    if (!$scope.crewSounds[index]) {
+      $scope.crewSounds[index] = ngAudio.play($scope.crewData.items[index].audio);
+    } else {
+      $scope.crewSounds[index].play();
+    };
+    
+    $scope.crewData.items[index].mute = false;
+  }
+
+  $scope.toggleAudio = function(event, index) {
+    if (event) event.stopPropagation();
+    if ($scope.crewData.items[index].mute) {
+      $scope.playAudio(event, index);
+    } else {
+      $scope.pauseAudio(event, index);
+    }
+  }
+
   //assigning data 
+  $scope.$on(
+    "$stateChangeStart",
+    function() {
+      $scope.stopAudio(false, $scope.currentCrewIndex);
+    }
+  );
+
   $scope.$on(
     "pageDataLoaded",
     function() {

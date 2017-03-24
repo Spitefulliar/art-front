@@ -1,6 +1,6 @@
 //SERVICE
-export default ['$http', '$rootScope', 
-  function($http, $rootScope) {
+export default ['$http', '$rootScope', '$state',
+  function($http, $rootScope, $state) {
     let service = {};
 
     service.getPage = function(apiurl, code) {
@@ -12,7 +12,11 @@ export default ['$http', '$rootScope',
         method: 'GET',
         url: apiurl + '?' + $.param(qData),
       }).then(function(response) {
-          //if there are typycal page sections, transform  them
+          if (!response.data.page) {
+            $state.go('404');
+            return false;
+          }
+          //if there are typical page sections, transform  them
           if (response.data.page && response.data.page.sections) {
             response.data.page.sections = service.sectionsCommonTranform(response.data.page.sections);
           }

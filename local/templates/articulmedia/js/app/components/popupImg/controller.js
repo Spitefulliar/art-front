@@ -42,11 +42,19 @@ let popupImgCtrl = function($scope, $rootScope, $timeout, $window, $log, $state,
       disableParentScroll: true,
       onDomAdded: function() {
         $scope.popupRendered = true;
-        
-        $('.popup-img').parents('.md-panel-outer-wrapper').append($('.popup-img .popup-img__close_outer'));
+        let wrapper = $('.popup-img').parents('.md-panel-outer-wrapper');
+        wrapper.append($('.popup-img .popup-img__close_outer'));
+
+        let scrollHandler = function(event) {
+          event.preventDefault();
+          popupImgCtrl.prototype.closePanel();
+        };
+
+        $(window).on('scroll', scrollHandler);
       },
       onDomRemoved: function() {
         $scope.popupRendered = false;
+        $(window).off('scroll', scrollHandler);
       }
     };
 

@@ -6,10 +6,10 @@
   <div carousel3d-slide ng-repeat="slide in slides track by $index" class="carousel-3d__slide">
     <img ng-src="{{ ($rootScope.isDesktop)? slide.desktop : slide.mobile }}" 
       ng-if="$rootScope.isDesktop || !$rootScope.isDesktop" 
-      art-popup-img-dir 
-      ng-click="popupImgCtrl.showImgPopup(slide.original, activeSlideIndex != $index)"
       alt="{{slide.title}}" 
       data-slideindex="{{$index}}"
     />
+    <!-- art-popup-img-dir 
+    ng-click="popupImgCtrl.showImgPopup(slide.original, activeSlideIndex != $index)" -->
   </div>
 </div>
