@@ -123,7 +123,7 @@
         ]
       },
       {
-        "type": "solution-gallery",
+        "type": "content-pic-gallery",
         "style": {
           "bgColor": "#c7b8a3",
           "bgGradient": {
@@ -134,7 +134,7 @@
         },
         "blocks": [
           {
-            "type": "solution-gallery-single",
+            "type": "content-pic-sm",
             "title": "Медиаподдержка:",
             "content": "<ul><li>Брендирование сайта «Кинопоиск»</li><li>Баннерная реклама на сайте Soloway</li><li>ВКонтакте: ТГБ</li><li>Facebook: рекомендованная страница и бустинг постов</li></ul>",
             "image": {
@@ -145,7 +145,7 @@
             }
           },
           {
-            "type": "solution-gallery-multi",
+            "type": "content-gallery-sm",
             "title": "SMM:",
             "content": "Основной контент размещался в официальных сообществах телеканала FOX в Facebook и ВК: новости, интересные факты по содержанию серий, еженедельные конкурсы с призами, тизеры и другие активности.",
             "images": [
