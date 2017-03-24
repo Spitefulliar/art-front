@@ -85,7 +85,7 @@
       </span>
     </md-button>
     <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
-      <div class="mobileMenu__slide" ng-repeat="item in navData.menuItems">
+      <div class="mobileMenu__slide" ng-repeat="item in navData.menuItems" ng-if="item.subMenu">
         <h5 class="mobileMenu__title">
           <a href="" class="mobileMenu__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
         </h5>
@@ -94,6 +94,11 @@
             <a href="" class="mobileMenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
           </li>
         </ul>
+      </div>
+      <div class="mobileMenu__slide" >
+        <h5 class="mobileMenu__title" ng-repeat="item in navData.menuItems" ng-if="!item.subMenu">
+          <a href="" class="mobileMenu__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
+        </h5>
       </div>
     </slick>
     <div class="sidenav__footer">
