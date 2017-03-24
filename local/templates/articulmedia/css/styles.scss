@@ -4617,7 +4617,8 @@ art-carousel3d-dir {
 
       @media (max-width: $screen-md) {
         font-size: vh(24px);
-        line-height: vh(24px);
+        line-height: vh(30px);
+        padding-top: 5px;
       }
     }
 
