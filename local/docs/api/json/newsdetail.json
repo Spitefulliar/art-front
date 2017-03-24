@@ -9,7 +9,6 @@
       "blocks": [
         {
           "size": "big",
-          "link": "/newsdetail/",
           "type": "image",
           "title": "Спортивный<br>маркетинг<br>в digital",
           "bgImage": "url(../local/templates/articulmedia/img/desktop/news-big.jpg)",
