@@ -533,7 +533,10 @@
               {
                 "name": "Имя Lorem ipsum dolor sit amet",
                 "position": "Позиция Nunc semper facilisis libero vitae facilisis",
-                "image": "url(../local/templates/articulmedia/img/desktop/image-page-bg.jpg)",
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/desktop/image-page-bg.jpg",
+                  "mobile": "/local/templates/articulmedia/img/mobile/image-page-bg-mobile.jpg"
+                },
                 "quote": "Цитата Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesqu"
               }
             ]
@@ -548,9 +551,11 @@
             "items": [
               {
                 "title": "Спортивный<br>маркетинг<br>в digital",
-                "image": "url(../local/templates/articulmedia/img/desktop/news-bg.jpg)",
-                "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitellen",
-                "imageBg": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)"
+                "image": {
+                  "desktop": "/local/templates/articulmedia/img/desktop/text-page-bg.jpg",
+                  "mobile": "/local/templates/articulmedia/img/mobile/text-page-bg-mobile.jpg"
+                },
+                "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitellen"
               }
             ]
           }
