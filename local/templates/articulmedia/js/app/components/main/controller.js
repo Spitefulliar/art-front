@@ -2,90 +2,10 @@
 import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
-export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http', '$mdSidenav','$mdMedia',
+export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http', '$mdSidenav','$mdMedia', 
   function($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http, $mdSidenav, $mdMedia) {
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
-
-  $scope.navData = {
-    'menuItems': [
-      {
-        'name': 'Компания',
-        'link': '/',
-        'hoverColor': 'orange',
-        'subMenu': [
-          {
-            'name': 'Мы – Articul',
-            'link': '/articul/'
-          },
-          {
-            'name': 'Клиенты',
-            'link': '/clients/'
-          },
-          {
-            'name': 'Команда',
-            'link': '/crew/'
-          },
-          {
-            'name': 'Articul Group',
-            'link': '/about/'
-          }
-        ]
-      },
-      {
-        'name': 'Экспертиза',
-        'link': '/digital/',
-        'subMenu': [
-          {
-            'name': '360 digital',
-            'link': '/digital/'
-          },
-          {
-            'name': 'Уникальный опыт',
-            'link': '/experience/'
-          },
-          {
-            'name': 'Развивам digital-индустрию',
-            'link': '/industry/'
-          }
-        ]
-      },
-      {
-        'name': 'Работы',
-        'link': '/case/',
-        'subMenu': [
-          {
-            'name': 'Все подряд',
-            'link': '/case/'
-          },
-          {
-            'name': 'Выбрать по виду',
-            'link': '/case/'
-          },
-          {
-            'name': 'Выбрать по бренду',
-            'link': '/case/'
-          }
-        ]
-      },
-      {
-        'name': 'Достижения',
-        'link': '/'
-      },
-      {
-        'name': 'Новости',
-        'link': '/news/'
-      },
-      {
-        'name': 'Карьера',
-        'link': '/jobs/'
-      },
-      {
-        'name': 'Контакты',
-        'link': '/'
-      }
-    ]
-  };
 
   //media
   $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
@@ -98,74 +18,11 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     $scope.isMobile = mquery;
   });
 
-  var myAppModule = angular.module('MyApp', ['slickCarousel'])
-
-  $scope.slickConfigMenu = {
-    enabled: true,
-    // autoplay: true,
-    draggable: true,
-    // adaptiveHeight: true,
-    autoplaySpeed: 6000,
-    infinite: true,
-    centerMode: true,
-    centerPadding: '18%',
-    slidesToShow: 1,
-    cssEase: false,
-    useCSS: false,
-    dots: true,
-    arrows: false,
-    mobileFirst: true,
-    respondTo: 'slider',
-    swipe: true,
-    easing: 'linear',
-    swipeToSlide: true,
-    slidesToScroll: 1,
-    variableWidth: false,
-    centerMode: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          centerPadding: '30%',
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerPadding: '25%',
-        }
-      }
-    ]  
-  };
-
-
-  //sidenav
-  $scope.sidenavToggle = function(){
-    $mdSidenav('sidenav-right').toggle();
-  }
-
-  $scope.sidenavHide = function() {
-    $mdSidenav('sidenav-right').close();
-  }
-
-  $scope.sidenavHideMedia = function() {
-    if ($mdMedia('gt-sm')) {
-      $scope.sidenavHide();
-    }
-    return $mdMedia('gt-sm');
-  }
-
-  $scope.$watch($scope.sidenavHideMedia);
-
   //eof sidenav
 
   $rootScope.$on('$stateChangeSuccess', 
     function(event, toState, toParams, fromState, fromParams){ 
       $scope.pageData = $state.current.data;
-
-      if ($scope.sidenavIsOpen) {
-        $scope.sidenavHide();
-      }
     }
   );
 

@@ -35,29 +35,33 @@
   }">
 <!-- header -->
 {% block header %}
-<header class="header">
+<header class="header" ng-controller="artMenuCtrl">
   <div class="header__container" flex="" layout="row" layout-align="space-between start" layout-align-gt-md="center center">
-    <a href="/" class="header__logo"></a>
+    <a ui-sref="index" ui-sref-opts="{reload: true}" class="header__logo"></a>
     <nav class="nav" hide-sm hide-xs>
       <ul class="nav__list">
-        <li class="nav__item" ng-repeat="item in navData.menuItems">
-          <a href="" class="nav__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
+        <li class="nav__item" 
+          ng-repeat="item in navData.menuItems" 
+          >
+          <a  class="nav__link" ng-bind="item.name" 
+            ui-sref="{{item.state}}" 
+            ui-sref-active='nav__link--active'
+            ></a>
           <ul class="submenu" ng-if="item.subMenu" ng-class="{'submenu--{{item.hoverColor}}': item.hoverColor}">
             <li class="submenu__item" ng-repeat="subItem in item.subMenu">
-              <a href="" class="submenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
+              <a class="submenu__link" ng-bind="subItem.name" 
+              ui-sref="{{subItem.state}}" 
+              ui-sref-active='submenu__link--active'></a>
             </li>
           </ul>
         </li>
       </ul>
     </nav>
     <div class="flex"></div>
-    <a href="" class="header__link">
-      <img src="/local/templates/articulmedia/img/icon/icon-с.png" alt="">
+    <a href="" ng-href="{{item.link}}" class="header__link" ng-repeat="item in navData.headerLinks">
+      <img ng-src="{{item.img}}" alt="{{item.name}}">
     </a>
-    <a href="" class="header__link">
-      <img src="/local/templates/articulmedia/img/icon/icon-p.png" alt="">
-    </a>
-    <md-button class="header__mobile-toggle md-default" ng-click="sidenavToggle()" aria-label="menu" md-no-ink="true|false" md-ripple-size="auto" >
+    <md-button class="header__mobile-toggle md-default" ng-click="sidenavShow()" aria-label="menu" md-no-ink="true" md-ripple-size="auto" >
       <span class="sidenav__nav-item__icon svg-icon">
         <svg>
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-burger" />
@@ -76,28 +80,45 @@
   md-whiteframe="4"
   md-is-open="sidenavIsOpen"
   >
-  <div class="sidenav__wrap">
-    <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavToggle()" aria-label="menu" md-ripple-size="auto" >
+  <div class="sidenav__wrap"  ng-controller="artMenuCtrl">
+    <md-button class="md-raised sidenav__close md-mini" ng-click="sidenavHide()" aria-label="menu" md-ripple-size="auto" md-no-ink="true">
       <span class="sidenav__nav-item__icon svg-icon">
         <svg>
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-close" />
         </svg>
       </span>
     </md-button>
-    <slick settings="slickConfigMenu" class="mobileMenu" ng-if="sidenavIsOpen">
-      <div class="mobileMenu__slide" ng-repeat="item in navData.menuItems" ng-if="item.subMenu">
-        <h5 class="mobileMenu__title">
-          <a href="" class="mobileMenu__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
+
+    <slick settings="slickConfigMenu" class="mobile-menu" 
+    ng-if="sidenavIsOpen && navData.menuItems"
+    >
+      <div class="mobile-menu__slide" ng-repeat="item in navData.menuItems" ng-if="item.subMenu">
+        <h5 class="mobile-menu__title">
+          <a class="mobile-menu__link" 
+            ng-bind="item.name" 
+            ui-sref="{{item.state}}" 
+            ui-sref-opts="{reload: true}" 
+            ui-sref-active='mobile-menu__link--active'
+            ></a>
         </h5>
-        <ul class="mobileMenu__list" ng-if="item.subMenu">
-          <li class="mobileMenu__item" ng-repeat="subItem in item.subMenu">
-            <a href="" class="mobileMenu__link" ng-bind="subItem.name" ng-href="{{subItem.link}}"></a>
+        <ul class="mobile-menu__list" ng-if="item.subMenu">
+          <li class="mobile-menu__item" ng-repeat="subItem in item.subMenu">
+            <a class="mobile-menu__link"  
+              ng-bind="subItem.name" 
+              ui-sref="{{subItem.state}}" 
+              ui-sref-opts="{reload: true}" 
+              ui-sref-active='mobile-menu__link--active'
+              ></a>
           </li>
         </ul>
       </div>
-      <div class="mobileMenu__slide" >
-        <h5 class="mobileMenu__title" ng-repeat="item in navData.menuItems" ng-if="!item.subMenu">
-          <a href="" class="mobileMenu__link" ng-bind="item.name" ng-href="{{item.link}}"></a>
+      <div class="mobile-menu__slide" >
+        <h5 class="mobile-menu__title" ng-repeat="item in navData.menuItems" ng-if="!item.subMenu">
+          <a class="mobile-menu__link" ng-bind="item.name" 
+            ui-sref="{{item.state}}" 
+            ui-sref-opts="{reload: true}" 
+            ui-sref-active='mobile-menu__link--active'
+            ></a>
         </h5>
       </div>
     </slick>

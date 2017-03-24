@@ -615,7 +615,7 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
   &__container {
     @include conpad-wide();
     width: 100%;
-    max-width: 1400px;
+    // max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     & > * {
@@ -760,53 +760,65 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
       padding: 0 15px;
       color: $black;
       transition: color .3s ease, background-color .5s ease;
+      &--active {
+        color: $white;
+        background: $black;
+      }
       @media (max-width: $screen-lg) {
         font-size: 11px;
         padding: 0 10px;
       }
     }
+  }
+}
 
-    .submenu {
-      padding: 0;
-      position: absolute;
-      left: 0;
-      top: 100%;
-      list-style: none;
-      opacity: 0;
-      visibility: hidden;
-      display: none;
-      background: $alto;
-      background: rgba(223, 220, 220, .6);
+.submenu {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  background: $alto;
+  background: rgba(223,220,220,.6);
 
-      &--orange {
-        .submenu__item:hover {
-          .submenu__link {
-            background: $crusta;
-          }
-        }
+  &--orange {
+    .submenu__item:hover
+     {
+      .submenu__link {
+        background: $crusta;
       }
+    }
+    .submenu__link--active {
+      background: $crusta;
+    }
+  }
 
-      &__item {
-        display: inline-block;
+  &__item {
+    display: inline-block;
 
-        &:hover {
-          .submenu__link {
-            background: $white;
-          }
-        }
+    &:hover {
+      .submenu__link {
+        background: $white;
       }
+    }
+  }
 
-      &__link {
-        color: $black;
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 40px;
-        white-space: nowrap;
-        font-weight: 500;
-        display: block;
-        padding: 0 15px;
-        transition: color .3s ease, background-color .5s ease;
-      }
+  &__link {
+    color: $black;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 40px;
+    white-space: nowrap;
+    font-weight: 500;
+    display: block;
+    padding: 0 15px;
+    transition: color .3s ease, background-color .5s ease;
+    &--active {
+      background: $white;
     }
   }
 }
@@ -968,7 +980,7 @@ md-sidenav {
     flex: 0 0 auto;
   }
 
-  .mobileMenu {
+  .mobile-menu {
 
     &__list {
       margin: 0;
@@ -978,7 +990,6 @@ md-sidenav {
 
     &__item {
       margin-bottom: 30px;
-
     }
 
     &__link {
@@ -986,6 +997,9 @@ md-sidenav {
       color: $black;
       font-size: 20px;
       line-height: 25px;
+      &--active {
+        color: $brand;
+      }
     }
 
     &__title {
@@ -4972,8 +4986,8 @@ art-bubbles-dir {
     z-index: 100;
   }
   &__title {
-    margin: 0 0 0.8em;
-    font-size: vh(48px, 'md');
+    margin: 0px 0px 0.8em;
+    font-size: vw(48px,'md');
     font-weight: $fwthin;
     line-height: 1;
     text-transform: uppercase;
