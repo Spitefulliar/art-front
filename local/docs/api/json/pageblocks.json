@@ -550,7 +550,8 @@
                 "title": "Спортивный<br>маркетинг<br>в digital",
                 "image": "url(../local/templates/articulmedia/img/desktop/news-bg.jpg)",
                 "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitellen",
-                "imageBg": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)"
+                "imageBg": "url(../local/templates/articulmedia/img/desktop/text-page-bg.jpg)",
+                "imageBgMobile": "url(../local/templates/articulmedia/img/mobile/text-page-bg-mobile.jpg)"
               }
             ]
           }
