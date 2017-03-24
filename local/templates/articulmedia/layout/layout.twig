@@ -45,12 +45,14 @@
           >
           <a  class="nav__link" ng-bind="item.name" 
             ui-sref="{{item.state}}" 
+            ui-sref-opts="{reload: true}" 
             ui-sref-active='nav__link--active'
             ></a>
           <ul class="submenu" ng-if="item.subMenu" ng-class="{'submenu--{{item.hoverColor}}': item.hoverColor}">
             <li class="submenu__item" ng-repeat="subItem in item.subMenu">
               <a class="submenu__link" ng-bind="subItem.name" 
               ui-sref="{{subItem.state}}" 
+              ui-sref-opts="{reload: true}" 
               ui-sref-active='submenu__link--active'></a>
             </li>
           </ul>
