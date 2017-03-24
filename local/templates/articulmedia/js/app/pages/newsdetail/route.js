@@ -22,9 +22,6 @@ function($stateProvider, $urlRouterProvider) {
         apiParam: PAGE_API_PARAM,
       }
     });
-
-    console.log(PAGE_URL);
-    console.log(PAGE_STATE);
 }];
 
 export default routing;

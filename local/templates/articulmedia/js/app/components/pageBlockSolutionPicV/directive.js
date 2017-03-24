@@ -7,11 +7,18 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       let element = $scope.element =  $($element);
 
+      //parallax part
       let elClass = 'pinit-' + Math.floor(Math.random()*50);
       element.addClass(elClass);
 
       let SMcontroller = new ScrollMagic.Controller({loglevel: 0});
       let SMscene;
+
+      // let scrollStopper = function(event) {
+      //   event.stopPropagation();
+      //   console.log(event);
+      //   return false;
+      // }
 
       function parallaxInit() {
         $scope.SMscene = new ScrollMagic.Scene({
@@ -29,6 +36,15 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
         $timeout(function(){
           $.scrollify.update();
         },0);
+
+        // $scope.SMscene.on('end', function(event){
+        //   if (event.scrollDirection == "FORWARD") {
+        //     $(window).on('mousewheel', scrollStopper);
+        //     $timeout(function(){
+        //       $(window).off('mousewheel', scrollStopper);
+        //     },1000);
+        //   }
+        // });
       }
 
       $scope.$watch(function() {
