@@ -610,7 +610,7 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
   &__container {
     @include conpad-wide();
     width: 100%;
-    max-width: 1400px;
+    // max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     & > * {
