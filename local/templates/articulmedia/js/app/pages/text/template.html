@@ -1,9 +1,0 @@
-<div class="text-page" art-page-constructor-dir ng-class="{'text-page__container--no-bg' : !items[0].imageBg}">
-	<div class="text-page__bg" ng-style="{'background-image': items[0].imageBg}" ng-if="items[0].imageBg"></div>
-  <div class="text-page__container" layout="row" layout-wrap ng-class="{'text-page__container--bg' : !items[0].imageBg}">
-  	<div class="text-page__wrap" flex-gt-sm="50" flex="100">
-	   	<h2 class="text-page__title" ng-bind-html="trustAsHtml(items[0].title)"></h2>
-	   	<p class="text-page__slogan" ng-bind-html="trustAsHtml(items[0].slogan)"></p>
-   	</div>
-  </div>
-</div>
