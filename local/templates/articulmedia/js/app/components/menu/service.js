@@ -1,7 +1,7 @@
 //SERVICE
 export default [
     function() {
-        let tmpNostate = "index";
+        let tmpNostate = "404";
         let _menu = {
             'menuItems': [{
                 'name': 'Компания',
