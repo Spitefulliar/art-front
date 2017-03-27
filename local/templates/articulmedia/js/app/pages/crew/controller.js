@@ -47,7 +47,7 @@ export default ["$scope", "$rootScope", "$location", "$log", "$timeout", "$windo
   $scope.stopAudio = function(event, index) {
     if (event) event.stopPropagation();
     if ($scope.crewSounds[index]) $scope.crewSounds[index].stop();
-    $scope.crewData.items[index].mute = false;
+    if ($scope.crewData.items[index]) $scope.crewData.items[index].mute = false;
   }
 
   $scope.pauseAudio = function(event, index) {

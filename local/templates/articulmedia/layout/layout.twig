@@ -47,6 +47,7 @@
             ui-sref="{{item.state}}" 
             ui-sref-opts="{reload: true}" 
             ui-sref-active='nav__link--active'
+            ng-class="{'nav__link--child-active': item.isActive}"
             ></a>
           <ul class="submenu" ng-if="item.subMenu" ng-class="{'submenu--{{item.hoverColor}}': item.hoverColor}">
             <li class="submenu__item" ng-repeat="subItem in item.subMenu">
@@ -101,6 +102,7 @@
             ui-sref="{{item.state}}" 
             ui-sref-opts="{reload: true}" 
             ui-sref-active='mobile-menu__link--active'
+            ng-class="{'mobile-menu__link--child-active': item.isActive}"
             ></a>
         </h5>
         <ul class="mobile-menu__list" ng-if="item.subMenu">

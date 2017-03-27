@@ -2,13 +2,32 @@
 import moduleConfig from './config';
 const MODULE_NAME = moduleConfig.name;
 
-export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http', '$mdSidenav','$mdMedia',
-  function($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http, $mdSidenav, $mdMedia) {
+export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http', '$mdSidenav','$mdMedia', '$filter',
+  function($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http, $mdSidenav, $mdMedia, $filter) {
 
   $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
 
   //getting nav date fo menu
   $scope.navData = $moduleService.getNavData();
+
+  //update perent menuitem state
+  let menuItemStateUppdate = (navData) => {
+    if (!navData || !navData.menuItems) return;
+
+    for (var i = 0; i < navData.menuItems.length; i++) {
+      let matches = false;
+      let el = navData.menuItems[i];
+      if (!el.subMenu) continue;
+
+      for (var j = 0; j < el.subMenu.length; j++) {
+        matches = $filter('isState')(el.subMenu[j].state);
+        if (matches) break;
+      }
+
+      el.isActive = matches;
+      if (matches) break;
+    }
+  };
 
   //sidenav
   $scope.sidenavToggle = function(){
@@ -101,6 +120,12 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       if ($scope.sidenavIsOpen) {
         $scope.sidenavHide();
       }
+    }
+  );
+
+  $rootScope.$on('$stateChangeSuccess', 
+    function(event, toState, toParams, fromState, fromParams){ 
+      menuItemStateUppdate($scope.navData);
     }
   );
 

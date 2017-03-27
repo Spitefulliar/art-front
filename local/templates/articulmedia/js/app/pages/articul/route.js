@@ -20,6 +20,7 @@ function($stateProvider, $urlRouterProvider) {
       data: {
         pageBgType: moduleConfig.pageBgType || false,
         apiParam: PAGE_API_PARAM,
+        title: PAGE_TITLE
       }
     });
 }];
