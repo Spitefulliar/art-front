@@ -10,12 +10,24 @@
     <div class="time-line__wrap">
         <slick settings="slickConfigTimeLine" class="time-line__blocks" layout="row" layout-wrap
                layout-align="space-around end">
+            <h1 class="time-line__before">
+                articulmedia<br>
+                навсегда
+            </h1>
             <div class="time-item" ng-repeat="item in items">
                 <div class="time-item__happy" ng-style="{height: item.happy}"></div>
                 <div class="time-item__honor" ng-style="{height: item.honor}"></div>
                 <div class="time-item__release" ng-style="{height: item.release}"></div>
                 <div class="time-item__year" ng-bind="item.year"></div>
             </div>
+            <div class="time-item">
+                <img src="" alt="">
+                <div class="time-item__year">2015</div>
+            </div>
+            <h1 class="time-line__after">
+                articulmedia<br>
+                навсегда
+            </h1>
         </slick>
     </div>
     <h4 class="time-line__title" hide-gt-xs>articulmedia <br> навсегда</h4>
