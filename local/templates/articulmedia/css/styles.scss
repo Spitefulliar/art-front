@@ -777,7 +777,6 @@ $colors: (#fd5d5d, #ff5aec, #5e63ff, #5cfffa, #9f49ac, #CC42A2, #FF3BA7, #FF5800
   position: absolute;
   left: 0;
   top: 100%;
-  left: 0;
   list-style: none;
   opacity: 0;
   visibility: hidden;
@@ -1289,9 +1288,8 @@ md-sidenav {
   &__copy {
     color: $nightRider;
     font-size: 16px;
-    margin: 0;
     display: inline-block;
-    margin-right: 95px;
+    margin: 0 95px 0 0;
     @media (max-width: $screen-md) {
       margin: 0;
       padding-left: 10px;
@@ -1929,7 +1927,7 @@ art-digital-dir {
       max-height: 100%;
       width: vw(25px);
       left: auto;
-      right: 0px;
+      right: 0;
       bottom: auto;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -2194,6 +2192,39 @@ art-digital-dir {
       max-width: 100%;
     }
 
+    &__before {
+      margin: 0;
+      font-size: vh(90px);
+      line-height: vh(90px);
+      text-transform: uppercase;
+      color: $crusta;
+      display: inline-block;
+      float: none;
+      position: relative;
+      right: vw(-50px);
+
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    &__after {
+      font-size: vh(90px);
+      line-height: vh(90px);
+      text-transform: uppercase;
+      color: $crusta;
+      text-align: right;
+      margin: 0;
+      display: inline-block;
+      float: none;
+      position: relative;
+      left: vw(-50px);
+
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+    }
+
     @media (max-width: 600px) {
       background: transparent url('../img/mobile/TimeLine.png') no-repeat;
       height: 320px;
@@ -2205,26 +2236,21 @@ art-digital-dir {
 
     &__wrap {
       padding-bottom: 100px;
+      padding-top: vh(70px);
     }
 
     &__blocks {
       width: 100%;
-      border-bottom: 6px solid $black;
+      position: relative;
+
 
       .slick-list {
         overflow: inherit;
+
       }
 
-      .time-item {
-        width: vw(80px);
-        display: inline-block;
-        vertical-align: bottom;
-        margin: 0 10px;
-        float: none;
-        position: relative;
-
-        &:after {
-          opacity: 0;
+      .slick-active {
+        &:before {
           position: absolute;
           content: '';
           bottom: -19px;
@@ -2235,6 +2261,26 @@ art-digital-dir {
           border-width: 13px 8px 0 8px;
           border-color: $black transparent transparent transparent;
         }
+      }
+
+      .time-item {
+        width: vw(80px);
+        display: inline-block;
+        vertical-align: bottom;
+        padding: 0 10px;
+        float: none;
+        position: relative;
+        border-bottom: 6px solid $black;
+
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+
 
         @media (max-width: $screen-md) {
           width: vw(350px);
@@ -2246,6 +2292,10 @@ art-digital-dir {
           &:after {
             opacity: 1;
           }
+        }
+
+        &__icon {
+          margin: 0 auto 15px auto;
         }
 
         &__year {
