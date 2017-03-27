@@ -9,7 +9,7 @@
       "blocks": [
         {
           "size": "big",
-          "link": "/newsdetail/",
+          "link": "/news/detail/",
           "type": "image",
           "title": "Спортивный<br>маркетинг<br>в digital",
           "bgImage": "url(../local/templates/articulmedia/img/desktop/news-big.jpg)",
