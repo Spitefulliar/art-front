@@ -14,11 +14,33 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
       let SMcontroller = new ScrollMagic.Controller({loglevel: 0});
       let SMscene;
 
-      // let scrollStopper = function(event) {
-      //   event.stopPropagation();
-      //   console.log(event);
-      //   return false;
-      // }
+
+      //making a "speedbump" for srolling this section
+      let scrollStopY = false;
+      let scrollStoperTO = false;
+      let scrollStoperAppliedTO = false;
+      let scrollStopDirection = false;
+
+      let scrollStopper = function(event) {
+
+        if ((scrollStopDirection == "FORWARD" && $(window).scrollTop() < scrollStopY) || (scrollStopDirection == "REVERSE" && $(window).scrollTop() > scrollStopY)) return;
+        
+        $(window).scrollTop(scrollStopY);
+
+        scrollStoperAppliedTO  = $timeout(function(){
+          $(window).off("scroll", scrollStopper);
+          $(window).on("scroll", scrollReenable);
+          scrollStoperAppliedTO = false;
+        },400);
+        return false;
+      };
+
+      let scrollReenable = function(event) {
+        $(window).off("scroll", scrollReenable);
+        $.scrollify.enable();
+      }
+
+
 
       function parallaxInit() {
         $scope.SMscene = new ScrollMagic.Scene({
@@ -37,14 +59,18 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log',
           $.scrollify.update();
         },0);
 
-        // $scope.SMscene.on('end', function(event){
-        //   if (event.scrollDirection == "FORWARD") {
-        //     $(window).on('mousewheel', scrollStopper);
-        //     $timeout(function(){
-        //       $(window).off('mousewheel', scrollStopper);
-        //     },1000);
-        //   }
-        // });
+        $scope.SMscene.on('enter', function(event){
+          if (scrollStoperTO || scrollStoperAppliedTO) return;
+          if (event.scrollDirection == "FORWARD") {
+            scrollStopY = element.offset().top + element.height() - $(window).height();
+          } else {
+            scrollStopY = element.offset().top;
+          }
+          scrollStopDirection = event.scrollDirection;
+
+          $.scrollify.disable();
+          $(window).on( "scroll",scrollStopper);
+        });
       }
 
       $scope.$watch(function() {
