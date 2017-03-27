@@ -17,7 +17,11 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
     for (var i = 0; i < navData.menuItems.length; i++) {
       let matches = false;
       let el = navData.menuItems[i];
-      if (!el.subMenu) continue;
+
+      if (!el.subMenu) {
+        el.isActive = matches;
+        continue;
+      };
 
       for (var j = 0; j < el.subMenu.length; j++) {
         matches = $filter('isState')(el.subMenu[j].state);
@@ -25,7 +29,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
       }
 
       el.isActive = matches;
-      if (matches) break;
+      // if (matches) break;
     }
   };
 
