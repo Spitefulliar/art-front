@@ -17,25 +17,21 @@
                 "type": "text",
                 "title": "Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»",
                 "fill": "#000",
-                "bgColor": "rgba(255,255,255,.5)",
                 "bgImage": "url(../local/templates/articulmedia/img/desktop/text-bg.jpg)"
             }, {
                 "type": "text",
                 "title": "делимся опытом<br> на РИФ+КИБ",
                 "fill": "#fff",
-                "bgColor": "rgba(255,255,255,.4)",
                 "bgImage": "url(../local/templates/articulmedia/img/desktop/text-bg.jpg)"
             }, {
                 "type": "text",
                 "title": "Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»",
                 "fill": "#000",
-                "bgColor": "rgba(255,255,255,.3)",
                 "bgImage": "url(../local/templates/articulmedia/img/desktop/text-bg.jpg)"
             }, {
                 "type": "text",
                 "title": "Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»",
                 "fill": "#000",
-                "bgColor": "rgba(255,255,255,.2)",
                 "bgImage": "url(../local/templates/articulmedia/img/desktop/text-bg.jpg)"
             } ]
         }

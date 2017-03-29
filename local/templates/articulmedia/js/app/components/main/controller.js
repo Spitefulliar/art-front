@@ -55,6 +55,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   $scope.convertHexToRgba = function(hexColor, opacities) {
     hexColor = hexColor.replace('#','');
+    if (hexColor.length == 3) hexColor += hexColor;
     let r = parseInt(hexColor.substring(0,2), 16);
     let g = parseInt(hexColor.substring(2,4), 16);
     let b = parseInt(hexColor.substring(4,6), 16);
@@ -66,7 +67,7 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
           result.push(`rgba(${r},${g},${b},${opacity/100})`);
         });
       } else {
-        result = `rgba(${r},${g},${b},${opacity/100})`;
+        result = `rgba(${r},${g},${b},${opacities/100})`;
       }
     } else {
       result= `rgb(${r},${g},${b})`;
