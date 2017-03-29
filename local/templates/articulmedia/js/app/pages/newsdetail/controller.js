@@ -4,11 +4,10 @@
 
 export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$window', '$state', '$http',
   function($scope, $rootScope, $location, $log, $timeout, $window, $state, $http) {
-
   $scope.$on(
     "pageDataLoaded",
     function() {
-      $scope.news = ($scope.page)? $scope.page.news: false;
+      $scope.newsdetail = ($rootScope.page && $rootScope.page.newsdetail)? $rootScope.page.newsdetail: false;
     }
   );
 
