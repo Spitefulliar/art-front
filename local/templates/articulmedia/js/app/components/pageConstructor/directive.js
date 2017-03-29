@@ -17,6 +17,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
 
       let pagePath = $rootScope.pageData.apiFullPath || CONFIG.APP.API_DIR + $rootScope.pageData.apiParam + urlPostfix;
       $scope.getPage(pagePath, $stateParams.pageCode).then(function(response){
+        if (!response || !response.page) return false;
         $rootScope.page = $scope.page = response.page;
         $scope.pageData.title = $scope.page.title || $scope.pageData.title;
         
