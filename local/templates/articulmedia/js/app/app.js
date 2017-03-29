@@ -11,7 +11,6 @@ import angular from 'angular';
 import ngAria from 'angular-aria';
 // import touch from 'angular-touch';
 import uirouter from 'angular-ui-router';
-import 'angular-ui-router.statehelper';
 import animate from 'angular-animate';
 import svgBaseFix from 'angular-svg-base-fix';
 import baronScrollbar from 'angular-baron-scrollbar';
@@ -68,7 +67,6 @@ let appModulesArr = AppModulesArr.concat([
     'ngAria', 
     // 'ngTouch', //not included with material
     'ui.router', 
-    'ui.router.stateHelper',
     'ngAnimate',
     'svgBaseFix',
     'angular-baron-scrollbar',
