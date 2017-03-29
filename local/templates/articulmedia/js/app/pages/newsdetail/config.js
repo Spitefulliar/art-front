@@ -1,8 +1,8 @@
 export default  {  
   name: 'Newsdetail',
-  state: 'detail',
+  state: 'news.detail',
   apiParam: 'newsdetail',
   // url: '/news/detail/',
-  url: 'detail/:code',
+  url: 'detail/',
   parent: 'news'
 };

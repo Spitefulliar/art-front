@@ -5,8 +5,7 @@
     "code": "",
     "title": "Articul Media Group: digital, стратегии, креатив, SMM, мобильный маркетинг, создание и поддержка веб-проектов, мобильные приложения",
     "scrollify": false,
-    "news": {
-      "blocks": [
+    "news": [
         {
           "size": "big",
           "link": "/news/detail/",
@@ -17,6 +16,7 @@
         },
         {
           "type": "text",
+          "link": "/news/detail/",
           "title": "Активация<br>собственного<br>e-commerce<br>для брендов",
           "fill": "#000",
           "bgColor": "rgba(255,255,255,.5)",
@@ -24,6 +24,7 @@
         },
         {
           "type": "text",
+          "link": "/news/detail/",
           "title": "Вывод<br>брендов<br>в mobile",
           "fill": "#fff",
           "bgColor": "rgba(255,255,255,.4)",
@@ -31,6 +32,7 @@
         },
         {
           "type": "text",
+          "link": "/news/detail/",
           "title": "Управляющий<br>партнёр<br>Articul Media<br>Ольга Куликова<br>номинирована<br>на премию<br>«Предприниматель<br>года 2015»",
           "fill": "#000",
           "bgColor": "rgba(255,255,255,.3)",
@@ -38,6 +40,7 @@
         },
         {
           "type": "text",
+          "link": "/news/detail/",
           "title": "Активация<br>собственного<br>e-commerce<br>для брендов",
           "fill": "#000",
           "bgColor": "rgba(255,255,255,.2)",
@@ -45,20 +48,11 @@
         },
         {
           "type": "image",
+          "link": "/news/detail/",
           "title": "Спортивный<br>маркетинг<br>в digital",
           "bgImage": "url(../local/templates/articulmedia/img/desktop/news-item1.jpg)",
           "fill": "#fff"
         }
-      ],
-      "items": [
-        {
-          "date": "29.12.2016",
-          "title": "lorem ipsum dolor sit amet iscing",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere ",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non leo eu mauris posuere feugiat. Pellentesque interdum dolor vel ipsum porttitor, eget rutrum odio venenatis. Duis lorem magna, scelerisque et mi quis, dictum feugiat ligula. Proin eget est facilisis, eleifend urna non, euismod massa. In luctus et velit ultricies laoreet. ",
-          "image": "url(../local/templates/articulmedia/img/desktop/news-big.jpg)"
-        }
-      ]
-    }
+    ]
   }
 }

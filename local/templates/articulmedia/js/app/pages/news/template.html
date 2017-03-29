@@ -1,63 +1,21 @@
-<div class="news-page" art-page-constructor-dir>
-    <div class="news-page__container" layout="row" layout-wrap>
-        <div class="news-list" flex="100" layout="row" layout-align="center start" layout-wrap layout="row">
-            <md-grid-list class="news-list__grid"
-                          md-cols="5"
-                          md-cols-sm="2"
-                          md-cols-xs="2"
-                          md-gutter="0px"
-                          md-row-height="1:1"
-            >
-                <md-grid-tile
-                        ng-repeat="block in news.blocks"
-                        md-rowspan="2" md-colspan="2"
-                        ng-if="block.size"
-                >
-                    <a class="news-list__item"
-                         ng-class="{'news-list__item--{{block.type}}': block.type}"
-                            ng-href="{{ block.link }}"
-                         ng-style="{
-							'background-color': block.bgColor
-
-						}"
-                    >
-                        <div class="news-list__image"
-                             ng-style="{
-							'background-image': block.bgImage
-						}"></div>
-                        <h3 class="news-list__title" ng-class="{'news-list__title--{{block.size}}': block.size}"
-                            ng-bind-html="trustAsHtml(block.title)"></h3>
-                        <span class="news-list__cross svg-icon">
-		          <svg ng-style="{'fill': block.fill}">
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick"/>
-		          </svg>
-		        </span>
-                    </a>
-                </md-grid-tile>
-                <md-grid-tile
-                        ng-repeat="block in news.blocks"
-                        md-rowspan="1" md-colspan="1"
-                        ng-if="!block.size"
-                >
-                    <div class="news-list__item"
-                         ng-class="{'news-list__item--{{block.type}}': block.type}"
-                         ng-style="{
-							'background-color': block.bgColor
-						}"
-                    >
-                        <div class="news-list__image"
-                             ng-style="{
-							'background-image': block.bgImage
-						}"></div>
-                        <h3 class="news-list__title" ng-bind-html="trustAsHtml(block.title)"></h3>
-                        <span class="news-list__cross svg-icon">
-		          <svg ng-style="{'fill': block.fill}">
-		            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick"/>
-		          </svg>
-		        </span>
-                    </div>
-                </md-grid-tile>
-            </md-grid-list>
+<ui-view art-page-constructor-dir>
+    <div class="news-page">
+        <div class="news-page__container" layout="row" layout-wrap>
+            <div class="news-list" flex="100" layout="row" layout-align="center start" layout-wrap layout="row">
+                <md-grid-list class="news-list__grid" md-cols="5" md-cols-sm="2" md-cols-xs="2" md-gutter="0px" md-row-height="1:1" ng-if="news">
+                    <md-grid-tile ng-repeat="block in news" md-rowspan="{{(block.size == 'big')? 2 : 1}}" md-colspan="{{(block.size == 'big')? 2 : 1}}">
+                        <a class="news-list__item" ng-class="{'news-list__item--{{block.type}}': block.type}" ng-href="{{ block.link }}" ng-style="{'background-color': block.bgColor }">
+                            <div class="news-list__image" ng-style="{'background-image': block.bgImage }"></div>
+                            <h3 class="news-list__title" ng-class="{'news-list__title--{{block.size}}': block.size}" ng-bind-html="trustAsHtml(block.title)"></h3>
+                            <span class="news-list__cross svg-icon">
+                              <svg ng-style="{'fill': block.fill}">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick"/>
+                              </svg>
+                            </span>
+                        </a>
+                    </md-grid-tile>
+                </md-grid-list>
+            </div>
         </div>
     </div>
-</div>
+</ui-view>
