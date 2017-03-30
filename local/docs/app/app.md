@@ -22,8 +22,8 @@
 +   [Картинки](/local/templates/articulmedia/img)
 
 ### Структура приложения
-[Основной конфиг](/local/templates/articulmedia/js/helper_config.js)
-[Основной файл приложения](/local/templates/articulmedia/js/app/app.js)
++   [Основной конфиг](/local/templates/articulmedia/js/helper_config.js)
++   [Основной файл приложения](/local/templates/articulmedia/js/app/app.js)
 +   [Провайдеры](/local/templates/articulmedia/js/app/providers)
 +   [Компоненты](/local/templates/articulmedia/js/app/components)
     *   Компонент
