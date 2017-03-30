@@ -1,3 +1,5 @@
+const NODE_ENV = process.env.NODE_ENV;
+
 var webpack = require('webpack');
 var path = require('path');
 
@@ -9,6 +11,16 @@ var CopyPlugin = require('copy-webpack-plugin');
 var projectRootPath = path.join(__dirname, '/local/templates/articulmedia');      //path to root
 var entryPath = path.join(projectRootPath, '/js');         //path to input dir
 var assetsPath = path.join(projectRootPath, '/assets');    //path to output dir
+
+
+if (NODE_ENV == 'production') {
+  var sourcemaps = '';
+  var postcssPackage = 'defaults';
+
+} else {
+  var sourcemaps = '?sourceMap';
+  var postcssPackage = 'defaults';
+}
 
 var config = {
     context: entryPath,
@@ -33,23 +45,18 @@ var config = {
             },
             {
               test: /\.less$/,
-              exclude: /(node_modules)/,
-              loader: ExtractTextPlugin.extract('style-loader','css-raw-loader?-minimize!postcss-loader?package=defaults!less-loader') //fastest build for dev, no autoprefix
-              // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?pack=defaults!less-loader')
-              // loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize!postcss-loader?pack=defaults!less-loader?sourceMap') //sourcemap
+              // exclude: /(node_modules)/,
+              loader: ExtractTextPlugin.extract('style-loader',`css-raw-loader?-minimize!postcss-loader?package=${postcssPackage}!less-loader${sourcemaps}`) //fastest build for dev, no autoprefix
             },
             {
               test: /\.scss$/,
-              exclude: /node_modules/,
-              loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?package=defaults!sass-loader') 
-              // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!sass-loader') 
+              // exclude: /node_modules/,
+              loader: ExtractTextPlugin.extract('style-loader', `css-raw-loader?-minimize!postcss-loader?package=${postcssPackage}!sass-loader${sourcemaps}`) 
             },
             {
               test: /\.css$/,
               // exclude: /(node_modules)/,
-              loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize')
-              // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?package=defaults')
-              // loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize')
+              loader: ExtractTextPlugin.extract('style-loader', `css-loader?-minimize!postcss-loader?package=${postcssPackage}`)
             },
             {
               test: /\.(png|jpg|gif)$/,
@@ -121,22 +128,14 @@ var config = {
     },
     plugins: [
         new webpack.optimize.DedupePlugin(), //remove dublicated modules
-        new webpack.DefinePlugin({
-            'NODE_ENV': JSON.stringify('develop') //setting environment variable
-            // 'NODE_ENV': JSON.stringify('production'), //setting environment variable
-        }),
+        // new webpack.DefinePlugin({
+        //     'NODE_ENV': JSON.stringify('develop') //setting environment variable
+        //     // 'NODE_ENV': JSON.stringify('production'), //setting environment variable
+        // }),
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js"),
-        // new webpack.optimize.UglifyJsPlugin({
-        //   compress: {
-        //     warnings: false
-        //   },
-        //   mangle: false,
-        //   sourceMap: false
-        // } ),
         new webpack.ProvidePlugin({
           //configs
           'NODE_ENV': 'NODE_ENV',
-          'PRODUCTION': 'NODE_ENV' == 'production',
           'CONFIG': path.join(entryPath, "/helper_config.js"),
           //libs
           '$': 'jquery',
@@ -151,24 +150,10 @@ var config = {
           'Matter': 'matter-js',
         }),
         new ExtractTextPlugin('[name].css'),
-        // new CopyPlugin([
-        //     { from: '../../../../node_modules/angular/angular.min.js', to: '../libs/angular' },
-        //     { from: '../../../../node_modules/angular/angular-csp.css', to: '../libs/angular' },
-        //     { from: '../../../../node_modules/angular-ui-router/release/angular-ui-router.min.js', to: '../libs/angular-ui-router' },
-        //     { from: '../../../../node_modules/angular-animate/angular-animate.min.js', to: '../libs/angular-animate' },
-        //     { from: '../../../../node_modules/angular-touch/angular-touch.min.js', to: '../libs/angular-touch' },
-        //     { from: '../../../../node_modules/angular-fancybox-plus/js/angular-fancybox-plus.js', to: '../libs/angular-fancybox-plus' },
-        //     { from: '../../../../node_modules/angular-ui-bootstrap/dist/', to: '../libs/angular-ui-bootstrap' },
-        //     { from: '../../../../node_modules/jquery/dist/jquery.min.js', to: '../libs/jquery' },
-        // ], {
-        //     ignore: [
-        //         // '*.txt',
-        //     ]
-        // })
     ],
     postcss: function () {
       return {
-        oldsup: [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] })], //with minification
+        oldsup: [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] })],
         defaults:  [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 3 version'] })]
       };
     },
@@ -180,5 +165,25 @@ var config = {
     },
     watch: false
 };
+
+if (NODE_ENV == 'production') {
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        },
+        mangle: false,
+        sourceMap: false
+      }
+    )
+  );
+
+  console.log("\x1b[37m", "\x1b[40m");
+  console.log("\x1b[35m", "\x1b[40m", 'production mode on');
+  console.log("\x1b[37m", "\x1b[40m");
+} else {
+  console.log("\x1b[37m", "\x1b[40m");
+  console.log("\x1b[35m", "\x1b[40m", 'develop mode on');
+  console.log("\x1b[37m", "\x1b[40m");
+}
 
 module.exports = config;

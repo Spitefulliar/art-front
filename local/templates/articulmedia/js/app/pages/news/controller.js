@@ -17,7 +17,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   $scope.$on(
     "pageDataLoaded",
     function() {
-      $scope.news = ($rootScope.page && $rootScope.page.news)? $rootScope.page.news : false;
+      $scope.news = ($scope.page && $scope.page.news)? $scope.page.news : false;
       if ($scope.news) transformBgColors($scope.news);
     }
   );

@@ -17,8 +17,7 @@ function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state(PAGE_STATE, {
       url: PAGE_URL + ':pageCode',
-      // template: template,
-      templateUrl: '/local/templates/articulmedia/js/app/pages/newsdetail/template.html',
+      template: template,
       parent: PAGE_STATE_PARENT,
       controller: CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
       data: {
