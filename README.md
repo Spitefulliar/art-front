@@ -7,4 +7,4 @@
 +   [Методы](local/docs/api/methods.md)
 
 ### APP
-+   [Приложение](local/docs/app.md)
++   [Приложение](local/docs/app/app.md)
