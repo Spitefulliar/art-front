@@ -4,9 +4,10 @@
   "description": "articulmedia",
   "main": "bundle.js",
   "scripts": {
-    "build": "webpack --progress",
+    "build": "NODE_ENV=develop webpack --progress",
+    "buildprod": "NODE_ENV=production webpack --progress",
     "watch": "webpack -w",
-    "pull": "git pull origin master && yarn && webpack --progress"
+    "pull": "git pull origin master && yarn && NODE_ENV=production webpack --progress"
   },
   "repository": {
     "type": "git",

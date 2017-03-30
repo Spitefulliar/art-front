@@ -7,7 +7,7 @@ export default ['$scope', '$rootScope', '$location', '$log', '$timeout', '$windo
   $scope.$on(
     "pageDataLoaded",
     function() {
-      $scope.newsdetail = ($rootScope.page && $rootScope.page.newsdetail)? $rootScope.page.newsdetail: false;
+      $scope.newsdetail = ($scope.page && $scope.page.newsdetail)? $scope.page.newsdetail: false;
     }
   );
 
